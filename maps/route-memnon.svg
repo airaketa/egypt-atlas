@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 540" role="img" aria-label="Условная последовательность остановок, не план здания">
+<defs><pattern id="grain" width="28" height="28" patternUnits="userSpaceOnUse"><path d="M28 0H0V28" fill="none" stroke="#dacfb8" stroke-width=".6"/></pattern></defs>
+<rect width="920" height="540" fill="#f1ebdd" rx="18"/><rect width="920" height="540" fill="url(#grain)" rx="18"/>
+<text x="29" y="36" fill="#2c5558" font-size="15" font-family="Arial,sans-serif" font-weight="bold">КОЛОССЫ МЕМНОНА</text>
+<text x="29" y="61" fill="#a16e47" font-size="13" font-family="Arial,sans-serif">СХЕМА РАССКАЗОВ • НЕ ГЕОГРАФИЧЕСКИЙ ПЛАН • НЕ В МАСШТАБЕ</text>
+<path d="M211.4 313.2 L405.0 313.2" stroke="#9caea7" stroke-width="3" stroke-dasharray="6 7"/>
+<rect x="42.4" y="276.2" width="228" height="86" rx="14" fill="#fffaf0" stroke="#c9bba2" stroke-width="1.5"/>
+<text x="156.4" y="342.2" font-size="12.4" font-family="Arial,sans-serif" font-weight="600" fill="#355453" text-anchor="middle">Два гиганта Аменхотепа III</text>
+<rect x="346.0" y="276.2" width="228" height="86" rx="14" fill="#fffaf0" stroke="#c9bba2" stroke-width="1.5"/>
+<text x="460.0" y="342.2" font-size="12.4" font-family="Arial,sans-serif" font-weight="600" fill="#355453" text-anchor="middle">Почему статуи «пели» на</text>
+<text x="460.0" y="356.2" font-size="12.4" font-family="Arial,sans-serif" font-weight="600" fill="#355453" text-anchor="middle">рассвете?</text>
+<text x="28" y="519" font-size="12" font-family="Arial,sans-serif" fill="#727b71">Нажмите на номер, чтобы открыть рассказ. Порядок не означает физическую близость.</text>
+</svg>

@@ -1,0 +1,57 @@
+name: Publish Egypt Atlas
+on:
+  push:
+    branches: [main]
+  release:
+    types: [published]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    # Ignore release of unrelated application versions.
+    if: github.event_name != 'release' || github.event.release.tag_name == 'media-v1'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Get media ZIP from GitHub Release, if available
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p .downloads
+          if gh release view media-v1 --repo "$GITHUB_REPOSITORY" > /dev/null 2>&1; then
+            gh release download media-v1 --pattern 'egypt-media.zip' --dir .downloads --repo "$GITHUB_REPOSITORY"
+            test -s .downloads/egypt-media.zip
+            echo "Using media-v1 release asset"
+          else
+            echo "media-v1 release not created yet; publishing a text-only preview"
+          fi
+      - name: Build and validate static site
+        run: |
+          if [ -f .downloads/egypt-media.zip ]; then
+            python3 tools/build_site.py --media .downloads/egypt-media.zip --out _site --require-audio
+          else
+            python3 tools/build_site.py --out _site
+          fi
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: _site
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

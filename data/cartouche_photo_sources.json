@@ -1,0 +1,62 @@
+{
+  "seti": {
+    "file": "Karnak_Freilichtmuseum_13b.jpg",
+    "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Karnak_Freilichtmuseum_13b.jpg/960px-Karnak_Freilichtmuseum_13b.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Karnak_Freilichtmuseum_13b.jpg",
+    "author": "Olaf Tausch, ретушь JMCC1",
+    "license": "CC BY 3.0",
+    "licurl": "https://creativecommons.org/licenses/by/3.0/",
+    "location": "Карнак, музей под открытым небом; НЕ гипостильный зал",
+    "note": "Сети I. Фото из другого участка Карнака; пример формы имени, а не инструкция «найдите эту стену»."
+  },
+  "r2k": {
+    "file": "Karnak_titul_ramses.JPG",
+    "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Karnak_titul_ramses.JPG/960px-Karnak_titul_ramses.JPG",
+    "source": "https://commons.wikimedia.org/wiki/File:Karnak_titul_ramses.JPG",
+    "author": "Lord-of-the-Light",
+    "license": "Public domain",
+    "licurl": "https://creativecommons.org/publicdomain/mark/1.0/",
+    "location": "Карнак, архитрав Большого гипостильного зала",
+    "note": "Рамсес II. Реальные картуши на каменной балке гипостильного зала; некоторые надписи были перерезаны."
+  },
+  "hatshepsut": {
+    "file": "Karnak_Tempel_Obelisk_Hatshepsut_07.jpg",
+    "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Karnak_Tempel_Obelisk_Hatshepsut_07.jpg/960px-Karnak_Tempel_Obelisk_Hatshepsut_07.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Karnak_Tempel_Obelisk_Hatshepsut_07.jpg",
+    "author": "Olaf Tausch",
+    "license": "CC BY 3.0",
+    "licurl": "https://creativecommons.org/licenses/by/3.0/",
+    "location": "Карнак, обелиск с надписями Хатшепсут",
+    "note": "Настоящий картуш Хатшепсут на обелиске. Список знаков ниже — для её тронного имени Мааткара, а не построчное чтение фото."
+  },
+  "luxor": {
+    "file": "Luxor_-_hieroglyphs_on_obelisk.jpg",
+    "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Luxor_-_hieroglyphs_on_obelisk.jpg/960px-Luxor_-_hieroglyphs_on_obelisk.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Luxor_-_hieroglyphs_on_obelisk.jpg",
+    "author": "Glenn Ashton",
+    "license": "CC BY-SA 3.0",
+    "licurl": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "location": "Луксорский храм, обелиск Рамсеса II",
+    "note": "Картуши на сохранившемся обелиске Рамсеса II у входа."
+  },
+  "habu": {
+    "file": "Medinet_Habou_Cartouche.jpg",
+    "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Medinet_Habou_Cartouche.jpg/960px-Medinet_Habou_Cartouche.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Medinet_Habou_Cartouche.jpg",
+    "author": "Lord-of-the-Light",
+    "license": "CC BY-SA 3.0",
+    "licurl": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "location": "Мединет-Абу, надписи Рамсеса III",
+    "note": "Реальная резьба с царскими именами Рамсеса III; точная стена на маршруте не подтверждена."
+  },
+  "gem_obelisk": {
+    "file": "Hanging_Obelisk_outside_the_Grand_Egyptian_Museum.jpg",
+    "thumb": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Hanging_Obelisk_outside_the_Grand_Egyptian_Museum.jpg?width=960",
+    "source": "https://commons.wikimedia.org/wiki/File:Hanging_Obelisk_outside_the_Grand_Egyptian_Museum.jpg",
+    "author": "Slyronit",
+    "license": "CC BY-SA 4.0",
+    "licurl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "location": "Большой Египетский музей, входная зона",
+    "note": "Висячий обелиск Рамсеса II. Два картуша находятся на нижней поверхности основания и видны снизу."
+  }
+}

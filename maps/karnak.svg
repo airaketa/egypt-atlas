@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 540" role="img" aria-label="Схема Карнака: западный вход слева, священное озеро к югу справа">
+<defs>
+ <pattern id="sand" width="25" height="25" patternUnits="userSpaceOnUse"><path d="M0 0h25v25" fill="none" stroke="#e5d9bd" stroke-width=".7"/></pattern>
+ <pattern id="cols" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="12" cy="12" r="5.7" fill="#a99373" stroke="#776c59" stroke-width="1"/></pattern>
+</defs>
+<rect width="920" height="540" rx="20" fill="#f2ead9"/><rect width="920" height="540" rx="20" fill="url(#sand)"/>
+<text x="32" y="40" font-family="system-ui" font-size="15" font-weight="700" letter-spacing="2" fill="#536a67">КАРНАК · УЧАСТОК АМОНА-РА</text>
+<g stroke="#a58e70" fill="none" stroke-width="8" stroke-linejoin="miter" stroke-linecap="square">
+ <path d="M99 190 L99 107 L812 107 L812 453 L601 453" stroke="#b9a78a" stroke-width="7"/>
+ <path d="M99 190 L99 371 L601 371" stroke="#b9a78a" stroke-width="7"/>
+</g>
+<!-- entrance / western approach -->
+<path d="M22 274 H129" stroke="#d1b98f" stroke-width="24"/><path d="M28 264V286 M46 264V286 M64 264V286 M82 264V286" stroke="#a58e75" stroke-width="3"/>
+<!-- first pylon -->
+<g fill="#ad9b80" stroke="#7f735f" stroke-width="2"><rect x="126" y="224" width="20" height="29"/><rect x="126" y="280" width="20" height="30"/></g><path d="M140 253V280" stroke="#9f8b70" stroke-width="5"/>
+<!-- great court -->
+<rect x="151" y="210" width="209" height="114" fill="#e9dfca" stroke="#a9977c" stroke-width="3"/>
+<g fill="#b5a188"><circle cx="166" cy="222" r="4"/><circle cx="166" cy="310" r="4"/><circle cx="177" cy="222" r="4"/><circle cx="177" cy="310" r="4"/><circle cx="188" cy="222" r="4"/><circle cx="188" cy="310" r="4"/><circle cx="199" cy="222" r="4"/><circle cx="199" cy="310" r="4"/><circle cx="210" cy="222" r="4"/><circle cx="210" cy="310" r="4"/><circle cx="221" cy="222" r="4"/><circle cx="221" cy="310" r="4"/><circle cx="232" cy="222" r="4"/><circle cx="232" cy="310" r="4"/><circle cx="243" cy="222" r="4"/><circle cx="243" cy="310" r="4"/><circle cx="254" cy="222" r="4"/><circle cx="254" cy="310" r="4"/><circle cx="265" cy="222" r="4"/><circle cx="265" cy="310" r="4"/><circle cx="276" cy="222" r="4"/><circle cx="276" cy="310" r="4"/><circle cx="287" cy="222" r="4"/><circle cx="287" cy="310" r="4"/><circle cx="298" cy="222" r="4"/><circle cx="298" cy="310" r="4"/><circle cx="309" cy="222" r="4"/><circle cx="309" cy="310" r="4"/><circle cx="320" cy="222" r="4"/><circle cx="320" cy="310" r="4"/><circle cx="331" cy="222" r="4"/><circle cx="331" cy="310" r="4"/><circle cx="342" cy="222" r="4"/><circle cx="342" cy="310" r="4"/></g>
+<rect x="198" y="255" width="39" height="24" fill="#d1c19f" stroke="#9c8b70" stroke-width="1.5"/>
+<g stroke="#a39279" stroke-width="4"><path d="M353 213V252 M353 283V319"/></g>
+<!-- hypostyle hall -->
+<rect x="362" y="219" width="177" height="106" fill="#d7c8ac" stroke="#928064" stroke-width="4"/>
+<rect x="364" y="221" width="173" height="102" fill="url(#cols)"/>
+<rect x="399" y="258" width="115" height="32" fill="#c7b18f" opacity=".78"/>
+<g fill="#aa8e67"><circle cx="412" cy="265" r="8"/><circle cx="412" cy="283" r="8"/><circle cx="438" cy="265" r="8"/><circle cx="438" cy="283" r="8"/><circle cx="464" cy="265" r="8"/><circle cx="464" cy="283" r="8"/><circle cx="490" cy="265" r="8"/><circle cx="490" cy="283" r="8"/><circle cx="510" cy="265" r="8"/><circle cx="510" cy="283" r="8"/><circle cx="522" cy="265" r="8"/><circle cx="522" cy="283" r="8"/></g>
+<!-- 3rd/4th/5th pylons -->
+<g stroke="#988368" stroke-width="9"><path d="M544 218V260 M544 289V326"/><path d="M596 224V260 M596 290V319"/><path d="M673 224V258 M673 288V321"/></g>
+<!-- inner axis -->
+<path d="M547 273H773" stroke="#cab99a" stroke-width="16"/>
+<!-- obelisk and inner elements -->
+<path d="M626 239L637 265L626 273L615 265Z" fill="#a47a52"/><path d="M626 245V270" stroke="#715b4b" stroke-width="2"/>
+<path d="M711 247H773V299H711Z" fill="#dfcfb2" stroke="#b09b7c" stroke-width="3"/>
+<path d="M732 250V294 M750 250V294" stroke="#b3a080" stroke-width="4"/>
+<!-- small Ramesses III temple off the south side of the First Court -->
+<g fill="#d3b894" stroke="#8e795c" stroke-width="2"><rect x="294" y="285" width="47" height="38"/><path d="M302 295h31M302 304h31" stroke-width="3"/></g>
+<!-- reconstructed approximate eastward position of the festival hall (not a measured plan) -->
+<g fill="#dfcda9" stroke="#9b8768" stroke-width="3"><rect x="782" y="214" width="111" height="110"/><rect x="796" y="227" width="86" height="82" fill="#e9deca"/></g>
+<g fill="#aa9678"><circle cx="805" cy="243" r="5"/><circle cx="827" cy="243" r="5"/><circle cx="849" cy="243" r="5"/><circle cx="871" cy="243" r="5"/><circle cx="805" cy="266" r="5"/><circle cx="827" cy="266" r="5"/><circle cx="849" cy="266" r="5"/><circle cx="871" cy="266" r="5"/><circle cx="805" cy="290" r="5"/><circle cx="827" cy="290" r="5"/><circle cx="849" cy="290" r="5"/><circle cx="871" cy="290" r="5"/></g>
+<!-- south lake below eastern buildings -->
+<rect x="671" y="347" width="153" height="94" rx="2" fill="#98c6c5" stroke="#538b91" stroke-width="6"/>
+<path d="M682 367q25 -12 50 0t55 0" fill="none" stroke="#e0f0e7" stroke-width="3" opacity=".75"/>
+<g font-family="system-ui,sans-serif" fill="#66736d" font-size="12">
+ <text x="83" y="344" text-anchor="middle">Западный</text><text x="83" y="359" text-anchor="middle">вход</text>
+ <text x="257" y="353" text-anchor="middle">Большой двор</text>
+ <text x="454" y="354" text-anchor="middle">Гипостильный зал</text>
+ <text x="635" y="206" text-anchor="middle">Зал Уаджит</text>
+ <text x="831" y="199" text-anchor="middle">Ахмену</text>
+ <text x="305" y="340" text-anchor="middle" font-size="11">Рамсес III</text>
+ <text x="748" y="463" text-anchor="middle">Священное озеро</text>
+ <text x="104" y="78" font-size="11">ЗАПАД</text><text x="784" y="78" font-size="11">ВОСТОК</text>
+ <text x="806" y="36" text-anchor="middle" font-weight="700" fill="#344d4a">СЕВЕР ↑</text>
+ <text x="43" y="510" font-size="12">Условная схема · не в масштабе</text>
+</g>
+</svg>

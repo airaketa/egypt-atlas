@@ -1,0 +1,1307 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "KAR-01",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.6568,
+          25.7191
+        ]
+      },
+      "properties": {
+        "tour": "Карнакский храм",
+        "id": "KAR-01",
+        "title": "Аллея бараноголовых сфинксов и Первый пилон",
+        "georeference_kind": "legacy_approx",
+        "location_note": "Ориентир памятника; не GPS-точка стояния",
+        "map_source": "https://digitalkarnak.ucsc.edu/1st-pylon/",
+        "where_to_listen": "перед западным входом, увидев ряд сфинксов и две башни пилона.",
+        "precision_warning": "Объект OSM: вход и доступ уточняются"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "KAR-02",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.6572,
+          25.7189
+        ]
+      },
+      "properties": {
+        "tour": "Карнакский храм",
+        "id": "KAR-02",
+        "title": "Большой двор и киоск Тахарки",
+        "georeference_kind": "legacy_approx",
+        "location_note": "Ориентир памятника; не GPS-точка стояния",
+        "map_source": "https://digitalkarnak.ucsc.edu/Shoshenq-I-Court/",
+        "where_to_listen": "сразу за Первым пилоном, в первом большом дворе.",
+        "precision_warning": "Объект OSM: вход и доступ уточняются"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "KAR-03",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.657,
+          25.7183
+        ]
+      },
+      "properties": {
+        "tour": "Карнакский храм",
+        "id": "KAR-03",
+        "title": "Малый храм Рамсеса III",
+        "georeference_kind": "legacy_approx",
+        "location_note": "Ориентир памятника; не GPS-точка стояния",
+        "map_source": "https://digitalkarnak.ucsc.edu/ramesses-iii-temple/",
+        "where_to_listen": "у входа в отдельный храм в южной стороне Большого двора.",
+        "precision_warning": "Объект OSM: вход и доступ уточняются"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "KAR-04",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.6579,
+          25.7186
+        ]
+      },
+      "properties": {
+        "tour": "Карнакский храм",
+        "id": "KAR-04",
+        "title": "Большой гипостильный зал",
+        "georeference_kind": "legacy_approx",
+        "location_note": "Ориентир памятника; не GPS-точка стояния",
+        "map_source": "https://www.memphis.edu/hypostyle/about-architecture/",
+        "where_to_listen": "между Вторым и Третьим пилонами, среди колонн.",
+        "precision_warning": "Объект OSM: вход и доступ уточняются"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "KAR-05",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.658569,
+          25.718311
+        ]
+      },
+      "properties": {
+        "tour": "Карнакский храм",
+        "id": "KAR-05",
+        "title": "Обелиск Хатшепсут",
+        "georeference_kind": "legacy_approx",
+        "location_note": "Ориентир памятника; не GPS-точка стояния",
+        "map_source": "https://digitalkarnak.ucsc.edu/Maps-of-Karnak-and-Luxor/",
+        "where_to_listen": "у сохранившегося высокого обелиска за главным колонным залом.",
+        "precision_warning": "Объект OSM: вход и доступ уточняются"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "KAR-06",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.6589,
+          25.7181
+        ]
+      },
+      "properties": {
+        "tour": "Карнакский храм",
+        "id": "KAR-06",
+        "title": "Центральное святилище священной ладьи Амона",
+        "georeference_kind": "site",
+        "location_note": "Ориентир святилища ладьи Амона; подход и проходимость внутри уточняются",
+        "map_source": "https://commons.wikimedia.org/wiki/Category:Central_Bark_Shrine_in_Karnak",
+        "where_to_listen": "в центральной части внутренней оси храма, у доступного святилища.",
+        "precision_warning": "Объект OSM: вход и доступ уточняются"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "KAR-07",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.659575,
+          25.717804
+        ]
+      },
+      "properties": {
+        "tour": "Карнакский храм",
+        "id": "KAR-07",
+        "title": "Ахмену — праздничный зал Тутмоса III",
+        "georeference_kind": "legacy_approx",
+        "location_note": "Ориентир памятника; не GPS-точка стояния",
+        "map_source": "https://digitalkarnak.ucsc.edu/akhmenu/",
+        "where_to_listen": "в восточной части комплекса; включать только если проход разрешён.",
+        "precision_warning": "Объект OSM: вход и доступ уточняются"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "KAR-08",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.65849,
+          25.71746
+        ]
+      },
+      "properties": {
+        "tour": "Карнакский храм",
+        "id": "KAR-08",
+        "title": "Священное озеро и скарабей",
+        "georeference_kind": "osm_object",
+        "location_note": "Скарабей у Священного озера; ориентир скульптуры, не рекомендованная точка стояния.",
+        "map_source": "https://mapcarta.com/N3322109124",
+        "where_to_listen": "у южной стороны храмовой части, на доступной площадке с видом на озеро.",
+        "precision_warning": "Объект OSM: вход и доступ уточняются"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "GIZ-01",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.125,
+          29.96788
+        ]
+      },
+      "properties": {
+        "tour": "Пирамиды Гизы и Сфинкс",
+        "id": "GIZ-01",
+        "title": "Панорама трёх пирамид",
+        "georeference_kind": "osm_object",
+        "location_note": "Панорамная точка с видом на три пирамиды; посещение зависит от действующей схемы движения.",
+        "map_source": "https://mapcarta.com/N11420474175",
+        "where_to_listen": "там, где одновременно видны три главные пирамиды, не обязательно на официальной «панорамной точке».",
+        "precision_warning": "Объект OSM: вход и доступ уточняются"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "GIZ-02",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.1342,
+          29.9792
+        ]
+      },
+      "properties": {
+        "tour": "Пирамиды Гизы и Сфинкс",
+        "id": "GIZ-02",
+        "title": "Великая пирамида Хуфу",
+        "georeference_kind": "legacy_approx",
+        "location_note": "Ориентир самого памятника; приблизительные координаты",
+        "map_source": "https://egymonuments.gov.eg/monuments/the-great-pyramid/",
+        "where_to_listen": "у подножия пирамиды с доступной стороны.",
+        "precision_warning": "Объект OSM: вход и доступ уточняются"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "GIZ-03",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.13569,
+          29.97864
+        ]
+      },
+      "properties": {
+        "tour": "Пирамиды Гизы и Сфинкс",
+        "id": "GIZ-03",
+        "title": "Погребальный комплекс: не только пирамида",
+        "georeference_kind": "osm_object",
+        "location_note": "Одна из лодочных ям к востоку от пирамиды Хуфу; рассказ охватывает более крупный комплекс, это не единственная точка.",
+        "map_source": "https://mapcarta.com/W219797717",
+        "where_to_listen": "у видимых малых пирамид или остатков храмовых построек рядом с комплексом Хуфу.",
+        "precision_warning": "Объект OSM: вход и доступ уточняются"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "GIZ-04",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.1307,
+          29.9751
+        ]
+      },
+      "properties": {
+        "tour": "Пирамиды Гизы и Сфинкс",
+        "id": "GIZ-04",
+        "title": "Пирамида Хафры",
+        "georeference_kind": "legacy_approx",
+        "location_note": "Ориентир самого памятника; приблизительные координаты",
+        "map_source": "https://egymonuments.gov.eg/monuments/pyramid-complex-of-khafre/",
+        "where_to_listen": "у подхода к второй большой пирамиде, с видом на сохранившуюся облицовку наверху.",
+        "precision_warning": "Объект OSM: вход и доступ уточняются"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "GIZ-05",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.1284,
+          29.9725
+        ]
+      },
+      "properties": {
+        "tour": "Пирамиды Гизы и Сфинкс",
+        "id": "GIZ-05",
+        "title": "Пирамида Менкауры и малые пирамиды",
+        "georeference_kind": "legacy_approx",
+        "location_note": "Ориентир самого памятника; приблизительные координаты",
+        "map_source": "https://egymonuments.gov.eg/monuments/pyramid-complex-of-menkaure/",
+        "where_to_listen": "с точки, откуда одновременно видны меньшая пирамида и ряд соседних малых пирамид.",
+        "precision_warning": "Объект OSM: вход и доступ уточняются"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "GIZ-06",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.1377,
+          29.9753
+        ]
+      },
+      "properties": {
+        "tour": "Пирамиды Гизы и Сфинкс",
+        "id": "GIZ-06",
+        "title": "Большой Сфинкс",
+        "georeference_kind": "legacy_approx",
+        "location_note": "Ориентир самого памятника; приблизительные координаты",
+        "map_source": "https://egymonuments.gov.eg/monuments/great-sphinx/",
+        "where_to_listen": "на разрешённой посетителям площадке со стороны Сфинкса.",
+        "precision_warning": "Объект OSM: вход и доступ уточняются"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "GIZ-07",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.13829,
+          29.97474
+        ]
+      },
+      "properties": {
+        "tour": "Пирамиды Гизы и Сфинкс",
+        "id": "GIZ-07",
+        "title": "Нижний храм Хафры и дорога процессий",
+        "georeference_kind": "osm_object",
+        "location_note": "Нижний храм Хафры: геопривязка исторического сооружения, не гарантированный доступный вход.",
+        "map_source": "https://mapcarta.com/32903444",
+        "where_to_listen": "у доступных построек близ Сфинкса, не заходя в закрытые зоны.",
+        "precision_warning": "Объект OSM: вход и доступ уточняются"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "CAI-01",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.261466,
+          30.029836
+        ]
+      },
+      "properties": {
+        "tour": "Исторический Каир",
+        "id": "CAI-01",
+        "title": "Цитадель Салах ад-Дина: крепость над городом",
+        "georeference_kind": "site",
+        "location_note": "Цитадель: общий ориентир комплекса, не вход и не место прослушивания",
+        "map_source": "https://www.outdooractive.com/en/poi/aegypten/salah-el-din-citadel/807775444/",
+        "where_to_listen": "в доступной открытой части цитадели с видом на оборонительные стены.",
+        "precision_warning": "Объект OSM: вход и доступ уточняются"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "CAI-02",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.25974,
+          30.02896
+        ]
+      },
+      "properties": {
+        "tour": "Исторический Каир",
+        "id": "CAI-02",
+        "title": "Мечеть Мухаммеда Али",
+        "georeference_kind": "site",
+        "location_note": "Мечеть Мухаммеда Али: ориентир здания по OpenStreetMap",
+        "map_source": "https://mapcarta.com/29632492",
+        "where_to_listen": "у мечети внутри цитадели, затем в разрешённой посетителям части здания.",
+        "precision_warning": "Объект OSM: вход и доступ уточняются"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "CAI-03",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.25631,
+          30.03226
+        ]
+      },
+      "properties": {
+        "tour": "Исторический Каир",
+        "id": "CAI-03",
+        "title": "Мечеть-медресе султана Хасана",
+        "georeference_kind": "site",
+        "location_note": "Мечеть-медресе: ориентир здания, не точка входа",
+        "map_source": "https://mapcarta.com/28173580",
+        "where_to_listen": "с площади Салах ад-Дина, затем во внутреннем дворе, если открыт.",
+        "precision_warning": "Объект OSM: вход и доступ уточняются"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "CAI-04",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.263433,
+          30.055399
+        ]
+      },
+      "properties": {
+        "tour": "Исторический Каир",
+        "id": "CAI-04",
+        "title": "Баб аль-Футух: северные ворота фатимидского Каира",
+        "georeference_kind": "legacy_approx",
+        "location_note": "Ориентир самого памятника; приблизительные координаты",
+        "map_source": "https://egymonuments.gov.eg/monuments/bab-al-futuh/",
+        "where_to_listen": "у северного начала улицы Аль-Муизз.",
+        "precision_warning": "Объект OSM: вход и доступ уточняются"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "CAI-05",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.26158,
+          30.05089
+        ]
+      },
+      "properties": {
+        "tour": "Исторический Каир",
+        "id": "CAI-05",
+        "title": "Улица Аль-Муизз: каменная история нескольких династий",
+        "georeference_kind": "area",
+        "location_note": "Улица Аль-Муизз: условная точка протяжённого маршрута; не начало и не конец улицы",
+        "map_source": "https://mapcarta.com/30705932",
+        "where_to_listen": "в центральной части улицы у исторических фасадов.",
+        "precision_warning": "Объект OSM: вход и доступ уточняются"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "CAI-06",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.26097,
+          30.04954
+        ]
+      },
+      "properties": {
+        "tour": "Исторический Каир",
+        "id": "CAI-06",
+        "title": "Комплекс султана Калауна",
+        "georeference_kind": "site",
+        "location_note": "Комплекс Калауна: ориентир памятника, не вход",
+        "map_source": "https://mapcarta.com/28174390",
+        "where_to_listen": "у комплекса на Аль-Муизз, заходить только по действующим правилам.",
+        "precision_warning": "Объект OSM: вход и доступ уточняются"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "CAI-07",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.25778,
+          30.04279
+        ]
+      },
+      "properties": {
+        "tour": "Исторический Каир",
+        "id": "CAI-07",
+        "title": "Баб Зувейла: южные ворота",
+        "georeference_kind": "site",
+        "location_note": "Баб Зувейла: ориентир ворот по OpenStreetMap",
+        "map_source": "https://mapcarta.com/28189580",
+        "where_to_listen": "у южного конца Аль-Муизз, перед воротами.",
+        "precision_warning": "Объект OSM: вход и доступ уточняются"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "VAL-01",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.6051,
+          25.74542
+        ]
+      },
+      "properties": {
+        "tour": "Долина царей",
+        "id": "VAL-01",
+        "title": "Долина царей: почему именно здесь?",
+        "georeference_kind": "interpretive_zone",
+        "location_note": "Общая вводная остановка: ориентир посетительской зоны южнее парковки, а НЕ обязательное место прослушивания.",
+        "map_source": "https://mapcarta.com/W89657572",
+        "where_to_listen": "у доступной общей панорамы долины до входа в конкретную гробницу.",
+        "precision_warning": "Положение НЕ является GPS-точкой прослушивания"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "VAL-02",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.6014,
+          25.7403
+        ]
+      },
+      "properties": {
+        "tour": "Долина царей",
+        "id": "VAL-02",
+        "title": "Как устроена царская гробница",
+        "georeference_kind": "shared_site",
+        "location_note": "Рассказ об устройстве гробницы: общая точка Долины царей, а не реальный вход/коридор. Слушать у любой доступной гробницы.",
+        "map_source": "https://mapcarta.com/Valley_of_the_Kings",
+        "where_to_listen": "перед входом или в разрешённом для остановки начале коридора одной из открытых гробниц.",
+        "precision_warning": "Положение НЕ является GPS-точкой прослушивания"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "VAL-07",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.60169,
+          25.74172
+        ]
+      },
+      "properties": {
+        "tour": "Долина царей",
+        "id": "VAL-07",
+        "title": "KV2: гробница Рамсеса IV — подземный маршрут по рисункам",
+        "georeference_kind": "osm_object",
+        "location_note": "OSM-объект KV2, положение входа необходимо уточнять на месте.",
+        "map_source": "https://mapcarta.com/N1047912060",
+        "where_to_listen": "у входа в KV2; далее слушать только там, где разрешено останавливаться. Опциональная гробница стандартного билета, если открыта.",
+        "precision_warning": "Объект OSM: вход и доступ уточняются"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "VAL-08",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.60228,
+          25.74026
+        ]
+      },
+      "properties": {
+        "tour": "Долина царей",
+        "id": "VAL-08",
+        "title": "KV6: Рамсес IX — астрономия на потолке",
+        "georeference_kind": "osm_object",
+        "location_note": "OSM-объект KV6; уточнено положение относительно предыдущей сборки.",
+        "map_source": "https://mapcarta.com/N1047983708",
+        "where_to_listen": "у входа в KV6; дальше — только в разрешённых точках, если гробница открыта. Опциональная.",
+        "precision_warning": "Объект OSM: вход и доступ уточняются"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "VAL-09",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.60007,
+          25.74098
+        ]
+      },
+      "properties": {
+        "tour": "Долина царей",
+        "id": "VAL-09",
+        "title": "KV8: Мернептах — наследник Рамсеса II",
+        "georeference_kind": "osm_object",
+        "location_note": "OSM-объект KV8; уточнено положение относительно предыдущей сборки.",
+        "map_source": "https://mapcarta.com/N1047912086",
+        "where_to_listen": "у входа в KV8; рассказ опциональный, если открыт по стандартному билету.",
+        "precision_warning": "Объект OSM: вход и доступ уточняются"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "VAL-10",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.60114,
+          25.74002
+        ]
+      },
+      "properties": {
+        "tour": "Долина царей",
+        "id": "VAL-10",
+        "title": "KV11: Рамсес III — гробница арфистов",
+        "georeference_kind": "osm_object",
+        "location_note": "OSM-полигон KV11; не гарантия входа.",
+        "map_source": "https://mapcarta.com/W813717255",
+        "where_to_listen": "у входа в KV11, затем в доступной части коридоров, если открыта по стандартному билету.",
+        "precision_warning": "Объект OSM: вход и доступ уточняются"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "VAL-03",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.6004,
+          25.74065
+        ]
+      },
+      "properties": {
+        "tour": "Долина царей",
+        "id": "VAL-03",
+        "title": "KV9: гробница Рамсеса V и VI — книги загробного мира",
+        "georeference_kind": "osm_object",
+        "location_note": "OSM-объект KV9; не гарантия входа.",
+        "map_source": "https://mapcarta.com/N1047912029",
+        "where_to_listen": "в KV9, если открыта; обычно это отдельный билет.",
+        "precision_warning": "Объект OSM: вход и доступ уточняются"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "VAL-04",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.6013,
+          25.74029
+        ]
+      },
+      "properties": {
+        "tour": "Долина царей",
+        "id": "VAL-04",
+        "title": "KV62: маленькая гробница Тутанхамона",
+        "georeference_kind": "osm_object",
+        "location_note": "OSM-объект KV62; не гарантия входа.",
+        "map_source": "https://mapcarta.com/N1047911950",
+        "where_to_listen": "у гробницы Тутанхамона, только при наличии билета и доступа.",
+        "precision_warning": "Объект OSM: вход и доступ уточняются"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "VAL-05",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.60152,
+          25.73937
+        ]
+      },
+      "properties": {
+        "tour": "Долина царей",
+        "id": "VAL-05",
+        "title": "KV17: гробница Сети I — вершина рельефной росписи",
+        "georeference_kind": "site",
+        "location_note": "Ориентир KV17 (Сети I), OSM node; не гарантированный вход",
+        "map_source": "https://mapcarta.com/N1047912183",
+        "where_to_listen": "только при открытом доступе в KV17; обычно дополнительный билет.",
+        "precision_warning": "Объект OSM: вход и доступ уточняются"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "VAL-06",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.6014,
+          25.7403
+        ]
+      },
+      "properties": {
+        "tour": "Долина царей",
+        "id": "VAL-06",
+        "title": "Почему гробницы отличаются друг от друга",
+        "georeference_kind": "shared_site",
+        "location_note": "Итоговое сравнение гробниц: тот же общий ориентир долины, а не отдельный памятник.",
+        "map_source": "https://mapcarta.com/Valley_of_the_Kings",
+        "where_to_listen": "после посещения выбранных открытых гробниц, в общей доступной зоне.",
+        "precision_warning": "Положение НЕ является GPS-точкой прослушивания"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "HAT-01",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.60682,
+          25.73804
+        ]
+      },
+      "properties": {
+        "tour": "Храм Хатшепсут",
+        "id": "HAT-01",
+        "title": "Панорама трёх террас",
+        "georeference_kind": "approx_plan",
+        "location_note": "Подход к террасам с панорамой фасада; приблизительно по планировке, проверьте открытую площадку.",
+        "map_source": "https://egymonuments.gov.eg/monuments/hatshepsut-temple/",
+        "where_to_listen": "у подхода, где видна почти вся фасадная композиция.",
+        "precision_warning": "Положение НЕ является GPS-точкой прослушивания"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "HAT-02",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.606492,
+          25.73779
+        ]
+      },
+      "properties": {
+        "tour": "Храм Хатшепсут",
+        "id": "HAT-02",
+        "title": "Рельефы экспедиции в Пунт",
+        "georeference_kind": "photo_viewpoint",
+        "location_note": "Фото-GPS у рельефов Пунта: возможна погрешность точки съёмки",
+        "map_source": "https://commons.wikimedia.org/wiki/File:Mortuary_Temple_of_Hatshepsut_032010_023.jpg",
+        "where_to_listen": "у соответствующей колоннады средней террасы, если открыта.",
+        "precision_warning": "Объект OSM: вход и доступ уточняются"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "HAT-03",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.60658,
+          25.73836
+        ]
+      },
+      "properties": {
+        "tour": "Храм Хатшепсут",
+        "id": "HAT-03",
+        "title": "Рассказ о божественном происхождении Хатшепсут",
+        "georeference_kind": "approx_plan",
+        "location_note": "Северная часть второго портика со сценами божественного происхождения; примерная зона по плану.",
+        "map_source": "https://egymonuments.gov.eg/monuments/hatshepsut-temple/",
+        "where_to_listen": "у сцен рождения/легитимации царской власти, если доступ разрешён.",
+        "precision_warning": "Положение НЕ является GPS-точкой прослушивания"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "HAT-04",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.60643,
+          25.73831
+        ]
+      },
+      "properties": {
+        "tour": "Храм Хатшепсут",
+        "id": "HAT-04",
+        "title": "Верхняя терраса и осирические статуи",
+        "georeference_kind": "approx_plan",
+        "location_note": "Верхняя терраса и осирические фигуры; общая зона, проходы могут быть закрыты.",
+        "map_source": "https://egymonuments.gov.eg/monuments/hatshepsut-temple/",
+        "where_to_listen": "на верхнем уровне, если доступ открыт.",
+        "precision_warning": "Положение НЕ является GPS-точкой прослушивания"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "HAT-05",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.60622,
+          25.73843
+        ]
+      },
+      "properties": {
+        "tour": "Храм Хатшепсут",
+        "id": "HAT-05",
+        "title": "Святилища Амона, Хатхор и Анубиса",
+        "georeference_kind": "shared_site",
+        "location_note": "Святилище Амона привязано к OSM; рассказ также описывает часовни Хатхор и Анубиса в других частях храма.",
+        "map_source": "https://mapcarta.com/N3020232939",
+        "where_to_listen": "у доступных указателей к часовням или у святилища Амона.",
+        "precision_warning": "Положение НЕ является GPS-точкой прослушивания"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "HAB-01",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.60194,
+          25.71931
+        ]
+      },
+      "properties": {
+        "tour": "Мединет-Абу",
+        "id": "HAB-01",
+        "title": "Высокие ворота и укрепления",
+        "georeference_kind": "approx_plan",
+        "location_note": "Восточные монументальные ворота комплекса; примерная зона по оси храма, а не геодезический замер.",
+        "map_source": "https://egymonuments.gov.eg/monuments/the-temple-of-medinet-habu/",
+        "where_to_listen": "у монументального входа и доступного участка окружающей стены.",
+        "precision_warning": "Положение НЕ является GPS-точкой прослушивания"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "HAB-02",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.60152,
+          25.71939
+        ]
+      },
+      "properties": {
+        "tour": "Мединет-Абу",
+        "id": "HAB-02",
+        "title": "Первый пилон: военная пропаганда царя",
+        "georeference_kind": "approx_plan",
+        "location_note": "Первый пилон к западу от восточных ворот; приблизительно по последовательности архитектурных частей.",
+        "map_source": "https://egymonuments.gov.eg/monuments/the-temple-of-medinet-habu/",
+        "where_to_listen": "перед первым большим пилоном, где видны военные рельефы.",
+        "precision_warning": "Положение НЕ является GPS-точкой прослушивания"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "HAB-03",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.601057,
+          25.719468
+        ]
+      },
+      "properties": {
+        "tour": "Мединет-Абу",
+        "id": "HAB-03",
+        "title": "Первый двор и осирические статуи",
+        "georeference_kind": "photo_viewpoint",
+        "location_note": "Фото-GPS, первый двор Мединет-Абу: ориентировочная зона",
+        "map_source": "https://commons.wikimedia.org/wiki/File:1st_Courtyard_Medinet_Habu_R01.jpg",
+        "where_to_listen": "внутри первого двора, у доступных колоннад.",
+        "precision_warning": "Объект OSM: вход и доступ уточняются"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "HAB-04",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.600918,
+          25.719688
+        ]
+      },
+      "properties": {
+        "tour": "Мединет-Абу",
+        "id": "HAB-04",
+        "title": "Второй двор: праздник и ритуал",
+        "georeference_kind": "photo_viewpoint",
+        "location_note": "Фото-GPS, второй двор Мединет-Абу: ориентировочная зона",
+        "map_source": "https://commons.wikimedia.org/wiki/File:2nd_Courtyard_Medinet_Habu_R01.jpg",
+        "where_to_listen": "во втором открытом дворе.",
+        "precision_warning": "Объект OSM: вход и доступ уточняются"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "HAB-05",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.60062,
+          25.71964
+        ]
+      },
+      "properties": {
+        "tour": "Мединет-Абу",
+        "id": "HAB-05",
+        "title": "Колонные залы и внутреннее святилище",
+        "georeference_kind": "approx_plan",
+        "location_note": "Внутренние колонные залы и святилище; условная зона, а не отдельная комната.",
+        "map_source": "https://egymonuments.gov.eg/monuments/the-temple-of-medinet-habu/",
+        "where_to_listen": "в разрешённой части внутренних помещений.",
+        "precision_warning": "Положение НЕ является GPS-точкой прослушивания"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MEM-01",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.61044,
+          25.7205
+        ]
+      },
+      "properties": {
+        "tour": "Колоссы Мемнона",
+        "id": "MEM-01",
+        "title": "Два гиганта Аменхотепа III",
+        "georeference_kind": "shared_site",
+        "location_note": "Комплекс двух колоссов: общий ориентир самих статуй.",
+        "map_source": "https://mapcarta.com/13050774",
+        "where_to_listen": "на разрешённой площадке перед статуями.",
+        "precision_warning": "Положение НЕ является GPS-точкой прослушивания"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MEM-02",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.61044,
+          25.7205
+        ]
+      },
+      "properties": {
+        "tour": "Колоссы Мемнона",
+        "id": "MEM-02",
+        "title": "Почему статуи «пели» на рассвете?",
+        "georeference_kind": "shared_site",
+        "location_note": "История о «поющей» статуе; тот же памятник, поэтому точка совпадает с остановкой 1.",
+        "map_source": "https://mapcarta.com/13050774",
+        "where_to_listen": "на той же площадке, не блокируя проход.",
+        "precision_warning": "Положение НЕ является GPS-точкой прослушивания"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "LUX-01",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.639783,
+          25.700272
+        ]
+      },
+      "properties": {
+        "tour": "Луксорский храм",
+        "id": "LUX-01",
+        "title": "Пилон Рамсеса II и одинокий обелиск",
+        "georeference_kind": "site",
+        "location_note": "Обелиск перед первым пилоном: координаты самого обелиска, не точка туриста",
+        "map_source": "https://www.obelisks.org/en/ramses.htm",
+        "where_to_listen": "перед входом с северной стороны.",
+        "precision_warning": "Объект OSM: вход и доступ уточняются"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "LUX-02",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.63951,
+          25.70002
+        ]
+      },
+      "properties": {
+        "tour": "Луксорский храм",
+        "id": "LUX-02",
+        "title": "Двор Рамсеса II",
+        "georeference_kind": "approx_plan",
+        "location_note": "Двор к югу от первого пилона; приблизительно по последовательности частей храма.",
+        "map_source": "https://egymonuments.gov.eg/monuments/luxor-temple/",
+        "where_to_listen": "внутри первого двора после пилона.",
+        "precision_warning": "Положение НЕ является GPS-точкой прослушивания"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "LUX-03",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.63938,
+          25.6997
+        ]
+      },
+      "properties": {
+        "tour": "Луксорский храм",
+        "id": "LUX-03",
+        "title": "Великая колоннада Аменхотепа III",
+        "georeference_kind": "approx_plan",
+        "location_note": "Большая колоннада между двором Рамсеса II и двором Аменхотепа III; приблизительная позиция на оси комплекса.",
+        "map_source": "https://egymonuments.gov.eg/monuments/luxor-temple/",
+        "where_to_listen": "у прохода с двумя рядами массивных колонн.",
+        "precision_warning": "Положение НЕ является GPS-точкой прослушивания"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "LUX-04",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.63917,
+          25.69942
+        ]
+      },
+      "properties": {
+        "tour": "Луксорский храм",
+        "id": "LUX-04",
+        "title": "Двор Аменхотепа III и древнее ядро храма",
+        "georeference_kind": "approx_plan",
+        "location_note": "Двор Аменхотепа III к югу от колоннады; приблизительно по планировке храма.",
+        "map_source": "https://egymonuments.gov.eg/monuments/luxor-temple/",
+        "where_to_listen": "во внутреннем дворе с колоннами.",
+        "precision_warning": "Положение НЕ является GPS-точкой прослушивания"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "LUX-05",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.63895,
+          25.6992
+        ]
+      },
+      "properties": {
+        "tour": "Луксорский храм",
+        "id": "LUX-05",
+        "title": "Римская часовня и история переиспользования",
+        "georeference_kind": "approx_plan",
+        "location_note": "Позднеримские росписи во внутренней части Луксорского храма; ориентир зоны, не отдельной стены.",
+        "map_source": "https://egymonuments.gov.eg/monuments/luxor-temple/",
+        "where_to_listen": "у разрешённой для осмотра позднеантичной росписи в глубинной части храма.",
+        "precision_warning": "Положение НЕ является GPS-точкой прослушивания"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "BIB-01",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.909222,
+          31.20833
+        ]
+      },
+      "properties": {
+        "tour": "Александрийская библиотека",
+        "id": "BIB-01",
+        "title": "Новый дом старой идеи",
+        "georeference_kind": "osm_object",
+        "location_note": "Внешний вход у библиотеки; точка съёмки входа в Commons, не обязательный вход сегодня.",
+        "map_source": "https://commons.wikimedia.org/wiki/File:Bibliotheca_Alexandrina_--_Library_entrance.jpg",
+        "where_to_listen": "перед современным зданием библиотеки, на доступной внешней площадке.",
+        "precision_warning": "Объект OSM: вход и доступ уточняются"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "BIB-02",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.90896,
+          31.20866
+        ]
+      },
+      "properties": {
+        "tour": "Александрийская библиотека",
+        "id": "BIB-02",
+        "title": "Гранитная стена: история письменности",
+        "georeference_kind": "shared_site",
+        "location_note": "Гранитная стена — архитектурный элемент библиотеки; общий ориентир здания, положение участка стены не уточнено.",
+        "map_source": "https://mapcarta.com/29457660",
+        "where_to_listen": "у наружной гранитной стены с изображениями знаков разных систем письма.",
+        "precision_warning": "Положение НЕ является GPS-точкой прослушивания"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "BIB-03",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.90896,
+          31.20866
+        ]
+      },
+      "properties": {
+        "tour": "Александрийская библиотека",
+        "id": "BIB-03",
+        "title": "Главный читальный зал",
+        "georeference_kind": "shared_site",
+        "location_note": "Читальный зал внутри здания: координаты всего здания, не точка внутри зала.",
+        "map_source": "https://mapcarta.com/29457660",
+        "where_to_listen": "в разрешённой посетителям части многоуровневого читального пространства.",
+        "precision_warning": "Положение НЕ является GPS-точкой прослушивания"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "BIB-04",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.90896,
+          31.20866
+        ]
+      },
+      "properties": {
+        "tour": "Александрийская библиотека",
+        "id": "BIB-04",
+        "title": "Археологический музей внутри библиотеки",
+        "georeference_kind": "shared_site",
+        "location_note": "Археологический музей внутри библиотеки: точка всего комплекса, не положение экспозиции.",
+        "map_source": "https://mapcarta.com/29457660",
+        "where_to_listen": "у входа в Antiquities Museum или в его доступной экспозиции.",
+        "precision_warning": "Положение НЕ является GPS-точкой прослушивания"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "QAI-01",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.885667,
+          31.213183
+        ]
+      },
+      "properties": {
+        "tour": "Крепость Кайтбей",
+        "id": "QAI-01",
+        "title": "Здесь стоял Александрийский маяк",
+        "georeference_kind": "photo_viewpoint",
+        "location_note": "Фото-GPS у входа крепости: метка не доказывает местоположение античного маяка",
+        "map_source": "https://commons.wikimedia.org/wiki/File:Entrance_of_Qaitbay_Citadel.jpg",
+        "where_to_listen": "снаружи крепости, со стороны моря и входа.",
+        "precision_warning": "Объект OSM: вход и доступ уточняются"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "QAI-02",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.88577,
+          31.21368
+        ]
+      },
+      "properties": {
+        "tour": "Крепость Кайтбей",
+        "id": "QAI-02",
+        "title": "Внешние стены и башни",
+        "georeference_kind": "approx_plan",
+        "location_note": "Наружная стена крепости: приблизительная точка, конкретная доступная площадка определяется на месте.",
+        "map_source": "https://egymonuments.gov.eg/monuments/qaitbay-fort/",
+        "where_to_listen": "у доступного участка наружных укреплений.",
+        "precision_warning": "Положение НЕ является GPS-точкой прослушивания"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "QAI-03",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.88523,
+          31.21394
+        ]
+      },
+      "properties": {
+        "tour": "Крепость Кайтбей",
+        "id": "QAI-03",
+        "title": "Главная башня и внутренний двор",
+        "georeference_kind": "approx_plan",
+        "location_note": "Центральная башня и двор на северо-западной стороне; приблизительно по описанию крепости.",
+        "map_source": "https://egymonuments.gov.eg/monuments/qaitbay-fort/",
+        "where_to_listen": "во внутреннем дворе, перед главным укреплённым корпусом.",
+        "precision_warning": "Положение НЕ является GPS-точкой прослушивания"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "QAI-04",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.88556,
+          31.2141
+        ]
+      },
+      "properties": {
+        "tour": "Крепость Кайтбей",
+        "id": "QAI-04",
+        "title": "Вид на гавань: море как история Александрии",
+        "georeference_kind": "approx_plan",
+        "location_note": "Северный край крепости с панорамой моря; примерная зона, выход на стену может быть закрыт.",
+        "map_source": "https://egymonuments.gov.eg/monuments/qaitbay-fort/",
+        "where_to_listen": "на открытой доступной площадке с видом в сторону Восточной гавани.",
+        "precision_warning": "Положение НЕ является GPS-точкой прослушивания"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "CAT-01",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.89304,
+          31.17854
+        ]
+      },
+      "properties": {
+        "tour": "Катакомбы Ком-эль-Шукафа",
+        "id": "CAT-01",
+        "title": "Спуск под землю",
+        "georeference_kind": "shared_site",
+        "location_note": "Археологический комплекс на поверхности: координата НЕ обозначает положение подземной лестницы. Внутри следуйте указателям.",
+        "map_source": "https://mapcarta.com/W32749330",
+        "where_to_listen": "перед спиральной лестницей или сразу после безопасного спуска, не задерживаясь на ступенях.",
+        "precision_warning": "Положение НЕ является GPS-точкой прослушивания"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "CAT-02",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.89304,
+          31.17854
+        ]
+      },
+      "properties": {
+        "tour": "Катакомбы Ком-эль-Шукафа",
+        "id": "CAT-02",
+        "title": "Ротонда и ниши",
+        "georeference_kind": "shared_site",
+        "location_note": "Археологический комплекс на поверхности: координата НЕ обозначает положение подземной ротонды. Внутри следуйте указателям.",
+        "map_source": "https://mapcarta.com/W32749330",
+        "where_to_listen": "в центральном подземном помещении, на свободной площадке.",
+        "precision_warning": "Положение НЕ является GPS-точкой прослушивания"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "CAT-03",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.89304,
+          31.17854
+        ]
+      },
+      "properties": {
+        "tour": "Катакомбы Ком-эль-Шукафа",
+        "id": "CAT-03",
+        "title": "Триклиний: обед в память об умерших",
+        "georeference_kind": "shared_site",
+        "location_note": "Археологический комплекс на поверхности: координата НЕ обозначает положение подземной триклиния. Внутри следуйте указателям.",
+        "map_source": "https://mapcarta.com/W32749330",
+        "where_to_listen": "в доступном помещении для поминальных трапез.",
+        "precision_warning": "Положение НЕ является GPS-точкой прослушивания"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "CAT-04",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.89304,
+          31.17854
+        ]
+      },
+      "properties": {
+        "tour": "Катакомбы Ком-эль-Шукафа",
+        "id": "CAT-04",
+        "title": "Главная гробница: Египет встречает Рим",
+        "georeference_kind": "shared_site",
+        "location_note": "Археологический комплекс на поверхности: координата НЕ обозначает положение подземной главной гробницы. Внутри следуйте указателям.",
+        "map_source": "https://mapcarta.com/W32749330",
+        "where_to_listen": "перед фасадом главного погребального помещения.",
+        "precision_warning": "Положение НЕ является GPS-точкой прослушивания"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "CAT-05",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.89304,
+          31.17854
+        ]
+      },
+      "properties": {
+        "tour": "Катакомбы Ком-эль-Шукафа",
+        "id": "CAT-05",
+        "title": "Змеи, Медуза и Анубис: символы защиты",
+        "georeference_kind": "shared_site",
+        "location_note": "Археологический комплекс на поверхности: координата НЕ обозначает положение подземной рельефов. Внутри следуйте указателям.",
+        "map_source": "https://mapcarta.com/W32749330",
+        "where_to_listen": "у доступных рельефов главной гробницы, не заходя за ограждения.",
+        "precision_warning": "Положение НЕ является GPS-точкой прослушивания"
+      }
+    }
+  ]
+}

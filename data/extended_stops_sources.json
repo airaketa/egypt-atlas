@@ -1,0 +1,83 @@
+{
+  "KAR-X01": {
+    "title": "Храм Хонсу — лунный бог Фив",
+    "sources": [
+      "https://egymonuments.gov.eg/monuments/khonsu-temple/",
+      "https://digitalkarnak.ucsc.edu/khonsu-temple/"
+    ],
+    "photoSource": "https://commons.wikimedia.org/wiki/File:Karnak_Khonsu_Temple_R01.jpg",
+    "photoStatus": "online_candidate"
+  },
+  "KAR-X02": {
+    "title": "Храм Опет — рождение и возрождение",
+    "sources": [
+      "https://digitalkarnak.ucsc.edu/opet-temple/",
+      "https://www.orient-mediterranee.com/program/karnak-le-temple-dopet/"
+    ],
+    "photoSource": "https://commons.wikimedia.org/wiki/File:OBET_TEMPLE.JPG",
+    "photoStatus": "online_candidate"
+  },
+  "LUX-X01": {
+    "title": "Часовня священной ладьи Александра",
+    "sources": [
+      "https://egymonuments.gov.eg/monuments/luxor-temple",
+      "https://www.lonelyplanet.com/points-of-interest/luxor-temple/1136321"
+    ],
+    "photoSource": "https://commons.wikimedia.org/wiki/File:Alexander_the_Great%27s_Barque_Chapel_%2814075130370%29.jpg",
+    "photoStatus": "online_candidate"
+  },
+  "LUX-X02": {
+    "title": "Зал божественного рождения Аменхотепа III",
+    "sources": [
+      "https://egymonuments.gov.eg/monuments/luxor-temple",
+      "https://www.lonelyplanet.com/points-of-interest/luxor-temple/1136321"
+    ],
+    "photoSource": "https://commons.wikimedia.org/wiki/File:Luxor-Tempel_Geburtsraum_02.jpg",
+    "photoStatus": "online_candidate"
+  },
+  "LUX-X03": {
+    "title": "Самое внутреннее святилище",
+    "sources": [
+      "https://egymonuments.gov.eg/monuments/luxor-temple",
+      "https://www.lonelyplanet.com/points-of-interest/luxor-temple/1136321"
+    ],
+    "photoSource": "https://commons.wikimedia.org/wiki/File:Luxor-Tempel_Sanktuar_Amenophis_III._01.jpg",
+    "photoStatus": "online_candidate"
+  },
+  "CAI-X01": {
+    "title": "Мечеть ас-Салих Талаи",
+    "sources": [
+      "https://archives.arce.org/collections/al-salih-tala-i-mosque-condition-survey-project",
+      "https://cairo.gov.eg/en/tourism/tourism-destinations/cultural/al-muizz-street/"
+    ],
+    "photoSource": "https://commons.wikimedia.org/wiki/File:Cairo%2C_moschea_di_as-salih_talai%2C_01.JPG",
+    "photoStatus": "online_candidate"
+  },
+  "CAI-X02": {
+    "title": "Улица мастеров-хайямийщиков",
+    "sources": [
+      "https://www.cairo.gov.eg/en/news/2026/october/14/ef7d30ceded74de89c62f8f4925b961a",
+      "https://www.lonelyplanet.com/points-of-interest/tentmakers-market/1326461"
+    ],
+    "photoSource": "https://commons.wikimedia.org/wiki/File:Khayamiya_market_01.jpg",
+    "photoStatus": "online_candidate"
+  },
+  "BIB-X01": {
+    "title": "Музей рукописей — память на бумаге",
+    "sources": [
+      "https://www.bibalex.org/en/center/details/manuscriptsmuseum",
+      "https://www.bibalex.org/en/Page/Guidelines"
+    ],
+    "photoSource": "https://commons.wikimedia.org/wiki/File:Bibliotheca_Alexandrina_%E2%80%93_Manuscript_Museum_25.jpg",
+    "photoStatus": "online_candidate"
+  },
+  "BIB-X02": {
+    "title": "Музей Садата — Египет XX века",
+    "sources": [
+      "https://www.bibalex.org/en/center/details/sadatmuseum",
+      "https://www.bibalex.org/en/Page/Guidelines"
+    ],
+    "photoSource": "https://commons.wikimedia.org/wiki/File:Sadat_Museum_gallery.JPG",
+    "photoStatus": "online_candidate"
+  }
+}

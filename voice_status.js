@@ -1,0 +1,1 @@
+window.EGYPT_ATLAS_VOICE_STATUS = {};

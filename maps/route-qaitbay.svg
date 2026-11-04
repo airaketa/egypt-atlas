@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 540" role="img" aria-label="Условная последовательность остановок, не план здания">
+<defs><pattern id="grain" width="28" height="28" patternUnits="userSpaceOnUse"><path d="M28 0H0V28" fill="none" stroke="#dacfb8" stroke-width=".6"/></pattern></defs>
+<rect width="920" height="540" fill="#f1ebdd" rx="18"/><rect width="920" height="540" fill="url(#grain)" rx="18"/>
+<text x="29" y="36" fill="#2c5558" font-size="15" font-family="Arial,sans-serif" font-weight="bold">КРЕПОСТЬ КАЙТБЕЙ</text>
+<text x="29" y="61" fill="#a16e47" font-size="13" font-family="Arial,sans-serif">СХЕМА РАССКАЗОВ • НЕ ГЕОГРАФИЧЕСКИЙ ПЛАН • НЕ В МАСШТАБЕ</text>
+<path d="M211.4 151.2 L405.0 151.2" stroke="#9caea7" stroke-width="3" stroke-dasharray="6 7"/>
+<path d="M515.0 151.2 L708.6 151.2" stroke="#9caea7" stroke-width="3" stroke-dasharray="6 7"/>
+<path d="M763.6 200.2 Q833.6 216.2 96.4 392.8 L156.4 392.8" fill="none" stroke="#bdc7ba" stroke-width="3" stroke-dasharray="6 7" opacity=".6"/>
+<rect x="42.4" y="114.2" width="228" height="86" rx="14" fill="#fffaf0" stroke="#c9bba2" stroke-width="1.5"/>
+<text x="156.4" y="180.2" font-size="12.4" font-family="Arial,sans-serif" font-weight="600" fill="#355453" text-anchor="middle">Здесь стоял Александрийский</text>
+<text x="156.4" y="194.2" font-size="12.4" font-family="Arial,sans-serif" font-weight="600" fill="#355453" text-anchor="middle">маяк</text>
+<rect x="346.0" y="114.2" width="228" height="86" rx="14" fill="#fffaf0" stroke="#c9bba2" stroke-width="1.5"/>
+<text x="460.0" y="180.2" font-size="12.4" font-family="Arial,sans-serif" font-weight="600" fill="#355453" text-anchor="middle">Внешние стены и башни</text>
+<rect x="649.6" y="114.2" width="228" height="86" rx="14" fill="#fffaf0" stroke="#c9bba2" stroke-width="1.5"/>
+<text x="763.6" y="180.2" font-size="12.4" font-family="Arial,sans-serif" font-weight="600" fill="#355453" text-anchor="middle">Главная башня и внутренний двор</text>
+<rect x="42.4" y="405.8" width="228" height="86" rx="14" fill="#fffaf0" stroke="#c9bba2" stroke-width="1.5"/>
+<text x="156.4" y="471.8" font-size="12.4" font-family="Arial,sans-serif" font-weight="600" fill="#355453" text-anchor="middle">Вид на гавань: море как история</text>
+<text x="156.4" y="485.8" font-size="12.4" font-family="Arial,sans-serif" font-weight="600" fill="#355453" text-anchor="middle">Александрии</text>
+<text x="28" y="519" font-size="12" font-family="Arial,sans-serif" fill="#727b71">Нажмите на номер, чтобы открыть рассказ. Порядок не означает физическую близость.</text>
+</svg>

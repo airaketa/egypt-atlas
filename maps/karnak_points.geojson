@@ -1,0 +1,158 @@
+{
+  "type": "FeatureCollection",
+  "name": "Karnak must-see markers, research coordinates (not pedestrian routing)",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "pylon",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.6568,
+          25.7191
+        ]
+      },
+      "properties": {
+        "id": "pylon",
+        "order": 1,
+        "title": "Аллея сфинксов и Первый пилон",
+        "note": "Первый пилон; точка рядом с западным входом",
+        "source": "https://de.wikivoyage.org/wiki/Karnak/Tempelbezirk_des_Amun-Re",
+        "precision": "site-level coordinates; no guarantee accessible listener position"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "court",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.6572,
+          25.7189
+        ]
+      },
+      "properties": {
+        "id": "court",
+        "order": 2,
+        "title": "Большой двор и киоск Тахарки",
+        "note": "Киоск Тахарки, внутри Большого двора",
+        "source": "https://de.wikivoyage.org/wiki/Karnak/Tempelbezirk_des_Amun-Re",
+        "precision": "site-level coordinates; no guarantee accessible listener position"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ramesses",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.657,
+          25.7183
+        ]
+      },
+      "properties": {
+        "id": "ramesses",
+        "order": 3,
+        "title": "Малый храм Рамсеса III",
+        "note": "Южная часть Большого двора",
+        "source": "https://de.wikivoyage.org/wiki/Karnak/Tempelbezirk_des_Amun-Re",
+        "precision": "site-level coordinates; no guarantee accessible listener position"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "hall",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.6579,
+          25.7186
+        ]
+      },
+      "properties": {
+        "id": "hall",
+        "order": 4,
+        "title": "Большой гипостильный зал",
+        "note": "Центр гипостильного зала",
+        "source": "https://mapcarta.com/W115784218",
+        "precision": "site-level coordinates; no guarantee accessible listener position"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "obelisk",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.658569,
+          25.718311
+        ]
+      },
+      "properties": {
+        "id": "obelisk",
+        "order": 5,
+        "title": "Обелиск Хатшепсут",
+        "note": "Расположение обелиска, не точка прохода",
+        "source": "https://de.wikivoyage.org/wiki/Karnak/Tempelbezirk_des_Amun-Re",
+        "precision": "site-level coordinates; no guarantee accessible listener position"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sanctuary",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.6589,
+          25.7181
+        ]
+      },
+      "properties": {
+        "id": "sanctuary",
+        "order": 6,
+        "title": "Святилище ладьи Амона",
+        "note": "Святилище ладьи; проход может быть ограничен",
+        "source": "https://de.wikivoyage.org/wiki/Karnak/Tempelbezirk_des_Amun-Re",
+        "precision": "site-level coordinates; no guarantee accessible listener position"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "akhmenu",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.659575,
+          25.717804
+        ]
+      },
+      "properties": {
+        "id": "akhmenu",
+        "order": 7,
+        "title": "Ахмену Тутмоса III",
+        "note": "Расположение зала; доступ зависит от состояния проходов",
+        "source": "https://de.wikivoyage.org/wiki/Karnak/Tempelbezirk_des_Amun-Re",
+        "precision": "site-level coordinates; no guarantee accessible listener position"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "lake",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.658112,
+          25.717613
+        ]
+      },
+      "properties": {
+        "id": "lake",
+        "order": 8,
+        "title": "Священное озеро и скарабей",
+        "note": "Маркер установлен у скарабея; само озеро расположено юго-восточнее",
+        "source": "https://de.wikivoyage.org/wiki/Karnak/Tempelbezirk_des_Amun-Re",
+        "precision": "site-level coordinates; no guarantee accessible listener position"
+      }
+    }
+  ]
+}
