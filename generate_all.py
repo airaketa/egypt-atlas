@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Egypt Atlas batch TTS: 73 core tracks + optional expansion tracks -> MP3 files.
+"""Egypt Atlas batch TTS: generate and verify all 82 MP3 files.
 
 Unofficial Edge consumer TTS endpoint. Use for local prototypes only until
 licensing of publicly distributed audio is confirmed. Output can be re-generated
@@ -18,6 +18,8 @@ from tts_pronunciation import prepare_tts_text
 
 ROOT=Path(__file__).resolve().parent
 TRACKS=json.loads((ROOT/'data'/'track_list.json').read_text(encoding='utf-8'))
+if len(TRACKS)!=82 or len({track['id'] for track in TRACKS})!=82:
+    raise RuntimeError('Ожидалось ровно 82 уникальные записи в data/track_list.json')
 OUT=ROOT/'audio'
 OUT.mkdir(exist_ok=True)
 STATUS_PATH=ROOT/'voice_status.json'
@@ -78,14 +80,14 @@ async def render(edge_tts,track,output):
         if tmp.exists():tmp.unlink()
 
 async def main():
-    parser=argparse.ArgumentParser(description='Egypt Atlas: озвучить все тексты Светланой, включая расширения')
-    parser.add_argument('--only',default='',help='Например KAR или KAR-04')
+    parser=argparse.ArgumentParser(description='Egypt Atlas: озвучить все 82 текста Светланой одним запуском')
+    targets=parser.add_mutually_exclusive_group()
+    targets.add_argument('--all',action='store_true',help='Обработать все 82 записи (режим GENERATE_ALL_WINDOWS.bat)')
+    targets.add_argument('--only',default='',help='Обработать только группу или ID, например KAR или KAR-04')
     parser.add_argument('--force',action='store_true',help='Перегенерировать даже уже готовые MP3')
     parser.add_argument('--verify',action='store_true',help='Проверить MP3 без сети и не генерировать новые')
-    parser.add_argument('--extensions-only',action='store_true',help='Генерировать только новые 9 записей продолжений')
     args=parser.parse_args()
-    selected=wanted_tracks(args.only)
-    if args.extensions_only:selected=[t for t in selected if '-X' in t['id']]
+    selected=TRACKS if args.all or not args.only else wanted_tracks(args.only)
     if not selected:
         print('Нет рассказов, подходящих под фильтр')
         return 2
@@ -106,7 +108,7 @@ async def main():
 
     print(f'Egypt Atlas: {len(selected)} рассказов; голос {VOICE}; темп {RATE}; без музыки.')
     print(f'Выходная папка: {OUT}')
-    failed=[]; skipped=0; consecutive_failures=0
+    failed=[]; skipped=0
     for idx,t in enumerate(selected,1):
         tid=t['id']; out=OUT/f'{tid}.mp3'
         body=(ROOT/'texts'/f'{tid}.txt').read_text(encoding='utf-8').strip()
@@ -132,32 +134,28 @@ async def main():
 
         print(f'[{idx}/{len(selected)}] {tid}: {t["title"]}',flush=True)
         last_error=None
-        for attempt in (1,2):
+        for attempt in (1,2,3):
             try:
                 duration,sha=await render(edge_tts,t,out)
                 status[tid]={'status':'ok','duration_sec':duration,'sha256':sha,'voice':VOICE}
                 save_status(status)
                 print(f'  OK: {duration}s',flush=True)
-                consecutive_failures=0
                 last_error=None
                 break
             except Exception as exc:
                 last_error=f'{type(exc).__name__}: {exc}'
-                print(f'  Ошибка ({attempt}/2): {last_error}',flush=True)
-                if attempt==1:
-                    await asyncio.sleep(4)
+                print(f'  Ошибка ({attempt}/3): {last_error}',flush=True)
+                if attempt<3:
+                    await asyncio.sleep(5*attempt)
         if last_error is not None:
             failed.append(tid)
-            consecutive_failures+=1
             status[tid]={'status':'failed','error':last_error[:300]}
             save_status(status)
-            if consecutive_failures>=3:
-                print('Три ошибки подряд: прекращаю запросы. Уже готовые MP3 сохранены; попробуй перезапустить позже.')
-                break
-        await asyncio.sleep(0.8)
+            print('  Переходим к следующей записи; остальные треки всё равно будут обработаны.',flush=True)
+        await asyncio.sleep(1.5)
     ready=sum(1 for t in TRACKS if status.get(t['id'],{}).get('status')=='ok')
     print(f'\nГотово: {ready}/{len(TRACKS)}. Пропущено готовых в этом запуске: {skipped}. Ошибки этого запуска: {len(failed)}.')
-    print('Сводка: generation_report.csv. Прослушивание: откройте index.html или listen.html')
+    print('Сводка: generation_report.csv. Для прослушивания откройте index.html.')
     if failed:print('Проблемные ID: '+', '.join(failed))
     return 0 if not failed and all(status.get(t['id'],{}).get('status') == 'ok' for t in selected) else 1
 

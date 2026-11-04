@@ -1,12 +1,13 @@
-/* Egypt Atlas v0.25: separate resilient app shell and explicitly downloaded media. */
+/* Egypt Atlas v0.26: resilient app shell plus explicitly downloaded media and PMTiles. */
 'use strict';
-const SHELL='egypt-atlas-v025-shell';
+const SHELL='egypt-atlas-v026-shell';
 const MEDIA='egypt-atlas-media-v1';
 const ROOT=new URL('./',self.registration.scope);
 const APP_FILES=[
   './','./index.html','./styles.css','./app.js','./catalog.js','./audio-ready.js',
   './offline-manifest.json','./manifest.webmanifest','./map-logic.js','./nearby.js',
   './cartouche-inline-ui.js','./cartouche-integrated-data.js',
+  './vendor/maplibre-gl.js','./vendor/maplibre-gl.css','./vendor/pmtiles.js',
   './icons/icon-192.png','./icons/icon-512.png','./photos/visual-fallback.svg',
   './assets/hieroglyphs/N005.png','./assets/hieroglyphs/C010.png',
   './assets/hieroglyphs/Y005.png','./assets/hieroglyphs/F012.png',
@@ -61,6 +62,7 @@ self.addEventListener('fetch',event=>{
   event.respondWith(fetch(request));return;
  }
  const isAudio=url.pathname.endsWith('.mp3');
+ const isPmtiles=url.pathname.endsWith('.pmtiles');
  if(isAudio){
   event.respondWith((async()=>{
    const cache=await caches.open(MEDIA);
@@ -72,6 +74,14 @@ self.addEventListener('fetch',event=>{
     if(full.ok&&full.status===200){await cache.put(url.href,full.clone());return respondRange(request,full);}
     return await fetch(request);
    }catch(_){return Response.error();}
+  })());return;
+ }
+ if(isPmtiles){
+  event.respondWith((async()=>{
+   const cache=await caches.open(MEDIA);
+   const cached=await cache.match(url.href);
+   if(cached)return respondRange(request,cached);
+   try{return await fetch(request);}catch(_){return Response.error();}
   })());return;
  }
  const dynamic=/\/(catalog|audio-ready)\.js$|\/offline-manifest\.json$/.test(url.pathname);

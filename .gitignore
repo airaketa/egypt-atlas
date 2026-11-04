@@ -3,11 +3,13 @@
 /photos/real/
 /assets/cartouches/
 /maps/offline/
+/tools/pmtiles.exe
 /egypt-media.zip
 /_site/
 /.downloads/
 /.venv/
 /__pycache__/
+**/__pycache__/
 *.part
 *.part.mp3
 voice_status.json

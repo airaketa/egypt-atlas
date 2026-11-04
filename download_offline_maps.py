@@ -96,6 +96,25 @@ def download_asset(url: str, dest: Path) -> None:
         raise
 
 
+def select_windows_cli_asset(assets: list[dict], arch_keywords: tuple[str, ...]) -> dict:
+    """Select Windows without confusing the `win_` suffix in `Darwin_`."""
+    matches=[]
+    for asset in assets:
+        name=asset.get("name","").lower()
+        is_windows=bool(re.search(r"(?:^|[-_.])windows(?:[-_.]|$)",name))
+        has_arch=any(keyword in name for keyword in arch_keywords)
+        is_archive=name.endswith((".zip", ".tar.gz", ".tgz", ".exe"))
+        if is_windows and has_arch and is_archive:
+            matches.append(asset)
+    if not matches:
+        raise RuntimeError(
+            "No Windows CLI asset found in official latest GitHub release. "
+            "Install manually from https://github.com/protomaps/go-pmtiles/releases"
+        )
+    matches.sort(key=lambda asset:(not asset.get("name","").lower().endswith(".zip"),asset.get("name","")))
+    return matches[0]
+
+
 def auto_install_cli() -> Path:
     if CLI.is_file():
         return CLI
@@ -119,15 +138,7 @@ def auto_install_cli() -> Path:
     with http_request(url,timeout=30) as resp:
         release=json.load(resp)
     assets=release.get("assets",[])
-    matches=[]
-    for asset in assets:
-        name=asset.get("name","").lower()
-        if ("windows" in name or "win_" in name or "_win" in name) and any(x in name for x in arch_keywords) and name.endswith((".zip", ".tar.gz", ".tgz", ".exe")):
-            matches.append(asset)
-    if not matches:
-        raise RuntimeError("No Windows CLI asset found in official latest GitHub release. Install manually from https://github.com/protomaps/go-pmtiles/releases")
-    matches.sort(key=lambda a:(not a.get("name","").lower().endswith(".zip"),a.get("name", "")))
-    asset=matches[0]
+    asset=select_windows_cli_asset(assets,arch_keywords)
     with tempfile.TemporaryDirectory() as temp_dir:
         downloaded=Path(temp_dir)/asset["name"]
         print(f"CLI release: {asset['name']}",flush=True)

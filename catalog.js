@@ -1350,9 +1350,9 @@ window.EgyptAtlasCatalog = [
         "position": "перед входом или в разрешённом для остановки начале коридора одной из открытых гробниц.",
         "summary": "Войдя в одну из открытых царских гробниц, присмотритесь к самому устройству пространства.",
         "script": "Войдя в одну из открытых царских гробниц, присмотритесь к самому устройству пространства. Перед вами могут быть наклонные коридоры, боковые комнаты, залы и погребальная камера; их последовательность различается от гробницы к гробнице. На стенах многих сооружений находятся тексты и сцены о загробном мире. Они связывали судьбу умершего царя с ночным путешествием солнечного бога и новым рождением. Но не ожидайте увидеть одинаковые изображения в каждой гробнице: погребальные программы менялись со временем. Обратите внимание на потолок, если в вашей гробнице сохранились астрономические изображения. И пожалуйста, не касайтесь росписей. Исследования реставраторов показывают, что микроклимат и воздействие посетителей могут угрожать древним материалам. Главная ценность этих помещений — не только красивый рисунок, но и редкая возможность прочитать религиозное представление о смерти прямо на стенах.",
-        "photo": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Tutankhamen_Tomb_layout.jpg?width=960",
+        "photo": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Tutankhamen%20tomb%20layout.jpg?width=960",
         "photoPlaceholder": false,
-        "photoSource": "https://commons.wikimedia.org/wiki/File:Tutankhamen_Tomb_layout.jpg",
+        "photoSource": "https://commons.wikimedia.org/wiki/File:Tutankhamen_tomb_layout.jpg",
         "sources": [
           "https://egymonuments.gov.eg/archaeological-sites/valley-of-the-kings",
           "https://egymonuments.gov.eg/en/monuments/tomb-of-ramesses-vi-kv9/"

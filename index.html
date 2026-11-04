@@ -59,7 +59,7 @@
     <section id="map-wrap" class="map-wrap" hidden aria-label="Карта точек обзора и ориентиров">
       <div class="map-heading"><strong>Карта и схема рассказов</strong><span>Все остановки отмечены на схеме; метки: объекты и приблизительные зоны</span></div>
       <div id="map-choice" class="map-choice" role="group" aria-label="Тип карты">
-        <button id="map-choice-live" class="map-choice-active" aria-pressed="true" type="button">🌍 Карта OSM</button>
+        <button id="map-choice-live" class="map-choice-active" aria-pressed="true" type="button">🌍 Интерактивная карта</button>
         <button id="map-choice-plan" type="button" aria-pressed="false">▦ Схема остановок</button>
       </div>
       <p id="map-fallback-alert" class="map-fallback-alert" hidden role="status"></p>
@@ -71,7 +71,7 @@
           <span id="map-gps-status" role="status" aria-live="polite">Геопозиция выключена</span>
         </div>
         <div id="osm-map" class="osm-map" role="region" aria-label="Интерактивная карта Карнакского храма"></div>
-        <div id="map-unlocated" class="unlocated-stops" hidden></div><p class="map-online-note" id="map-online-note">Карта: OpenFreeMap / © участники OpenStreetMap · требуется интернет. GPS работает с разрешением на HTTPS или localhost. Точность маркеров ориентировочная.</p>
+        <div id="map-unlocated" class="unlocated-stops" hidden></div><p class="map-online-note" id="map-online-note">Локальная карта: Protomaps / © участники OpenStreetMap. После загрузки офлайн-пакета работает без интернета. GPS требует разрешения пользователя. Точность маркеров ориентировочная.</p>
       </div>
       <div id="offline-map-panel" hidden>
         <p class="map-online-note">Схемы без масштаба. Номера показывают порядок рассказов, а не точные проходы и не витрины. Следуйте указателям объекта.</p>
@@ -95,7 +95,7 @@
     <h2>Куда идём?</h2>
     <p>Выберите достопримечательность</p>
     <div id="drawer-tours"></div>
-    <div class="drawer-foot"><span class="mini-star">✳</span> Никаких выдуманных историй. Тексты доступны офлайн; Истории доступны сразу. Офлайн-фото и MP3 доступны после установки медиапакета и загрузки на устройство. Интерактивная карта пока требует интернет.</div>
+    <div class="drawer-foot"><span class="mini-star">✳</span> Никаких выдуманных историй. Тексты доступны сразу. Фото, MP3 и интерактивные карты работают без интернета после загрузки полного офлайн-пакета на устройство.</div>
   </nav>
 
   <div class="modal-overlay" id="modal-overlay" hidden>

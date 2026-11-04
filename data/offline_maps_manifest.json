@@ -1,0 +1,214 @@
+{
+  "schemaVersion": 1,
+  "format": "PMTiles",
+  "createdAtUtc": "2026-11-04T17:32:40.556229+00:00",
+  "source": "https://build.protomaps.com/20261104.pmtiles",
+  "maxZoom": 15,
+  "licenseNotice": "Protomaps basemap produced work; data © OpenStreetMap contributors (ODbL). Attribution required.",
+  "maps": [
+    {
+      "id": "karnak",
+      "title": "Карнакский храм",
+      "path": "maps/offline/karnak.pmtiles",
+      "bbox": [
+        [
+          32.651319,
+          25.713054
+        ],
+        [
+          32.664281,
+          25.724739
+        ]
+      ],
+      "bytes": 809844,
+      "sha256": "e72cc3e805794a5ee6d27ede437259a0021ad8acb958e08031d7a1a087d95870"
+    },
+    {
+      "id": "giza",
+      "title": "Пирамиды Гизы и Сфинкс",
+      "path": "maps/offline/giza.pmtiles",
+      "bbox": [
+        [
+          31.119296,
+          29.962939
+        ],
+        [
+          31.145244,
+          29.98618
+        ]
+      ],
+      "bytes": 1200627,
+      "sha256": "45f7afc2feb0c8cb6e3c53a044b7fad144a654d9e923da432b4cac7cbce71bc7"
+    },
+    {
+      "id": "gem",
+      "title": "Большой Египетский музей",
+      "path": "maps/offline/gem.pmtiles",
+      "bbox": [
+        [
+          31.111002,
+          29.987514
+        ],
+        [
+          31.127598,
+          30.001886
+        ]
+      ],
+      "bytes": 1442185,
+      "sha256": "0b66fdd24c4ff6f8d9970e09843799e31d6f10a5bf2d2a8181062decf78bf13c"
+    },
+    {
+      "id": "cairo",
+      "title": "Исторический Каир",
+      "path": "maps/offline/cairo.pmtiles",
+      "bbox": [
+        [
+          31.240221,
+          30.024648
+        ],
+        [
+          31.277579,
+          30.06097
+        ]
+      ],
+      "bytes": 2921816,
+      "sha256": "2acc54be3568e69189edbb94a95bed4036bd386bef16c5296999c0d40af64ba7"
+    },
+    {
+      "id": "valley",
+      "title": "Долина царей",
+      "path": "maps/offline/valley.pmtiles",
+      "bbox": [
+        [
+          32.595915,
+          25.735059
+        ],
+        [
+          32.609089,
+          25.749013
+        ]
+      ],
+      "bytes": 642487,
+      "sha256": "37de156a2e579cfd6866ad5e177de528284028474650d9d98c5dc6f60a4cb7ec"
+    },
+    {
+      "id": "hatshepsut",
+      "title": "Храм Хатшепсут",
+      "path": "maps/offline/hatshepsut.pmtiles",
+      "bbox": [
+        [
+          32.601812,
+          25.734058
+        ],
+        [
+          32.610788,
+          25.742142
+        ]
+      ],
+      "bytes": 639453,
+      "sha256": "fc633fed2cd8621246f696a63f313ac8ec6cf7413cc4a0d7553a8df516318c1f"
+    },
+    {
+      "id": "medinet-habu",
+      "title": "Мединет-Абу",
+      "path": "maps/offline/medinet-habu.pmtiles",
+      "bbox": [
+        [
+          32.59713,
+          25.715627
+        ],
+        [
+          32.605988,
+          25.723173
+        ]
+      ],
+      "bytes": 598190,
+      "sha256": "bec7e7ed94c7fd11c1ed0eb78478862cad99be0d6c3d50ba5afada28c5126b01"
+    },
+    {
+      "id": "memnon",
+      "title": "Колоссы Мемнона",
+      "path": "maps/offline/memnon.pmtiles",
+      "bbox": [
+        [
+          32.606013,
+          25.716558
+        ],
+        [
+          32.614987,
+          25.724642
+        ]
+      ],
+      "bytes": 754528,
+      "sha256": "6341e0353d01ed18f93ab6dcab047a7b9a77c694dfcb6ea0ee2e509d0220c15b"
+    },
+    {
+      "id": "luxor-temple",
+      "title": "Луксорский храм",
+      "path": "maps/offline/luxor-temple.pmtiles",
+      "bbox": [
+        [
+          32.634414,
+          25.695378
+        ],
+        [
+          32.643786,
+          25.703822
+        ]
+      ],
+      "bytes": 836403,
+      "sha256": "02dff3e1dbf1064136dbc1d91cf4fdb89a7db87b72d988ff0d5552adc7b4d2cf"
+    },
+    {
+      "id": "alex-library",
+      "title": "Александрийская библиотека",
+      "path": "maps/offline/alex-library.pmtiles",
+      "bbox": [
+        [
+          29.904374,
+          31.204858
+        ],
+        [
+          29.913826,
+          31.212942
+        ]
+      ],
+      "bytes": 743077,
+      "sha256": "9917b5f01a68a28498ef114fda55e7610a09b7d40780c8863568e6325c38194d"
+    },
+    {
+      "id": "qaitbay",
+      "title": "Крепость Кайтбей",
+      "path": "maps/offline/qaitbay.pmtiles",
+      "bbox": [
+        [
+          29.880563,
+          31.209938
+        ],
+        [
+          29.890017,
+          31.218022
+        ]
+      ],
+      "bytes": 759954,
+      "sha256": "2ab3e124ad87041097f3aad2b316fb9104376e05edfec8c4cc6da845163e98f6"
+    },
+    {
+      "id": "catacombs",
+      "title": "Катакомбы Ком-эль-Шукафа",
+      "path": "maps/offline/catacombs.pmtiles",
+      "bbox": [
+        [
+          29.888315,
+          31.174498
+        ],
+        [
+          29.897765,
+          31.182582
+        ]
+      ],
+      "bytes": 882506,
+      "sha256": "ebad36b5844c290405a5ff0ebd9aecaae5f00de8d511b2331cf1c321dc8fdcd7"
+    }
+  ]
+}

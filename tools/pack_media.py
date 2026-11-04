@@ -14,6 +14,13 @@ def catalog():
 def expected_ids():
  return [s['id'] for t in catalog() for s in t['stops']+t.get('extension',{}).get('stops',[])]
 
+def expected_tour_ids():return [tour['id'] for tour in catalog()]
+
+def expected_cartouche_ids():
+ raw=(ROOT/'cartouche-integrated-data.js').read_text(encoding='utf-8')
+ data=json.loads(raw.removeprefix('window.EgyptAtlasCartouchesInline = ').strip().removesuffix(';'))
+ return list(data['photos'])
+
 def photo_path(tid):
  return next((ROOT/'photos'/'real'/f'{tid}{ext}' for ext in POSSIBLE_IMAGE_EXTS if (ROOT/'photos'/'real'/f'{tid}{ext}').is_file()),None)
 
@@ -22,7 +29,7 @@ def digest(data):return hashlib.sha256(data).hexdigest()
 def main():
  p=argparse.ArgumentParser(description='Package generated Egypt Atlas MP3, photos and optional maps for GitHub Releases')
  p.add_argument('--out',default=str(ROOT/'egypt-media.zip'))
- p.add_argument('--strict',action='store_true',help='Fail unless all 82 MP3 are present')
+ p.add_argument('--strict',action='store_true',help='Fail unless all audio, photos and 12 PMTiles maps are present')
  p.add_argument('--confirm-rights',action='store_true',help='I reviewed image permissions and TTS redistribution rights')
  args=p.parse_args()
  ids=expected_ids();assert len(ids)==len(set(ids))==82
@@ -42,6 +49,13 @@ def main():
  count_maps=sum(k.endswith('.pmtiles') for k in paths)
  print(f'Found: {count_mp3}/82 MP3, {count_photos}/82 photos, {count_cart} cartouche photos, {count_maps} PMTiles')
  if args.strict and count_mp3!=len(ids):raise SystemExit('ERROR: missing MP3. Run GENERATE_ALL_WINDOWS.bat first.')
+ if args.strict and count_photos!=len(ids):raise SystemExit('ERROR: missing photos. Run DOWNLOAD_PHOTOS_WINDOWS.bat again.')
+ if args.strict and count_maps!=len(expected_tour_ids()):raise SystemExit('ERROR: missing PMTiles. Run DOWNLOAD_ALL_MAPS_WINDOWS.bat first.')
+ if args.strict and count_cart!=len(expected_cartouche_ids()):raise SystemExit('ERROR: missing cartouche photos. Run DOWNLOAD_CARTOUCHE_PHOTOS_WINDOWS.bat first.')
+ for tour_id in expected_tour_ids():
+  map_path=ROOT/'maps'/'offline'/f'{tour_id}.pmtiles'
+  if args.strict and (not map_path.is_file() or map_path.read_bytes()[:7]!=b'PMTiles'):
+   raise SystemExit(f'ERROR: invalid PMTiles archive: {tour_id}')
  if args.strict:
   from tts_pronunciation import prepare_tts_text
   status_path=ROOT/'voice_status.json'

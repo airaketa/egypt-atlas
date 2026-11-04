@@ -1,24 +1,26 @@
 @echo off
 chcp 65001 >nul
-set PYTHONUTF8=1
+set "PYTHONUTF8=1"
 cd /d "%~dp0"
 where py >nul 2>nul
-if %ERRORLEVEL% EQU 0 (
-  set "PY=py -3"
-) else (
+if errorlevel 1 (
   set "PY=python"
+) else (
+  set "PY=py -3"
 )
-echo Egypt Atlas: 82 аудиорассказа (73 основных + 9 дополнительных) / Светлана
+echo Egypt Atlas: generating 82 audio tracks with Svetlana voice...
 %PY% -m pip install edge-tts mutagen
 if errorlevel 1 (
-  echo Не удалось установить зависимости. Проверь интернет/Python.
+  echo ERROR: Could not install dependencies. Check Python and internet access.
   pause
   exit /b 1
 )
-%PY% generate_all.py
+%PY% generate_all.py --all
 if errorlevel 1 (
-  echo Некоторые дорожки не готовы. После исправления проблемы этот BAT продолжит с нужного места.
+  echo ERROR: Some tracks are not ready. Run this file again after fixing the error.
+  pause
+  exit /b 1
 )
 echo.
-echo Для прослушивания открой listen.html
+echo Done. All 82 tracks are ready. Open index.html to check the generated audio.
 pause

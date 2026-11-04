@@ -1,47 +1,75 @@
-/* Egypt Atlas v0.12: OpenFreeMap / OSM-powered live map.  No coordinates leave app
-   until the user authorizes geolocation; browser shares coordinates with OS location services,
-   not with the basemap provider directly. Offline scheme remains available without WebGL.
-   LIVE map requires internet until fully licensed offline vector packs are implemented. */
+/* Egypt Atlas v0.26: local PMTiles basemap with an online fallback. */
 (() => {
 'use strict';
 const $ = id => document.getElementById(id);
-// MapLibre GL JS 6.x only ships ESM (.mjs). The old v0.10 URL ended in
-// maplibre-gl.js and therefore returned HTTP 404. v5.24 has a UMD build,
-// compatible with double-click / file:// local previews.
-const LIB_MIRRORS = [
- 'https://cdn.jsdelivr.net/npm/maplibre-gl@5.24.0/dist/',
- 'https://unpkg.com/maplibre-gl@5.24.0/dist/'
-];
-const STYLE = 'https://tiles.openfreemap.org/styles/liberty';
+const RUNTIME={maplibre:'./vendor/maplibre-gl.js',css:'./vendor/maplibre-gl.css',pmtiles:'./vendor/pmtiles.js'};
+const ONLINE_STYLE='https://tiles.openfreemap.org/styles/liberty';
 let live = null, markers = [], venueMarker = null, geoMarker = null, accuracy = null, watchId = null;
-let selectedTour = null, openCard = null, loadPromise = null, loaded = false, mapMode = 'live';
+let selectedTour = null, openCard = null, loadPromise = null, manifestPromise = null, loaded = false, mapMode = 'live', liveTourId = null;
 const setStatus = s => { if ($('map-gps-status')) $('map-gps-status').textContent=s; };
-function loadLib() {
- if(window.maplibregl)return Promise.resolve();
- if(loadPromise)return loadPromise;
- const loadFrom=(base)=>new Promise((resolve,reject)=>{
-  const script=document.createElement('script');
-  const css=document.getElementById('maplibre-css')||document.createElement('link');
-  css.id='maplibre-css';css.rel='stylesheet';css.href=base+'maplibre-gl.css';
-  if(!css.isConnected)document.head.appendChild(css);
-  script.src=base+'maplibre-gl.js';script.async=true;
-  let done=false;
-  const finish=err=>{if(done)return;done=true;clearTimeout(timer);if(err){script.remove();reject(err);}else resolve();};
-  const timer=setTimeout(()=>finish(new Error('Превышено время загрузки MapLibre')),12000);
-  script.onload=()=>finish(window.maplibregl?null:new Error('Библиотека карты не экспортировала maplibregl'));
-  script.onerror=()=>finish(new Error('CDN недоступен: '+base));
+function loadScript(src,ready){
+ if(ready())return Promise.resolve();
+ return new Promise((resolve,reject)=>{
+  const script=document.createElement('script');script.src=src;script.async=true;
+  const timer=setTimeout(()=>{script.remove();reject(new Error('Превышено время загрузки '+src));},12000);
+  script.onload=()=>{clearTimeout(timer);ready()?resolve():reject(new Error('Модуль не экспортирован: '+src));};
+  script.onerror=()=>{clearTimeout(timer);reject(new Error('Не найден локальный модуль: '+src));};
   document.head.appendChild(script);
  });
+}
+function loadLib() {
+ if(window.maplibregl&&window.pmtiles)return Promise.resolve();
+ if(loadPromise)return loadPromise;
  loadPromise=(async()=>{
-  let last;
-  for(const url of LIB_MIRRORS){try{await loadFrom(url);return;}catch(e){last=e;console.warn('MapLibre: пробуем следующий CDN',e.message);}}
-  throw last||new Error('Не удалось загрузить MapLibre');
+  const css=document.getElementById('maplibre-css')||document.createElement('link');
+  css.id='maplibre-css';css.rel='stylesheet';css.href=RUNTIME.css;
+  if(!css.isConnected)document.head.appendChild(css);
+  await loadScript(RUNTIME.maplibre,()=>!!window.maplibregl);
+  await loadScript(RUNTIME.pmtiles,()=>!!window.pmtiles);
+  if(!window.__egyptAtlasPmtilesProtocol){
+   const protocol=new window.pmtiles.Protocol();
+   window.maplibregl.addProtocol('pmtiles',protocol.tile);
+   window.__egyptAtlasPmtilesProtocol=protocol;
+  }
  })().catch(e=>{loadPromise=null;throw e});
  return loadPromise;
 }
+async function offlineMapPath(tourId){
+ if(!manifestPromise)manifestPromise=fetch('./offline-manifest.json').then(r=>r.ok?r.json():null).catch(()=>null);
+ const manifest=await manifestPromise;
+ const item=manifest?.maps?.find(map=>map.id===tourId);
+ if(item?.path)return item.path;
+ if(location.protocol==='file:')return null;
+ const candidate=`./maps/offline/${encodeURIComponent(tourId)}.pmtiles`;
+ try{
+  const response=await fetch(candidate,{headers:{Range:'bytes=0-6'}});
+  if(!response.ok)return null;
+  const magic=new Uint8Array(await response.arrayBuffer()).slice(0,7);
+  return new TextDecoder().decode(magic)==='PMTiles'?candidate:null;
+ }catch(_){return null;}
+}
+function localStyle(path){
+ const archive=new URL(path,location.href).href;
+ const source='protomaps';
+ return {version:8,name:'Egypt Atlas Offline',sources:{[source]:{type:'vector',url:'pmtiles://'+archive}},layers:[
+  {id:'background',type:'background',paint:{'background-color':'#f2ead9'}},
+  {id:'earth',type:'fill',source,'source-layer':'earth',paint:{'fill-color':'#eee5d2'}},
+  {id:'landuse',type:'fill',source,'source-layer':'landuse',paint:{'fill-color':'#dfe6cf','fill-opacity':0.62}},
+  {id:'water',type:'fill',source,'source-layer':'water',paint:{'fill-color':'#a9d5df'}},
+  {id:'buildings',type:'fill',source,'source-layer':'buildings',minzoom:12,paint:{'fill-color':'#d3c3aa','fill-outline-color':'#b8a78e','fill-opacity':0.82}},
+  {id:'road-casing',type:'line',source,'source-layer':'roads',paint:{'line-color':'#b8a990','line-width':['interpolate',['linear'],['zoom'],10,1,15,5,19,12]}},
+  {id:'roads',type:'line',source,'source-layer':'roads',paint:{'line-color':'#fffaf0','line-width':['interpolate',['linear'],['zoom'],10,.6,15,3.2,19,9]}},
+  {id:'boundaries',type:'line',source,'source-layer':'boundaries',paint:{'line-color':'#a89070','line-width':1,'line-dasharray':[3,3]}},
+  {id:'pois',type:'circle',source,'source-layer':'pois',minzoom:14,paint:{'circle-radius':2.5,'circle-color':'#8c4f35','circle-stroke-color':'#fff','circle-stroke-width':1}}
+ ],metadata:{'egypt-atlas:offline':true}};
+}
+function destroyLive(){
+ stopTracking();markers.forEach(marker=>marker.remove());markers=[];venueMarker=null;
+ if(live){live.remove();live=null;}loaded=false;liveTourId=null;
+}
 function fallback(message){
  console.warn('Egypt Atlas map fallback:',message);
- const alert=$('map-fallback-alert');if(alert){alert.textContent=message+' Показана офлайн-схема. Нажмите «Карта OSM», чтобы повторить.';alert.hidden=false;}
+ const alert=$('map-fallback-alert');if(alert){alert.textContent=message+' Показана офлайн-схема. Нажмите «Интерактивная карта», чтобы повторить.';alert.hidden=false;}
  chooseMode('plan');
 }
 function chooseMode(mode){
@@ -73,6 +101,7 @@ function pointInsideBounds(lon,lat,bounds){
 }
 function setTour(t,callback){
  const changed=selectedTour?.id!==t?.id;
+ if(changed&&live)destroyLive();
  selectedTour=t;openCard=callback;
  if(changed && t?.map?.defaultView){
    const mode=t.map.defaultView;
@@ -85,19 +114,22 @@ async function activate(t,callback){
  selectedTour=t;openCard=callback;
  if(mapMode==='plan')return;
  if(live){requestAnimationFrame(()=>{live.resize();applyNavigationBounds(t);drawMarkers();fitStops();});return;}
- $('map-online-note').textContent='Загружаем интерактивную карту OpenFreeMap… Для офлайна можно переключиться на «Схему офлайн».';
+ $('map-online-note').textContent='Загружаем локальную интерактивную карту…';
  try{
   await loadLib();
   if(live)return;
   // MapLibre GL JS v5 exposes Map but not a public supported() function.
   // Calling supported() caused the false fallback even after the library loaded.
   if(typeof window.maplibregl?.Map !== 'function')throw new Error('Библиотека MapLibre не содержит Map');
-  live=new window.maplibregl.Map({container:'osm-map',style:STYLE,center:t.map.center,zoom:t.map.zoom||16,minZoom:10,maxZoom:20,maxBounds:t.map.navBounds,attributionControl:false});
+  const mapPath=await offlineMapPath(t.id);
+  const usingOffline=!!mapPath;
+  liveTourId=t.id;
+  live=new window.maplibregl.Map({container:'osm-map',style:usingOffline?localStyle(mapPath):ONLINE_STYLE,center:t.map.center,zoom:t.map.zoom||16,minZoom:10,maxZoom:20,maxBounds:t.map.navBounds,attributionControl:false});
   live.addControl(new window.maplibregl.NavigationControl({showCompass:false}),'bottom-right');
-  live.addControl(new window.maplibregl.AttributionControl({compact:true}),'bottom-left');
+  live.addControl(new window.maplibregl.AttributionControl({compact:true,customAttribution:'© OpenStreetMap contributors · Protomaps'}),'bottom-left');
   let statusDone=false;
-  live.on('load',()=>{loaded=true;statusDone=true;applyNavigationBounds(selectedTour);drawMarkers();fitStops();$('map-online-note').textContent='OSM / OpenFreeMap: тёмные метки — памятники, пунктир — примерные зоны или общий ориентир здания. При совпадающих точках нажмите на группу номеров. Это НЕ GPS-навигация внутри объектов. Нужен интернет.';});
-  live.on('error',e=>{console.warn('OSM map error',e.error);if(!statusDone){fallback('Не удалось загрузить картографические данные OpenFreeMap.');}});
+  live.on('load',()=>{loaded=true;statusDone=true;applyNavigationBounds(selectedTour);drawMarkers();fitStops();$('map-online-note').textContent=(usingOffline?'Локальная карта PMTiles доступна без интернета после загрузки офлайн-пакета. ':'Используется резервная онлайн-карта. ')+'Тёмные метки — памятники, пунктир — примерные зоны. Это НЕ GPS-навигация внутри объектов.';});
+  live.on('error',e=>{console.warn('Map error',e.error);if(!statusDone){fallback(usingOffline?'Не удалось открыть локальную карту PMTiles.':'Не удалось загрузить резервную онлайн-карту.');}});
  }catch(e){fallback('Не получилось загрузить карту: '+e.message);}
 }
 function drawMarkers(){

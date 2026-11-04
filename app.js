@@ -51,7 +51,7 @@ function renderMap(t){
  $('map-image').src=map.image;
  if(window.EgyptAtlasMap)window.EgyptAtlasMap.setTour({...t,stops},openStop);
  $('map-image').alt=(map.planKind==='ordered_route'?'Условная схема порядка рассказов: ':'Ориентировочная архитектурная схема ')+t.title;
- $('map-caption').textContent=map.note+(unlocked(t)?' Дополнительные точки доступны в списке ниже; на схеме порядок условный. Для географических ориентиров используйте карту OSM.':'');
+ $('map-caption').textContent=map.note+(unlocked(t)?' Дополнительные точки доступны в списке ниже; на схеме порядок условный. Для географических ориентиров используйте интерактивную карту.':'');
  $('map-source').href=map.source;
  $('map-scroll').setAttribute('aria-label',(map.planKind==='ordered_route'?'Условная схема рассказов: ':'Архитектурный ориентир: ')+t.title);
  $('map-pins').innerHTML=stops.map((s,i)=>{
@@ -240,7 +240,7 @@ async function getOfflineManifest(){
 function offlineState(message,state='info'){
  const el=$('offline-status-banner');if(!el)return;
  el.dataset.state=state;
- el.textContent=message+' · Интерактивная OSM-карта пока требует интернет';
+ el.textContent=message;
 }
 async function inspectOfflinePackage(){
  if(!('caches'in window)||!navigator.serviceWorker?.controller)return;
@@ -253,9 +253,9 @@ async function inspectOfflinePackage(){
    if(response&&response.headers.get('X-Atlas-Sha256')===file.sha256&&(await response.blob()).size===file.bytes)ready++;
   }
   const total=manifest.files.length;
-  const missing=manifest.missingAudio.length+manifest.missingPhotos.length+manifest.missingCartouches.length;
+  const missing=(manifest.missingAudio||[]).length+(manifest.missingPhotos||[]).length+(manifest.missingCartouches||[]).length+(manifest.missingMaps||[]).length;
   if(!total){offlineState('Медиафайлы ещё не опубликованы. Сначала загрузите архив в GitHub Releases.','error');return;}
-  if(ready===total&&missing===0){offlineState('Аудио, фотографии и схемы готовы офлайн ✓','ready');}
+  if(ready===total&&missing===0){offlineState('Аудио, фотографии и интерактивные карты готовы офлайн ✓','ready');}
   else offlineState(`Офлайн-медиа: ${ready}/${total} скачано. Не опубликовано: ${missing}.`,'error');
  }catch(e){offlineState('Пока не удалось проверить офлайн-пакет: '+e.message,'error');}
 }
@@ -268,7 +268,7 @@ async function offlineDownload(){
   const manifest=await getOfflineManifest();
   const cache=await caches.open(OFFLINE_MEDIA_CACHE);
   const files=manifest.files;
-  if(!files.length){offlineState('Сначала опубликуйте MP3 и фотографии на сайте.','error');return;}
+  if(!files.length){offlineState('Сначала опубликуйте полный медиапакет на сайте.','error');return;}
   let ok=0,fail=[];
   for(const [index,item] of files.entries()){
    const url=new URL(item.path,location.href).href;
@@ -289,8 +289,8 @@ async function offlineDownload(){
     await cache.put(url,new Response(payload,{status:200,headers}));ok++;
    }catch(e){console.warn('Offline media',item.path,e);fail.push(item.path);}
   }
-  const missing=manifest.missingAudio.length+manifest.missingPhotos.length+manifest.missingCartouches.length;
-  if(ok===files.length&&missing===0){offlineState('Аудио, фотографии и схемы готовы офлайн ✓','ready');toast('Офлайн-медиа скачаны. Проверяйте в авиарежиме.');}
+  const missing=(manifest.missingAudio||[]).length+(manifest.missingPhotos||[]).length+(manifest.missingCartouches||[]).length+(manifest.missingMaps||[]).length;
+  if(ok===files.length&&missing===0){offlineState('Аудио, фотографии и интерактивные карты готовы офлайн ✓','ready');toast('Офлайн-медиа скачаны. Проверяйте в авиарежиме.');}
   else{offlineState(`Доступно ${ok}/${files.length}. Ошибок загрузки: ${fail.length}, ещё не опубликовано: ${missing}.`,'error');toast('Не всё готово. Повторная загрузка докачает недостающее.');}
  }catch(e){offlineState('Не удалось скачать: '+e.message,'error');toast('Проверьте подключение к интернету.');}
  finally{btn.disabled=false;}

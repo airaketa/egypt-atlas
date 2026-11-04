@@ -35,7 +35,7 @@ jobs:
       - name: Build and validate static site
         run: |
           if [ -f .downloads/egypt-media.zip ]; then
-            python3 tools/build_site.py --media .downloads/egypt-media.zip --out _site --require-audio
+            python3 tools/build_site.py --media .downloads/egypt-media.zip --out _site --require-complete
           else
             python3 tools/build_site.py --out _site
           fi

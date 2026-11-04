@@ -25,12 +25,14 @@ def main():
         source=(ROOT/'texts'/f'{id}.txt').read_text(encoding='utf-8').strip()
         assert source==stop['script']==voice_index[id]['text']==track_index[id]['text'], f'Text drift for {id}'
         assert hashlib.sha256(source.encode('utf-8')).hexdigest()==track_index[id]['sha256'], f'SHA mismatch for {id}'
-    for name in ('index.html','manifest.webmanifest','sw.js','.github/workflows/pages.yml','tools/build_site.py','tools/pack_media.py','PACK_MEDIA_WINDOWS.bat'):
+    for name in ('index.html','manifest.webmanifest','sw.js','.github/workflows/pages.yml','tools/build_site.py','tools/pack_media.py','PACK_MEDIA_WINDOWS.bat','vendor/maplibre-gl.js','vendor/maplibre-gl.css','vendor/pmtiles.js'):
         assert (ROOT/name).is_file(), f'Missing {name}'
+    assert "pmtiles://" in (ROOT/'map-logic.js').read_text(encoding='utf-8'), 'Local PMTiles map integration missing'
+    assert "--require-complete" in (ROOT/'.github/workflows/pages.yml').read_text(encoding='utf-8'), 'Pages must require a complete offline package'
     ignored=(ROOT/'.gitignore').read_text(encoding='utf-8')
     for rule in ('/audio/','/photos/real/','/maps/offline/','/egypt-media.zip'):
         assert rule in ignored, f'Missing .gitignore rule: {rule}'
-    print('PASS: 12 tours, 82 matching texts, GitHub Pages workflow, media excluded by .gitignore')
+    print('PASS: 12 tours, 82 matching texts, complete offline Pages workflow and local PMTiles runtime')
     return 0
 if __name__=='__main__':
     try:sys.exit(main())

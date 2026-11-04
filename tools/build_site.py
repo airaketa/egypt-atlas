@@ -48,6 +48,7 @@ def main():
  parser.add_argument('--media',type=Path,help='egypt-media.zip from the media-v1 Release')
  parser.add_argument('--out',type=Path,default=ROOT/'_site')
  parser.add_argument('--require-audio',action='store_true')
+ parser.add_argument('--require-complete',action='store_true',help='require all audio, photos, cartouche images and PMTiles')
  args=parser.parse_args();dest=args.out.resolve();
  if dest==ROOT:raise SystemExit('Output must differ from source directory')
  if dest.exists():shutil.rmtree(dest)
@@ -58,10 +59,12 @@ def main():
      'cartouche-inline-ui.js','listen.html','voice_status.js','photo-sources.html'):
   src=ROOT/filename
   if src.exists():shutil.copy2(src,dest/filename)
- for folder in ('assets','photos','maps','icons'):
+ for folder in ('assets','photos','maps','icons','vendor'):
   src=ROOT/folder
   if src.exists():
    shutil.copytree(src,dest/folder,ignore=shutil.ignore_patterns('real','offline','cartouches'))
+ for runtime in ('vendor/maplibre-gl.js','vendor/maplibre-gl.css','vendor/pmtiles.js'):
+  if not (dest/runtime).is_file():raise FileNotFoundError('Missing offline map runtime: '+runtime)
  if args.media:
   if not args.media.is_file():raise FileNotFoundError(args.media)
   safe_extract(args.media,dest)
@@ -72,7 +75,7 @@ def main():
  def record(path):
   file=dest/path
   files.append({'path':'./'+path,'bytes':file.stat().st_size,'sha256':sha(file)})
- missingAudio=[];missingPhotos=[];missingCartouches=[]
+ missingAudio=[];missingPhotos=[];missingCartouches=[];missingMaps=[];offlineMaps=[]
  audio_ready=[]
  for stop in stops:
   tid=stop['id'];mp3=f'audio/{tid}.mp3'
@@ -94,19 +97,29 @@ def main():
   path=f'assets/cartouches/{key}.jpg'
   if (dest/path).is_file() and (dest/path).stat().st_size>2500:record(path)
   else:missingCartouches.append(key)
+ for tour in tours:
+  path=f'maps/offline/{tour["id"]}.pmtiles'
+  file=dest/path
+  if file.is_file() and file.stat().st_size>=127 and file.read_bytes()[:7]==b'PMTiles':
+   record(path)
+   offlineMaps.append({'id':tour['id'],'path':'./'+path,'bytes':file.stat().st_size,'sha256':sha(file)})
+  else:missingMaps.append(tour['id'])
  # Deduplicate manifest resource entries and sort for stable builds.
  files=sorted({x['path']:x for x in files}.values(),key=lambda x:x['path'])
  (dest/'catalog.js').write_text(BASENAME+json.dumps(tours,ensure_ascii=False,indent=2)+';\n',encoding='utf-8')
  (dest/'audio-ready.js').write_text('window.EgyptAtlasAudioReady = '+json.dumps({'voice':'ru-RU-SvetlanaNeural','ids':audio_ready},ensure_ascii=False)+';\n',encoding='utf-8')
- manifest={'version':1,'files':files,'expectedAudio':82,'expectedPhotos':82,
+ manifest={'version':1,'files':files,'expectedAudio':82,'expectedPhotos':82,'expectedMaps':len(tours),
   'missingAudio':missingAudio,'missingPhotos':missingPhotos,'missingCartouches':missingCartouches,
-  'note':'Interactive vector basemap is currently online-only. SVG plans are precached in SW.'}
+  'missingMaps':missingMaps,'maps':offlineMaps,
+  'note':'Audio, photos and PMTiles use same-origin relative URLs and can be cached for offline use.'}
  (dest/'offline-manifest.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
  if args.require_audio and missingAudio:raise RuntimeError(f'Cannot deploy without all 82 MP3: {missingAudio[:12]}')
+ if args.require_complete and (missingAudio or missingPhotos or missingCartouches or missingMaps):
+  raise RuntimeError(f'Incomplete offline package: audio={len(missingAudio)}, photos={len(missingPhotos)}, cartouches={len(missingCartouches)}, maps={len(missingMaps)}')
  size=sum(f.stat().st_size for f in dest.rglob('*') if f.is_file())
  if size > 950_000_000:raise RuntimeError(f'Site too large for GitHub Pages: {size/1e9:.2f} GB. Shrink audio/maps.')
- print(f'Built {dest}: MP3 {len(audio_ready)}/82; photos {82-len(missingPhotos)}/82; cartouches {len(cart["photos"])-len(missingCartouches)}/{len(cart["photos"])}')
+ print(f'Built {dest}: MP3 {len(audio_ready)}/82; photos {82-len(missingPhotos)}/82; cartouches {len(cart["photos"])-len(missingCartouches)}/{len(cart["photos"])}; maps {len(offlineMaps)}/{len(tours)}')
  print('Missing Photos:',', '.join(missingPhotos[:15]))
- print('Map: SVG offline; interactive online only')
+ print('Map: local PMTiles when packaged; OpenFreeMap fallback otherwise')
  return 0
 if __name__=='__main__':raise SystemExit(main())
