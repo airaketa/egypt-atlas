@@ -25,36 +25,24 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           mkdir -p .downloads
-          LIST_OK=false
-          for attempt in 1 2 3; do
-            if MEDIA_TAG="$(gh release list --repo "$GITHUB_REPOSITORY" --limit 100 \
-              --json tagName,isDraft,isPrerelease,publishedAt \
-              --jq '[.[] | select(.isDraft == false and .isPrerelease == false and (.tagName | test("^media-v[0-9]+([.][0-9]+)*$")))] | sort_by(.publishedAt) | last | .tagName // ""')"; then
-              LIST_OK=true
-              break
-            fi
-            echo "Release lookup failed (attempt $attempt/3); retrying..."
-            sleep $((attempt * 10))
-          done
-          if [ "$LIST_OK" != true ]; then
-            echo "Unable to query GitHub Releases after 3 attempts" >&2
-            exit 1
-          fi
+          curl --fail --silent --show-error --location \
+            --retry 3 --retry-all-errors \
+            --header "Accept: application/vnd.github+json" \
+            --header "Authorization: Bearer $GH_TOKEN" \
+            --header "X-GitHub-Api-Version: 2022-11-28" \
+            --output .downloads/releases.json \
+            "https://api.github.com/repos/$GITHUB_REPOSITORY/releases?per_page=100"
+          MEDIA_TAG="$(jq -r '[.[] | select(.draft == false and .prerelease == false and (.tag_name | test("^media-v[0-9]+([.][0-9]+)*$")))] | sort_by(.published_at) | last | .tag_name // empty' .downloads/releases.json)"
           if [ -n "$MEDIA_TAG" ]; then
-            DOWNLOAD_OK=false
-            for attempt in 1 2 3; do
-              rm -f .downloads/atlas-media.zip
-              if gh release download "$MEDIA_TAG" --pattern 'atlas-media.zip' --dir .downloads --repo "$GITHUB_REPOSITORY"; then
-                DOWNLOAD_OK=true
-                break
-              fi
-              echo "Release download failed (attempt $attempt/3); retrying..."
-              sleep $((attempt * 10))
-            done
-            if [ "$DOWNLOAD_OK" != true ]; then
-              echo "Unable to download atlas-media.zip after 3 attempts" >&2
+            MEDIA_URL="$(jq -r --arg tag "$MEDIA_TAG" '.[] | select(.tag_name == $tag) | [.assets[] | select(.name == "atlas-media.zip")] | first | .browser_download_url // empty' .downloads/releases.json)"
+            if [ -z "$MEDIA_URL" ]; then
+              echo "$MEDIA_TAG does not contain atlas-media.zip" >&2
               exit 1
             fi
+            curl --fail --silent --show-error --location \
+              --retry 3 --retry-all-errors \
+              --output .downloads/atlas-media.zip \
+              "$MEDIA_URL"
             test -s .downloads/atlas-media.zip
             echo "ATLAS_MEDIA_RELEASE=$MEDIA_TAG" >> "$GITHUB_ENV"
             echo "Using $MEDIA_TAG / atlas-media.zip"
