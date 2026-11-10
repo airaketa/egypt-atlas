@@ -1,0 +1,47 @@
+{
+  "schema_version": 2,
+  "project": "Atlas",
+  "language": "ru",
+  "content_revision": "evergreen-draft-2026-11-09",
+  "countries": [
+    {
+      "id": "egypt",
+      "title": "Египет",
+      "shared_package": "egypt-common",
+      "cities": [
+        {
+          "id": "cairo",
+          "title": "Каир и Гиза",
+          "package_id": "egypt-cairo",
+          "requires": [
+            "egypt-common"
+          ],
+          "attraction_count": 3,
+          "story_count": 13
+        },
+        {
+          "id": "luxor",
+          "title": "Луксор",
+          "package_id": "egypt-luxor",
+          "requires": [
+            "egypt-common"
+          ],
+          "attraction_count": 6,
+          "story_count": 12
+        },
+        {
+          "id": "alexandria",
+          "title": "Александрия",
+          "package_id": "egypt-alexandria",
+          "requires": [
+            "egypt-common"
+          ],
+          "attraction_count": 3,
+          "story_count": 11
+        }
+      ]
+    }
+  ],
+  "download_lifecycle": "city packages with shared country dependencies",
+  "editorial_policy": "evergreen_audio_only"
+}

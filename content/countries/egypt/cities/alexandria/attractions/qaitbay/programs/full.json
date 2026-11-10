@@ -1,0 +1,13 @@
+{
+  "id": "qaitbay-full",
+  "title": "Полная экскурсия",
+  "validation": "original_order_from_v025",
+  "estimated_narration_minutes": 3.0,
+  "ordered_point_ids": [
+    "QAI-01",
+    "QAI-02",
+    "QAI-03",
+    "QAI-04"
+  ],
+  "optional_point_ids": []
+}

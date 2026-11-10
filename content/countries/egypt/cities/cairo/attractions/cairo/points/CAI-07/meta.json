@@ -1,0 +1,51 @@
+{
+  "id": "CAI-07",
+  "title": "Баб Зувейла: южные ворота",
+  "role": "main",
+  "narrations": {
+    "main": {
+      "text": "main.txt",
+      "status": "imported_v025_unchanged",
+      "words": 109,
+      "estimated_minutes": 0.8,
+      "audio": "audio/main.mp3",
+      "text_sha256": "bea100f0c9bda5238ba8fa45d5f56a723f15d04241a2014fbeb889358c9622e1"
+    },
+    "learn_more": {
+      "text": "learn_more.txt",
+      "status": "imported_v1_unverified",
+      "words": 173,
+      "estimated_minutes": 1.3,
+      "audio": "audio/learn_more.mp3",
+      "text_sha256": "88a1875095d2eb698713b3e03a6f6b13b7e125f515483472f185d37fdd9a1ac0"
+    }
+  },
+  "source_candidates_unchecked": [
+    "https://egymonuments.gov.eg/monuments/bab-zuwayla"
+  ],
+  "factcheck_status": "pending_for_learn_more",
+  "summary": "Эти ворота построили в тысяча девяносто втором году — всего через несколько лет после северных Баб аль-Футух.",
+  "where_to_listen": "у южного конца Аль-Муизз, перед воротами.",
+  "location": {
+    "lng": 31.25778,
+    "lat": 30.04279,
+    "note": "Баб Зувейла: ориентир ворот по OpenStreetMap",
+    "source": "https://mapcarta.com/28189580",
+    "precision": "site"
+  },
+  "map_note": {
+    "status": "A",
+    "description": "Баб Зувейла, южные исторические ворота",
+    "source": "https://egymonuments.gov.eg/monuments/bab-zuwayla/"
+  },
+  "media": {
+    "photo": {
+      "path": "content/countries/egypt/cities/cairo/attractions/cairo/points/CAI-07/photo.jpg",
+      "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Zewala_gate.JPG?width=960",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Zewala_gate.JPG",
+      "source_filename": "Zewala gate.JPG",
+      "review_status": "candidate",
+      "accuracy_note": "Фотография-кандидат, авторство проверяется"
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "id": "GIZ-03",
+  "title": "Погребальный комплекс: не только пирамида",
+  "role": "main",
+  "narrations": {
+    "main": {
+      "text": "main.txt",
+      "status": "imported_v025_unchanged",
+      "words": 97,
+      "estimated_minutes": 0.7,
+      "audio": "audio/main.mp3",
+      "text_sha256": "2f3224df24962308bca29aa2fc7e4234f1d34e2bdc09db9b007e088caeff3a11"
+    },
+    "learn_more": {
+      "text": "learn_more.txt",
+      "status": "imported_v1_unverified",
+      "words": 185,
+      "estimated_minutes": 1.4,
+      "audio": "audio/learn_more.mp3",
+      "text_sha256": "713ed6a5d0eadb9eb9390f2f5071a874eec0218a15819d80e7f446e3b47238c0"
+    }
+  },
+  "source_candidates_unchecked": [
+    "https://egymonuments.gov.eg/en/archaeological-sites/giza-plateau/",
+    "https://gem.eg/collection/khufus-boats-museum/"
+  ],
+  "factcheck_status": "pending_for_learn_more",
+  "summary": "Попробуйте на минуту забыть о гигантских треугольниках.",
+  "where_to_listen": "у видимых малых пирамид или остатков храмовых построек рядом с комплексом Хуфу.",
+  "location": {
+    "lat": 29.97864,
+    "lng": 31.13569,
+    "precision": "osm_object",
+    "note": "Одна из лодочных ям к востоку от пирамиды Хуфу; рассказ охватывает более крупный комплекс, это не единственная точка.",
+    "source": "https://mapcarta.com/W219797717"
+  },
+  "map_note": {
+    "status": "B",
+    "description": "Малые пирамиды / остатки припирамидного комплекса Хуфу",
+    "source": "https://egymonuments.gov.eg/monuments/giza-plateau/"
+  },
+  "media": {
+    "photo": {
+      "path": "content/countries/egypt/cities/cairo/attractions/giza/points/GIZ-03/photo.jpg",
+      "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Khufu%27s_Pyramid_Complex_(V).jpg?width=960",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Khufu%27s_Pyramid_Complex_(V).jpg",
+      "source_filename": "Khufu's Pyramid Complex (V).jpg",
+      "review_status": "candidate",
+      "accuracy_note": "Фотография-кандидат, авторство проверяется"
+    }
+  }
+}

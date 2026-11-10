@@ -1,0 +1,52 @@
+{
+  "id": "VAL-02",
+  "title": "Как устроена царская гробница",
+  "role": "main",
+  "narrations": {
+    "main": {
+      "text": "main.txt",
+      "status": "imported_v025_unchanged",
+      "words": 118,
+      "estimated_minutes": 0.9,
+      "audio": "audio/main.mp3",
+      "text_sha256": "37c3abe44e4a7e42048f55b6d76ea41eacd03da9ba15291aa659db2ddddcbd63"
+    },
+    "learn_more": {
+      "text": "learn_more.txt",
+      "status": "edited_evergreen_2026-11-09",
+      "words": 177,
+      "estimated_minutes": 1.4,
+      "audio": "audio/learn_more.mp3",
+      "text_sha256": "a0894786bc68d683f7b5fca47d38daff9a811dbd998ccbbebcda599b9fd50428"
+    }
+  },
+  "source_candidates_unchecked": [
+    "https://egymonuments.gov.eg/archaeological-sites/valley-of-the-kings",
+    "https://egymonuments.gov.eg/en/monuments/tomb-of-ramesses-vi-kv9/"
+  ],
+  "factcheck_status": "pending_for_learn_more",
+  "summary": "Войдя в одну из открытых царских гробниц, присмотритесь к самому устройству пространства.",
+  "where_to_listen": "перед входом или в разрешённом для остановки начале коридора одной из открытых гробниц.",
+  "location": {
+    "lat": 25.7403,
+    "lng": 32.6014,
+    "precision": "shared_site",
+    "note": "Рассказ об устройстве гробницы: общая точка Долины царей, а не реальный вход/коридор. Слушать у любой доступной гробницы.",
+    "source": "https://mapcarta.com/Valley_of_the_Kings"
+  },
+  "map_note": {
+    "status": "B",
+    "description": "Любой открытый царский подземный коридор",
+    "source": "https://thebanmappingproject.com/sites/default/files/plans/Valley%20of%20the%20Kings.pdf"
+  },
+  "media": {
+    "photo": {
+      "path": "content/countries/egypt/cities/luxor/attractions/valley/points/VAL-02/photo.jpg",
+      "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Tutankhamen%20tomb%20layout.jpg?width=960",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Tutankhamen_tomb_layout.jpg",
+      "source_filename": "Tutankhamen Tomb layout.jpg",
+      "review_status": "illustration",
+      "accuracy_note": "Иллюстрация"
+    }
+  }
+}

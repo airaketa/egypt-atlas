@@ -1,0 +1,51 @@
+{
+  "id": "VAL-05",
+  "title": "KV17: гробница Сети I — вершина рельефной росписи",
+  "role": "main",
+  "narrations": {
+    "main": {
+      "text": "main.txt",
+      "status": "imported_v025_unchanged",
+      "words": 102,
+      "estimated_minutes": 0.8,
+      "audio": "audio/main.mp3",
+      "text_sha256": "84fa125cd8990c84c3ab9e7c5fea18ac5dbc1ab5275f4bd6f6504a5b5f22ec55"
+    },
+    "learn_more": {
+      "text": "learn_more.txt",
+      "status": "edited_evergreen_2026-11-09",
+      "words": 185,
+      "estimated_minutes": 1.4,
+      "audio": "audio/learn_more.mp3",
+      "text_sha256": "17d072c726c421d05d49097f5f6258bd809db3c5a44555fda13b9327d7416425"
+    }
+  },
+  "source_candidates_unchecked": [
+    "https://egymonuments.gov.eg/en/monuments/tomb-of-sety-i-kv17"
+  ],
+  "factcheck_status": "pending_for_learn_more",
+  "summary": "Гробница Сети Первого считается одним из самых впечатляющих погребений Долины царей.",
+  "where_to_listen": "только при открытом доступе в KV17; обычно дополнительный билет.",
+  "location": {
+    "lng": 32.60152,
+    "lat": 25.73937,
+    "note": "Ориентир KV17 (Сети I), OSM node; не гарантированный вход",
+    "source": "https://mapcarta.com/N1047912183",
+    "precision": "site"
+  },
+  "map_note": {
+    "status": "A",
+    "description": "Вход в гробницу VAL-05: сверить KV-номер и форму входа с официальной картой TMP",
+    "source": "https://thebanmappingproject.com/sites/default/files/plans/Valley%20of%20the%20Kings.pdf"
+  },
+  "media": {
+    "photo": {
+      "path": "content/countries/egypt/cities/luxor/attractions/valley/points/VAL-05/photo.jpg",
+      "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/The_tomb_of_Seti_I_(KV17)_1.jpg?width=960",
+      "source_url": "https://commons.wikimedia.org/wiki/File:The_tomb_of_Seti_I_(KV17)_1.jpg",
+      "source_filename": "The tomb of Seti I (KV17) 1.jpg",
+      "review_status": "candidate",
+      "accuracy_note": "Фотография-кандидат, авторство проверяется"
+    }
+  }
+}

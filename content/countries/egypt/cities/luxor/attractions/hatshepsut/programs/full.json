@@ -1,0 +1,14 @@
+{
+  "id": "hatshepsut-full",
+  "title": "Полная экскурсия",
+  "validation": "original_order_from_v025",
+  "estimated_narration_minutes": 3.7,
+  "ordered_point_ids": [
+    "HAT-01",
+    "HAT-02",
+    "HAT-03",
+    "HAT-04",
+    "HAT-05"
+  ],
+  "optional_point_ids": []
+}

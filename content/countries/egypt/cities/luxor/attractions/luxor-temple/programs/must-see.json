@@ -1,0 +1,15 @@
+{
+  "id": "luxor-temple-must-see",
+  "title": "Главное · Must-see",
+  "validation": "editorial_selection_not_route_verified",
+  "estimated_narration_minutes": 3.6,
+  "editorial_notes": "Последовательность осмотра сохраняется. Пропускается рассказ о дворе Рамсеса II, хотя сам двор останется на пути.",
+  "important": "Не обещать экономию времени на перемещении, доступность или физический маршрут без проверки.",
+  "ordered_point_ids": [
+    "LUX-01",
+    "LUX-03",
+    "LUX-04",
+    "LUX-05"
+  ],
+  "optional_point_ids": []
+}

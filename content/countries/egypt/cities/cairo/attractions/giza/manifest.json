@@ -1,0 +1,158 @@
+{
+  "schema_version": 1,
+  "id": "giza",
+  "title": "Пирамиды Гизы и Сфинкс",
+  "city_id": "cairo",
+  "country_id": "egypt",
+  "full_program": "programs/full.json",
+  "must_see_program": "programs/must-see.json",
+  "content_status": "draft",
+  "points": [
+    {
+      "id": "GIZ-01",
+      "title": "Панорама трёх пирамид",
+      "meta": "points/GIZ-01/meta.json"
+    },
+    {
+      "id": "GIZ-02",
+      "title": "Великая пирамида Хуфу",
+      "meta": "points/GIZ-02/meta.json"
+    },
+    {
+      "id": "GIZ-03",
+      "title": "Погребальный комплекс: не только пирамида",
+      "meta": "points/GIZ-03/meta.json"
+    },
+    {
+      "id": "GIZ-04",
+      "title": "Пирамида Хафры",
+      "meta": "points/GIZ-04/meta.json"
+    },
+    {
+      "id": "GIZ-05",
+      "title": "Пирамида Менкауры и малые пирамиды",
+      "meta": "points/GIZ-05/meta.json"
+    },
+    {
+      "id": "GIZ-06",
+      "title": "Большой Сфинкс",
+      "meta": "points/GIZ-06/meta.json"
+    },
+    {
+      "id": "GIZ-07",
+      "title": "Нижний храм Хафры и дорога процессий",
+      "meta": "points/GIZ-07/meta.json"
+    }
+  ],
+  "main_points": 7,
+  "optional_continuation_points": 0,
+  "content_type": "attraction",
+  "map": {
+    "center": [
+      31.1328,
+      29.9754
+    ],
+    "zoom": 15.3,
+    "geoPoints": {
+      "GIZ-02": {
+        "lng": 31.1342,
+        "lat": 29.9792,
+        "note": "Ориентир самого памятника; приблизительные координаты",
+        "precision": "legacy_approx",
+        "source": "https://egymonuments.gov.eg/monuments/the-great-pyramid/"
+      },
+      "GIZ-04": {
+        "lng": 31.1307,
+        "lat": 29.9751,
+        "note": "Ориентир самого памятника; приблизительные координаты",
+        "precision": "legacy_approx",
+        "source": "https://egymonuments.gov.eg/monuments/pyramid-complex-of-khafre/"
+      },
+      "GIZ-05": {
+        "lng": 31.1284,
+        "lat": 29.9725,
+        "note": "Ориентир самого памятника; приблизительные координаты",
+        "precision": "legacy_approx",
+        "source": "https://egymonuments.gov.eg/monuments/pyramid-complex-of-menkaure/"
+      },
+      "GIZ-06": {
+        "lng": 31.1377,
+        "lat": 29.9753,
+        "note": "Ориентир самого памятника; приблизительные координаты",
+        "precision": "legacy_approx",
+        "source": "https://egymonuments.gov.eg/monuments/great-sphinx/"
+      },
+      "GIZ-01": {
+        "lat": 29.96788,
+        "lng": 31.125,
+        "precision": "osm_object",
+        "note": "Панорамная точка с видом на три пирамиды; посещение зависит от действующей схемы движения.",
+        "source": "https://mapcarta.com/N11420474175"
+      },
+      "GIZ-03": {
+        "lat": 29.97864,
+        "lng": 31.13569,
+        "precision": "osm_object",
+        "note": "Одна из лодочных ям к востоку от пирамиды Хуфу; рассказ охватывает более крупный комплекс, это не единственная точка.",
+        "source": "https://mapcarta.com/W219797717"
+      },
+      "GIZ-07": {
+        "lat": 29.97474,
+        "lng": 31.13829,
+        "precision": "osm_object",
+        "note": "Нижний храм Хафры: геопривязка исторического сооружения, не гарантированный доступный вход.",
+        "source": "https://mapcarta.com/32903444"
+      }
+    },
+    "image": "content/countries/egypt/cities/cairo/attractions/giza/map-plan.svg",
+    "source": "https://www.openstreetmap.org/copyright",
+    "note": "СХЕМА ПОРЯДКА РАССКАЗОВ, не географический план. Номера на схеме условные: для передвижения используйте карту OSM, официальные указатели и описания «Где слушать».",
+    "points": {
+      "GIZ-01": {
+        "x": 17.0,
+        "y": 28.0
+      },
+      "GIZ-02": {
+        "x": 50,
+        "y": 28.0
+      },
+      "GIZ-03": {
+        "x": 83.0,
+        "y": 28.0
+      },
+      "GIZ-04": {
+        "x": 17.0,
+        "y": 55.0
+      },
+      "GIZ-05": {
+        "x": 50,
+        "y": 55.0
+      },
+      "GIZ-06": {
+        "x": 83.0,
+        "y": 55.0
+      },
+      "GIZ-07": {
+        "x": 17.0,
+        "y": 82.0
+      }
+    },
+    "venueLabel": "Пирамиды Гизы и Сфинкс",
+    "planKind": "ordered_route",
+    "defaultView": "live",
+    "geoCount": 7,
+    "navBounds": [
+      [
+        31.119296,
+        29.962939
+      ],
+      [
+        31.145244,
+        29.98618
+      ]
+    ],
+    "navPaddingMeters": 550,
+    "nearbyRadiusMeters": 650,
+    "archive": "content/countries/egypt/cities/cairo/attractions/giza/map.pmtiles"
+  }
+}

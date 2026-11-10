@@ -1,0 +1,206 @@
+{
+  "schema_version": 1,
+  "id": "valley",
+  "title": "Долина царей",
+  "city_id": "luxor",
+  "country_id": "egypt",
+  "full_program": "programs/full.json",
+  "must_see_program": "programs/must-see.json",
+  "content_status": "draft",
+  "points": [
+    {
+      "id": "VAL-01",
+      "title": "Долина царей: почему именно здесь?",
+      "meta": "points/VAL-01/meta.json"
+    },
+    {
+      "id": "VAL-02",
+      "title": "Как устроена царская гробница",
+      "meta": "points/VAL-02/meta.json"
+    },
+    {
+      "id": "VAL-07",
+      "title": "KV2: гробница Рамсеса IV — подземный маршрут по рисункам",
+      "meta": "points/VAL-07/meta.json"
+    },
+    {
+      "id": "VAL-08",
+      "title": "KV6: Рамсес IX — астрономия на потолке",
+      "meta": "points/VAL-08/meta.json"
+    },
+    {
+      "id": "VAL-09",
+      "title": "KV8: Мернептах — наследник Рамсеса II",
+      "meta": "points/VAL-09/meta.json"
+    },
+    {
+      "id": "VAL-10",
+      "title": "KV11: Рамсес III — гробница арфистов",
+      "meta": "points/VAL-10/meta.json"
+    },
+    {
+      "id": "VAL-03",
+      "title": "KV9: гробница Рамсеса V и VI — книги загробного мира",
+      "meta": "points/VAL-03/meta.json"
+    },
+    {
+      "id": "VAL-04",
+      "title": "KV62: маленькая гробница Тутанхамона",
+      "meta": "points/VAL-04/meta.json"
+    },
+    {
+      "id": "VAL-05",
+      "title": "KV17: гробница Сети I — вершина рельефной росписи",
+      "meta": "points/VAL-05/meta.json"
+    },
+    {
+      "id": "VAL-06",
+      "title": "Почему гробницы отличаются друг от друга",
+      "meta": "points/VAL-06/meta.json"
+    }
+  ],
+  "main_points": 10,
+  "optional_continuation_points": 0,
+  "content_type": "attraction",
+  "map": {
+    "center": [
+      32.6014,
+      25.74
+    ],
+    "zoom": 16.4,
+    "geoPoints": {
+      "VAL-07": {
+        "lng": 32.60169,
+        "lat": 25.74172,
+        "note": "OSM-объект KV2, положение входа необходимо уточнять на месте.",
+        "source": "https://mapcarta.com/N1047912060",
+        "precision": "osm_object"
+      },
+      "VAL-08": {
+        "lng": 32.60228,
+        "lat": 25.74026,
+        "note": "OSM-объект KV6; уточнено положение относительно предыдущей сборки.",
+        "source": "https://mapcarta.com/N1047983708",
+        "precision": "osm_object"
+      },
+      "VAL-09": {
+        "lng": 32.60007,
+        "lat": 25.74098,
+        "note": "OSM-объект KV8; уточнено положение относительно предыдущей сборки.",
+        "source": "https://mapcarta.com/N1047912086",
+        "precision": "osm_object"
+      },
+      "VAL-10": {
+        "lng": 32.60114,
+        "lat": 25.74002,
+        "note": "OSM-полигон KV11; не гарантия входа.",
+        "source": "https://mapcarta.com/W813717255",
+        "precision": "osm_object"
+      },
+      "VAL-03": {
+        "lng": 32.6004,
+        "lat": 25.74065,
+        "note": "OSM-объект KV9; не гарантия входа.",
+        "source": "https://mapcarta.com/N1047912029",
+        "precision": "osm_object"
+      },
+      "VAL-04": {
+        "lng": 32.6013,
+        "lat": 25.74029,
+        "note": "OSM-объект KV62; не гарантия входа.",
+        "source": "https://mapcarta.com/N1047911950",
+        "precision": "osm_object"
+      },
+      "VAL-05": {
+        "lng": 32.60152,
+        "lat": 25.73937,
+        "note": "Ориентир KV17 (Сети I), OSM node; не гарантированный вход",
+        "source": "https://mapcarta.com/N1047912183",
+        "precision": "site"
+      },
+      "VAL-01": {
+        "lat": 25.74542,
+        "lng": 32.6051,
+        "precision": "interpretive_zone",
+        "note": "Общая вводная остановка: ориентир посетительской зоны южнее парковки, а НЕ обязательное место прослушивания.",
+        "source": "https://mapcarta.com/W89657572"
+      },
+      "VAL-02": {
+        "lat": 25.7403,
+        "lng": 32.6014,
+        "precision": "shared_site",
+        "note": "Рассказ об устройстве гробницы: общая точка Долины царей, а не реальный вход/коридор. Слушать у любой доступной гробницы.",
+        "source": "https://mapcarta.com/Valley_of_the_Kings"
+      },
+      "VAL-06": {
+        "lat": 25.7403,
+        "lng": 32.6014,
+        "precision": "shared_site",
+        "note": "Итоговое сравнение гробниц: тот же общий ориентир долины, а не отдельный памятник.",
+        "source": "https://mapcarta.com/Valley_of_the_Kings"
+      }
+    },
+    "image": "content/countries/egypt/cities/luxor/attractions/valley/map-plan.svg",
+    "source": "https://huss.aucegypt.edu/about/centers/theban-mapping-project",
+    "note": "СХЕМА ПОРЯДКА РАССКАЗОВ, не географический план. Номера на схеме условные: для передвижения используйте карту OSM, официальные указатели и описания «Где слушать».",
+    "points": {
+      "VAL-01": {
+        "x": 17.0,
+        "y": 28.0
+      },
+      "VAL-02": {
+        "x": 50,
+        "y": 28.0
+      },
+      "VAL-07": {
+        "x": 83.0,
+        "y": 28.0
+      },
+      "VAL-08": {
+        "x": 17.0,
+        "y": 46.0
+      },
+      "VAL-09": {
+        "x": 50,
+        "y": 46.0
+      },
+      "VAL-10": {
+        "x": 83.0,
+        "y": 46.0
+      },
+      "VAL-03": {
+        "x": 17.0,
+        "y": 64.0
+      },
+      "VAL-04": {
+        "x": 50,
+        "y": 64.0
+      },
+      "VAL-05": {
+        "x": 83.0,
+        "y": 64.0
+      },
+      "VAL-06": {
+        "x": 17.0,
+        "y": 82.0
+      }
+    },
+    "venueLabel": "Долина царей",
+    "planKind": "ordered_route",
+    "defaultView": "live",
+    "geoCount": 10,
+    "navBounds": [
+      [
+        32.595915,
+        25.735059
+      ],
+      [
+        32.609089,
+        25.749013
+      ]
+    ],
+    "navPaddingMeters": 400,
+    "nearbyRadiusMeters": 550,
+    "archive": "content/countries/egypt/cities/luxor/attractions/valley/map.pmtiles"
+  }
+}

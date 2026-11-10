@@ -1,0 +1,51 @@
+{
+  "id": "HAT-04",
+  "title": "Верхняя терраса и осирические статуи",
+  "role": "main",
+  "narrations": {
+    "main": {
+      "text": "main.txt",
+      "status": "imported_v025_unchanged",
+      "words": 93,
+      "estimated_minutes": 0.7,
+      "audio": "audio/main.mp3",
+      "text_sha256": "ce337c512e9aa5439bff0707ac28d5d16093e342e037f99ee5f3380736b8b51f"
+    },
+    "learn_more": {
+      "text": "learn_more.txt",
+      "status": "imported_v1_unverified",
+      "words": 172,
+      "estimated_minutes": 1.3,
+      "audio": "audio/learn_more.mp3",
+      "text_sha256": "9f22c4723ba251e2dc4f3c3c97a9be086fb77252afaaa65caace7c379597306e"
+    }
+  },
+  "source_candidates_unchecked": [
+    "https://egymonuments.gov.eg/en/monuments/hatshepsut-temple/"
+  ],
+  "factcheck_status": "pending_for_learn_more",
+  "summary": "Теперь вы приблизились к верхней террасе храма.",
+  "where_to_listen": "на верхнем уровне, если доступ открыт.",
+  "location": {
+    "lat": 25.73831,
+    "lng": 32.60643,
+    "precision": "approx_plan",
+    "note": "Верхняя терраса и осирические фигуры; общая зона, проходы могут быть закрыты.",
+    "source": "https://egymonuments.gov.eg/monuments/hatshepsut-temple/"
+  },
+  "map_note": {
+    "status": "A",
+    "description": "Верхняя терраса, осирические статуи у портика",
+    "source": "https://egymonuments.gov.eg/monuments/hatshepsut-temple/"
+  },
+  "media": {
+    "photo": {
+      "path": "content/countries/egypt/cities/luxor/attractions/hatshepsut/points/HAT-04/photo.jpg",
+      "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Hatshepsut_temple35.JPG?width=960",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Hatshepsut_temple35.JPG",
+      "source_filename": "Hatshepsut temple35.JPG",
+      "review_status": "candidate",
+      "accuracy_note": "Фотография-кандидат, авторство проверяется"
+    }
+  }
+}

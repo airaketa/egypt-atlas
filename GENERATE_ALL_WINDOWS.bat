@@ -8,7 +8,7 @@ if errorlevel 1 (
 ) else (
   set "PY=py -3"
 )
-echo Egypt Atlas: generating 82 audio tracks with Svetlana voice...
+echo Atlas: generating every audio track found under content\...
 %PY% -m pip install edge-tts mutagen
 if errorlevel 1 (
   echo ERROR: Could not install dependencies. Check Python and internet access.
@@ -22,5 +22,5 @@ if errorlevel 1 (
   exit /b 1
 )
 echo.
-echo Done. All 82 tracks are ready. Open index.html to check the generated audio.
+echo Done. All country, city and point audio tracks are ready.
 pause

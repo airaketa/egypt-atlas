@@ -1,0 +1,51 @@
+{
+  "id": "CAI-06",
+  "title": "Комплекс султана Калауна",
+  "role": "main",
+  "narrations": {
+    "main": {
+      "text": "main.txt",
+      "status": "imported_v025_unchanged",
+      "words": 108,
+      "estimated_minutes": 0.8,
+      "audio": "audio/main.mp3",
+      "text_sha256": "b7446d113ef099d0c7d5a97cdf500480cef49ae66740721410c80c2849a26fde"
+    },
+    "learn_more": {
+      "text": "learn_more.txt",
+      "status": "imported_v1_unverified",
+      "words": 176,
+      "estimated_minutes": 1.4,
+      "audio": "audio/learn_more.mp3",
+      "text_sha256": "8d5b83974d0adf96bfa34a4ce94e7ffd241336e03967243aff4d68df5454ee4d"
+    }
+  },
+  "source_candidates_unchecked": [
+    "https://egymonuments.gov.eg/en/monuments/madrasa-mausaleum-and-bimaristan-of-al-mansur-qalawun/"
+  ],
+  "factcheck_status": "pending_for_learn_more",
+  "summary": "Комплекс султана Калауна, созданный в тысяча двести восемьдесят третьем — восемьдесят четвёртом годах, показывает, насколько много функций могла объединять средневековая постройка.",
+  "where_to_listen": "у комплекса на Аль-Муизз, заходить только по действующим правилам.",
+  "location": {
+    "lng": 31.26097,
+    "lat": 30.04954,
+    "note": "Комплекс Калауна: ориентир памятника, не вход",
+    "source": "https://mapcarta.com/28174390",
+    "precision": "site"
+  },
+  "map_note": {
+    "status": "A",
+    "description": "Комплекс Калауна на Аль-Муизз",
+    "source": "https://egymonuments.gov.eg/monuments/complex-of-sultan-qalawun/"
+  },
+  "media": {
+    "photo": {
+      "path": "content/countries/egypt/cities/cairo/attractions/cairo/points/CAI-06/photo.jpg",
+      "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Sultan_Qalawun_Mosque_at_Mu%27izz_street.jpg?width=960",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Sultan_Qalawun_Mosque_at_Mu%27izz_street.jpg",
+      "source_filename": "Sultan Qalawun Mosque at Mu'izz street.jpg",
+      "review_status": "candidate",
+      "accuracy_note": "Фотография-кандидат, авторство проверяется"
+    }
+  }
+}

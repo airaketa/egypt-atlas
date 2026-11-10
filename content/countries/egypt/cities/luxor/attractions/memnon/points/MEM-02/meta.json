@@ -1,0 +1,52 @@
+{
+  "id": "MEM-02",
+  "title": "Почему статуи «пели» на рассвете?",
+  "role": "main",
+  "narrations": {
+    "main": {
+      "text": "main.txt",
+      "status": "imported_v025_unchanged",
+      "words": 97,
+      "estimated_minutes": 0.7,
+      "audio": "audio/main.mp3",
+      "text_sha256": "f23b46e3de3374d8a093471089fb8a80bf763d992fb70774c2aa1bc6982fb9be"
+    },
+    "learn_more": {
+      "text": "learn_more.txt",
+      "status": "imported_v1_unverified",
+      "words": 183,
+      "estimated_minutes": 1.4,
+      "audio": "audio/learn_more.mp3",
+      "text_sha256": "3b82e3fb4b4510b46bd94afbb21102efcad4d2ed2e999602f4cd519e9b930f0d"
+    }
+  },
+  "source_candidates_unchecked": [
+    "https://www.memphis.edu/egypt/resources/colortour/westbank2.php",
+    "https://academic.oup.com/edited-volume/61673/chapter-abstract/548067558"
+  ],
+  "factcheck_status": "pending_for_learn_more",
+  "summary": "Название «Колоссы Мемнона» появилось благодаря античной легенде.",
+  "where_to_listen": "на той же площадке, не блокируя проход.",
+  "location": {
+    "lat": 25.7205,
+    "lng": 32.61044,
+    "precision": "shared_site",
+    "note": "История о «поющей» статуе; тот же памятник, поэтому точка совпадает с остановкой 1.",
+    "source": "https://mapcarta.com/13050774"
+  },
+  "map_note": {
+    "status": "A",
+    "description": "Та же площадка у Колоссов Мемнона, что и MEM-01",
+    "source": "https://egymonuments.gov.eg/monuments/colossi-of-memnon/"
+  },
+  "media": {
+    "photo": {
+      "path": "content/countries/egypt/cities/luxor/attractions/memnon/points/MEM-02/photo.jpg",
+      "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Thebes,_Egypt,_The_Colossi_of_Memnon,_Ancient_Egypt.jpg?width=960",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Thebes,_Egypt,_The_Colossi_of_Memnon,_Ancient_Egypt.jpg",
+      "source_filename": "Thebes, Egypt, The Colossi of Memnon, Ancient Egypt.jpg",
+      "review_status": "candidate",
+      "accuracy_note": "Фотография-кандидат, авторство проверяется"
+    }
+  }
+}

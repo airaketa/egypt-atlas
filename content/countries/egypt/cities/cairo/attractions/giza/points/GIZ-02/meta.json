@@ -1,0 +1,54 @@
+{
+  "id": "GIZ-02",
+  "title": "Великая пирамида Хуфу",
+  "role": "main",
+  "narrations": {
+    "main": {
+      "text": "main.txt",
+      "status": "editorial_revision_2026-11-08_pending_full_factcheck",
+      "words": 108,
+      "estimated_minutes": 0.8,
+      "audio": "audio/main.mp3",
+      "text_sha256": "ea1a05e8c9663964316320c02568bc5d2c34748ab0ab47c5221b876dedc2be44"
+    },
+    "learn_more": {
+      "text": "learn_more.txt",
+      "status": "imported_v1_unverified",
+      "words": 193,
+      "estimated_minutes": 1.5,
+      "audio": "audio/learn_more.mp3",
+      "text_sha256": "56ae16c5f75f5128c876dab7506ee57b8d4398ba0790c4d594a55af28feb0bdc"
+    }
+  },
+  "source_candidates_unchecked": [
+    "https://egymonuments.gov.eg/en/monuments/the-great-pyramid/"
+  ],
+  "factcheck_status": "pending_for_learn_more",
+  "editorial_notes": [
+    "2026-11-08: устранено повторение оценки возраста пирамиды; около 4600 лет — допустимое округление."
+  ],
+  "summary": "Это пирамида Хуфу, которого древние греки называли Хеопсом.",
+  "where_to_listen": "у подножия пирамиды с доступной стороны.",
+  "location": {
+    "lng": 31.1342,
+    "lat": 29.9792,
+    "note": "Ориентир самого памятника; приблизительные координаты",
+    "precision": "legacy_approx",
+    "source": "https://egymonuments.gov.eg/monuments/the-great-pyramid/"
+  },
+  "map_note": {
+    "status": "A",
+    "description": "У доступной стороны северо-восточной Великой пирамиды Хуфу",
+    "source": "https://egymonuments.gov.eg/monuments/the-great-pyramid/"
+  },
+  "media": {
+    "photo": {
+      "path": "content/countries/egypt/cities/cairo/attractions/giza/points/GIZ-02/photo.jpg",
+      "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Pyramids_of_Giza,_Giza,_GG,_EGY_(46986591195).jpg?width=960",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Pyramids_of_Giza%2C_Giza%2C_GG%2C_EGY_%2846986591195%29.jpg",
+      "source_filename": "Pyramids of Giza, Giza, GG, EGY (46986591195).jpg",
+      "review_status": "existing_candidate",
+      "accuracy_note": "Фотография-кандидат, авторство проверяется"
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "id": "BIB-X01",
+  "title": "Музей рукописей — память на бумаге",
+  "role": "optional_continuation",
+  "narrations": {
+    "main": {
+      "text": "main.txt",
+      "status": "imported_v025_unchanged",
+      "words": 184,
+      "estimated_minutes": 1.4,
+      "audio": "audio/main.mp3",
+      "text_sha256": "55d621a46cf64969088183c4f7af992402fdcc93daef4666f5a46668fe46c3e1"
+    },
+    "learn_more": {
+      "text": "learn_more.txt",
+      "status": "imported_v1_unverified",
+      "words": 241,
+      "estimated_minutes": 1.9,
+      "audio": "audio/learn_more.mp3",
+      "text_sha256": "b4bcfa4af66efb1cdfeed5f3c1270625589b3dff8353e27982f14f67020abfe4"
+    }
+  },
+  "source_candidates_unchecked": [
+    "https://www.bibalex.org/en/center/details/manuscriptsmuseum",
+    "https://www.bibalex.org/en/Page/Guidelines"
+  ],
+  "factcheck_status": "pending_for_learn_more",
+  "summary": "В древней библиотеке хранили тексты на свитках. Здесь можно увидеть, как письменное наследие пережило века.",
+  "where_to_listen": "после Археологического музея следуйте по указателям B1 к Manuscripts Museum; слушайте в разрешённой зоне экспозиции.",
+  "location": {
+    "lat": 31.20866,
+    "lng": 29.90896,
+    "precision": "shared_site",
+    "note": "Общий ориентир здания Александрийской библиотеки, не координата комнаты B1.",
+    "source": "https://www.bibalex.org/en/Page/Guidelines"
+  },
+  "map_note": {
+    "status": null,
+    "description": null,
+    "source": null
+  },
+  "media": {
+    "photo": {
+      "path": "content/countries/egypt/cities/alexandria/attractions/alex-library/points/BIB-X01/photo.jpg",
+      "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Bibliotheca_Alexandrina_%E2%80%93_Manuscript_Museum_25.jpg",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Bibliotheca_Alexandrina_%E2%80%93_Manuscript_Museum_25.jpg",
+      "source_filename": null,
+      "review_status": "candidate",
+      "accuracy_note": "Фото-кандидат: указан памятник, но ракурс не обязательно совпадает с местом прослушивания"
+    }
+  }
+}

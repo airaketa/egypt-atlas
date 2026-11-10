@@ -1,4 +1,4 @@
-name: Publish Egypt Atlas
+name: Publish Atlas
 on:
   push:
     branches: [main]
@@ -15,29 +15,34 @@ concurrency:
 
 jobs:
   build:
-    # Ignore release of unrelated application versions.
-    if: github.event_name != 'release' || github.event.release.tag_name == 'media-v1'
+    # Ignore releases unrelated to the static media series.
+    if: github.event_name != 'release' || startsWith(github.event.release.tag_name, 'media-v')
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Get media ZIP from GitHub Release, if available
+      - name: Find latest published media release
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
           mkdir -p .downloads
-          if gh release view media-v1 --repo "$GITHUB_REPOSITORY" > /dev/null 2>&1; then
-            gh release download media-v1 --pattern 'egypt-media.zip' --dir .downloads --repo "$GITHUB_REPOSITORY"
-            test -s .downloads/egypt-media.zip
-            echo "Using media-v1 release asset"
+          MEDIA_TAG="$(gh release list --repo "$GITHUB_REPOSITORY" --limit 100 \
+            --json tagName,isDraft,isPrerelease,publishedAt \
+            --jq '[.[] | select(.isDraft == false and .isPrerelease == false and (.tagName | test("^media-v[0-9]+([.][0-9]+)*$")))] | sort_by(.publishedAt) | last | .tagName // ""')"
+          if [ -n "$MEDIA_TAG" ]; then
+            gh release download "$MEDIA_TAG" --pattern 'atlas-media.zip' --dir .downloads --repo "$GITHUB_REPOSITORY"
+            test -s .downloads/atlas-media.zip
+            echo "ATLAS_MEDIA_RELEASE=$MEDIA_TAG" >> "$GITHUB_ENV"
+            echo "Using $MEDIA_TAG / atlas-media.zip"
           else
-            echo "media-v1 release not created yet; publishing a text-only preview"
+            echo "ATLAS_MEDIA_RELEASE=preview" >> "$GITHUB_ENV"
+            echo "No published media-v* release; publishing a text-only preview"
           fi
       - name: Build and validate static site
         run: |
-          if [ -f .downloads/egypt-media.zip ]; then
-            python3 tools/build_site.py --media .downloads/egypt-media.zip --out _site --require-complete
+          if [ -f .downloads/atlas-media.zip ]; then
+            python3 tools/build_site.py --media .downloads/atlas-media.zip --out _site --require-complete --release-tag "$ATLAS_MEDIA_RELEASE"
           else
-            python3 tools/build_site.py --out _site
+            python3 tools/build_site.py --out _site --release-tag "$ATLAS_MEDIA_RELEASE"
           fi
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v4

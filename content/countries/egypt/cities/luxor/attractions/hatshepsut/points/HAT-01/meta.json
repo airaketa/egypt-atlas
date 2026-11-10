@@ -1,0 +1,51 @@
+{
+  "id": "HAT-01",
+  "title": "Панорама трёх террас",
+  "role": "main",
+  "narrations": {
+    "main": {
+      "text": "main.txt",
+      "status": "imported_v025_unchanged",
+      "words": 99,
+      "estimated_minutes": 0.8,
+      "audio": "audio/main.mp3",
+      "text_sha256": "6384977ba3c497e68dbac4f9121a8bc962877d2eabcd59243e84f932a87a7cdf"
+    },
+    "learn_more": {
+      "text": "learn_more.txt",
+      "status": "imported_v1_unverified",
+      "words": 178,
+      "estimated_minutes": 1.4,
+      "audio": "audio/learn_more.mp3",
+      "text_sha256": "553e8bd7b0f4b3bd9d5f3b420bd5ee1fd95bf91638d725798db94dd8361dcb27"
+    }
+  },
+  "source_candidates_unchecked": [
+    "https://egymonuments.gov.eg/en/monuments/hatshepsut-temple/"
+  ],
+  "factcheck_status": "pending_for_learn_more",
+  "summary": "Перед вами заупокойный храм Хатшепсут, который древние египтяне называли «Джесер-джесеру» — «Святая святых».",
+  "where_to_listen": "у подхода, где видна почти вся фасадная композиция.",
+  "location": {
+    "lat": 25.73804,
+    "lng": 32.60682,
+    "precision": "approx_plan",
+    "note": "Подход к террасам с панорамой фасада; приблизительно по планировке, проверьте открытую площадку.",
+    "source": "https://egymonuments.gov.eg/monuments/hatshepsut-temple/"
+  },
+  "map_note": {
+    "status": "A",
+    "description": "Вид на все три террасы со стороны подхода к храму",
+    "source": "https://egymonuments.gov.eg/monuments/hatshepsut-temple/"
+  },
+  "media": {
+    "photo": {
+      "path": "content/countries/egypt/cities/luxor/attractions/hatshepsut/points/HAT-01/photo.jpg",
+      "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Deir-El-Bahri,_Temple_of_Hatshepsut_(9794923745).jpg?width=960",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Deir-El-Bahri%2C_Temple_of_Hatshepsut_%289794923745%29.jpg",
+      "source_filename": "Deir-El-Bahri, Temple of Hatshepsut (9794923745).jpg",
+      "review_status": "existing_candidate",
+      "accuracy_note": "Фотография-кандидат, авторство проверяется"
+    }
+  }
+}

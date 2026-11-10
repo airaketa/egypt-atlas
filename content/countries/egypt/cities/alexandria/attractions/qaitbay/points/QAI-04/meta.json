@@ -1,0 +1,53 @@
+{
+  "id": "QAI-04",
+  "title": "Вид на гавань: море как история Александрии",
+  "role": "main",
+  "narrations": {
+    "main": {
+      "text": "main.txt",
+      "status": "imported_v025_unchanged",
+      "words": 103,
+      "estimated_minutes": 0.8,
+      "audio": "audio/main.mp3",
+      "text_sha256": "33c325fb6e82ccd495ad9f5a693f2fda32272be256f471416db98115dc8f8e67"
+    },
+    "learn_more": {
+      "text": "learn_more.txt",
+      "status": "imported_v1_unverified",
+      "words": 165,
+      "estimated_minutes": 1.3,
+      "audio": "audio/learn_more.mp3",
+      "text_sha256": "44bb7709b92661043c0ca5eef00344f463d6283371aad25aa8472502e305b7fd"
+    }
+  },
+  "source_candidates_unchecked": [
+    "https://egymonuments.gov.eg/monuments/qaitbay-fort/",
+    "https://egymonuments.gov.eg/sunken-monuments/qaitbay-fort-site/",
+    "https://egymonuments.gov.eg/sunken-monuments/eastern-harbor/"
+  ],
+  "factcheck_status": "pending_for_learn_more",
+  "summary": "Оглянитесь на море и представьте, что смотрите на один из важнейших портов древнего Средиземноморья.",
+  "where_to_listen": "на открытой доступной площадке с видом в сторону Восточной гавани.",
+  "location": {
+    "lat": 31.2141,
+    "lng": 29.88556,
+    "precision": "approx_plan",
+    "note": "Северный край крепости с панорамой моря; примерная зона, выход на стену может быть закрыт.",
+    "source": "https://egymonuments.gov.eg/monuments/qaitbay-fort/"
+  },
+  "map_note": {
+    "status": "B",
+    "description": "Открытая площадка в крепости с видом на Восточную гавань",
+    "source": "https://egymonuments.gov.eg/monuments/qaitbay-fort/"
+  },
+  "media": {
+    "photo": {
+      "path": "content/countries/egypt/cities/alexandria/attractions/qaitbay/points/QAI-04/photo.jpg",
+      "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/A_view_of_Alexandria_from_the_Citadel_of_Qaitbay.jpg?width=960",
+      "source_url": "https://commons.wikimedia.org/wiki/File:A_view_of_Alexandria_from_the_Citadel_of_Qaitbay.jpg",
+      "source_filename": "A view of Alexandria from the Citadel of Qaitbay.jpg",
+      "review_status": "candidate",
+      "accuracy_note": "Фотография-кандидат, авторство проверяется"
+    }
+  }
+}

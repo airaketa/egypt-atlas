@@ -8,7 +8,11 @@ if errorlevel 1 (
 ) else (
   set "PY=py -3"
 )
-%PY% tools\build_site.py --media egypt-media.zip --out _site --require-complete
+if exist atlas-media.zip (
+  %PY% tools\build_site.py --media atlas-media.zip --out _site --release-tag local-media
+) else (
+  %PY% tools\build_site.py --out _site --release-tag local-preview
+)
 if errorlevel 1 (
   pause
   exit /b 1

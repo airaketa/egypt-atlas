@@ -1,0 +1,52 @@
+{
+  "id": "BIB-X02",
+  "title": "Музей Садата — Египет XX века",
+  "role": "optional_continuation",
+  "narrations": {
+    "main": {
+      "text": "main.txt",
+      "status": "imported_v025_unchanged",
+      "words": 177,
+      "estimated_minutes": 1.4,
+      "audio": "audio/main.mp3",
+      "text_sha256": "66aea42eeabca2b68c7ae79e4b4f7d6f3ae30d1422e869399cdb2edbb13ff118"
+    },
+    "learn_more": {
+      "text": "learn_more.txt",
+      "status": "imported_v1_unverified",
+      "words": 187,
+      "estimated_minutes": 1.4,
+      "audio": "audio/learn_more.mp3",
+      "text_sha256": "2ac11b7d8c54a1d7aae22dd34ed82770b8ebc724ff4ee88d64132d1d8f98956a"
+    }
+  },
+  "source_candidates_unchecked": [
+    "https://www.bibalex.org/en/center/details/sadatmuseum",
+    "https://www.bibalex.org/en/Page/Guidelines"
+  ],
+  "factcheck_status": "pending_for_learn_more",
+  "summary": "Завершаем путешествие через тысячелетия историей президента Анвара Садата.",
+  "where_to_listen": "в конце одностороннего музейного маршрута B1 у Sadat Museum, перед выходом со стороны планетария.",
+  "location": {
+    "lat": 31.20866,
+    "lng": 29.90896,
+    "precision": "shared_site",
+    "note": "Общий ориентир здания Александрийской библиотеки, не координата комнаты B1.",
+    "source": "https://www.bibalex.org/en/Page/Guidelines"
+  },
+  "map_note": {
+    "status": null,
+    "description": null,
+    "source": null
+  },
+  "media": {
+    "photo": {
+      "path": "content/countries/egypt/cities/alexandria/attractions/alex-library/points/BIB-X02/photo.jpg",
+      "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Sadat_Museum_gallery.JPG",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Sadat_Museum_gallery.JPG",
+      "source_filename": null,
+      "review_status": "candidate",
+      "accuracy_note": "Фото-кандидат: указан памятник, но ракурс не обязательно совпадает с местом прослушивания"
+    }
+  }
+}

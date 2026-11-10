@@ -1,0 +1,14 @@
+{
+  "id": "alex-library-must-see",
+  "title": "Главное · Must-see",
+  "validation": "editorial_selection_not_route_verified",
+  "estimated_narration_minutes": 2.6,
+  "editorial_notes": "Внутренние помещения и музеи могут требовать билета/соблюдения одностороннего движения; схема предварительная.",
+  "important": "Не обещать экономию времени на перемещении, доступность или физический маршрут без проверки.",
+  "ordered_point_ids": [
+    "BIB-01",
+    "BIB-03",
+    "BIB-04"
+  ],
+  "optional_point_ids": []
+}

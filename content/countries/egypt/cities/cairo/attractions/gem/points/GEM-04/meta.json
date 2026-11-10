@@ -1,0 +1,45 @@
+{
+  "id": "GEM-04",
+  "title": "Основные галереи: власть, общество и вера",
+  "role": "main",
+  "narrations": {
+    "main": {
+      "text": "main.txt",
+      "status": "imported_v025_unchanged",
+      "words": 102,
+      "estimated_minutes": 0.8,
+      "audio": "audio/main.mp3",
+      "text_sha256": "6aed2f896d801e41075cd4f8bdbb928a5c46f10c97f7eaac48147ac56b862193"
+    },
+    "learn_more": {
+      "text": "learn_more.txt",
+      "status": "imported_v1_unverified",
+      "words": 194,
+      "estimated_minutes": 1.5,
+      "audio": "audio/learn_more.mp3",
+      "text_sha256": "cb5519722e370c2e7129e355689200900933379bdd91d4983f733d5f59d00400"
+    }
+  },
+  "source_candidates_unchecked": [
+    "https://gem.eg/en/whats-on/news/grand-egyptian-museum-announces-trial-operations-of-main-galleries/"
+  ],
+  "factcheck_status": "pending_for_learn_more",
+  "summary": "Главная экспозиция музея устроена вокруг трёх тем: царская власть, общество и верования.",
+  "where_to_listen": "у входа в Main Galleries, перед выбором тематических залов.",
+  "location": null,
+  "map_note": {
+    "status": "B",
+    "description": "Входная зона основных тематических галерей Main Galleries",
+    "source": "https://gem.eg/collection/main-galleries/"
+  },
+  "media": {
+    "photo": {
+      "path": "content/countries/egypt/cities/cairo/attractions/gem/points/GEM-04/photo.jpg",
+      "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Grand_staircase_and_entrance_hall_of_the_Grand_Egyptian_Museum_in_Giza,_Egypt,_featuring_several_large_ancient_Egyptian_statues.jpg?width=960",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Grand_staircase_and_entrance_hall_of_the_Grand_Egyptian_Museum_in_Giza,_Egypt,_featuring_several_large_ancient_Egyptian_statues.jpg",
+      "source_filename": "Grand staircase and entrance hall of the Grand Egyptian Museum in Giza, Egypt, featuring several large ancient Egyptian statues.jpg",
+      "review_status": "context_photo",
+      "accuracy_note": "Фотография по теме"
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "id": "valley-must-see",
+  "title": "Главное · Must-see",
+  "validation": "editorial_selection_not_route_verified",
+  "estimated_narration_minutes": 4.7,
+  "editorial_notes": "Это редакционный порядок рассказов, а не подтверждённая схема прохода между гробницами. Вход по билетам; доступные гробницы и условия меняются. Выбор конкретных KV согласовать перед релизом.",
+  "important": "Не обещать экономию времени на перемещении, доступность или физический маршрут без проверки.",
+  "ordered_point_ids": [
+    "VAL-01",
+    "VAL-02",
+    "VAL-07",
+    "VAL-10",
+    "VAL-03",
+    "VAL-06"
+  ],
+  "optional_point_ids": []
+}

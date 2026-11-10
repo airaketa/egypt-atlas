@@ -1,0 +1,53 @@
+{
+  "id": "VAL-09",
+  "title": "KV8: Мернептах — наследник Рамсеса II",
+  "role": "main",
+  "narrations": {
+    "main": {
+      "text": "main.txt",
+      "status": "imported_v025_unchanged",
+      "words": 112,
+      "estimated_minutes": 0.9,
+      "audio": "audio/main.mp3",
+      "text_sha256": "e69e769a6b3f6b1434310d82970951550f179977bd60cd2d674bbe9e03abaab3"
+    },
+    "learn_more": {
+      "text": "learn_more.txt",
+      "status": "imported_v1_unverified",
+      "words": 160,
+      "estimated_minutes": 1.2,
+      "audio": "audio/learn_more.mp3",
+      "text_sha256": "44d04cd39213bec5ec2ba7c8e3727ffa2ea927e9f0e7d1663ace33a2ef686218"
+    }
+  },
+  "source_candidates_unchecked": [
+    "https://huss.aucegypt.edu/about/centers/theban-mapping-project",
+    "https://www.lonelyplanet.com/points-of-interest/tomb-of-merenptah-kv-8/1136329",
+    "https://jarch.journals.ekb.eg/article_277047_2fc0bdfce101dc9dd7e52df05f329cfd.pdf"
+  ],
+  "factcheck_status": "pending_for_learn_more",
+  "summary": "Здесь похоронен Мернептах — фараон, который вступил на престол после долгого правления своего отца Рамсеса Второго.",
+  "where_to_listen": "у входа в KV8; рассказ опциональный, если открыт по стандартному билету.",
+  "location": {
+    "lng": 32.60007,
+    "lat": 25.74098,
+    "note": "OSM-объект KV8; уточнено положение относительно предыдущей сборки.",
+    "source": "https://mapcarta.com/N1047912086",
+    "precision": "osm_object"
+  },
+  "map_note": {
+    "status": "A",
+    "description": "Вход в гробницу VAL-09: сверить KV-номер и форму входа с официальной картой TMP",
+    "source": "https://thebanmappingproject.com/sites/default/files/plans/Valley%20of%20the%20Kings.pdf"
+  },
+  "media": {
+    "photo": {
+      "path": "content/countries/egypt/cities/luxor/attractions/valley/points/VAL-09/photo.jpg",
+      "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/MERENPTAH_tomb_KV8.jpeg?width=960",
+      "source_url": "https://commons.wikimedia.org/wiki/File:MERENPTAH_tomb_KV8.jpeg",
+      "source_filename": "MERENPTAH tomb KV8.jpeg",
+      "review_status": "candidate",
+      "accuracy_note": "Фотография-кандидат, авторство проверяется"
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "id": "giza-full",
+  "title": "Полная экскурсия",
+  "validation": "original_order_from_v025",
+  "estimated_narration_minutes": 5.6,
+  "ordered_point_ids": [
+    "GIZ-01",
+    "GIZ-02",
+    "GIZ-03",
+    "GIZ-04",
+    "GIZ-05",
+    "GIZ-06",
+    "GIZ-07"
+  ],
+  "optional_point_ids": []
+}

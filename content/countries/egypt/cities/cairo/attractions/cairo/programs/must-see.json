@@ -1,0 +1,15 @@
+{
+  "id": "cairo-must-see",
+  "title": "Главное · Must-see",
+  "validation": "editorial_selection_not_route_verified",
+  "estimated_narration_minutes": 3.2,
+  "editorial_notes": "Выбран компактный пешеходный маршрут по улице Аль-Муизз: он НАЧИНАЕТСЯ с Баб аль-Футух. Цитадель и мечеть султана Хасана исключены сознательно как отдельная географическая зона.",
+  "important": "Не обещать экономию времени на перемещении, доступность или физический маршрут без проверки.",
+  "ordered_point_ids": [
+    "CAI-04",
+    "CAI-05",
+    "CAI-06",
+    "CAI-07"
+  ],
+  "optional_point_ids": []
+}

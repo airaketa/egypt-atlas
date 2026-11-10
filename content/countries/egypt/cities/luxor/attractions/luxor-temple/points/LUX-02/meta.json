@@ -1,0 +1,51 @@
+{
+  "id": "LUX-02",
+  "title": "Двор Рамсеса II",
+  "role": "main",
+  "narrations": {
+    "main": {
+      "text": "main.txt",
+      "status": "imported_v025_unchanged",
+      "words": 112,
+      "estimated_minutes": 0.9,
+      "audio": "audio/main.mp3",
+      "text_sha256": "c306732da87740799638117248224a687ed8ad5967c394f9bc10ab5a865658c4"
+    },
+    "learn_more": {
+      "text": "learn_more.txt",
+      "status": "imported_v1_unverified",
+      "words": 151,
+      "estimated_minutes": 1.2,
+      "audio": "audio/learn_more.mp3",
+      "text_sha256": "4857bcb1dc1743e2e29d385da2afafddb73c6868e44b2f123dc668c1cbfb7c1f"
+    }
+  },
+  "source_candidates_unchecked": [
+    "https://egymonuments.gov.eg/monuments/luxor-temple/"
+  ],
+  "factcheck_status": "pending_for_learn_more",
+  "summary": "Вы вошли во двор, построенный при Рамсесе Втором.",
+  "where_to_listen": "внутри первого двора после пилона.",
+  "location": {
+    "lng": 32.63951,
+    "lat": 25.70002,
+    "note": "Двор к югу от первого пилона; приблизительно по последовательности частей храма.",
+    "source": "https://egymonuments.gov.eg/monuments/luxor-temple/",
+    "precision": "approx_plan"
+  },
+  "map_note": {
+    "status": "A",
+    "description": "Двор Рамсеса II непосредственно за входным пилоном",
+    "source": "https://egymonuments.gov.eg/monuments/luxor-temple/"
+  },
+  "media": {
+    "photo": {
+      "path": "content/countries/egypt/cities/luxor/attractions/luxor-temple/points/LUX-02/photo.jpg",
+      "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Luxor_Temple_Courtyard_of_Rameses_II_(9794740765).jpg?width=960",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Luxor_Temple_Courtyard_of_Rameses_II_(9794740765).jpg",
+      "source_filename": "Luxor Temple Courtyard of Rameses II (9794740765).jpg",
+      "review_status": "candidate",
+      "accuracy_note": "Фотография-кандидат, авторство проверяется"
+    }
+  }
+}

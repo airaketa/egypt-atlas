@@ -1,0 +1,52 @@
+{
+  "id": "BIB-03",
+  "title": "Главный читальный зал",
+  "role": "main",
+  "narrations": {
+    "main": {
+      "text": "main.txt",
+      "status": "imported_v025_unchanged",
+      "words": 112,
+      "estimated_minutes": 0.9,
+      "audio": "audio/main.mp3",
+      "text_sha256": "9b45402f855c555e0864ba6b2b7ea131ad02335d35e5c39b9993704a7e73526a"
+    },
+    "learn_more": {
+      "text": "learn_more.txt",
+      "status": "imported_v1_unverified",
+      "words": 165,
+      "estimated_minutes": 1.3,
+      "audio": "audio/learn_more.mp3",
+      "text_sha256": "7049a3c52f7f09ca04bb3937266c703ae7e0603454a766b2d2bb8dd1f44a9122"
+    }
+  },
+  "source_candidates_unchecked": [
+    "https://www.bibalex.org/en/center/details/mainlibrary",
+    "https://www.bibalex.org/libraries/presentation/static/156b0.aspx"
+  ],
+  "factcheck_status": "pending_for_learn_more",
+  "summary": "Внутри библиотеки открывается огромный читальный зал, расположенный на нескольких уровнях.",
+  "where_to_listen": "в разрешённой посетителям части многоуровневого читального пространства.",
+  "location": {
+    "lat": 31.20866,
+    "lng": 29.90896,
+    "precision": "shared_site",
+    "note": "Читальный зал внутри здания: координаты всего здания, не точка внутри зала.",
+    "source": "https://mapcarta.com/29457660"
+  },
+  "map_note": {
+    "status": "B",
+    "description": "Многоуровневый главный читальный зал",
+    "source": "https://www.bibalex.org/en/center/details/mainlibrary"
+  },
+  "media": {
+    "photo": {
+      "path": "content/countries/egypt/cities/alexandria/attractions/alex-library/points/BIB-03/photo.jpg",
+      "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Bibliotheca_Alexandrina_-_Reading_area.jpg?width=960",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Bibliotheca_Alexandrina_-_Reading_area.jpg",
+      "source_filename": "Bibliotheca Alexandrina - Reading area.jpg",
+      "review_status": "candidate",
+      "accuracy_note": "Фотография-кандидат, авторство проверяется"
+    }
+  }
+}

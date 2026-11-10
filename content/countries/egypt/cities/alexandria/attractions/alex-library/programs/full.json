@@ -1,0 +1,16 @@
+{
+  "id": "alex-library-full",
+  "title": "Полная экскурсия",
+  "validation": "original_order_from_v025",
+  "estimated_narration_minutes": 3.4,
+  "ordered_point_ids": [
+    "BIB-01",
+    "BIB-02",
+    "BIB-03",
+    "BIB-04"
+  ],
+  "optional_point_ids": [
+    "BIB-X01",
+    "BIB-X02"
+  ]
+}

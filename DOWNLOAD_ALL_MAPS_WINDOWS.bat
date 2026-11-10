@@ -8,7 +8,7 @@ if errorlevel 1 (
 ) else (
   set "PY=py -3"
 )
-echo Egypt Atlas: downloading offline maps for all 12 tours...
+echo Atlas: downloading every offline attraction map found under content\...
 %PY% download_offline_maps.py --all %*
 if errorlevel 1 (
   echo ERROR: Offline map download failed. Review the messages above.
@@ -16,5 +16,5 @@ if errorlevel 1 (
   exit /b 1
 )
 echo.
-echo Done. Offline maps are stored in maps\offline\.
+echo Done. Each offline map is stored beside its attraction manifest.
 pause

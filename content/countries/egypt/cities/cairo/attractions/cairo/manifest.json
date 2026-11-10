@@ -1,0 +1,182 @@
+{
+  "schema_version": 1,
+  "id": "cairo",
+  "title": "Исторический Каир",
+  "city_id": "cairo",
+  "country_id": "egypt",
+  "full_program": "programs/full.json",
+  "must_see_program": "programs/must-see.json",
+  "content_status": "draft",
+  "points": [
+    {
+      "id": "CAI-01",
+      "title": "Цитадель Салах ад-Дина: крепость над городом",
+      "meta": "points/CAI-01/meta.json"
+    },
+    {
+      "id": "CAI-02",
+      "title": "Мечеть Мухаммеда Али",
+      "meta": "points/CAI-02/meta.json"
+    },
+    {
+      "id": "CAI-03",
+      "title": "Мечеть-медресе султана Хасана",
+      "meta": "points/CAI-03/meta.json"
+    },
+    {
+      "id": "CAI-04",
+      "title": "Баб аль-Футух: северные ворота фатимидского Каира",
+      "meta": "points/CAI-04/meta.json"
+    },
+    {
+      "id": "CAI-05",
+      "title": "Улица Аль-Муизз: каменная история нескольких династий",
+      "meta": "points/CAI-05/meta.json"
+    },
+    {
+      "id": "CAI-06",
+      "title": "Комплекс султана Калауна",
+      "meta": "points/CAI-06/meta.json"
+    },
+    {
+      "id": "CAI-07",
+      "title": "Баб Зувейла: южные ворота",
+      "meta": "points/CAI-07/meta.json"
+    },
+    {
+      "id": "CAI-X01",
+      "title": "Мечеть ас-Салих Талаи",
+      "meta": "points/CAI-X01/meta.json"
+    },
+    {
+      "id": "CAI-X02",
+      "title": "Улица мастеров-хайямийщиков",
+      "meta": "points/CAI-X02/meta.json"
+    }
+  ],
+  "main_points": 7,
+  "optional_continuation_points": 2,
+  "content_type": "attraction",
+  "map": {
+    "center": [
+      31.2589,
+      30.0448
+    ],
+    "zoom": 13.7,
+    "geoPoints": {
+      "CAI-04": {
+        "lng": 31.263433,
+        "lat": 30.055399,
+        "note": "Ориентир самого памятника; приблизительные координаты",
+        "precision": "legacy_approx",
+        "source": "https://egymonuments.gov.eg/monuments/bab-al-futuh/"
+      },
+      "CAI-01": {
+        "lng": 31.261466,
+        "lat": 30.029836,
+        "note": "Цитадель: общий ориентир комплекса, не вход и не место прослушивания",
+        "source": "https://www.outdooractive.com/en/poi/aegypten/salah-el-din-citadel/807775444/",
+        "precision": "site"
+      },
+      "CAI-02": {
+        "lng": 31.25974,
+        "lat": 30.02896,
+        "note": "Мечеть Мухаммеда Али: ориентир здания по OpenStreetMap",
+        "source": "https://mapcarta.com/29632492",
+        "precision": "site"
+      },
+      "CAI-03": {
+        "lng": 31.25631,
+        "lat": 30.03226,
+        "note": "Мечеть-медресе: ориентир здания, не точка входа",
+        "source": "https://mapcarta.com/28173580",
+        "precision": "site"
+      },
+      "CAI-05": {
+        "lng": 31.26158,
+        "lat": 30.05089,
+        "note": "Улица Аль-Муизз: условная точка протяжённого маршрута; не начало и не конец улицы",
+        "source": "https://mapcarta.com/30705932",
+        "precision": "area"
+      },
+      "CAI-06": {
+        "lng": 31.26097,
+        "lat": 30.04954,
+        "note": "Комплекс Калауна: ориентир памятника, не вход",
+        "source": "https://mapcarta.com/28174390",
+        "precision": "site"
+      },
+      "CAI-07": {
+        "lng": 31.25778,
+        "lat": 30.04279,
+        "note": "Баб Зувейла: ориентир ворот по OpenStreetMap",
+        "source": "https://mapcarta.com/28189580",
+        "precision": "site"
+      },
+      "CAI-X01": {
+        "lat": 30.04226,
+        "lng": 31.25808,
+        "precision": "site",
+        "note": "Мечеть ас-Салих Талаи: ориентир здания на площади, не вход.",
+        "source": "https://mapcarta.com/28189876"
+      },
+      "CAI-X02": {
+        "lat": 30.042025,
+        "lng": 31.257551,
+        "precision": "area",
+        "note": "Крытая улица мастеров аль-Хайямия: общий ориентир протяжённого рынка.",
+        "source": "https://en.wikipedia.org/wiki/Qasaba_of_Radwan_Bey"
+      }
+    },
+    "image": "content/countries/egypt/cities/cairo/attractions/cairo/map-plan.svg",
+    "source": "https://www.openstreetmap.org/copyright",
+    "note": "СХЕМА ПОРЯДКА РАССКАЗОВ, не географический план. Номера на схеме условные: для передвижения используйте карту OSM, официальные указатели и описания «Где слушать».",
+    "points": {
+      "CAI-01": {
+        "x": 17.0,
+        "y": 28.0
+      },
+      "CAI-02": {
+        "x": 50,
+        "y": 28.0
+      },
+      "CAI-03": {
+        "x": 83.0,
+        "y": 28.0
+      },
+      "CAI-04": {
+        "x": 17.0,
+        "y": 55.0
+      },
+      "CAI-05": {
+        "x": 50,
+        "y": 55.0
+      },
+      "CAI-06": {
+        "x": 83.0,
+        "y": 55.0
+      },
+      "CAI-07": {
+        "x": 17.0,
+        "y": 82.0
+      }
+    },
+    "venueLabel": "Исторический Каир",
+    "planKind": "ordered_route",
+    "defaultView": "live",
+    "geoCount": 7,
+    "navBounds": [
+      [
+        31.240221,
+        30.024648
+      ],
+      [
+        31.277579,
+        30.06097
+      ]
+    ],
+    "navPaddingMeters": 480,
+    "nearbyRadiusMeters": 500,
+    "archive": "content/countries/egypt/cities/cairo/attractions/cairo/map.pmtiles"
+  }
+}

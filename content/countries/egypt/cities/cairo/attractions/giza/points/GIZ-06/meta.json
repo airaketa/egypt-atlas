@@ -1,0 +1,51 @@
+{
+  "id": "GIZ-06",
+  "title": "Большой Сфинкс",
+  "role": "main",
+  "narrations": {
+    "main": {
+      "text": "main.txt",
+      "status": "imported_v025_unchanged",
+      "words": 100,
+      "estimated_minutes": 0.8,
+      "audio": "audio/main.mp3",
+      "text_sha256": "ccb3efb07cdcc54123bf9003a5c1493f5b40fe0bbc833ca69155c13ab05039b7"
+    },
+    "learn_more": {
+      "text": "learn_more.txt",
+      "status": "imported_v1_unverified",
+      "words": 200,
+      "estimated_minutes": 1.5,
+      "audio": "audio/learn_more.mp3",
+      "text_sha256": "fb4293c3b6ae9a2293b40d3644db87c3aa1858648a783df5b1ea4431f981794c"
+    }
+  },
+  "source_candidates_unchecked": [
+    "https://egymonuments.gov.eg/en/monuments/the-great-sphinx/"
+  ],
+  "factcheck_status": "pending_for_learn_more",
+  "summary": "Сфинкс высечен прямо из скального основания плато.",
+  "where_to_listen": "на разрешённой посетителям площадке со стороны Сфинкса.",
+  "location": {
+    "lng": 31.1377,
+    "lat": 29.9753,
+    "note": "Ориентир самого памятника; приблизительные координаты",
+    "precision": "legacy_approx",
+    "source": "https://egymonuments.gov.eg/monuments/great-sphinx/"
+  },
+  "map_note": {
+    "status": "A",
+    "description": "Восточный край плато, обзорная площадка у Большого Сфинкса",
+    "source": "https://egymonuments.gov.eg/monuments/great-sphinx/"
+  },
+  "media": {
+    "photo": {
+      "path": "content/countries/egypt/cities/cairo/attractions/giza/points/GIZ-06/photo.jpg",
+      "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/The_Great_Sphinx,_Giza,_GG,_EGY_(46986551395).jpg?width=960",
+      "source_url": "https://commons.wikimedia.org/wiki/File:The_Great_Sphinx%2C_Giza%2C_GG%2C_EGY_%2846986551395%29.jpg",
+      "source_filename": "The Great Sphinx, Giza, GG, EGY (46986551395).jpg",
+      "review_status": "existing_candidate",
+      "accuracy_note": "Фотография-кандидат, авторство проверяется"
+    }
+  }
+}

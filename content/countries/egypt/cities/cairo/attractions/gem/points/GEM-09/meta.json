@@ -1,0 +1,45 @@
+{
+  "id": "GEM-09",
+  "title": "Царский писец Рахотеп: кто управлял Египтом?",
+  "role": "main",
+  "narrations": {
+    "main": {
+      "text": "main.txt",
+      "status": "imported_v025_unchanged",
+      "words": 111,
+      "estimated_minutes": 0.9,
+      "audio": "audio/main.mp3",
+      "text_sha256": "831a929addd8a675cc4f3f6ae0b42b7d24a68cf7ce346a973cdeb6b36d2827a8"
+    },
+    "learn_more": {
+      "text": "learn_more.txt",
+      "status": "imported_v1_unverified",
+      "words": 177,
+      "estimated_minutes": 1.4,
+      "audio": "audio/learn_more.mp3",
+      "text_sha256": "8e41e77e382c650ea00d021c6959a1ff02612156d8d12fea4a342e3d5d77241f"
+    }
+  },
+  "source_candidates_unchecked": [
+    "https://gem.eg/en/collection/artefacts/statue-of-the-royal-scribe-rahotep"
+  ],
+  "factcheck_status": "pending_for_learn_more",
+  "summary": "Перед вами не царь и не бог, а чиновник — царский писец Рахотеп времён Пятой династии.",
+  "where_to_listen": "у статуи царского писца Рахотепа (GEM № 1127), только если экспонат находится в доступном зале Main Galleries.",
+  "location": null,
+  "map_note": {
+    "status": "C",
+    "description": "Статуя писца Рахотепа, GEM 1127, Main Galleries",
+    "source": "https://gem.eg/en/collection/artefacts/statue-of-the-royal-scribe-rahotep"
+  },
+  "media": {
+    "photo": {
+      "path": "content/countries/egypt/cities/cairo/attractions/gem/points/GEM-09/photo.jpg",
+      "download_url": "https://cdn.gem.eg/media/4185/1127.jpeg?rnd=133988540500000000&ver=2025.10.27.02",
+      "source_url": "https://gem.eg/en/collection/artefacts/statue-of-the-royal-scribe-rahotep",
+      "source_filename": null,
+      "review_status": "official_image",
+      "accuracy_note": "Официальное изображение экспоната"
+    }
+  }
+}

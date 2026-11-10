@@ -1,0 +1,54 @@
+{
+  "id": "VAL-06",
+  "title": "Почему гробницы отличаются друг от друга",
+  "role": "main",
+  "narrations": {
+    "main": {
+      "text": "main.txt",
+      "status": "imported_v025_unchanged",
+      "words": 107,
+      "estimated_minutes": 0.8,
+      "audio": "audio/main.mp3",
+      "text_sha256": "a477f62127b811f041ebd4e86c49395b9df0915d66bd5aeda1c5767ebb83d610"
+    },
+    "learn_more": {
+      "text": "learn_more.txt",
+      "status": "imported_v1_unverified",
+      "words": 164,
+      "estimated_minutes": 1.3,
+      "audio": "audio/learn_more.mp3",
+      "text_sha256": "756eb0c78313ab70f0bef9ebbb072e40511ffc5fefded1d92a60d21088a78251"
+    }
+  },
+  "source_candidates_unchecked": [
+    "https://egymonuments.gov.eg/archaeological-sites/valley-of-the-kings",
+    "https://egymonuments.gov.eg/en/monuments/tomb-of-ramesses-vi-kv9/",
+    "https://egymonuments.gov.eg/en/monuments/tomb-of-tutankhamun",
+    "https://egymonuments.gov.eg/en/monuments/tomb-of-sety-i-kv17"
+  ],
+  "factcheck_status": "pending_for_learn_more",
+  "summary": "Теперь, увидев несколько гробниц, сравните их.",
+  "where_to_listen": "после посещения выбранных открытых гробниц, в общей доступной зоне.",
+  "location": {
+    "lat": 25.7403,
+    "lng": 32.6014,
+    "precision": "shared_site",
+    "note": "Итоговое сравнение гробниц: тот же общий ориентир долины, а не отдельный памятник.",
+    "source": "https://mapcarta.com/Valley_of_the_Kings"
+  },
+  "map_note": {
+    "status": "B",
+    "description": "Общая дорожка после посещения нескольких выбранных гробниц",
+    "source": "https://thebanmappingproject.com/sites/default/files/plans/Valley%20of%20the%20Kings.pdf"
+  },
+  "media": {
+    "photo": {
+      "path": "content/countries/egypt/cities/luxor/attractions/valley/points/VAL-06/photo.jpg",
+      "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Entrance_of_Ramses_IV_tomb_in_the_Valley_of_the_Kings_(KV2).jpg?width=960",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Entrance_of_Ramses_IV_tomb_in_the_Valley_of_the_Kings_(KV2).jpg",
+      "source_filename": null,
+      "review_status": "context_photo",
+      "accuracy_note": "Фотография по теме"
+    }
+  }
+}

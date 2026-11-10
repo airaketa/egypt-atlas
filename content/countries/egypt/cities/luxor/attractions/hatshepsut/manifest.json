@@ -1,0 +1,126 @@
+{
+  "schema_version": 1,
+  "id": "hatshepsut",
+  "title": "Храм Хатшепсут",
+  "city_id": "luxor",
+  "country_id": "egypt",
+  "full_program": "programs/full.json",
+  "must_see_program": "programs/must-see.json",
+  "content_status": "draft",
+  "points": [
+    {
+      "id": "HAT-01",
+      "title": "Панорама трёх террас",
+      "meta": "points/HAT-01/meta.json"
+    },
+    {
+      "id": "HAT-02",
+      "title": "Рельефы экспедиции в Пунт",
+      "meta": "points/HAT-02/meta.json"
+    },
+    {
+      "id": "HAT-03",
+      "title": "Рассказ о божественном происхождении Хатшепсут",
+      "meta": "points/HAT-03/meta.json"
+    },
+    {
+      "id": "HAT-04",
+      "title": "Верхняя терраса и осирические статуи",
+      "meta": "points/HAT-04/meta.json"
+    },
+    {
+      "id": "HAT-05",
+      "title": "Святилища Амона, Хатхор и Анубиса",
+      "meta": "points/HAT-05/meta.json"
+    }
+  ],
+  "main_points": 5,
+  "optional_continuation_points": 0,
+  "content_type": "attraction",
+  "map": {
+    "center": [
+      32.6063,
+      25.7381
+    ],
+    "zoom": 17.0,
+    "geoPoints": {
+      "HAT-02": {
+        "lng": 32.606492,
+        "lat": 25.73779,
+        "note": "Фото-GPS у рельефов Пунта: возможна погрешность точки съёмки",
+        "source": "https://commons.wikimedia.org/wiki/File:Mortuary_Temple_of_Hatshepsut_032010_023.jpg",
+        "precision": "photo_viewpoint"
+      },
+      "HAT-01": {
+        "lat": 25.73804,
+        "lng": 32.60682,
+        "precision": "approx_plan",
+        "note": "Подход к террасам с панорамой фасада; приблизительно по планировке, проверьте открытую площадку.",
+        "source": "https://egymonuments.gov.eg/monuments/hatshepsut-temple/"
+      },
+      "HAT-03": {
+        "lat": 25.73836,
+        "lng": 32.60658,
+        "precision": "approx_plan",
+        "note": "Северная часть второго портика со сценами божественного происхождения; примерная зона по плану.",
+        "source": "https://egymonuments.gov.eg/monuments/hatshepsut-temple/"
+      },
+      "HAT-04": {
+        "lat": 25.73831,
+        "lng": 32.60643,
+        "precision": "approx_plan",
+        "note": "Верхняя терраса и осирические фигуры; общая зона, проходы могут быть закрыты.",
+        "source": "https://egymonuments.gov.eg/monuments/hatshepsut-temple/"
+      },
+      "HAT-05": {
+        "lat": 25.73843,
+        "lng": 32.60622,
+        "precision": "shared_site",
+        "note": "Святилище Амона привязано к OSM; рассказ также описывает часовни Хатхор и Анубиса в других частях храма.",
+        "source": "https://mapcarta.com/N3020232939"
+      }
+    },
+    "image": "content/countries/egypt/cities/luxor/attractions/hatshepsut/map-plan.svg",
+    "source": "https://www.openstreetmap.org/copyright",
+    "note": "СХЕМА ПОРЯДКА РАССКАЗОВ, не географический план. Номера на схеме условные: для передвижения используйте карту OSM, официальные указатели и описания «Где слушать».",
+    "points": {
+      "HAT-01": {
+        "x": 17.0,
+        "y": 28.0
+      },
+      "HAT-02": {
+        "x": 50,
+        "y": 28.0
+      },
+      "HAT-03": {
+        "x": 83.0,
+        "y": 28.0
+      },
+      "HAT-04": {
+        "x": 17.0,
+        "y": 82.0
+      },
+      "HAT-05": {
+        "x": 50,
+        "y": 82.0
+      }
+    },
+    "venueLabel": "Храм Хатшепсут",
+    "planKind": "ordered_route",
+    "defaultView": "live",
+    "geoCount": 5,
+    "navBounds": [
+      [
+        32.601812,
+        25.734058
+      ],
+      [
+        32.610788,
+        25.742142
+      ]
+    ],
+    "navPaddingMeters": 350,
+    "nearbyRadiusMeters": 450,
+    "archive": "content/countries/egypt/cities/luxor/attractions/hatshepsut/map.pmtiles"
+  }
+}

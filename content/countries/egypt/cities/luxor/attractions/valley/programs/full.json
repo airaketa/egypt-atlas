@@ -1,0 +1,19 @@
+{
+  "id": "valley-full",
+  "title": "Полная экскурсия",
+  "validation": "original_order_from_v025",
+  "estimated_narration_minutes": 8.0,
+  "ordered_point_ids": [
+    "VAL-01",
+    "VAL-02",
+    "VAL-07",
+    "VAL-08",
+    "VAL-09",
+    "VAL-10",
+    "VAL-03",
+    "VAL-04",
+    "VAL-05",
+    "VAL-06"
+  ],
+  "optional_point_ids": []
+}

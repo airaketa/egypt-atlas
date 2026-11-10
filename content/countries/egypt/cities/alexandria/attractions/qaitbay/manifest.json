@@ -1,0 +1,110 @@
+{
+  "schema_version": 1,
+  "id": "qaitbay",
+  "title": "Крепость Кайтбей",
+  "city_id": "alexandria",
+  "country_id": "egypt",
+  "full_program": "programs/full.json",
+  "must_see_program": "programs/must-see.json",
+  "content_status": "draft",
+  "points": [
+    {
+      "id": "QAI-01",
+      "title": "Здесь стоял Александрийский маяк",
+      "meta": "points/QAI-01/meta.json"
+    },
+    {
+      "id": "QAI-02",
+      "title": "Внешние стены и башни",
+      "meta": "points/QAI-02/meta.json"
+    },
+    {
+      "id": "QAI-03",
+      "title": "Главная башня и внутренний двор",
+      "meta": "points/QAI-03/meta.json"
+    },
+    {
+      "id": "QAI-04",
+      "title": "Вид на гавань: море как история Александрии",
+      "meta": "points/QAI-04/meta.json"
+    }
+  ],
+  "main_points": 4,
+  "optional_continuation_points": 0,
+  "content_type": "attraction",
+  "map": {
+    "center": [
+      29.88529,
+      31.21398
+    ],
+    "zoom": 17.1,
+    "geoPoints": {
+      "QAI-01": {
+        "lng": 29.885667,
+        "lat": 31.213183,
+        "note": "Фото-GPS у входа крепости: метка не доказывает местоположение античного маяка",
+        "source": "https://commons.wikimedia.org/wiki/File:Entrance_of_Qaitbay_Citadel.jpg",
+        "precision": "photo_viewpoint"
+      },
+      "QAI-02": {
+        "lat": 31.21368,
+        "lng": 29.88577,
+        "precision": "approx_plan",
+        "note": "Наружная стена крепости: приблизительная точка, конкретная доступная площадка определяется на месте.",
+        "source": "https://egymonuments.gov.eg/monuments/qaitbay-fort/"
+      },
+      "QAI-03": {
+        "lat": 31.21394,
+        "lng": 29.88523,
+        "precision": "approx_plan",
+        "note": "Центральная башня и двор на северо-западной стороне; приблизительно по описанию крепости.",
+        "source": "https://egymonuments.gov.eg/monuments/qaitbay-fort/"
+      },
+      "QAI-04": {
+        "lat": 31.2141,
+        "lng": 29.88556,
+        "precision": "approx_plan",
+        "note": "Северный край крепости с панорамой моря; примерная зона, выход на стену может быть закрыт.",
+        "source": "https://egymonuments.gov.eg/monuments/qaitbay-fort/"
+      }
+    },
+    "image": "content/countries/egypt/cities/alexandria/attractions/qaitbay/map-plan.svg",
+    "source": "https://www.openstreetmap.org/copyright",
+    "note": "СХЕМА ПОРЯДКА РАССКАЗОВ, не географический план. Номера на схеме условные: для передвижения используйте карту OSM, официальные указатели и описания «Где слушать».",
+    "points": {
+      "QAI-01": {
+        "x": 17.0,
+        "y": 28.0
+      },
+      "QAI-02": {
+        "x": 50,
+        "y": 28.0
+      },
+      "QAI-03": {
+        "x": 83.0,
+        "y": 28.0
+      },
+      "QAI-04": {
+        "x": 17.0,
+        "y": 82.0
+      }
+    },
+    "venueLabel": "Крепость Кайтбей",
+    "planKind": "ordered_route",
+    "defaultView": "live",
+    "geoCount": 4,
+    "navBounds": [
+      [
+        29.880563,
+        31.209938
+      ],
+      [
+        29.890017,
+        31.218022
+      ]
+    ],
+    "navPaddingMeters": 350,
+    "nearbyRadiusMeters": 450,
+    "archive": "content/countries/egypt/cities/alexandria/attractions/qaitbay/map.pmtiles"
+  }
+}

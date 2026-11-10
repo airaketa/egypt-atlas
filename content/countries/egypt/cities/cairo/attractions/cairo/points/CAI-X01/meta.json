@@ -1,0 +1,52 @@
+{
+  "id": "CAI-X01",
+  "title": "Мечеть ас-Салих Талаи",
+  "role": "optional_continuation",
+  "narrations": {
+    "main": {
+      "text": "main.txt",
+      "status": "imported_v025_unchanged",
+      "words": 164,
+      "estimated_minutes": 1.3,
+      "audio": "audio/main.mp3",
+      "text_sha256": "6cd5d9f071ba6f441b9dd399e3961a920e953b9fab790cd0edf91ba9267682bc"
+    },
+    "learn_more": {
+      "text": "learn_more.txt",
+      "status": "imported_v1_unverified",
+      "words": 166,
+      "estimated_minutes": 1.3,
+      "audio": "audio/learn_more.mp3",
+      "text_sha256": "6dc2777fe7bfb7010abe2b2015faaefbdef1fa6e7149822f04e4f29973e0f51b"
+    }
+  },
+  "source_candidates_unchecked": [
+    "https://archives.arce.org/collections/al-salih-tala-i-mosque-condition-survey-project",
+    "https://cairo.gov.eg/en/tourism/tourism-destinations/cultural/al-muizz-street/"
+  ],
+  "factcheck_status": "pending_for_learn_more",
+  "summary": "Последняя большая мечеть фатимидского времени стоит прямо за воротами старого Каира.",
+  "where_to_listen": "сразу к югу от Баб Зувейла, напротив ворот, на публичной площади у внешнего фасада мечети.",
+  "location": {
+    "lat": 30.04226,
+    "lng": 31.25808,
+    "precision": "site",
+    "note": "Мечеть ас-Салих Талаи: ориентир здания на площади, не вход.",
+    "source": "https://mapcarta.com/28189876"
+  },
+  "map_note": {
+    "status": null,
+    "description": null,
+    "source": null
+  },
+  "media": {
+    "photo": {
+      "path": "content/countries/egypt/cities/cairo/attractions/cairo/points/CAI-X01/photo.jpg",
+      "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Cairo%2C_moschea_di_as-salih_talai%2C_01.JPG",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Cairo%2C_moschea_di_as-salih_talai%2C_01.JPG",
+      "source_filename": null,
+      "review_status": "candidate",
+      "accuracy_note": "Фото-кандидат: указан памятник, но ракурс не обязательно совпадает с местом прослушивания"
+    }
+  }
+}

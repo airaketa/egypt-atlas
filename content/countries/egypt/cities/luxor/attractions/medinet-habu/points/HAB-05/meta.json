@@ -1,0 +1,51 @@
+{
+  "id": "HAB-05",
+  "title": "Колонные залы и внутреннее святилище",
+  "role": "main",
+  "narrations": {
+    "main": {
+      "text": "main.txt",
+      "status": "imported_v025_unchanged",
+      "words": 99,
+      "estimated_minutes": 0.8,
+      "audio": "audio/main.mp3",
+      "text_sha256": "d711bbfb798f940dfd25956acd157c57b2d999fcb4eae8ec321aeb1aad575ffc"
+    },
+    "learn_more": {
+      "text": "learn_more.txt",
+      "status": "imported_v1_unverified",
+      "words": 183,
+      "estimated_minutes": 1.4,
+      "audio": "audio/learn_more.mp3",
+      "text_sha256": "828307e3d38952902bddb3c5fb0daa4fa7c97760c283acee8831e5d7d583c66c"
+    }
+  },
+  "source_candidates_unchecked": [
+    "https://egymonuments.gov.eg/monuments/the-temple-of-medinet-habu/"
+  ],
+  "factcheck_status": "pending_for_learn_more",
+  "summary": "Чем дальше вы продвигаетесь по центральной оси Мединет-Абу, тем меньше становится пространства и тем ближе внутренние святилища.",
+  "where_to_listen": "в разрешённой части внутренних помещений.",
+  "location": {
+    "lat": 25.71964,
+    "lng": 32.60062,
+    "precision": "approx_plan",
+    "note": "Внутренние колонные залы и святилище; условная зона, а не отдельная комната.",
+    "source": "https://egymonuments.gov.eg/monuments/the-temple-of-medinet-habu/"
+  },
+  "map_note": {
+    "status": "B",
+    "description": "Зона внутренних колонных залов за вторым двором",
+    "source": "https://isac.uchicago.edu/publications/united-eternity-concise-guide-monuments-medinet-habu"
+  },
+  "media": {
+    "photo": {
+      "path": "content/countries/egypt/cities/luxor/attractions/medinet-habu/points/HAB-05/photo.jpg",
+      "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Hypostyle_hall_at_the_mortuary_temple_of_Ramesses_III.jpg?width=960",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Hypostyle_hall_at_the_mortuary_temple_of_Ramesses_III.jpg",
+      "source_filename": "Hypostyle hall at the mortuary temple of Ramesses III.jpg",
+      "review_status": "candidate",
+      "accuracy_note": "Фотография-кандидат, авторство проверяется"
+    }
+  }
+}

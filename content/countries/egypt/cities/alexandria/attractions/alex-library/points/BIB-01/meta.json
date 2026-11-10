@@ -1,0 +1,53 @@
+{
+  "id": "BIB-01",
+  "title": "Новый дом старой идеи",
+  "role": "main",
+  "narrations": {
+    "main": {
+      "text": "main.txt",
+      "status": "imported_v025_unchanged",
+      "words": 114,
+      "estimated_minutes": 0.9,
+      "audio": "audio/main.mp3",
+      "text_sha256": "b3b500ff7038d6edf54940e771845ce1ac216aca871c3b7025fd23b4d1838511"
+    },
+    "learn_more": {
+      "text": "learn_more.txt",
+      "status": "imported_v1_unverified",
+      "words": 174,
+      "estimated_minutes": 1.3,
+      "audio": "audio/learn_more.mp3",
+      "text_sha256": "0d4bd99fe964f745548f69fa357574855db137608f951fd0e2884b0030b8821b"
+    }
+  },
+  "source_candidates_unchecked": [
+    "https://www.bibalex.org/en/Page/overview",
+    "https://www.bibalex.org/Attachments/Publications/Files/1_NewBibliothecaAlexandrina.pdf",
+    "https://www.bibalex.org/en/news/details?documentid=220&page=936"
+  ],
+  "factcheck_status": "pending_for_learn_more",
+  "summary": "Перед вами современная Александрийская библиотека, открытая в 2002 году.",
+  "where_to_listen": "перед современным зданием библиотеки, на доступной внешней площадке.",
+  "location": {
+    "lat": 31.20833,
+    "lng": 29.909222,
+    "precision": "osm_object",
+    "note": "Внешний вход у библиотеки; точка съёмки входа в Commons, не обязательный вход сегодня.",
+    "source": "https://commons.wikimedia.org/wiki/File:Bibliotheca_Alexandrina_--_Library_entrance.jpg"
+  },
+  "map_note": {
+    "status": "A",
+    "description": "Снаружи у современного здания Bibliotheca Alexandrina, на площадке входа",
+    "source": "https://www.bibalex.org/en/center/details/mainlibrary"
+  },
+  "media": {
+    "photo": {
+      "path": "content/countries/egypt/cities/alexandria/attractions/alex-library/points/BIB-01/photo.jpg",
+      "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Bibliotheca_Alexandria_1.jpg?width=960",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Bibliotheca_Alexandria_1.jpg",
+      "source_filename": "Bibliotheca Alexandria 1.jpg",
+      "review_status": "candidate",
+      "accuracy_note": "Фотография-кандидат, авторство проверяется"
+    }
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "id": "LUX-01",
+  "title": "Пилон Рамсеса II и одинокий обелиск",
+  "role": "main",
+  "narrations": {
+    "main": {
+      "text": "main.txt",
+      "status": "imported_v025_unchanged",
+      "words": 169,
+      "estimated_minutes": 1.3,
+      "audio": "audio/main.mp3",
+      "text_sha256": "c77951f9e71d23749ba2de7db3dcec3c8c278dafda3c5d0eacd9e303800c1d68"
+    },
+    "learn_more": {
+      "text": "learn_more.txt",
+      "status": "imported_v1_unverified",
+      "words": 175,
+      "estimated_minutes": 1.3,
+      "audio": "audio/learn_more.mp3",
+      "text_sha256": "3faff55c546a7502422a7b9492e222e832671866e41cf8dac2d0a41adef907f5"
+    }
+  },
+  "source_candidates_unchecked": [
+    "https://egymonuments.gov.eg/monuments/luxor-temple/",
+    "https://commons.wikimedia.org/wiki/File:Luxor_-_hieroglyphs_on_obelisk.jpg",
+    "https://www.memphis.edu/hypostyle/welcome/",
+    "https://www.metmuseum.org/art/collection/search/559806"
+  ],
+  "factcheck_status": "pending_for_learn_more",
+  "summary": "Луксорский храм встречает посетителей огромным пилоном и статуями Рамсеса Второго.",
+  "where_to_listen": "перед входом с северной стороны.",
+  "location": {
+    "lng": 32.639783,
+    "lat": 25.700272,
+    "note": "Обелиск перед первым пилоном: координаты самого обелиска, не точка туриста",
+    "source": "https://www.obelisks.org/en/ramses.htm",
+    "precision": "site"
+  },
+  "map_note": {
+    "status": "A",
+    "description": "Северный пилон Рамсеса II и сохранившийся обелиск",
+    "source": "https://egymonuments.gov.eg/monuments/luxor-temple/"
+  },
+  "media": {
+    "photo": {
+      "path": "content/countries/egypt/cities/luxor/attractions/luxor-temple/points/LUX-01/photo.jpg",
+      "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/LuxorTemplePylon.jpg?width=960",
+      "source_url": "https://commons.wikimedia.org/wiki/File:LuxorTemplePylon.jpg",
+      "source_filename": "LuxorTemplePylon.jpg",
+      "review_status": "candidate",
+      "accuracy_note": "Фотография-кандидат, авторство проверяется"
+    }
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "id": "BIB-04",
+  "title": "Археологический музей внутри библиотеки",
+  "role": "main",
+  "narrations": {
+    "main": {
+      "text": "main.txt",
+      "status": "imported_v025_unchanged",
+      "words": 104,
+      "estimated_minutes": 0.8,
+      "audio": "audio/main.mp3",
+      "text_sha256": "87cb3d9ba44a76f3db5cbe1e6524c85c397da92c20c1053f317bc60890f44979"
+    },
+    "learn_more": {
+      "text": "learn_more.txt",
+      "status": "imported_v1_unverified",
+      "words": 155,
+      "estimated_minutes": 1.2,
+      "audio": "audio/learn_more.mp3",
+      "text_sha256": "2bec99685a0300ce7d707f523aba19f7d1035ff3592e2139c011eeb9b82be50a"
+    }
+  },
+  "source_candidates_unchecked": [
+    "https://www.bibalex.org/en/center/details/antiquitiesmuseum"
+  ],
+  "factcheck_status": "pending_for_learn_more",
+  "summary": "Археологический музей внутри современной библиотеки — неожиданное продолжение истории города.",
+  "where_to_listen": "у входа в Antiquities Museum или в его доступной экспозиции.",
+  "location": {
+    "lat": 31.20866,
+    "lng": 29.90896,
+    "precision": "shared_site",
+    "note": "Археологический музей внутри библиотеки: точка всего комплекса, не положение экспозиции.",
+    "source": "https://mapcarta.com/29457660"
+  },
+  "map_note": {
+    "status": "B",
+    "description": "Antiquities Museum внутри комплекса библиотеки",
+    "source": "https://www.bibalex.org/en/center/details/antiquitiesmuseum"
+  },
+  "media": {
+    "photo": {
+      "path": "content/countries/egypt/cities/alexandria/attractions/alex-library/points/BIB-04/photo.jpg",
+      "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Mosaic_depicting_a_sitting_dog,_Ptolemaic_Period,_2nd_century_BC,_Bibliotheca_Alexandrina_Antiquities_Museum.jpg?width=960",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Mosaic_depicting_a_sitting_dog,_Ptolemaic_Period,_2nd_century_BC,_Bibliotheca_Alexandrina_Antiquities_Museum.jpg",
+      "source_filename": "Mosaic depicting a sitting dog, Ptolemaic Period, 2nd century BC, Bibliotheca Alexandrina Antiquities Museum.jpg",
+      "review_status": "candidate",
+      "accuracy_note": "Фотография-кандидат, авторство проверяется"
+    }
+  }
+}

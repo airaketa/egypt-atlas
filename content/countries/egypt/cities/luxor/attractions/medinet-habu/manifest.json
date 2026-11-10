@@ -1,0 +1,126 @@
+{
+  "schema_version": 1,
+  "id": "medinet-habu",
+  "title": "Мединет-Абу",
+  "city_id": "luxor",
+  "country_id": "egypt",
+  "full_program": "programs/full.json",
+  "must_see_program": "programs/must-see.json",
+  "content_status": "draft",
+  "points": [
+    {
+      "id": "HAB-01",
+      "title": "Высокие ворота и укрепления",
+      "meta": "points/HAB-01/meta.json"
+    },
+    {
+      "id": "HAB-02",
+      "title": "Первый пилон: военная пропаганда царя",
+      "meta": "points/HAB-02/meta.json"
+    },
+    {
+      "id": "HAB-03",
+      "title": "Первый двор и осирические статуи",
+      "meta": "points/HAB-03/meta.json"
+    },
+    {
+      "id": "HAB-04",
+      "title": "Второй двор: праздник и ритуал",
+      "meta": "points/HAB-04/meta.json"
+    },
+    {
+      "id": "HAB-05",
+      "title": "Колонные залы и внутреннее святилище",
+      "meta": "points/HAB-05/meta.json"
+    }
+  ],
+  "main_points": 5,
+  "optional_continuation_points": 0,
+  "content_type": "attraction",
+  "map": {
+    "center": [
+      32.6018,
+      25.7194
+    ],
+    "zoom": 17.0,
+    "geoPoints": {
+      "HAB-03": {
+        "lng": 32.601057,
+        "lat": 25.719468,
+        "note": "Фото-GPS, первый двор Мединет-Абу: ориентировочная зона",
+        "source": "https://commons.wikimedia.org/wiki/File:1st_Courtyard_Medinet_Habu_R01.jpg",
+        "precision": "photo_viewpoint"
+      },
+      "HAB-04": {
+        "lng": 32.600918,
+        "lat": 25.719688,
+        "note": "Фото-GPS, второй двор Мединет-Абу: ориентировочная зона",
+        "source": "https://commons.wikimedia.org/wiki/File:2nd_Courtyard_Medinet_Habu_R01.jpg",
+        "precision": "photo_viewpoint"
+      },
+      "HAB-01": {
+        "lat": 25.71931,
+        "lng": 32.60194,
+        "precision": "approx_plan",
+        "note": "Восточные монументальные ворота комплекса; примерная зона по оси храма, а не геодезический замер.",
+        "source": "https://egymonuments.gov.eg/monuments/the-temple-of-medinet-habu/"
+      },
+      "HAB-02": {
+        "lat": 25.71939,
+        "lng": 32.60152,
+        "precision": "approx_plan",
+        "note": "Первый пилон к западу от восточных ворот; приблизительно по последовательности архитектурных частей.",
+        "source": "https://egymonuments.gov.eg/monuments/the-temple-of-medinet-habu/"
+      },
+      "HAB-05": {
+        "lat": 25.71964,
+        "lng": 32.60062,
+        "precision": "approx_plan",
+        "note": "Внутренние колонные залы и святилище; условная зона, а не отдельная комната.",
+        "source": "https://egymonuments.gov.eg/monuments/the-temple-of-medinet-habu/"
+      }
+    },
+    "image": "content/countries/egypt/cities/luxor/attractions/medinet-habu/map-plan.svg",
+    "source": "https://www.openstreetmap.org/copyright",
+    "note": "СХЕМА ПОРЯДКА РАССКАЗОВ, не географический план. Номера на схеме условные: для передвижения используйте карту OSM, официальные указатели и описания «Где слушать».",
+    "points": {
+      "HAB-01": {
+        "x": 17.0,
+        "y": 28.0
+      },
+      "HAB-02": {
+        "x": 50,
+        "y": 28.0
+      },
+      "HAB-03": {
+        "x": 83.0,
+        "y": 28.0
+      },
+      "HAB-04": {
+        "x": 17.0,
+        "y": 82.0
+      },
+      "HAB-05": {
+        "x": 50,
+        "y": 82.0
+      }
+    },
+    "venueLabel": "Мединет-Абу",
+    "planKind": "ordered_route",
+    "defaultView": "live",
+    "geoCount": 5,
+    "navBounds": [
+      [
+        32.59713,
+        25.715627
+      ],
+      [
+        32.605988,
+        25.723173
+      ]
+    ],
+    "navPaddingMeters": 350,
+    "nearbyRadiusMeters": 450,
+    "archive": "content/countries/egypt/cities/luxor/attractions/medinet-habu/map.pmtiles"
+  }
+}

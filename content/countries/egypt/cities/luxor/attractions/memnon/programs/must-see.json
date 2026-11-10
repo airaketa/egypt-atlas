@@ -1,0 +1,13 @@
+{
+  "id": "memnon-must-see",
+  "title": "Главное · Must-see",
+  "validation": "editorial_selection_not_route_verified",
+  "estimated_narration_minutes": 1.5,
+  "editorial_notes": "Обе остановки уже краткие. Must-see совпадает с полной программой; не создавать искусственное сокращение.",
+  "important": "Не обещать экономию времени на перемещении, доступность или физический маршрут без проверки.",
+  "ordered_point_ids": [
+    "MEM-01",
+    "MEM-02"
+  ],
+  "optional_point_ids": []
+}

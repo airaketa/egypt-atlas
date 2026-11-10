@@ -1,0 +1,52 @@
+{
+  "id": "CAI-04",
+  "title": "Баб аль-Футух: северные ворота фатимидского Каира",
+  "role": "main",
+  "narrations": {
+    "main": {
+      "text": "main.txt",
+      "status": "imported_v025_unchanged",
+      "words": 103,
+      "estimated_minutes": 0.8,
+      "audio": "audio/main.mp3",
+      "text_sha256": "476ff534a9c21be0c45f4eb1ab56dc554aade528d84b1ddd54434ce8d602f506"
+    },
+    "learn_more": {
+      "text": "learn_more.txt",
+      "status": "imported_v1_unverified",
+      "words": 159,
+      "estimated_minutes": 1.2,
+      "audio": "audio/learn_more.mp3",
+      "text_sha256": "cd686be44e6cdf302d8ca9dc222bbb2e4bfceda0ec935b1eb1c57864e850e246"
+    }
+  },
+  "source_candidates_unchecked": [
+    "https://egymonuments.gov.eg/en/monuments/bab-al-futuh",
+    "https://egymonuments.gov.eg/archaeological-sites/al-muizz-street/"
+  ],
+  "factcheck_status": "pending_for_learn_more",
+  "summary": "Перед вами Баб аль-Футух — Ворота завоеваний.",
+  "where_to_listen": "у северного начала улицы Аль-Муизз.",
+  "location": {
+    "lng": 31.263433,
+    "lat": 30.055399,
+    "note": "Ориентир самого памятника; приблизительные координаты",
+    "precision": "legacy_approx",
+    "source": "https://egymonuments.gov.eg/monuments/bab-al-futuh/"
+  },
+  "map_note": {
+    "status": "A",
+    "description": "Баб аль-Футух, северные ворота улицы Аль-Муизз",
+    "source": "https://egymonuments.gov.eg/monuments/bab-al-futuh/"
+  },
+  "media": {
+    "photo": {
+      "path": "content/countries/egypt/cities/cairo/attractions/cairo/points/CAI-04/photo.jpg",
+      "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Cairo-Bab-al-Futuh.jpg?width=960",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Cairo-Bab-al-Futuh.jpg",
+      "source_filename": "Cairo-Bab-al-Futuh.jpg",
+      "review_status": "candidate",
+      "accuracy_note": "Фотография-кандидат, авторство проверяется"
+    }
+  }
+}

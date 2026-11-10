@@ -1,0 +1,45 @@
+{
+  "id": "GEM-03",
+  "title": "Большая лестница: история царской власти",
+  "role": "main",
+  "narrations": {
+    "main": {
+      "text": "main.txt",
+      "status": "imported_v025_unchanged",
+      "words": 101,
+      "estimated_minutes": 0.8,
+      "audio": "audio/main.mp3",
+      "text_sha256": "d3c3e558d9ca47352d75571198dd4b929da18e7a323dc1d214d4a07476769779"
+    },
+    "learn_more": {
+      "text": "learn_more.txt",
+      "status": "imported_v1_unverified",
+      "words": 198,
+      "estimated_minutes": 1.5,
+      "audio": "audio/learn_more.mp3",
+      "text_sha256": "c4db943e7398f19e5feedaaaf98fb8108aa08341fdfc890629de828b994aa316"
+    }
+  },
+  "source_candidates_unchecked": [
+    "https://gem.eg/en/whats-on/news/grand-egyptian-museum-announces-trial-operations-of-main-galleries/"
+  ],
+  "factcheck_status": "pending_for_learn_more",
+  "summary": "Поднимаясь по Большой лестнице, вы словно проходите сквозь историю египетской царской власти.",
+  "where_to_listen": "на одной из разрешённых остановок вдоль Grand Staircase.",
+  "location": null,
+  "map_note": {
+    "status": "A",
+    "description": "Grand Staircase после Большого зала",
+    "source": "https://gem.eg/visit/plan-your-visit/museum-maps/"
+  },
+  "media": {
+    "photo": {
+      "path": "content/countries/egypt/cities/cairo/attractions/gem/points/GEM-03/photo.jpg",
+      "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Grand_Egyptian_Museum_Grand_Staircase.jpg?width=960",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Grand_Egyptian_Museum_Grand_Staircase.jpg",
+      "source_filename": "Grand Egyptian Museum Grand Staircase.jpg",
+      "review_status": "candidate",
+      "accuracy_note": "Фотография-кандидат, авторство проверяется"
+    }
+  }
+}

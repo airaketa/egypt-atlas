@@ -1,0 +1,52 @@
+{
+  "id": "CAT-01",
+  "title": "Спуск под землю",
+  "role": "main",
+  "narrations": {
+    "main": {
+      "text": "main.txt",
+      "status": "imported_v025_unchanged",
+      "words": 89,
+      "estimated_minutes": 0.7,
+      "audio": "audio/main.mp3",
+      "text_sha256": "21d11a32220b3efe42ad37e6d8a5aaec39739ef377d59a31045885432172d2b7"
+    },
+    "learn_more": {
+      "text": "learn_more.txt",
+      "status": "imported_v1_unverified",
+      "words": 157,
+      "estimated_minutes": 1.2,
+      "audio": "audio/learn_more.mp3",
+      "text_sha256": "0b20371969637dae835daa69e9b63419e432e0699c87b23c58a95789c8fa222d"
+    }
+  },
+  "source_candidates_unchecked": [
+    "https://www.bibalex.org/alexmed/Attachments/Publications/Files/kom%20el%20shoqafa.pdf",
+    "https://egymonuments.gov.eg/en/archaeological-sites/alexandria/"
+  ],
+  "factcheck_status": "pending_for_learn_more",
+  "summary": "Перед вами один из самых известных погребальных комплексов римской Александрии.",
+  "where_to_listen": "перед спиральной лестницей или сразу после безопасного спуска, не задерживаясь на ступенях.",
+  "location": {
+    "lat": 31.17854,
+    "lng": 29.89304,
+    "precision": "shared_site",
+    "note": "Археологический комплекс на поверхности: координата НЕ обозначает положение подземной лестницы. Внутри следуйте указателям.",
+    "source": "https://mapcarta.com/W32749330"
+  },
+  "map_note": {
+    "status": "A",
+    "description": "Вход и спиральная лестница вниз",
+    "source": "https://www.bibalex.org/alexmed/Attachments/Publications/Files/kom%20el%20shoqafa.pdf"
+  },
+  "media": {
+    "photo": {
+      "path": "content/countries/egypt/cities/alexandria/attractions/catacombs/points/CAT-01/photo.jpg",
+      "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Stairs_of_the_Catacombs_of_Kom_El_Shoqafa.jpg?width=960",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Stairs_of_the_Catacombs_of_Kom_El_Shoqafa.jpg",
+      "source_filename": "Stairs of the Catacombs of Kom El Shoqafa.jpg",
+      "review_status": "candidate",
+      "accuracy_note": "Фотография-кандидат, авторство проверяется"
+    }
+  }
+}

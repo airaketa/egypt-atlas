@@ -1,0 +1,51 @@
+{
+  "id": "CAI-02",
+  "title": "Мечеть Мухаммеда Али",
+  "role": "main",
+  "narrations": {
+    "main": {
+      "text": "main.txt",
+      "status": "imported_v025_unchanged",
+      "words": 118,
+      "estimated_minutes": 0.9,
+      "audio": "audio/main.mp3",
+      "text_sha256": "74e8bd690180da28c2eebe18cdadd2b6dc89d8991b831e916349171fe4e19e74"
+    },
+    "learn_more": {
+      "text": "learn_more.txt",
+      "status": "imported_v1_unverified",
+      "words": 170,
+      "estimated_minutes": 1.3,
+      "audio": "audio/learn_more.mp3",
+      "text_sha256": "cee860f3844310d453aef0800cdf8adbf66f9ed4e4d8e6717e0e312ded334e50"
+    }
+  },
+  "source_candidates_unchecked": [
+    "https://egymonuments.gov.eg/en/monuments/muhammad-ali-mosque/"
+  ],
+  "factcheck_status": "pending_for_learn_more",
+  "summary": "Эту мечеть часто называют Алебастровой из-за каменной облицовки.",
+  "where_to_listen": "у мечети внутри цитадели, затем в разрешённой посетителям части здания.",
+  "location": {
+    "lng": 31.25974,
+    "lat": 30.02896,
+    "note": "Мечеть Мухаммеда Али: ориентир здания по OpenStreetMap",
+    "source": "https://mapcarta.com/29632492",
+    "precision": "site"
+  },
+  "map_note": {
+    "status": "A",
+    "description": "Мечеть Мухаммеда Али внутри Цитадели",
+    "source": "https://egymonuments.gov.eg/monuments/muhammad-ali-mosque/"
+  },
+  "media": {
+    "photo": {
+      "path": "content/countries/egypt/cities/cairo/attractions/cairo/points/CAI-02/photo.jpg",
+      "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/The_mosque_of_Mohammed_Ali_at_the_Cairo_Citadel.jpg?width=960",
+      "source_url": "https://commons.wikimedia.org/wiki/File:The_mosque_of_Mohammed_Ali_at_the_Cairo_Citadel.jpg",
+      "source_filename": "The mosque of Mohammed Ali at the Cairo Citadel.jpg",
+      "review_status": "candidate",
+      "accuracy_note": "Фотография-кандидат, авторство проверяется"
+    }
+  }
+}

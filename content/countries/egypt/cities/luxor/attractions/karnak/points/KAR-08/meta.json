@@ -1,0 +1,53 @@
+{
+  "id": "KAR-08",
+  "title": "Священное озеро и скарабей",
+  "role": "main",
+  "narrations": {
+    "main": {
+      "text": "main.txt",
+      "status": "imported_v025_unchanged",
+      "words": 102,
+      "estimated_minutes": 0.8,
+      "audio": "audio/main.mp3",
+      "text_sha256": "17fe360a547d41ea5dd750a0ae0fa42e1d93d1800d38fe1cffa0ed4a1134032f"
+    },
+    "learn_more": {
+      "text": "learn_more.txt",
+      "status": "imported_v1_unverified",
+      "words": 209,
+      "estimated_minutes": 1.6,
+      "audio": "audio/learn_more.mp3",
+      "text_sha256": "e31a85e49c3f2a37c9bd811e01f53b50b39776dd39e88035389c3e58260a1b4d"
+    }
+  },
+  "source_candidates_unchecked": [
+    "https://egymonuments.gov.eg/archaeological-sites/karnak/",
+    "https://digitalkarnak.ucsc.edu/sacred-lake/",
+    "https://digitalkarnak.ucsc.edu/scarab-of-amenhotep-iii/"
+  ],
+  "factcheck_status": "pending_for_learn_more",
+  "summary": "После каменных залов перед вами неожиданно открывается вода.",
+  "where_to_listen": "у южной стороны храмовой части, на доступной площадке с видом на озеро.",
+  "location": {
+    "lat": 25.71746,
+    "lng": 32.65849,
+    "precision": "osm_object",
+    "note": "Скарабей у Священного озера; ориентир скульптуры, не рекомендованная точка стояния.",
+    "source": "https://mapcarta.com/N3322109124"
+  },
+  "map_note": {
+    "status": "B",
+    "description": "Священное озеро к югу от центральной оси; скарабей — в районе западного берега озера",
+    "source": "https://digitalkarnak.ucsc.edu/scarab-of-amenhotep-iii/"
+  },
+  "media": {
+    "photo": {
+      "path": "content/countries/egypt/cities/luxor/attractions/karnak/points/KAR-08/photo.jpg",
+      "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Sacred_Lake,_Karnak_Temple,_Luxor,_LG,_EGY_(48009486436).jpg?width=960",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Sacred_Lake%2C_Karnak_Temple%2C_Luxor%2C_LG%2C_EGY_%2848009486436%29.jpg",
+      "source_filename": "Sacred Lake, Karnak Temple, Luxor, LG, EGY (48009486436).jpg",
+      "review_status": "existing_candidate",
+      "accuracy_note": "Фотография-кандидат, авторство проверяется"
+    }
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "id": "QAI-02",
+  "title": "Внешние стены и башни",
+  "role": "main",
+  "narrations": {
+    "main": {
+      "text": "main.txt",
+      "status": "imported_v025_unchanged",
+      "words": 101,
+      "estimated_minutes": 0.8,
+      "audio": "audio/main.mp3",
+      "text_sha256": "7c3f2697732312a3ca1c6683fd2b5412f68c0c25c5966ed681206afa3f33ada1"
+    },
+    "learn_more": {
+      "text": "learn_more.txt",
+      "status": "imported_v1_unverified",
+      "words": 152,
+      "estimated_minutes": 1.2,
+      "audio": "audio/learn_more.mp3",
+      "text_sha256": "9ac51113defd7dba8fa4bd7deb6d90ff843d2ef0d99ef1b56ab09e43836200ba"
+    }
+  },
+  "source_candidates_unchecked": [
+    "https://egymonuments.gov.eg/monuments/qaitbay-fort/"
+  ],
+  "factcheck_status": "pending_for_learn_more",
+  "summary": "Крепость Кайтбей занимает важную точку на средиземноморском побережье.",
+  "where_to_listen": "у доступного участка наружных укреплений.",
+  "location": {
+    "lat": 31.21368,
+    "lng": 29.88577,
+    "precision": "approx_plan",
+    "note": "Наружная стена крепости: приблизительная точка, конкретная доступная площадка определяется на месте.",
+    "source": "https://egymonuments.gov.eg/monuments/qaitbay-fort/"
+  },
+  "map_note": {
+    "status": "A",
+    "description": "Внешние крепостные стены и башни по доступному маршруту",
+    "source": "https://egymonuments.gov.eg/monuments/qaitbay-fort/"
+  },
+  "media": {
+    "photo": {
+      "path": "content/countries/egypt/cities/alexandria/attractions/qaitbay/points/QAI-02/photo.jpg",
+      "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Citadel_Qaitbay_Alexandria.jpg?width=960",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Citadel_Qaitbay_Alexandria.jpg",
+      "source_filename": "Citadel Qaitbay Alexandria.jpg",
+      "review_status": "candidate",
+      "accuracy_note": "Фотография-кандидат, авторство проверяется"
+    }
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "id": "GEM-02",
+  "title": "Колосс Рамсеса II в Большом зале",
+  "role": "main",
+  "narrations": {
+    "main": {
+      "text": "main.txt",
+      "status": "imported_v025_unchanged",
+      "words": 120,
+      "estimated_minutes": 0.9,
+      "audio": "audio/main.mp3",
+      "text_sha256": "3efe39a2ba7a01c5f29a83c24815ad0453cc22bf942c6063a367c3828486cc70"
+    },
+    "learn_more": {
+      "text": "learn_more.txt",
+      "status": "imported_v1_unverified",
+      "words": 182,
+      "estimated_minutes": 1.4,
+      "audio": "audio/learn_more.mp3",
+      "text_sha256": "292795ffd94ce2c6b8a3882910c13d4a2a6851550660b846878a30d4813152b1"
+    }
+  },
+  "source_candidates_unchecked": [
+    "https://gem.eg/en/whats-on/news/grand-egyptian-museum-announces-trial-operations-of-main-galleries/"
+  ],
+  "factcheck_status": "pending_for_learn_more",
+  "summary": "В центре Большого зала вас встречает колоссальная гранитная статуя Рамсеса Второго.",
+  "where_to_listen": "перед статуей в Grand Hall.",
+  "location": null,
+  "map_note": {
+    "status": "A",
+    "description": "Колосс Рамсеса II, Grand Hall",
+    "source": "https://gem.eg/en/collection/artefacts/colossal-statue-of-ramesses-ii"
+  },
+  "media": {
+    "photo": {
+      "path": "content/countries/egypt/cities/cairo/attractions/gem/points/GEM-02/photo.jpg",
+      "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Grand_Hall_(Atrium).jpg?width=960",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Grand_Hall_(Atrium).jpg",
+      "source_filename": "Grand Hall (Atrium).jpg",
+      "review_status": "candidate",
+      "accuracy_note": "Фотография-кандидат, авторство проверяется"
+    }
+  }
+}

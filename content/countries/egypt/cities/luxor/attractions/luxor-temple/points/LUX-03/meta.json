@@ -1,0 +1,51 @@
+{
+  "id": "LUX-03",
+  "title": "Великая колоннада Аменхотепа III",
+  "role": "main",
+  "narrations": {
+    "main": {
+      "text": "main.txt",
+      "status": "imported_v025_unchanged",
+      "words": 106,
+      "estimated_minutes": 0.8,
+      "audio": "audio/main.mp3",
+      "text_sha256": "b4ad72ddcac9ef6aa47ab455915ac2fc55c6f7841e3a31cf54756e81aa539437"
+    },
+    "learn_more": {
+      "text": "learn_more.txt",
+      "status": "imported_v1_unverified",
+      "words": 158,
+      "estimated_minutes": 1.2,
+      "audio": "audio/learn_more.mp3",
+      "text_sha256": "a977dc617f3405dc359de66b389dd2d966ce5ded5cf8746f0efe5f365711345b"
+    }
+  },
+  "source_candidates_unchecked": [
+    "https://egymonuments.gov.eg/monuments/luxor-temple/"
+  ],
+  "factcheck_status": "pending_for_learn_more",
+  "summary": "Перед вами Великая колоннада Аменхотепа Третьего — два ряда по семь огромных колонн, всего четырнадцать.",
+  "where_to_listen": "у прохода с двумя рядами массивных колонн.",
+  "location": {
+    "lat": 25.6997,
+    "lng": 32.63938,
+    "precision": "approx_plan",
+    "note": "Большая колоннада между двором Рамсеса II и двором Аменхотепа III; приблизительная позиция на оси комплекса.",
+    "source": "https://egymonuments.gov.eg/monuments/luxor-temple/"
+  },
+  "map_note": {
+    "status": "A",
+    "description": "Колоннада Аменхотепа III, 2 ряда по 7 колонн, между дворами",
+    "source": "https://egymonuments.gov.eg/monuments/luxor-temple/"
+  },
+  "media": {
+    "photo": {
+      "path": "content/countries/egypt/cities/luxor/attractions/luxor-temple/points/LUX-03/photo.jpg",
+      "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Luxor_Temple,_The_Colonnade_of_Amenhotep_III,_Luxor,_Egypt.jpg?width=960",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Luxor_Temple,_The_Colonnade_of_Amenhotep_III,_Luxor,_Egypt.jpg",
+      "source_filename": "Luxor Temple, The Colonnade of Amenhotep III, Luxor, Egypt.jpg",
+      "review_status": "candidate",
+      "accuracy_note": "Фотография-кандидат, авторство проверяется"
+    }
+  }
+}

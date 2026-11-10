@@ -1,0 +1,52 @@
+{
+  "id": "VAL-10",
+  "title": "KV11: Рамсес III — гробница арфистов",
+  "role": "main",
+  "narrations": {
+    "main": {
+      "text": "main.txt",
+      "status": "imported_v025_unchanged",
+      "words": 99,
+      "estimated_minutes": 0.8,
+      "audio": "audio/main.mp3",
+      "text_sha256": "4a9cfbb77d21225fbc96549310668dc004cc209c52bb865a091eac9e043dbb76"
+    },
+    "learn_more": {
+      "text": "learn_more.txt",
+      "status": "imported_v1_unverified",
+      "words": 155,
+      "estimated_minutes": 1.2,
+      "audio": "audio/learn_more.mp3",
+      "text_sha256": "15ea45cc7c1c616947a5dfdd7443c37c804ba0e02ab427a9c2cbfbb0199e56f1"
+    }
+  },
+  "source_candidates_unchecked": [
+    "https://arce.org/project/ramesses-iii-kv-11-publication-and-conservation-project/",
+    "https://journals.sagepub.com/doi/10.1177/03075133211060539"
+  ],
+  "factcheck_status": "pending_for_learn_more",
+  "summary": "Это гробница Рамсеса Третьего, того самого фараона, чей огромный заупокойный храм вы увидите в Мединет-Абу.",
+  "where_to_listen": "у входа в KV11, затем в доступной части коридоров, если открыта по стандартному билету.",
+  "location": {
+    "lng": 32.60114,
+    "lat": 25.74002,
+    "note": "OSM-полигон KV11; не гарантия входа.",
+    "source": "https://mapcarta.com/W813717255",
+    "precision": "osm_object"
+  },
+  "map_note": {
+    "status": "A",
+    "description": "Вход в гробницу VAL-10: сверить KV-номер и форму входа с официальной картой TMP",
+    "source": "https://thebanmappingproject.com/sites/default/files/plans/Valley%20of%20the%20Kings.pdf"
+  },
+  "media": {
+    "photo": {
+      "path": "content/countries/egypt/cities/luxor/attractions/valley/points/VAL-10/photo.jpg",
+      "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Flickr_-_Gaspa_-_Valle_dei_Re,_tomba_di_Ramses_III_(2).jpg?width=960",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Flickr_-_Gaspa_-_Valle_dei_Re,_tomba_di_Ramses_III_(2).jpg",
+      "source_filename": "Flickr - Gaspa - Valle dei Re, tomba di Ramses III (2).jpg",
+      "review_status": "candidate",
+      "accuracy_note": "Фотография-кандидат, авторство проверяется"
+    }
+  }
+}

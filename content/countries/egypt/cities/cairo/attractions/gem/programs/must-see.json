@@ -1,0 +1,18 @@
+{
+  "id": "gem-must-see",
+  "title": "Главное · Must-see",
+  "validation": "editorial_selection_not_route_verified",
+  "estimated_narration_minutes": 6.3,
+  "editorial_notes": "Порядок экспонатов и доступность галерей могут меняться. Основные галереи и залы Тутанхамона не всегда удастся пройти строго в этом порядке.",
+  "important": "Не обещать экономию времени на перемещении, доступность или физический маршрут без проверки.",
+  "ordered_point_ids": [
+    "GEM-01",
+    "GEM-02",
+    "GEM-03",
+    "GEM-04",
+    "GEM-05",
+    "GEM-06",
+    "GEM-08"
+  ],
+  "optional_point_ids": []
+}

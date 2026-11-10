@@ -8,8 +8,8 @@ if errorlevel 1 (
 ) else (
   set "PY=py -3"
 )
-echo Prepare the complete Egypt Atlas offline package for GitHub Release.
-echo Required: 82 MP3, 82 photos, 6 cartouche photos and 12 PMTiles maps.
+echo Prepare every Atlas country and city media package for GitHub Release.
+echo Required counts are discovered automatically from content\.
 echo Important: review all photo licenses and redistribution terms for generated TTS.
 choice /C YN /M "I have confirmed legal rights to distribute the included audio and images"
 if errorlevel 2 (
@@ -23,5 +23,5 @@ if errorlevel 1 (
   pause
   exit /b 1
 )
-echo Created egypt-media.zip. Attach it to Release media-v1.
+echo Created atlas-media.zip. Attach this stable filename to a new media-vN Release.
 pause

@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "id": "egypt-luxor",
+  "scope": "city",
+  "city_id": "luxor",
+  "country_id": "egypt",
+  "title": "Луксор",
+  "language": "ru",
+  "revision": "evergreen-draft-2026-11-09",
+  "requires": [
+    {
+      "package_id": "egypt-common",
+      "once": true
+    }
+  ],
+  "download_semantics": "Install egypt-common if absent, then this city; shared package not duplicated.",
+  "includes": [
+    "city-stories",
+    "city-attraction-texts",
+    "city-programs"
+  ],
+  "excludes": [
+    "audio-mp3",
+    "photos",
+    "offline-map-tiles"
+  ],
+  "content_status": "draft",
+  "editorial_policy": "evergreen_audio_only",
+  "factcheck_status": "pending_historical_review",
+  "stories": "stories/manifest.json",
+  "attractions": [
+    {
+      "id": "karnak",
+      "title": "Карнакский храм",
+      "manifest": "attractions/karnak/manifest.json"
+    },
+    {
+      "id": "valley",
+      "title": "Долина царей",
+      "manifest": "attractions/valley/manifest.json"
+    },
+    {
+      "id": "hatshepsut",
+      "title": "Храм Хатшепсут",
+      "manifest": "attractions/hatshepsut/manifest.json"
+    },
+    {
+      "id": "medinet-habu",
+      "title": "Мединет-Абу",
+      "manifest": "attractions/medinet-habu/manifest.json"
+    },
+    {
+      "id": "memnon",
+      "title": "Колоссы Мемнона",
+      "manifest": "attractions/memnon/manifest.json"
+    },
+    {
+      "id": "luxor-temple",
+      "title": "Луксорский храм",
+      "manifest": "attractions/luxor-temple/manifest.json"
+    }
+  ]
+}

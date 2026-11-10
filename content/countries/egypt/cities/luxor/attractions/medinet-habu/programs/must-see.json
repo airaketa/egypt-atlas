@@ -1,0 +1,15 @@
+{
+  "id": "medinet-habu-must-see",
+  "title": "Главное · Must-see",
+  "validation": "editorial_selection_not_route_verified",
+  "estimated_narration_minutes": 3.7,
+  "editorial_notes": "При прохождении внутреннего двора его физически не миновать: сокращается рассказ, а не маршрут. Доступ внутренних помещений сверить.",
+  "important": "Не обещать экономию времени на перемещении, доступность или физический маршрут без проверки.",
+  "ordered_point_ids": [
+    "HAB-01",
+    "HAB-02",
+    "HAB-04",
+    "HAB-05"
+  ],
+  "optional_point_ids": []
+}

@@ -1,0 +1,51 @@
+{
+  "id": "GIZ-05",
+  "title": "Пирамида Менкауры и малые пирамиды",
+  "role": "main",
+  "narrations": {
+    "main": {
+      "text": "main.txt",
+      "status": "imported_v025_unchanged",
+      "words": 120,
+      "estimated_minutes": 0.9,
+      "audio": "audio/main.mp3",
+      "text_sha256": "a9f34c812b8c60f9e15cdc5f591c736353d1a345effca8317c33e8591fb9ec14"
+    },
+    "learn_more": {
+      "text": "learn_more.txt",
+      "status": "imported_v1_unverified",
+      "words": 169,
+      "estimated_minutes": 1.3,
+      "audio": "audio/learn_more.mp3",
+      "text_sha256": "b109f3bb1526ab8e85bb4edf52796b0c4b4debb4ac3e37b4c9f94896da8a3044"
+    }
+  },
+  "source_candidates_unchecked": [
+    "https://egymonuments.gov.eg/monuments/pyramid-complex-of-menkaure/"
+  ],
+  "factcheck_status": "pending_for_learn_more",
+  "summary": "Перед вами пирамида Менкауры — самая небольшая из трёх главных пирамид Гизы.",
+  "where_to_listen": "с точки, откуда одновременно видны меньшая пирамида и ряд соседних малых пирамид.",
+  "location": {
+    "lng": 31.1284,
+    "lat": 29.9725,
+    "note": "Ориентир самого памятника; приблизительные координаты",
+    "precision": "legacy_approx",
+    "source": "https://egymonuments.gov.eg/monuments/pyramid-complex-of-menkaure/"
+  },
+  "map_note": {
+    "status": "A",
+    "description": "Пирамида Менкауры и три прилегающих малых пирамиды",
+    "source": "https://egymonuments.gov.eg/monuments/pyramid-complex-of-menkaure/"
+  },
+  "media": {
+    "photo": {
+      "path": "content/countries/egypt/cities/cairo/attractions/giza/points/GIZ-05/photo.jpg",
+      "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Menkaure-Pyramid_and_queens_pyramids.jpg?width=960",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Menkaure-Pyramid_and_queens_pyramids.jpg",
+      "source_filename": "Menkaure-Pyramid and queens pyramids.jpg",
+      "review_status": "candidate",
+      "accuracy_note": "Фотография-кандидат, авторство проверяется"
+    }
+  }
+}

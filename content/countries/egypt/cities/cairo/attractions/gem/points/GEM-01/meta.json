@@ -1,0 +1,48 @@
+{
+  "id": "GEM-01",
+  "title": "Висячий обелиск у входа",
+  "role": "main",
+  "narrations": {
+    "main": {
+      "text": "main.txt",
+      "status": "imported_v025_unchanged",
+      "words": 180,
+      "estimated_minutes": 1.4,
+      "audio": "audio/main.mp3",
+      "text_sha256": "5a12d6d74648a6613b866ce9f4c8a6d0647247a7cc9ca53c629396118c298005"
+    },
+    "learn_more": {
+      "text": "learn_more.txt",
+      "status": "imported_v1_unverified",
+      "words": 202,
+      "estimated_minutes": 1.6,
+      "audio": "audio/learn_more.mp3",
+      "text_sha256": "3c5367de73c7e49cffb8bb63a7281b5d146a2ee37adb91213f9498b9e439662f"
+    }
+  },
+  "source_candidates_unchecked": [
+    "https://gem.eg/en/whats-on/news/grand-egyptian-museum-announces-trial-operations-of-main-galleries/",
+    "https://gem.eg/en/collection/",
+    "https://gem.eg/en/collection/artefacts/obelisk-of-king-ramesses-ii",
+    "https://www.nature.com/articles/s41598-023-28451-1"
+  ],
+  "factcheck_status": "pending_for_learn_more",
+  "summary": "Перед вами висячий обелиск Рамсеса Второго. Самое интересное спрятано не на боковой грани, а под основанием: там видны два царских картуша.",
+  "where_to_listen": "в открытой входной зоне у обелиска, если пространство доступно.",
+  "location": null,
+  "map_note": {
+    "status": "A",
+    "description": "Висячий обелиск Рамсеса II во входной зоне комплекса GEM",
+    "source": "https://gem.eg/en/collection/artefacts/obelisk-of-king-ramesses-ii"
+  },
+  "media": {
+    "photo": {
+      "path": "content/countries/egypt/cities/cairo/attractions/gem/points/GEM-01/photo.jpg",
+      "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Hanging_Obelisk_outside_the_Grand_Egyptian_Museum.jpg?width=960",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Hanging_Obelisk_outside_the_Grand_Egyptian_Museum.jpg",
+      "source_filename": "Hanging Obelisk outside the Grand Egyptian Museum.jpg",
+      "review_status": "candidate",
+      "accuracy_note": "Фотография-кандидат, авторство проверяется"
+    }
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "id": "LUX-05",
+  "title": "Римская часовня и история переиспользования",
+  "role": "main",
+  "narrations": {
+    "main": {
+      "text": "main.txt",
+      "status": "imported_v025_unchanged",
+      "words": 102,
+      "estimated_minutes": 0.8,
+      "audio": "audio/main.mp3",
+      "text_sha256": "75010841cdf099875186a1b3eb0ded9c3a069360998c64d5c408d626e3c27c5e"
+    },
+    "learn_more": {
+      "text": "learn_more.txt",
+      "status": "imported_v1_unverified",
+      "words": 182,
+      "estimated_minutes": 1.4,
+      "audio": "audio/learn_more.mp3",
+      "text_sha256": "3a68a509202cfcf3cd348b3069f397460f76f08cf41bdfdf849755622e1e24fb"
+    }
+  },
+  "source_candidates_unchecked": [
+    "https://egymonuments.gov.eg/monuments/luxor-temple/"
+  ],
+  "factcheck_status": "pending_for_learn_more",
+  "summary": "В позднеримское время часть Луксорского храма получила совершенно новое назначение.",
+  "where_to_listen": "у разрешённой для осмотра позднеантичной росписи в глубинной части храма.",
+  "location": {
+    "lat": 25.6992,
+    "lng": 32.63895,
+    "precision": "approx_plan",
+    "note": "Позднеримские росписи во внутренней части Луксорского храма; ориентир зоны, не отдельной стены.",
+    "source": "https://egymonuments.gov.eg/monuments/luxor-temple/"
+  },
+  "map_note": {
+    "status": "B",
+    "description": "Позднеримское переоборудованное святилище внутри, за гипостилем",
+    "source": "https://egymonuments.gov.eg/monuments/luxor-temple/"
+  },
+  "media": {
+    "photo": {
+      "path": "content/countries/egypt/cities/luxor/attractions/luxor-temple/points/LUX-05/photo.jpg",
+      "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Flickr_-_schmuela_-_Roman_imperial_niche_in_Luxor_Temple.jpg?width=960",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Flickr_-_schmuela_-_Roman_imperial_niche_in_Luxor_Temple.jpg",
+      "source_filename": "Flickr - schmuela - Roman imperial niche in Luxor Temple.jpg",
+      "review_status": "candidate",
+      "accuracy_note": "Фотография-кандидат, авторство проверяется"
+    }
+  }
+}

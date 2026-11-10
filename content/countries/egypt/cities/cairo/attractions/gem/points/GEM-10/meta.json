@@ -1,0 +1,45 @@
+{
+  "id": "GEM-10",
+  "title": "Статуя Нахтмина и Тий: семья в камне",
+  "role": "main",
+  "narrations": {
+    "main": {
+      "text": "main.txt",
+      "status": "imported_v025_unchanged",
+      "words": 105,
+      "estimated_minutes": 0.8,
+      "audio": "audio/main.mp3",
+      "text_sha256": "b5d5971775ef5f8e4c02b5d693db69e412dd7010cdd35ec0e14943f8a6c0b48a"
+    },
+    "learn_more": {
+      "text": "learn_more.txt",
+      "status": "imported_v1_unverified",
+      "words": 175,
+      "estimated_minutes": 1.3,
+      "audio": "audio/learn_more.mp3",
+      "text_sha256": "52f9a21b63432dba642c2f7c237186a432909b32501851d9a71de5312bf57504"
+    }
+  },
+  "source_candidates_unchecked": [
+    "https://gem.eg/en/collection/artefacts/double-statue-of-nakhtmin-and-tiy"
+  ],
+  "factcheck_status": "pending_for_learn_more",
+  "summary": "Посмотрите на эту небольшую семейную скульптуру.",
+  "where_to_listen": "у двойной статуи Нахтмина и Тий (GEM № 2250), если предмет экспонируется в Main Galleries.",
+  "location": null,
+  "map_note": {
+    "status": "C",
+    "description": "Двойная статуя Нахтмина и Тий, GEM 2250, Main Galleries",
+    "source": "https://gem.eg/en/collection/artefacts/double-statue-of-nakhtmin-and-tiy"
+  },
+  "media": {
+    "photo": {
+      "path": "content/countries/egypt/cities/cairo/attractions/gem/points/GEM-10/photo.jpg",
+      "download_url": "https://cdn.gem.eg/media/4397/2250.jpeg?center=0.413194444444444%2C0.477443609022556&height=576&mode=crop&rnd=133981703310000000&ver=2025.10.27.02&width=830",
+      "source_url": "https://gem.eg/en/collection/artefacts/double-statue-of-nakhtmin-and-tiy",
+      "source_filename": null,
+      "review_status": "official_image",
+      "accuracy_note": "Официальное изображение экспоната"
+    }
+  }
+}

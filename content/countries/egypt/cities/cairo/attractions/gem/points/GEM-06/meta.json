@@ -1,0 +1,45 @@
+{
+  "id": "GEM-06",
+  "title": "Золотая погребальная маска Тутанхамона",
+  "role": "main",
+  "narrations": {
+    "main": {
+      "text": "main.txt",
+      "status": "imported_v025_unchanged",
+      "words": 106,
+      "estimated_minutes": 0.8,
+      "audio": "audio/main.mp3",
+      "text_sha256": "0cc5e2825eab09c4efc8a2df74fd43c029d5b64b49d7566b41eb053159568b79"
+    },
+    "learn_more": {
+      "text": "learn_more.txt",
+      "status": "imported_v1_unverified",
+      "words": 185,
+      "estimated_minutes": 1.4,
+      "audio": "audio/learn_more.mp3",
+      "text_sha256": "c03ad191ef2b299e6f7d8ee22e77fb80bab39040409d5e9845dd2a69b6489fb9"
+    }
+  },
+  "source_candidates_unchecked": [
+    "https://gem.eg/en/collection/artefacts/the-golden-burial-mask-of-tutankhamun"
+  ],
+  "factcheck_status": "pending_for_learn_more",
+  "summary": "Перед вами один из самых известных предметов древнеегипетского искусства — золотая маска Тутанхамона.",
+  "where_to_listen": "перед витриной с маской, если она доступна посетителям.",
+  "location": null,
+  "map_note": {
+    "status": "C",
+    "description": "Витрина золотой маски в Tutankhamun Galleries",
+    "source": "https://gem.eg/en/collection/artefacts/golden-burial-mask-of-tutankhamun"
+  },
+  "media": {
+    "photo": {
+      "path": "content/countries/egypt/cities/cairo/attractions/gem/points/GEM-06/photo.jpg",
+      "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/The_golden_mask_of_Tutankhamun_inside_the_Grand_Egyptian_Museum.jpg?width=960",
+      "source_url": "https://commons.wikimedia.org/wiki/File:The_golden_mask_of_Tutankhamun_inside_the_Grand_Egyptian_Museum.jpg",
+      "source_filename": "The golden mask of Tutankhamun inside the Grand Egyptian Museum.jpg",
+      "review_status": "candidate",
+      "accuracy_note": "Фотография-кандидат, авторство проверяется"
+    }
+  }
+}

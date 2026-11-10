@@ -1,125 +1,169 @@
 #!/usr/bin/env python3
-"""Build static GitHub Pages site from code + separately uploaded media ZIP."""
-import argparse,hashlib,json,shutil,zipfile
-from pathlib import Path
-ROOT=Path(__file__).resolve().parents[1]
-IMAGE_EXT=('.jpg','.jpeg','.png','.webp')
-BASENAME='window.EgyptAtlasCatalog = '
+"""Build the generic Atlas PWA and optionally inject Release media."""
 
-def sha(path):
- h=hashlib.sha256()
- with open(path,'rb') as f:
-  for part in iter(lambda:f.read(2**20),b''):h.update(part)
- return h.hexdigest()
+from __future__ import annotations
 
-def read_catalog(path):
- raw=path.read_text(encoding='utf-8')
- assert raw.startswith(BASENAME)
- return json.loads(raw[len(BASENAME):].strip().removesuffix(';'))
+import argparse
+import datetime as dt
+import hashlib
+import json
+import os
+from pathlib import Path, PurePosixPath
+import shutil
+import subprocess
+import zipfile
 
-def collect(tours):return [s for t in tours for s in t['stops']+t.get('extension',{}).get('stops',[])]
+from build_content import build as build_content
+from content_model import ContentTree, ROOT, sha256_bytes
 
-def safe_extract(media,out):
- with zipfile.ZipFile(media) as z:
-  names=z.namelist()
-  if len(names)!=len(set(names)):raise ValueError('Duplicate entries in media ZIP')
-  if 'media-package.json' not in names:raise ValueError('Use tools/pack_media.py for the release ZIP')
-  index=json.loads(z.read('media-package.json'))
-  if index.get('format')!=2 or not isinstance(index.get('texts_sha256'),dict):
-   raise ValueError('Outdated media ZIP: rerun tools/pack_media.py to bind recordings to script versions')
-  track_texts={t['id']:(ROOT/'texts'/f"{t['id']}.txt").read_text(encoding='utf-8').strip() for t in json.loads((ROOT/'data/track_list.json').read_text(encoding='utf-8'))}
-  for track_id,body in track_texts.items():
-   if index['texts_sha256'].get(track_id)!=hashlib.sha256(body.encode('utf-8')).hexdigest():
-    raise ValueError('Media ZIP was generated with a different script: '+track_id)
-  entries={x['path']:x for x in index['files']}
-  if set(names)!=(set(entries)|{'media-package.json'}):raise ValueError('Unexpected archive members')
-  for entry in index['files']:
-   rel=Path(entry['path'])
-   allowed=(len(rel.parts)==2 and rel.parts[0]=='audio' and rel.suffix.lower()=='.mp3') or (len(rel.parts)==3 and rel.parts[:2]==('photos','real') and rel.suffix.lower() in IMAGE_EXT) or (len(rel.parts)==3 and rel.parts[:2]==('assets','cartouches') and rel.suffix.lower()=='.jpg') or (len(rel.parts)==3 and rel.parts[:2]==('maps','offline') and rel.suffix.lower()=='.pmtiles')
-   if rel.is_absolute() or '..' in rel.parts or not allowed:
-    raise ValueError('Unsafe archive entry: '+entry['path'])
-   dest=out/rel;dest.parent.mkdir(parents=True,exist_ok=True)
-   with z.open(entry['path']) as source, dest.open('wb') as target:shutil.copyfileobj(source,target)
-   if dest.stat().st_size!=entry['bytes'] or sha(dest)!=entry['sha256']:
-    raise ValueError('Integrity check failed: '+entry['path'])
 
-def main():
- parser=argparse.ArgumentParser()
- parser.add_argument('--media',type=Path,help='egypt-media.zip from the media-v1 Release')
- parser.add_argument('--out',type=Path,default=ROOT/'_site')
- parser.add_argument('--require-audio',action='store_true')
- parser.add_argument('--require-complete',action='store_true',help='require all audio, photos, cartouche images and PMTiles')
- args=parser.parse_args();dest=args.out.resolve();
- if dest==ROOT:raise SystemExit('Output must differ from source directory')
- if dest.exists():shutil.rmtree(dest)
- dest.mkdir(parents=True)
- # Only files actually used by the browser go into the deployable site.
- for filename in ('index.html','styles.css','app.js','catalog.js','audio-ready.js','voice-catalog.js',
-     'sw.js','manifest.webmanifest','map-logic.js','nearby.js','cartouche-integrated-data.js',
-     'cartouche-inline-ui.js','listen.html','voice_status.js','photo-sources.html'):
-  src=ROOT/filename
-  if src.exists():shutil.copy2(src,dest/filename)
- for folder in ('assets','photos','maps','icons','vendor'):
-  src=ROOT/folder
-  if src.exists():
-   shutil.copytree(src,dest/folder,ignore=shutil.ignore_patterns('real','offline','cartouches'))
- for runtime in ('vendor/maplibre-gl.js','vendor/maplibre-gl.css','vendor/pmtiles.js'):
-  if not (dest/runtime).is_file():raise FileNotFoundError('Missing offline map runtime: '+runtime)
- if args.media:
-  if not args.media.is_file():raise FileNotFoundError(args.media)
-  safe_extract(args.media,dest)
- (dest/'.nojekyll').write_text('',encoding='utf-8')
- tours=read_catalog(dest/'catalog.js');stops=collect(tours);ids={s['id'] for s in stops}
- if len(stops)!=len(ids) or len(ids)!=82:raise ValueError('Expected 82 unique stops')
- files=[]
- def record(path):
-  file=dest/path
-  files.append({'path':'./'+path,'bytes':file.stat().st_size,'sha256':sha(file)})
- missingAudio=[];missingPhotos=[];missingCartouches=[];missingMaps=[];offlineMaps=[]
- audio_ready=[]
- for stop in stops:
-  tid=stop['id'];mp3=f'audio/{tid}.mp3'
-  if (dest/mp3).is_file() and (dest/mp3).stat().st_size>2500:
-   record(mp3);audio_ready.append(tid)
-  else:missingAudio.append(tid)
-  photo=next((f'photos/real/{tid}{ext}' for ext in IMAGE_EXT if (dest/'photos/real'/f'{tid}{ext}').is_file()),None)
-  if photo and (dest/photo).stat().st_size>2500:
-   stop['photo']='./'+photo
-   stop['photoPlaceholder']=False
-   record(photo)
-  else:
-   # Never advertise remote images as fully offline.
-   stop['photo']='./photos/visual-fallback.svg';stop['photoPlaceholder']=True
-   missingPhotos.append(tid)
- # Offline cartouche explanations work even when photographs are absent, but avoid missing files.
- cart=json.loads((dest/'cartouche-integrated-data.js').read_text(encoding='utf-8').removeprefix('window.EgyptAtlasCartouchesInline = ').strip().removesuffix(';'))
- for key in cart['photos']:
-  path=f'assets/cartouches/{key}.jpg'
-  if (dest/path).is_file() and (dest/path).stat().st_size>2500:record(path)
-  else:missingCartouches.append(key)
- for tour in tours:
-  path=f'maps/offline/{tour["id"]}.pmtiles'
-  file=dest/path
-  if file.is_file() and file.stat().st_size>=127 and file.read_bytes()[:7]==b'PMTiles':
-   record(path)
-   offlineMaps.append({'id':tour['id'],'path':'./'+path,'bytes':file.stat().st_size,'sha256':sha(file)})
-  else:missingMaps.append(tour['id'])
- # Deduplicate manifest resource entries and sort for stable builds.
- files=sorted({x['path']:x for x in files}.values(),key=lambda x:x['path'])
- (dest/'catalog.js').write_text(BASENAME+json.dumps(tours,ensure_ascii=False,indent=2)+';\n',encoding='utf-8')
- (dest/'audio-ready.js').write_text('window.EgyptAtlasAudioReady = '+json.dumps({'voice':'ru-RU-SvetlanaNeural','ids':audio_ready},ensure_ascii=False)+';\n',encoding='utf-8')
- manifest={'version':1,'files':files,'expectedAudio':82,'expectedPhotos':82,'expectedMaps':len(tours),
-  'missingAudio':missingAudio,'missingPhotos':missingPhotos,'missingCartouches':missingCartouches,
-  'missingMaps':missingMaps,'maps':offlineMaps,
-  'note':'Audio, photos and PMTiles use same-origin relative URLs and can be cached for offline use.'}
- (dest/'offline-manifest.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
- if args.require_audio and missingAudio:raise RuntimeError(f'Cannot deploy without all 82 MP3: {missingAudio[:12]}')
- if args.require_complete and (missingAudio or missingPhotos or missingCartouches or missingMaps):
-  raise RuntimeError(f'Incomplete offline package: audio={len(missingAudio)}, photos={len(missingPhotos)}, cartouches={len(missingCartouches)}, maps={len(missingMaps)}')
- size=sum(f.stat().st_size for f in dest.rglob('*') if f.is_file())
- if size > 950_000_000:raise RuntimeError(f'Site too large for GitHub Pages: {size/1e9:.2f} GB. Shrink audio/maps.')
- print(f'Built {dest}: MP3 {len(audio_ready)}/82; photos {82-len(missingPhotos)}/82; cartouches {len(cart["photos"])-len(missingCartouches)}/{len(cart["photos"])}; maps {len(offlineMaps)}/{len(tours)}')
- print('Missing Photos:',', '.join(missingPhotos[:15]))
- print('Map: local PMTiles when packaged; OpenFreeMap fallback otherwise')
- return 0
-if __name__=='__main__':raise SystemExit(main())
+SHELL_FILES = (
+    "index.html",
+    "styles.css",
+    "app.js",
+    "map-logic.js",
+    "sw.js",
+    "manifest.webmanifest",
+)
+SHELL_DIRECTORIES = ("icons", "vendor")
+
+
+def safe_output(path: Path) -> Path:
+    output = path.resolve()
+    workspace = ROOT.resolve()
+    if output == workspace or workspace not in output.parents:
+        raise ValueError(f"Output must be a subdirectory of the workspace: {output}")
+    return output
+
+
+def safe_member(name: str) -> bool:
+    value = PurePosixPath(name)
+    return (
+        not value.is_absolute()
+        and ".." not in value.parts
+        and "\\" not in name
+        and (name == "media-package.json" or (value.parts and value.parts[0] == "content"))
+    )
+
+
+def extract_media(media: Path, destination: Path, tree: ContentTree) -> dict:
+    with zipfile.ZipFile(media) as archive:
+        names = archive.namelist()
+        if len(names) != len(set(names)):
+            raise ValueError("Duplicate entries in media ZIP")
+        if not all(safe_member(name) for name in names):
+            raise ValueError("Media ZIP contains an unsafe or unsupported path")
+        if "media-package.json" not in names:
+            raise ValueError("Use tools/pack_media.py to create the Release ZIP")
+        index = json.loads(archive.read("media-package.json"))
+        if index.get("format") != 3:
+            raise ValueError("Outdated media ZIP; rebuild atlas-media.zip")
+        if index.get("content_revision") != tree.catalog["content_revision"]:
+            raise ValueError("Media ZIP belongs to a different content revision")
+        indexed_paths = {entry["path"] for entry in index.get("files", [])}
+        archive_paths = set(names) - {"media-package.json"}
+        if indexed_paths != archive_paths:
+            raise ValueError("Media ZIP file list does not match media-package.json")
+        for entry in index["files"]:
+            data = archive.read(entry["path"])
+            if len(data) != entry["bytes"] or sha256_bytes(data) != entry["sha256"]:
+                raise ValueError("Media integrity check failed: " + entry["path"])
+            target = destination / entry["path"]
+            target.parent.mkdir(parents=True, exist_ok=True)
+            target.write_bytes(data)
+    return index
+
+
+def git_revision() -> str:
+    configured = os.environ.get("GITHUB_SHA", "").strip()
+    if configured:
+        return configured
+    try:
+        return subprocess.run(
+            ["git", "rev-parse", "HEAD"],
+            cwd=ROOT,
+            check=True,
+            capture_output=True,
+            text=True,
+        ).stdout.strip()
+    except (OSError, subprocess.CalledProcessError):
+        return "unknown"
+
+
+def build_metadata(tree: ContentTree, media_index: dict | None, release_tag: str) -> dict:
+    media_payload = json.dumps(media_index or {}, ensure_ascii=False, sort_keys=True, separators=(",", ":"))
+    media_sha256 = hashlib.sha256(media_payload.encode("utf-8")).hexdigest()
+    commit = git_revision()
+    seed = "\n".join((tree.catalog["content_revision"], release_tag, commit, media_sha256))
+    build_id = hashlib.sha256(seed.encode("utf-8")).hexdigest()[:12]
+    files = (media_index or {}).get("files", [])
+    missing = (media_index or {}).get("missing", [])
+    return {
+        "schema_version": 1,
+        "version": release_tag,
+        "build_id": build_id,
+        "media_release": release_tag if media_index else None,
+        "content_revision": tree.catalog["content_revision"],
+        "git_commit": commit,
+        "built_at_utc": dt.datetime.now(dt.timezone.utc).isoformat(),
+        "media_files": len(files),
+        "media_missing": len(missing),
+        "media_sha256": media_sha256,
+    }
+
+
+def inject_build_id(service_worker: Path, build_id: str) -> None:
+    source = service_worker.read_text(encoding="utf-8")
+    placeholder = "__ATLAS_BUILD_ID__"
+    if source.count(placeholder) != 1:
+        raise ValueError("sw.js must contain exactly one build ID placeholder")
+    service_worker.write_text(source.replace(placeholder, build_id), encoding="utf-8")
+
+
+def build_site(output: Path, media: Path | None, require_complete: bool, release_tag: str) -> dict:
+    output = safe_output(output)
+    if output.exists():
+        shutil.rmtree(output)
+    output.mkdir(parents=True)
+    for name in SHELL_FILES:
+        shutil.copy2(ROOT / name, output / name)
+    for name in SHELL_DIRECTORIES:
+        shutil.copytree(ROOT / name, output / name)
+
+    tree = ContentTree()
+    media_index = None
+    if media:
+        media_index = extract_media(media.resolve(), output, tree)
+    result = build_content(output, require_complete=require_complete)
+    metadata = build_metadata(tree, media_index, release_tag)
+    metadata_path = output / "content-data" / "build-info.json"
+    metadata_path.write_text(json.dumps(metadata, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    inject_build_id(output / "sw.js", metadata["build_id"])
+    result["build_info"] = metadata
+    print(f"Built site: {output}")
+    print(f"Version: {metadata['version']} (build {metadata['build_id']})")
+    if media_index:
+        print(f"Injected {len(media_index['files'])} media files from {media}")
+    return result
+
+
+def main(argv=None) -> int:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--media", type=Path, help="atlas-media.zip from a media-v* Release")
+    parser.add_argument("--out", type=Path, default=ROOT / "_site")
+    parser.add_argument("--require-complete", action="store_true", help="require every declared city-package asset")
+    parser.add_argument(
+        "--release-tag",
+        default=os.environ.get("ATLAS_MEDIA_RELEASE", "preview"),
+        help="release tag recorded in build-info.json (default: ATLAS_MEDIA_RELEASE or preview)",
+    )
+    args = parser.parse_args(argv)
+    build_site(args.out, args.media, args.require_complete, args.release_tag)
+    return 0
+
+
+if __name__ == "__main__":
+    try:
+        raise SystemExit(main())
+    except (ValueError, OSError, zipfile.BadZipFile) as error:
+        raise SystemExit(f"ERROR: {error}")

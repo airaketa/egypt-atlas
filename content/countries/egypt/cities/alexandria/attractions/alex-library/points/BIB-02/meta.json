@@ -1,0 +1,51 @@
+{
+  "id": "BIB-02",
+  "title": "Гранитная стена: история письменности",
+  "role": "main",
+  "narrations": {
+    "main": {
+      "text": "main.txt",
+      "status": "imported_v025_unchanged",
+      "words": 109,
+      "estimated_minutes": 0.8,
+      "audio": "audio/main.mp3",
+      "text_sha256": "1d27b43008ab8dc16a05263738f7887216aa923019a7924c7e5ba5baf5b84035"
+    },
+    "learn_more": {
+      "text": "learn_more.txt",
+      "status": "imported_v1_unverified",
+      "words": 171,
+      "estimated_minutes": 1.3,
+      "audio": "audio/learn_more.mp3",
+      "text_sha256": "899b1dc55869bb72eb7e9ee7d2586f02d0c4432e2df64a3f424fd65d313aaef6"
+    }
+  },
+  "source_candidates_unchecked": [
+    "https://www.bibalex.org/writingandscriptscenter/en/aboutus/calligraphycenter.aspx"
+  ],
+  "factcheck_status": "pending_for_learn_more",
+  "summary": "Посмотрите на эту большую стену.",
+  "where_to_listen": "у наружной гранитной стены с изображениями знаков разных систем письма.",
+  "location": {
+    "lat": 31.20866,
+    "lng": 29.90896,
+    "precision": "shared_site",
+    "note": "Гранитная стена — архитектурный элемент библиотеки; общий ориентир здания, положение участка стены не уточнено.",
+    "source": "https://mapcarta.com/29457660"
+  },
+  "map_note": {
+    "status": "A",
+    "description": "Наружная гранитная стена с письменностями, у фасада библиотеки",
+    "source": "https://www.bibalex.org/en/center/details/mainlibrary"
+  },
+  "media": {
+    "photo": {
+      "path": "content/countries/egypt/cities/alexandria/attractions/alex-library/points/BIB-02/photo.jpg",
+      "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Bibliotheca_Alexandrina_--_Wall_detail.jpg?width=960",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Bibliotheca_Alexandrina_--_Wall_detail.jpg",
+      "source_filename": "Bibliotheca Alexandrina -- Wall detail.jpg",
+      "review_status": "candidate",
+      "accuracy_note": "Фотография-кандидат, авторство проверяется"
+    }
+  }
+}

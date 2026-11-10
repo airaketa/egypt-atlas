@@ -1,0 +1,15 @@
+{
+  "id": "catacombs-must-see",
+  "title": "Главное · Must-see",
+  "validation": "editorial_selection_not_route_verified",
+  "estimated_narration_minutes": 2.9,
+  "editorial_notes": "Пропущен триклиний как отдельный рассказ, но реальный проход зависит от доступных подземных помещений.",
+  "important": "Не обещать экономию времени на перемещении, доступность или физический маршрут без проверки.",
+  "ordered_point_ids": [
+    "CAT-01",
+    "CAT-02",
+    "CAT-04",
+    "CAT-05"
+  ],
+  "optional_point_ids": []
+}

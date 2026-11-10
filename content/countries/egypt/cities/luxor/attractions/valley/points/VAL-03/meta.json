@@ -1,0 +1,51 @@
+{
+  "id": "VAL-03",
+  "title": "KV9: гробница Рамсеса V и VI — книги загробного мира",
+  "role": "main",
+  "narrations": {
+    "main": {
+      "text": "main.txt",
+      "status": "imported_v025_unchanged",
+      "words": 96,
+      "estimated_minutes": 0.7,
+      "audio": "audio/main.mp3",
+      "text_sha256": "f6bd02f1b0c597e8b503c952706fbae81c991ec5734abe69bf5a7d43ae1139c0"
+    },
+    "learn_more": {
+      "text": "learn_more.txt",
+      "status": "imported_v1_unverified",
+      "words": 179,
+      "estimated_minutes": 1.4,
+      "audio": "audio/learn_more.mp3",
+      "text_sha256": "d6ceb9c5669e9ee07a6def8d68d4317140ffdd3e24d1fdf7631a59c02e635161"
+    }
+  },
+  "source_candidates_unchecked": [
+    "https://egymonuments.gov.eg/en/monuments/tomb-of-ramesses-vi-kv9/"
+  ],
+  "factcheck_status": "pending_for_learn_more",
+  "summary": "Эту гробницу начали при Рамсесе Пятом, а затем расширили для Рамсеса Шестого.",
+  "where_to_listen": "в KV9, если открыта; обычно это отдельный билет.",
+  "location": {
+    "lng": 32.6004,
+    "lat": 25.74065,
+    "note": "OSM-объект KV9; не гарантия входа.",
+    "source": "https://mapcarta.com/N1047912029",
+    "precision": "osm_object"
+  },
+  "map_note": {
+    "status": "A",
+    "description": "Вход в гробницу VAL-03: сверить KV-номер и форму входа с официальной картой TMP",
+    "source": "https://thebanmappingproject.com/sites/default/files/plans/Valley%20of%20the%20Kings.pdf"
+  },
+  "media": {
+    "photo": {
+      "path": "content/countries/egypt/cities/luxor/attractions/valley/points/VAL-03/photo.jpg",
+      "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/KV9_Tomb_of_Ramses_V-VI_DSCF2903.jpg?width=960",
+      "source_url": "https://commons.wikimedia.org/wiki/File:KV9_Tomb_of_Ramses_V-VI_DSCF2903.jpg",
+      "source_filename": "KV9 Tomb of Ramses V-VI DSCF2903.jpg",
+      "review_status": "candidate",
+      "accuracy_note": "Фотография-кандидат, авторство проверяется"
+    }
+  }
+}

@@ -1,0 +1,162 @@
+{
+  "schema_version": 1,
+  "id": "luxor-temple",
+  "title": "Луксорский храм",
+  "city_id": "luxor",
+  "country_id": "egypt",
+  "full_program": "programs/full.json",
+  "must_see_program": "programs/must-see.json",
+  "content_status": "draft",
+  "points": [
+    {
+      "id": "LUX-01",
+      "title": "Пилон Рамсеса II и одинокий обелиск",
+      "meta": "points/LUX-01/meta.json"
+    },
+    {
+      "id": "LUX-02",
+      "title": "Двор Рамсеса II",
+      "meta": "points/LUX-02/meta.json"
+    },
+    {
+      "id": "LUX-03",
+      "title": "Великая колоннада Аменхотепа III",
+      "meta": "points/LUX-03/meta.json"
+    },
+    {
+      "id": "LUX-04",
+      "title": "Двор Аменхотепа III и древнее ядро храма",
+      "meta": "points/LUX-04/meta.json"
+    },
+    {
+      "id": "LUX-05",
+      "title": "Римская часовня и история переиспользования",
+      "meta": "points/LUX-05/meta.json"
+    },
+    {
+      "id": "LUX-X01",
+      "title": "Часовня священной ладьи Александра",
+      "meta": "points/LUX-X01/meta.json"
+    },
+    {
+      "id": "LUX-X02",
+      "title": "Зал божественного рождения Аменхотепа III",
+      "meta": "points/LUX-X02/meta.json"
+    },
+    {
+      "id": "LUX-X03",
+      "title": "Самое внутреннее святилище",
+      "meta": "points/LUX-X03/meta.json"
+    }
+  ],
+  "main_points": 5,
+  "optional_continuation_points": 3,
+  "content_type": "attraction",
+  "map": {
+    "center": [
+      32.6391,
+      25.6996
+    ],
+    "zoom": 17.4,
+    "geoPoints": {
+      "LUX-01": {
+        "lng": 32.639783,
+        "lat": 25.700272,
+        "note": "Обелиск перед первым пилоном: координаты самого обелиска, не точка туриста",
+        "source": "https://www.obelisks.org/en/ramses.htm",
+        "precision": "site"
+      },
+      "LUX-02": {
+        "lng": 32.63951,
+        "lat": 25.70002,
+        "note": "Двор к югу от первого пилона; приблизительно по последовательности частей храма.",
+        "source": "https://egymonuments.gov.eg/monuments/luxor-temple/",
+        "precision": "approx_plan"
+      },
+      "LUX-04": {
+        "lng": 32.63917,
+        "lat": 25.69942,
+        "note": "Двор Аменхотепа III к югу от колоннады; приблизительно по планировке храма.",
+        "source": "https://egymonuments.gov.eg/monuments/luxor-temple/",
+        "precision": "approx_plan"
+      },
+      "LUX-03": {
+        "lat": 25.6997,
+        "lng": 32.63938,
+        "precision": "approx_plan",
+        "note": "Большая колоннада между двором Рамсеса II и двором Аменхотепа III; приблизительная позиция на оси комплекса.",
+        "source": "https://egymonuments.gov.eg/monuments/luxor-temple/"
+      },
+      "LUX-05": {
+        "lat": 25.6992,
+        "lng": 32.63895,
+        "precision": "approx_plan",
+        "note": "Позднеримские росписи во внутренней части Луксорского храма; ориентир зоны, не отдельной стены.",
+        "source": "https://egymonuments.gov.eg/monuments/luxor-temple/"
+      },
+      "LUX-X01": {
+        "lat": 25.69905,
+        "lng": 32.63885,
+        "precision": "shared_site",
+        "note": "Общий ориентир южного внутреннего комплекса Луксорского храма; положение отдельной комнаты не определено GPS.",
+        "source": "https://egymonuments.gov.eg/monuments/luxor-temple"
+      },
+      "LUX-X02": {
+        "lat": 25.69905,
+        "lng": 32.63885,
+        "precision": "shared_site",
+        "note": "Общий ориентир южного внутреннего комплекса Луксорского храма; положение отдельной комнаты не определено GPS.",
+        "source": "https://egymonuments.gov.eg/monuments/luxor-temple"
+      },
+      "LUX-X03": {
+        "lat": 25.69905,
+        "lng": 32.63885,
+        "precision": "shared_site",
+        "note": "Общий ориентир южного внутреннего комплекса Луксорского храма; положение отдельной комнаты не определено GPS.",
+        "source": "https://egymonuments.gov.eg/monuments/luxor-temple"
+      }
+    },
+    "image": "content/countries/egypt/cities/luxor/attractions/luxor-temple/map-plan.svg",
+    "source": "https://www.openstreetmap.org/copyright",
+    "note": "СХЕМА ПОРЯДКА РАССКАЗОВ, не географический план. Номера на схеме условные: для передвижения используйте карту OSM, официальные указатели и описания «Где слушать».",
+    "points": {
+      "LUX-01": {
+        "x": 17.0,
+        "y": 28.0
+      },
+      "LUX-02": {
+        "x": 50,
+        "y": 28.0
+      },
+      "LUX-03": {
+        "x": 83.0,
+        "y": 28.0
+      },
+      "LUX-04": {
+        "x": 17.0,
+        "y": 82.0
+      },
+      "LUX-05": {
+        "x": 50,
+        "y": 82.0
+      }
+    },
+    "venueLabel": "Луксорский храм",
+    "planKind": "ordered_route",
+    "defaultView": "live",
+    "geoCount": 5,
+    "navBounds": [
+      [
+        32.634414,
+        25.695378
+      ],
+      [
+        32.643786,
+        25.703822
+      ]
+    ],
+    "navPaddingMeters": 350,
+    "nearbyRadiusMeters": 450,
+    "archive": "content/countries/egypt/cities/luxor/attractions/luxor-temple/map.pmtiles"
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "id": "VAL-04",
+  "title": "KV62: маленькая гробница Тутанхамона",
+  "role": "main",
+  "narrations": {
+    "main": {
+      "text": "main.txt",
+      "status": "imported_v025_unchanged",
+      "words": 123,
+      "estimated_minutes": 0.9,
+      "audio": "audio/main.mp3",
+      "text_sha256": "ecc38e9a4737adfc5c826ba7ceefc0a5ddb5d62ee2048bb5748502825c24045f"
+    },
+    "learn_more": {
+      "text": "learn_more.txt",
+      "status": "imported_v1_unverified",
+      "words": 173,
+      "estimated_minutes": 1.3,
+      "audio": "audio/learn_more.mp3",
+      "text_sha256": "ddf917ebb7c4b1175d21cb23603ac07957c5f9932acf468ec1f2cc56bb3a1510"
+    }
+  },
+  "source_candidates_unchecked": [
+    "https://egymonuments.gov.eg/en/monuments/tomb-of-tutankhamun"
+  ],
+  "factcheck_status": "pending_for_learn_more",
+  "summary": "Перед вами сравнительно небольшая гробница фараона Тутанхамона.",
+  "where_to_listen": "у гробницы Тутанхамона, только при наличии билета и доступа.",
+  "location": {
+    "lng": 32.6013,
+    "lat": 25.74029,
+    "note": "OSM-объект KV62; не гарантия входа.",
+    "source": "https://mapcarta.com/N1047911950",
+    "precision": "osm_object"
+  },
+  "map_note": {
+    "status": "A",
+    "description": "Вход в гробницу VAL-04: сверить KV-номер и форму входа с официальной картой TMP",
+    "source": "https://thebanmappingproject.com/sites/default/files/plans/Valley%20of%20the%20Kings.pdf"
+  },
+  "media": {
+    "photo": {
+      "path": "content/countries/egypt/cities/luxor/attractions/valley/points/VAL-04/photo.jpg",
+      "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Tutankhamun_KV62_burial_chamber_and_sarcophagus.jpg?width=960",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Tutankhamun_KV62_burial_chamber_and_sarcophagus.jpg",
+      "source_filename": "Tutankhamun KV62 burial chamber and sarcophagus.jpg",
+      "review_status": "candidate",
+      "accuracy_note": "Фотография-кандидат, авторство проверяется"
+    }
+  }
+}

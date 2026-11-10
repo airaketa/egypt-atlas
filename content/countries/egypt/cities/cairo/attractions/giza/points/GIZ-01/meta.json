@@ -1,0 +1,51 @@
+{
+  "id": "GIZ-01",
+  "title": "Панорама трёх пирамид",
+  "role": "main",
+  "narrations": {
+    "main": {
+      "text": "main.txt",
+      "status": "imported_v025_unchanged",
+      "words": 117,
+      "estimated_minutes": 0.9,
+      "audio": "audio/main.mp3",
+      "text_sha256": "c14a5088c68bcd06862c9369de7ad37f6da431dd9099db5ad5dc30965b3e61c0"
+    },
+    "learn_more": {
+      "text": "learn_more.txt",
+      "status": "imported_v1_unverified",
+      "words": 188,
+      "estimated_minutes": 1.4,
+      "audio": "audio/learn_more.mp3",
+      "text_sha256": "a402df245273625c1b06a671c268c4eb727c17a63a327b4b276ce8c87ad7f826"
+    }
+  },
+  "source_candidates_unchecked": [
+    "https://egymonuments.gov.eg/en/archaeological-sites/giza-plateau/"
+  ],
+  "factcheck_status": "pending_for_learn_more",
+  "summary": "Перед вами три царские пирамиды IV династии.",
+  "where_to_listen": "там, где одновременно видны три главные пирамиды, не обязательно на официальной «панорамной точке».",
+  "location": {
+    "lat": 29.96788,
+    "lng": 31.125,
+    "precision": "osm_object",
+    "note": "Панорамная точка с видом на три пирамиды; посещение зависит от действующей схемы движения.",
+    "source": "https://mapcarta.com/N11420474175"
+  },
+  "map_note": {
+    "status": "B",
+    "description": "Точка общего вида на три царских пирамиды в зоне разрешённых панорам",
+    "source": "https://pyramidenvongizeh.com/en/map/"
+  },
+  "media": {
+    "photo": {
+      "path": "content/countries/egypt/cities/cairo/attractions/giza/points/GIZ-01/photo.jpg",
+      "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Giza_Pyramids_Panorama.jpg?width=960",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Giza_Pyramids_Panorama.jpg",
+      "source_filename": "Giza Pyramids Panorama.jpg",
+      "review_status": "candidate",
+      "accuracy_note": "Фотография-кандидат, авторство проверяется"
+    }
+  }
+}

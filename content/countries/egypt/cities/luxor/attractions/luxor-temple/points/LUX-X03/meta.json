@@ -1,0 +1,52 @@
+{
+  "id": "LUX-X03",
+  "title": "Самое внутреннее святилище",
+  "role": "optional_continuation",
+  "narrations": {
+    "main": {
+      "text": "main.txt",
+      "status": "imported_v025_unchanged",
+      "words": 163,
+      "estimated_minutes": 1.3,
+      "audio": "audio/main.mp3",
+      "text_sha256": "c180af214b23db7898998e6940d99dd425237563d17ca7f6a0cd11144f57c540"
+    },
+    "learn_more": {
+      "text": "learn_more.txt",
+      "status": "imported_v1_unverified",
+      "words": 208,
+      "estimated_minutes": 1.6,
+      "audio": "audio/learn_more.mp3",
+      "text_sha256": "65de726decb327b8e91a811df6b8fe83cbd8643ea8ee066c2a2e2c8e46e1752e"
+    }
+  },
+  "source_candidates_unchecked": [
+    "https://egymonuments.gov.eg/monuments/luxor-temple",
+    "https://www.lonelyplanet.com/points-of-interest/luxor-temple/1136321"
+  ],
+  "factcheck_status": "pending_for_learn_more",
+  "summary": "В конце храмовой оси пространство сжимается: это уже не место для толпы, а ядро древнего культа.",
+  "where_to_listen": "в дальней доступной части южного святилища Аменхотепа III; не заходите в служебные или закрытые комнаты.",
+  "location": {
+    "lat": 25.69905,
+    "lng": 32.63885,
+    "precision": "shared_site",
+    "note": "Общий ориентир южного внутреннего комплекса Луксорского храма; положение отдельной комнаты не определено GPS.",
+    "source": "https://egymonuments.gov.eg/monuments/luxor-temple"
+  },
+  "map_note": {
+    "status": null,
+    "description": null,
+    "source": null
+  },
+  "media": {
+    "photo": {
+      "path": "content/countries/egypt/cities/luxor/attractions/luxor-temple/points/LUX-X03/photo.jpg",
+      "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Luxor-Tempel_Sanktuar_Amenophis_III._01.jpg",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Luxor-Tempel_Sanktuar_Amenophis_III._01.jpg",
+      "source_filename": null,
+      "review_status": "candidate",
+      "accuracy_note": "Фото-кандидат: указан памятник, но ракурс не обязательно совпадает с местом прослушивания"
+    }
+  }
+}

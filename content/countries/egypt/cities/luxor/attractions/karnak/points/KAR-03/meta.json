@@ -1,0 +1,52 @@
+{
+  "id": "KAR-03",
+  "title": "Малый храм Рамсеса III",
+  "role": "main",
+  "narrations": {
+    "main": {
+      "text": "main.txt",
+      "status": "imported_v025_unchanged",
+      "words": 97,
+      "estimated_minutes": 0.7,
+      "audio": "audio/main.mp3",
+      "text_sha256": "e64a5d52616393a977a298c1c08baa87f4f89fe44a4ebd9df7d4e7ee716fabac"
+    },
+    "learn_more": {
+      "text": "learn_more.txt",
+      "status": "imported_v1_unverified",
+      "words": 200,
+      "estimated_minutes": 1.5,
+      "audio": "audio/learn_more.mp3",
+      "text_sha256": "38d2c6508acfb08b76df2652c760239a4d7dcf65500f2371ca7aed881e8d97b5"
+    }
+  },
+  "source_candidates_unchecked": [
+    "https://digitalkarnak.ucsc.edu/ramesses-iii-temple/",
+    "https://egymonuments.gov.eg/monuments/luxor-temple/"
+  ],
+  "factcheck_status": "pending_for_learn_more",
+  "summary": "Здесь, внутри гигантского комплекса, стоит ещё один храм — построенный Рамсесом Третьим в двенадцатом веке до нашей эры.",
+  "where_to_listen": "у входа в отдельный храм в южной стороне Большого двора.",
+  "location": {
+    "lng": 32.657,
+    "lat": 25.7183,
+    "note": "Ориентир памятника; не GPS-точка стояния",
+    "precision": "legacy_approx",
+    "source": "https://digitalkarnak.ucsc.edu/ramesses-iii-temple/"
+  },
+  "map_note": {
+    "status": "A",
+    "description": "Южная часть Большого двора — вход в храм-станцию Рамсеса III",
+    "source": "https://digitalkarnak.ucsc.edu/ramesses-iii-temple/"
+  },
+  "media": {
+    "photo": {
+      "path": "content/countries/egypt/cities/luxor/attractions/karnak/points/KAR-03/photo.jpg",
+      "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Karnak_Ramses_III_temple.JPG?width=960",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Karnak_Ramses_III_temple.JPG",
+      "source_filename": "Karnak Ramses III temple.JPG",
+      "review_status": "existing_candidate",
+      "accuracy_note": "Фотография-кандидат, авторство проверяется"
+    }
+  }
+}

@@ -1,0 +1,134 @@
+{
+  "schema_version": 1,
+  "id": "alex-library",
+  "title": "Александрийская библиотека",
+  "city_id": "alexandria",
+  "country_id": "egypt",
+  "full_program": "programs/full.json",
+  "must_see_program": "programs/must-see.json",
+  "content_status": "draft",
+  "points": [
+    {
+      "id": "BIB-01",
+      "title": "Новый дом старой идеи",
+      "meta": "points/BIB-01/meta.json"
+    },
+    {
+      "id": "BIB-02",
+      "title": "Гранитная стена: история письменности",
+      "meta": "points/BIB-02/meta.json"
+    },
+    {
+      "id": "BIB-03",
+      "title": "Главный читальный зал",
+      "meta": "points/BIB-03/meta.json"
+    },
+    {
+      "id": "BIB-04",
+      "title": "Археологический музей внутри библиотеки",
+      "meta": "points/BIB-04/meta.json"
+    },
+    {
+      "id": "BIB-X01",
+      "title": "Музей рукописей — память на бумаге",
+      "meta": "points/BIB-X01/meta.json"
+    },
+    {
+      "id": "BIB-X02",
+      "title": "Музей Садата — Египет XX века",
+      "meta": "points/BIB-X02/meta.json"
+    }
+  ],
+  "main_points": 4,
+  "optional_continuation_points": 2,
+  "content_type": "attraction",
+  "map": {
+    "center": [
+      29.9091,
+      31.2089
+    ],
+    "zoom": 16.4,
+    "geoPoints": {
+      "BIB-01": {
+        "lat": 31.20833,
+        "lng": 29.909222,
+        "precision": "osm_object",
+        "note": "Внешний вход у библиотеки; точка съёмки входа в Commons, не обязательный вход сегодня.",
+        "source": "https://commons.wikimedia.org/wiki/File:Bibliotheca_Alexandrina_--_Library_entrance.jpg"
+      },
+      "BIB-02": {
+        "lat": 31.20866,
+        "lng": 29.90896,
+        "precision": "shared_site",
+        "note": "Гранитная стена — архитектурный элемент библиотеки; общий ориентир здания, положение участка стены не уточнено.",
+        "source": "https://mapcarta.com/29457660"
+      },
+      "BIB-03": {
+        "lat": 31.20866,
+        "lng": 29.90896,
+        "precision": "shared_site",
+        "note": "Читальный зал внутри здания: координаты всего здания, не точка внутри зала.",
+        "source": "https://mapcarta.com/29457660"
+      },
+      "BIB-04": {
+        "lat": 31.20866,
+        "lng": 29.90896,
+        "precision": "shared_site",
+        "note": "Археологический музей внутри библиотеки: точка всего комплекса, не положение экспозиции.",
+        "source": "https://mapcarta.com/29457660"
+      },
+      "BIB-X01": {
+        "lat": 31.20866,
+        "lng": 29.90896,
+        "precision": "shared_site",
+        "note": "Общий ориентир здания Александрийской библиотеки, не координата комнаты B1.",
+        "source": "https://www.bibalex.org/en/Page/Guidelines"
+      },
+      "BIB-X02": {
+        "lat": 31.20866,
+        "lng": 29.90896,
+        "precision": "shared_site",
+        "note": "Общий ориентир здания Александрийской библиотеки, не координата комнаты B1.",
+        "source": "https://www.bibalex.org/en/Page/Guidelines"
+      }
+    },
+    "image": "content/countries/egypt/cities/alexandria/attractions/alex-library/map-plan.svg",
+    "source": "https://www.openstreetmap.org/copyright",
+    "note": "СХЕМА ПОРЯДКА РАССКАЗОВ, не географический план. Номера на схеме условные: для передвижения используйте карту OSM, официальные указатели и описания «Где слушать».",
+    "points": {
+      "BIB-01": {
+        "x": 17.0,
+        "y": 28.0
+      },
+      "BIB-02": {
+        "x": 50,
+        "y": 28.0
+      },
+      "BIB-03": {
+        "x": 83.0,
+        "y": 28.0
+      },
+      "BIB-04": {
+        "x": 17.0,
+        "y": 82.0
+      }
+    },
+    "venueLabel": "Александрийская библиотека",
+    "planKind": "ordered_route",
+    "defaultView": "live",
+    "geoCount": 4,
+    "navBounds": [
+      [
+        29.904374,
+        31.204858
+      ],
+      [
+        29.913826,
+        31.212942
+      ]
+    ],
+    "navPaddingMeters": 350,
+    "nearbyRadiusMeters": 450,
+    "archive": "content/countries/egypt/cities/alexandria/attractions/alex-library/map.pmtiles"
+  }
+}

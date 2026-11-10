@@ -1,0 +1,51 @@
+{
+  "id": "CAI-01",
+  "title": "Цитадель Салах ад-Дина: крепость над городом",
+  "role": "main",
+  "narrations": {
+    "main": {
+      "text": "main.txt",
+      "status": "imported_v025_unchanged",
+      "words": 104,
+      "estimated_minutes": 0.8,
+      "audio": "audio/main.mp3",
+      "text_sha256": "25775754042cb83168f3b1975177673f9bbc814ed7d4725136c3064325661459"
+    },
+    "learn_more": {
+      "text": "learn_more.txt",
+      "status": "imported_v1_unverified",
+      "words": 183,
+      "estimated_minutes": 1.4,
+      "audio": "audio/learn_more.mp3",
+      "text_sha256": "d0a750bcfef5967827077126190723dc18f3b0907425d052a71fb8f2a6b7bf72"
+    }
+  },
+  "source_candidates_unchecked": [
+    "https://egymonuments.gov.eg/archaeological-sites/cairo-citadel/"
+  ],
+  "factcheck_status": "pending_for_learn_more",
+  "summary": "Каирская цитадель — не просто красивый фон для фотографий.",
+  "where_to_listen": "в доступной открытой части цитадели с видом на оборонительные стены.",
+  "location": {
+    "lng": 31.261466,
+    "lat": 30.029836,
+    "note": "Цитадель: общий ориентир комплекса, не вход и не место прослушивания",
+    "source": "https://www.outdooractive.com/en/poi/aegypten/salah-el-din-citadel/807775444/",
+    "precision": "site"
+  },
+  "map_note": {
+    "status": "B",
+    "description": "Открытая площадка цитадели с видом на Каир",
+    "source": "https://egymonuments.gov.eg/monuments/cairo-citadel/"
+  },
+  "media": {
+    "photo": {
+      "path": "content/countries/egypt/cities/cairo/attractions/cairo/points/CAI-01/photo.jpg",
+      "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Citadel_of_Salah_El.Din.jpg?width=960",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Citadel_of_Salah_El.Din.jpg",
+      "source_filename": "Citadel of Salah El.Din.jpg",
+      "review_status": "candidate",
+      "accuracy_note": "Фотография-кандидат, авторство проверяется"
+    }
+  }
+}

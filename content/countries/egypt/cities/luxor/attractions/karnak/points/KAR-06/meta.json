@@ -1,0 +1,53 @@
+{
+  "id": "KAR-06",
+  "title": "Центральное святилище священной ладьи Амона",
+  "role": "main",
+  "narrations": {
+    "main": {
+      "text": "main.txt",
+      "status": "imported_v025_unchanged",
+      "words": 113,
+      "estimated_minutes": 0.9,
+      "audio": "audio/main.mp3",
+      "text_sha256": "7751caca80d047c9437430cfe1009f14a6a1fe4ea2281c692e2893298c36f261"
+    },
+    "learn_more": {
+      "text": "learn_more.txt",
+      "status": "imported_v1_unverified",
+      "words": 201,
+      "estimated_minutes": 1.5,
+      "audio": "audio/learn_more.mp3",
+      "text_sha256": "5c919a4918b64c8f19b4e5dfba35994e2b29c0b136c16dacfe50fdfb675832ba"
+    }
+  },
+  "source_candidates_unchecked": [
+    "https://egymonuments.gov.eg/archaeological-sites/karnak/",
+    "https://www.memphis.edu/hypostyle/meaning_function/",
+    "https://digitalkarnak.ucsc.edu/central-bark-shrine/"
+  ],
+  "factcheck_status": "pending_for_learn_more",
+  "summary": "Вы приблизились к сакральному центру храма Амона.",
+  "where_to_listen": "в центральной части внутренней оси храма, у доступного святилища.",
+  "location": {
+    "lng": 32.6589,
+    "lat": 25.7181,
+    "note": "Ориентир святилища ладьи Амона; подход и проходимость внутри уточняются",
+    "source": "https://commons.wikimedia.org/wiki/Category:Central_Bark_Shrine_in_Karnak",
+    "precision": "site"
+  },
+  "map_note": {
+    "status": "B",
+    "description": "Центральная ось восточнее гипостиля — святилище ладьи Филиппа Арридея",
+    "source": "https://digitalkarnak.ucsc.edu/central-bark-shrine/"
+  },
+  "media": {
+    "photo": {
+      "path": "content/countries/egypt/cities/luxor/attractions/karnak/points/KAR-06/photo.jpg",
+      "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Interior_of_the_Central_Bark_Shrine_in_Karnak.jpg?width=960",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Interior_of_the_Central_Bark_Shrine_in_Karnak.jpg",
+      "source_filename": "Interior of the Central Bark Shrine in Karnak.jpg",
+      "review_status": "candidate",
+      "accuracy_note": "Фотография-кандидат, авторство проверяется"
+    }
+  }
+}

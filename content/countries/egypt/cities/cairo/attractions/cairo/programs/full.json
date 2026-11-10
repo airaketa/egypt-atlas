@@ -1,0 +1,19 @@
+{
+  "id": "cairo-full",
+  "title": "Полная экскурсия",
+  "validation": "original_order_from_v025",
+  "estimated_narration_minutes": 5.7,
+  "ordered_point_ids": [
+    "CAI-01",
+    "CAI-02",
+    "CAI-03",
+    "CAI-04",
+    "CAI-05",
+    "CAI-06",
+    "CAI-07"
+  ],
+  "optional_point_ids": [
+    "CAI-X01",
+    "CAI-X02"
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "id": "KAR-05",
+  "title": "Обелиск Хатшепсут",
+  "role": "main",
+  "narrations": {
+    "main": {
+      "text": "main.txt",
+      "status": "imported_v025_unchanged",
+      "words": 191,
+      "estimated_minutes": 1.5,
+      "audio": "audio/main.mp3",
+      "text_sha256": "52889f78394d3c790c67872ca3b436b243a65976b621812a840fa321fe607673"
+    },
+    "learn_more": {
+      "text": "learn_more.txt",
+      "status": "imported_v1_unverified",
+      "words": 214,
+      "estimated_minutes": 1.6,
+      "audio": "audio/learn_more.mp3",
+      "text_sha256": "289c0fc3212aa9152e17ed4ba3593be212ed7f5e1b09f1626dfe88b8f3b6b383"
+    }
+  },
+  "source_candidates_unchecked": [
+    "https://egymonuments.gov.eg/archaeological-sites/karnak/",
+    "https://commons.wikimedia.org/wiki/File:Karnak_Tempel_Obelisk_Hatshepsut_07.jpg",
+    "https://www.memphis.edu/hypostyle/welcome/",
+    "https://www.metmuseum.org/art/collection/search/559806"
+  ],
+  "factcheck_status": "pending_for_learn_more",
+  "summary": "Поднимите взгляд: почти тридцатиметровый обелиск был установлен по приказу Хатшепсут, женщины, которая приняла полный титул фараона.",
+  "where_to_listen": "у сохранившегося высокого обелиска за главным колонным залом.",
+  "location": {
+    "lng": 32.658569,
+    "lat": 25.718311,
+    "note": "Ориентир памятника; не GPS-точка стояния",
+    "precision": "legacy_approx",
+    "source": "https://digitalkarnak.ucsc.edu/Maps-of-Karnak-and-Luxor/"
+  },
+  "map_note": {
+    "status": "A",
+    "description": "За Третьим пилоном, зона сохранившегося обелиска Хатшепсут",
+    "source": "https://digitalkarnak.ucsc.edu/Maps-of-Karnak-and-Luxor/"
+  },
+  "media": {
+    "photo": {
+      "path": "content/countries/egypt/cities/luxor/attractions/karnak/points/KAR-05/photo.jpg",
+      "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Karnak_Temple_Obelisk_of_Hatshepsut_and_Thutmosis_I.jpg?width=960",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Karnak_Temple_Obelisk_of_Hatshepsut_and_Thutmosis_I.jpg",
+      "source_filename": "Karnak Temple Obelisk of Hatshepsut and Thutmosis I.jpg",
+      "review_status": "existing_candidate",
+      "accuracy_note": "Фотография-кандидат, авторство проверяется"
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "id": "egypt-common",
+  "scope": "country",
+  "country_id": "egypt",
+  "title": "Египет · общий контент",
+  "language": "ru",
+  "revision": "evergreen-draft-2026-11-09",
+  "type": "content-only",
+  "install_policy": "shared_dependency_install_once",
+  "gps_optional": true,
+  "cities": [
+    {
+      "id": "cairo",
+      "title": "Каир и Гиза",
+      "package_id": "egypt-cairo"
+    },
+    {
+      "id": "luxor",
+      "title": "Луксор",
+      "package_id": "egypt-luxor"
+    },
+    {
+      "id": "alexandria",
+      "title": "Александрия",
+      "package_id": "egypt-alexandria"
+    }
+  ],
+  "factcheck_status": "pending_historical_review",
+  "editorial_policy": "evergreen_audio_only",
+  "stories": "stories/manifest.json",
+  "content_type": "country"
+}

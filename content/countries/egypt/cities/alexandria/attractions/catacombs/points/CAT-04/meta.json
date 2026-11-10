@@ -1,0 +1,52 @@
+{
+  "id": "CAT-04",
+  "title": "Главная гробница: Египет встречает Рим",
+  "role": "main",
+  "narrations": {
+    "main": {
+      "text": "main.txt",
+      "status": "imported_v025_unchanged",
+      "words": 91,
+      "estimated_minutes": 0.7,
+      "audio": "audio/main.mp3",
+      "text_sha256": "ec67a00a86d9423074b5fecd1ddd49d9f2af6b3477e734ca8625178641de03af"
+    },
+    "learn_more": {
+      "text": "learn_more.txt",
+      "status": "imported_v1_unverified",
+      "words": 150,
+      "estimated_minutes": 1.2,
+      "audio": "audio/learn_more.mp3",
+      "text_sha256": "d9353406afe12771c2e64c4ff7fdaed1cb0c8f6b1a0cd3a7ff47761b156a42fc"
+    }
+  },
+  "source_candidates_unchecked": [
+    "https://www.bibalex.org/alexmed/Attachments/Publications/Files/kom%20el%20shoqafa.pdf",
+    "https://www.cambridge.org/core/books/visualizing-the-afterlife-in-the-tombs-of-graecoroman-egypt/egypt-as-metaphor/808A0B4ECDBFD6CB43A6054E9549D900"
+  ],
+  "factcheck_status": "pending_for_learn_more",
+  "summary": "Здесь лучше всего видно смешение художественных традиций Александрии.",
+  "where_to_listen": "перед фасадом главного погребального помещения.",
+  "location": {
+    "lat": 31.17854,
+    "lng": 29.89304,
+    "precision": "shared_site",
+    "note": "Археологический комплекс на поверхности: координата НЕ обозначает положение подземной главной гробницы. Внутри следуйте указателям.",
+    "source": "https://mapcarta.com/W32749330"
+  },
+  "map_note": {
+    "status": "A",
+    "description": "У фасада главной гробницы, не внутри закрытых камер",
+    "source": "https://www.bibalex.org/alexmed/Attachments/Publications/Files/kom%20el%20shoqafa.pdf"
+  },
+  "media": {
+    "photo": {
+      "path": "content/countries/egypt/cities/alexandria/attractions/catacombs/points/CAT-04/photo.jpg",
+      "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Alexandria,_Shuqafa_Chapel.jpg?width=960",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Alexandria,_Shuqafa_Chapel.jpg",
+      "source_filename": "Alexandria, Shuqafa Chapel.jpg",
+      "review_status": "candidate",
+      "accuracy_note": "Фотография-кандидат, авторство проверяется"
+    }
+  }
+}

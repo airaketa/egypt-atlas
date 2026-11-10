@@ -1,0 +1,197 @@
+{
+  "schema_version": 1,
+  "id": "karnak",
+  "title": "Карнакский храм",
+  "city_id": "luxor",
+  "country_id": "egypt",
+  "full_program": "programs/full.json",
+  "must_see_program": "programs/must-see.json",
+  "content_status": "draft",
+  "points": [
+    {
+      "id": "KAR-01",
+      "title": "Аллея бараноголовых сфинксов и Первый пилон",
+      "meta": "points/KAR-01/meta.json"
+    },
+    {
+      "id": "KAR-02",
+      "title": "Большой двор и киоск Тахарки",
+      "meta": "points/KAR-02/meta.json"
+    },
+    {
+      "id": "KAR-03",
+      "title": "Малый храм Рамсеса III",
+      "meta": "points/KAR-03/meta.json"
+    },
+    {
+      "id": "KAR-04",
+      "title": "Большой гипостильный зал",
+      "meta": "points/KAR-04/meta.json"
+    },
+    {
+      "id": "KAR-05",
+      "title": "Обелиск Хатшепсут",
+      "meta": "points/KAR-05/meta.json"
+    },
+    {
+      "id": "KAR-06",
+      "title": "Центральное святилище священной ладьи Амона",
+      "meta": "points/KAR-06/meta.json"
+    },
+    {
+      "id": "KAR-07",
+      "title": "Ахмену — праздничный зал Тутмоса III",
+      "meta": "points/KAR-07/meta.json"
+    },
+    {
+      "id": "KAR-08",
+      "title": "Священное озеро и скарабей",
+      "meta": "points/KAR-08/meta.json"
+    },
+    {
+      "id": "KAR-X01",
+      "title": "Храм Хонсу — лунный бог Фив",
+      "meta": "points/KAR-X01/meta.json"
+    },
+    {
+      "id": "KAR-X02",
+      "title": "Храм Опет — рождение и возрождение",
+      "meta": "points/KAR-X02/meta.json"
+    }
+  ],
+  "main_points": 8,
+  "optional_continuation_points": 2,
+  "content_type": "attraction",
+  "map": {
+    "center": [
+      32.6578,
+      25.7189
+    ],
+    "zoom": 17.2,
+    "geoPoints": {
+      "KAR-01": {
+        "lng": 32.6568,
+        "lat": 25.7191,
+        "note": "Ориентир памятника; не GPS-точка стояния",
+        "precision": "legacy_approx",
+        "source": "https://digitalkarnak.ucsc.edu/1st-pylon/"
+      },
+      "KAR-02": {
+        "lng": 32.6572,
+        "lat": 25.7189,
+        "note": "Ориентир памятника; не GPS-точка стояния",
+        "precision": "legacy_approx",
+        "source": "https://digitalkarnak.ucsc.edu/Shoshenq-I-Court/"
+      },
+      "KAR-03": {
+        "lng": 32.657,
+        "lat": 25.7183,
+        "note": "Ориентир памятника; не GPS-точка стояния",
+        "precision": "legacy_approx",
+        "source": "https://digitalkarnak.ucsc.edu/ramesses-iii-temple/"
+      },
+      "KAR-04": {
+        "lng": 32.6579,
+        "lat": 25.7186,
+        "note": "Ориентир памятника; не GPS-точка стояния",
+        "precision": "legacy_approx",
+        "source": "https://www.memphis.edu/hypostyle/about-architecture/"
+      },
+      "KAR-05": {
+        "lng": 32.658569,
+        "lat": 25.718311,
+        "note": "Ориентир памятника; не GPS-точка стояния",
+        "precision": "legacy_approx",
+        "source": "https://digitalkarnak.ucsc.edu/Maps-of-Karnak-and-Luxor/"
+      },
+      "KAR-07": {
+        "lng": 32.659575,
+        "lat": 25.717804,
+        "note": "Ориентир памятника; не GPS-точка стояния",
+        "precision": "legacy_approx",
+        "source": "https://digitalkarnak.ucsc.edu/akhmenu/"
+      },
+      "KAR-06": {
+        "lng": 32.6589,
+        "lat": 25.7181,
+        "note": "Ориентир святилища ладьи Амона; подход и проходимость внутри уточняются",
+        "source": "https://commons.wikimedia.org/wiki/Category:Central_Bark_Shrine_in_Karnak",
+        "precision": "site"
+      },
+      "KAR-08": {
+        "lat": 25.71746,
+        "lng": 32.65849,
+        "precision": "osm_object",
+        "note": "Скарабей у Священного озера; ориентир скульптуры, не рекомендованная точка стояния.",
+        "source": "https://mapcarta.com/N3322109124"
+      },
+      "KAR-X01": {
+        "lat": 25.716773,
+        "lng": 32.655858,
+        "precision": "site",
+        "note": "Храм Хонсу: ориентир здания; проход к храму зависит от доступа.",
+        "source": "https://www.outdooractive.com/en/poi/aegypten/temple-of-khonsu/807789224/"
+      },
+      "KAR-X02": {
+        "lat": 25.716647,
+        "lng": 32.655412,
+        "precision": "site",
+        "note": "Храм Опет: научная геопривязка здания, не гарантированный вход.",
+        "source": "https://www.orient-mediterranee.com/program/karnak-le-temple-dopet/"
+      }
+    },
+    "image": "content/countries/egypt/cities/luxor/attractions/karnak/map-plan.svg",
+    "source": "https://digitalkarnak.ucsc.edu/Maps-of-Karnak-and-Luxor/",
+    "note": "Ориентировочный архитектурный план комплекса: все 8 остановок нанесены. Схема не в масштабе; проверяйте открытые проходы и указатели.",
+    "points": {
+      "KAR-01": {
+        "x": 14.8,
+        "y": 49.4
+      },
+      "KAR-02": {
+        "x": 25.5,
+        "y": 47.0
+      },
+      "KAR-03": {
+        "x": 32.5,
+        "y": 56.6
+      },
+      "KAR-05": {
+        "x": 67.3,
+        "y": 49.2
+      },
+      "KAR-07": {
+        "x": 90.4,
+        "y": 49.7
+      },
+      "KAR-04": {
+        "x": 48.7,
+        "y": 49.0
+      },
+      "KAR-06": {
+        "x": 80.5,
+        "y": 49.5
+      },
+      "KAR-08": {
+        "x": 80.3,
+        "y": 73.2
+      }
+    },
+    "venueLabel": "Карнакский храм",
+    "planKind": "approx_architecture",
+    "geoCount": 8,
+    "navBounds": [
+      [
+        32.651319,
+        25.713054
+      ],
+      [
+        32.664281,
+        25.724739
+      ]
+    ],
+    "navPaddingMeters": 400,
+    "nearbyRadiusMeters": 450,
+    "archive": "content/countries/egypt/cities/luxor/attractions/karnak/map.pmtiles"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "id": "KAR-07",
+  "title": "Ахмену — праздничный зал Тутмоса III",
+  "role": "main",
+  "narrations": {
+    "main": {
+      "text": "main.txt",
+      "status": "imported_v025_unchanged",
+      "words": 94,
+      "estimated_minutes": 0.7,
+      "audio": "audio/main.mp3",
+      "text_sha256": "8ea9811a7353f14d60476fef05eae39694f850c302c4ba177d0d441b726844ba"
+    },
+    "learn_more": {
+      "text": "learn_more.txt",
+      "status": "imported_v1_unverified",
+      "words": 197,
+      "estimated_minutes": 1.5,
+      "audio": "audio/learn_more.mp3",
+      "text_sha256": "2c45caee3166df2d78c8eec0caf3adbaeefe358af8885391d0ad2e70bbfbe125"
+    }
+  },
+  "source_candidates_unchecked": [
+    "https://digitalkarnak.ucsc.edu/akhmenu/",
+    "https://egymonuments.gov.eg/archaeological-sites/karnak/"
+  ],
+  "factcheck_status": "pending_for_learn_more",
+  "summary": "Ахмену — большой храмовый ансамбль Тутмоса Третьего, правителя восемнадцатой династии.",
+  "where_to_listen": "в восточной части комплекса; включать только если проход разрешён.",
+  "location": {
+    "lng": 32.659575,
+    "lat": 25.717804,
+    "note": "Ориентир памятника; не GPS-точка стояния",
+    "precision": "legacy_approx",
+    "source": "https://digitalkarnak.ucsc.edu/akhmenu/"
+  },
+  "map_note": {
+    "status": "A",
+    "description": "Восточный конец главной оси, Ахмену Тутмоса III",
+    "source": "https://digitalkarnak.ucsc.edu/akhmenu/"
+  },
+  "media": {
+    "photo": {
+      "path": "content/countries/egypt/cities/luxor/attractions/karnak/points/KAR-07/photo.png",
+      "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/ThutmosesIII-GreatFestivalTemple-Karnak.png?width=960",
+      "source_url": "https://commons.wikimedia.org/wiki/File:ThutmosesIII-GreatFestivalTemple-Karnak.png",
+      "source_filename": "ThutmosesIII-GreatFestivalTemple-Karnak.png",
+      "review_status": "existing_candidate",
+      "accuracy_note": "Фотография-кандидат, авторство проверяется"
+    }
+  }
+}

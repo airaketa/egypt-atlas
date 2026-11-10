@@ -1,0 +1,45 @@
+{
+  "id": "GEM-11",
+  "title": "Стела Несхонсу: загробный мир не только для фараонов",
+  "role": "main",
+  "narrations": {
+    "main": {
+      "text": "main.txt",
+      "status": "imported_v025_unchanged",
+      "words": 106,
+      "estimated_minutes": 0.8,
+      "audio": "audio/main.mp3",
+      "text_sha256": "5efebd497506f850d515346ac27886937b3bc7646a12bfc492de9744cfc45e77"
+    },
+    "learn_more": {
+      "text": "learn_more.txt",
+      "status": "imported_v1_unverified",
+      "words": 176,
+      "estimated_minutes": 1.4,
+      "audio": "audio/learn_more.mp3",
+      "text_sha256": "5e5e9af7de527e4f6a6314815a77589e62a719ef39cb1381503b62b4c319f5a3"
+    }
+  },
+  "source_candidates_unchecked": [
+    "https://gem.eg/en/collection/artefacts/stela-of-neskhons"
+  ],
+  "factcheck_status": "pending_for_learn_more",
+  "summary": "Перед вами маленькая деревянная стела Несхонсу — женщины из семьи, связанной со жречеством.",
+  "where_to_listen": "у деревянной расписной стелы Несхонсу (GEM № 468), если она выставлена в Main Galleries.",
+  "location": null,
+  "map_note": {
+    "status": "C",
+    "description": "Стела Несхонсу, GEM 468, Main Galleries",
+    "source": "https://gem.eg/en/collection/artefacts/stela-of-neskhons"
+  },
+  "media": {
+    "photo": {
+      "path": "content/countries/egypt/cities/cairo/attractions/gem/points/GEM-11/photo.jpg",
+      "download_url": "https://cdn.gem.eg/media/3465/gem468-1.jpeg?center=0.405572755417957%2C0.498327759197324&height=576&mode=crop&rnd=133970533950000000&ver=2025.10.27.02&width=830",
+      "source_url": "https://gem.eg/en/collection/artefacts/stela-of-neskhons",
+      "source_filename": null,
+      "review_status": "official_image",
+      "accuracy_note": "Официальное изображение экспоната"
+    }
+  }
+}

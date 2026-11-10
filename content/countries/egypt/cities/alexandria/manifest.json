@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "id": "egypt-alexandria",
+  "scope": "city",
+  "city_id": "alexandria",
+  "country_id": "egypt",
+  "title": "Александрия",
+  "language": "ru",
+  "revision": "evergreen-draft-2026-11-09",
+  "requires": [
+    {
+      "package_id": "egypt-common",
+      "once": true
+    }
+  ],
+  "download_semantics": "Install egypt-common if absent, then this city; shared package not duplicated.",
+  "includes": [
+    "city-stories",
+    "city-attraction-texts",
+    "city-programs"
+  ],
+  "excludes": [
+    "audio-mp3",
+    "photos",
+    "offline-map-tiles"
+  ],
+  "content_status": "draft",
+  "editorial_policy": "evergreen_audio_only",
+  "factcheck_status": "pending_historical_review",
+  "stories": "stories/manifest.json",
+  "attractions": [
+    {
+      "id": "alex-library",
+      "title": "Александрийская библиотека",
+      "manifest": "attractions/alex-library/manifest.json"
+    },
+    {
+      "id": "qaitbay",
+      "title": "Крепость Кайтбей",
+      "manifest": "attractions/qaitbay/manifest.json"
+    },
+    {
+      "id": "catacombs",
+      "title": "Катакомбы Ком-эль-Шукафа",
+      "manifest": "attractions/catacombs/manifest.json"
+    }
+  ]
+}

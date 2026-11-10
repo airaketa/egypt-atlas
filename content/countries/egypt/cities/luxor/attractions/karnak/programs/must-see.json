@@ -1,0 +1,16 @@
+{
+  "id": "karnak-must-see",
+  "title": "Главное · Must-see",
+  "validation": "editorial_selection_not_route_verified",
+  "estimated_narration_minutes": 6.1,
+  "editorial_notes": "Быстрый отбор ориентирован на крупнейшие элементы главного храма. Проходы между ними на месте проверить; GPS внутри залов ненадёжен.",
+  "important": "Не обещать экономию времени на перемещении, доступность или физический маршрут без проверки.",
+  "ordered_point_ids": [
+    "KAR-01",
+    "KAR-04",
+    "KAR-05",
+    "KAR-06",
+    "KAR-08"
+  ],
+  "optional_point_ids": []
+}

@@ -1,0 +1,51 @@
+{
+  "id": "HAT-02",
+  "title": "Рельефы экспедиции в Пунт",
+  "role": "main",
+  "narrations": {
+    "main": {
+      "text": "main.txt",
+      "status": "imported_v025_unchanged",
+      "words": 100,
+      "estimated_minutes": 0.8,
+      "audio": "audio/main.mp3",
+      "text_sha256": "25b06c50027ce580d9e686adb746b9c2583cb70578ed35ae1001603b80203c6e"
+    },
+    "learn_more": {
+      "text": "learn_more.txt",
+      "status": "imported_v1_unverified",
+      "words": 169,
+      "estimated_minutes": 1.3,
+      "audio": "audio/learn_more.mp3",
+      "text_sha256": "f0b16f1d7d97ebc5a2a4d054bc8a8287bbf4d0b342f48f56838f9894ee372946"
+    }
+  },
+  "source_candidates_unchecked": [
+    "https://egymonuments.gov.eg/en/monuments/hatshepsut-temple/"
+  ],
+  "factcheck_status": "pending_for_learn_more",
+  "summary": "На рельефах храма Хатшепсут изображена экспедиция в страну Пунт.",
+  "where_to_listen": "у соответствующей колоннады средней террасы, если открыта.",
+  "location": {
+    "lng": 32.606492,
+    "lat": 25.73779,
+    "note": "Фото-GPS у рельефов Пунта: возможна погрешность точки съёмки",
+    "source": "https://commons.wikimedia.org/wiki/File:Mortuary_Temple_of_Hatshepsut_032010_023.jpg",
+    "precision": "photo_viewpoint"
+  },
+  "map_note": {
+    "status": "A",
+    "description": "ЮЖНЫЙ портик СРЕДНЕЙ террасы — Порт Пунта (слева от пандуса при взгляде на фасад)",
+    "source": "https://www.templeofhatshepsut.uw.edu.pl/en/middle_portico_south_portico_of_punt.html"
+  },
+  "media": {
+    "photo": {
+      "path": "content/countries/egypt/cities/luxor/attractions/hatshepsut/points/HAT-02/photo.jpg",
+      "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Mortuary_Temple_of_Hatshepsut_032010_023.jpg?width=960",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Mortuary_Temple_of_Hatshepsut_032010_023.jpg",
+      "source_filename": "Mortuary Temple of Hatshepsut 032010 023.jpg",
+      "review_status": "candidate",
+      "accuracy_note": "Фотография-кандидат, авторство проверяется"
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "id": "KAR-02",
+  "title": "Большой двор и киоск Тахарки",
+  "role": "main",
+  "narrations": {
+    "main": {
+      "text": "main.txt",
+      "status": "imported_v025_unchanged",
+      "words": 107,
+      "estimated_minutes": 0.8,
+      "audio": "audio/main.mp3",
+      "text_sha256": "948a87f3155e60511d943005ebf466a8bbdffefd3373732eb3730776415c4e1e"
+    },
+    "learn_more": {
+      "text": "learn_more.txt",
+      "status": "imported_v1_unverified",
+      "words": 199,
+      "estimated_minutes": 1.5,
+      "audio": "audio/learn_more.mp3",
+      "text_sha256": "69956d50048b80f7b575477899d3aeb387ef005580d06ef4c0c0a52048828d95"
+    }
+  },
+  "source_candidates_unchecked": [
+    "https://egymonuments.gov.eg/archaeological-sites/karnak/",
+    "https://digitalkarnak.ucsc.edu/Shoshenq-I-Court/"
+  ],
+  "factcheck_status": "pending_for_learn_more",
+  "summary": "Вы оказались в просторном дворе между Первым и Вторым пилонами.",
+  "where_to_listen": "сразу за Первым пилоном, в первом большом дворе.",
+  "location": {
+    "lng": 32.6572,
+    "lat": 25.7189,
+    "note": "Ориентир памятника; не GPS-точка стояния",
+    "precision": "legacy_approx",
+    "source": "https://digitalkarnak.ucsc.edu/Shoshenq-I-Court/"
+  },
+  "map_note": {
+    "status": "A",
+    "description": "Большой двор за Первым пилоном; сохранившаяся колонна киоска Тахарки ближе к оси",
+    "source": "https://digitalkarnak.ucsc.edu/Shoshenq-I-Court/"
+  },
+  "media": {
+    "photo": {
+      "path": "content/countries/egypt/cities/luxor/attractions/karnak/points/KAR-02/photo.jpg",
+      "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Egyptian_views%3B_Karnak._The_great_court_LOC_matpc.01541.jpg?width=960",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Egyptian_views%3B_Karnak._The_great_court_LOC_matpc.01541.jpg",
+      "source_filename": "Egyptian views; Karnak. The great court LOC matpc.01541.jpg",
+      "review_status": "existing_candidate",
+      "accuracy_note": "Фотография-кандидат, авторство проверяется"
+    }
+  }
+}

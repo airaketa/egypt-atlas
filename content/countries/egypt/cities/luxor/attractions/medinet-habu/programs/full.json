@@ -1,0 +1,14 @@
+{
+  "id": "medinet-habu-full",
+  "title": "Полная экскурсия",
+  "validation": "original_order_from_v025",
+  "estimated_narration_minutes": 4.4,
+  "ordered_point_ids": [
+    "HAB-01",
+    "HAB-02",
+    "HAB-03",
+    "HAB-04",
+    "HAB-05"
+  ],
+  "optional_point_ids": []
+}

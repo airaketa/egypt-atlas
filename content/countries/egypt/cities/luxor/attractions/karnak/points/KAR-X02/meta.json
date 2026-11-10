@@ -1,0 +1,52 @@
+{
+  "id": "KAR-X02",
+  "title": "Храм Опет — рождение и возрождение",
+  "role": "optional_continuation",
+  "narrations": {
+    "main": {
+      "text": "main.txt",
+      "status": "imported_v025_unchanged",
+      "words": 168,
+      "estimated_minutes": 1.3,
+      "audio": "audio/main.mp3",
+      "text_sha256": "4c511d302d165906b3511251498b459a02212332f591bf4a776760c4694433e4"
+    },
+    "learn_more": {
+      "text": "learn_more.txt",
+      "status": "imported_v1_unverified",
+      "words": 186,
+      "estimated_minutes": 1.4,
+      "audio": "audio/learn_more.mp3",
+      "text_sha256": "340f52805f1ae70816f56d2bf9d7955561758f204497221cff9812c0bfae76ad"
+    }
+  },
+  "source_candidates_unchecked": [
+    "https://digitalkarnak.ucsc.edu/opet-temple/",
+    "https://www.orient-mediterranee.com/program/karnak-le-temple-dopet/"
+  ],
+  "factcheck_status": "pending_for_learn_more",
+  "summary": "Рядом с храмом Хонсу находится меньший храм богини Опет, чья история продолжает тему рождения и обновления.",
+  "where_to_listen": "следующая остановка западнее храма Хонсу, у храма Опет; выбирайте только официально открытый проход.",
+  "location": {
+    "lat": 25.716647,
+    "lng": 32.655412,
+    "precision": "site",
+    "note": "Храм Опет: научная геопривязка здания, не гарантированный вход.",
+    "source": "https://www.orient-mediterranee.com/program/karnak-le-temple-dopet/"
+  },
+  "map_note": {
+    "status": null,
+    "description": null,
+    "source": null
+  },
+  "media": {
+    "photo": {
+      "path": "content/countries/egypt/cities/luxor/attractions/karnak/points/KAR-X02/photo.jpg",
+      "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/OBET_TEMPLE.JPG",
+      "source_url": "https://commons.wikimedia.org/wiki/File:OBET_TEMPLE.JPG",
+      "source_filename": null,
+      "review_status": "candidate",
+      "accuracy_note": "Фото-кандидат: указан памятник, но ракурс не обязательно совпадает с местом прослушивания"
+    }
+  }
+}

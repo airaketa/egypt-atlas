@@ -1,0 +1,126 @@
+{
+  "schema_version": 1,
+  "id": "catacombs",
+  "title": "Катакомбы Ком-эль-Шукафа",
+  "city_id": "alexandria",
+  "country_id": "egypt",
+  "full_program": "programs/full.json",
+  "must_see_program": "programs/must-see.json",
+  "content_status": "draft",
+  "points": [
+    {
+      "id": "CAT-01",
+      "title": "Спуск под землю",
+      "meta": "points/CAT-01/meta.json"
+    },
+    {
+      "id": "CAT-02",
+      "title": "Ротонда и ниши",
+      "meta": "points/CAT-02/meta.json"
+    },
+    {
+      "id": "CAT-03",
+      "title": "Триклиний: обед в память об умерших",
+      "meta": "points/CAT-03/meta.json"
+    },
+    {
+      "id": "CAT-04",
+      "title": "Главная гробница: Египет встречает Рим",
+      "meta": "points/CAT-04/meta.json"
+    },
+    {
+      "id": "CAT-05",
+      "title": "Змеи, Медуза и Анубис: символы защиты",
+      "meta": "points/CAT-05/meta.json"
+    }
+  ],
+  "main_points": 5,
+  "optional_continuation_points": 0,
+  "content_type": "attraction",
+  "map": {
+    "center": [
+      29.89304,
+      31.17854
+    ],
+    "zoom": 17.2,
+    "geoPoints": {
+      "CAT-01": {
+        "lat": 31.17854,
+        "lng": 29.89304,
+        "precision": "shared_site",
+        "note": "Археологический комплекс на поверхности: координата НЕ обозначает положение подземной лестницы. Внутри следуйте указателям.",
+        "source": "https://mapcarta.com/W32749330"
+      },
+      "CAT-02": {
+        "lat": 31.17854,
+        "lng": 29.89304,
+        "precision": "shared_site",
+        "note": "Археологический комплекс на поверхности: координата НЕ обозначает положение подземной ротонды. Внутри следуйте указателям.",
+        "source": "https://mapcarta.com/W32749330"
+      },
+      "CAT-03": {
+        "lat": 31.17854,
+        "lng": 29.89304,
+        "precision": "shared_site",
+        "note": "Археологический комплекс на поверхности: координата НЕ обозначает положение подземной триклиния. Внутри следуйте указателям.",
+        "source": "https://mapcarta.com/W32749330"
+      },
+      "CAT-04": {
+        "lat": 31.17854,
+        "lng": 29.89304,
+        "precision": "shared_site",
+        "note": "Археологический комплекс на поверхности: координата НЕ обозначает положение подземной главной гробницы. Внутри следуйте указателям.",
+        "source": "https://mapcarta.com/W32749330"
+      },
+      "CAT-05": {
+        "lat": 31.17854,
+        "lng": 29.89304,
+        "precision": "shared_site",
+        "note": "Археологический комплекс на поверхности: координата НЕ обозначает положение подземной рельефов. Внутри следуйте указателям.",
+        "source": "https://mapcarta.com/W32749330"
+      }
+    },
+    "image": "content/countries/egypt/cities/alexandria/attractions/catacombs/map-plan.svg",
+    "source": "https://www.touregypt.net/featurestories/komelshuqafa.htm",
+    "note": "СХЕМА ПОРЯДКА РАССКАЗОВ, не географический план. Номера на схеме условные: для передвижения используйте карту OSM, официальные указатели и описания «Где слушать».",
+    "points": {
+      "CAT-01": {
+        "x": 17.0,
+        "y": 28.0
+      },
+      "CAT-02": {
+        "x": 50,
+        "y": 28.0
+      },
+      "CAT-03": {
+        "x": 83.0,
+        "y": 28.0
+      },
+      "CAT-04": {
+        "x": 17.0,
+        "y": 82.0
+      },
+      "CAT-05": {
+        "x": 50,
+        "y": 82.0
+      }
+    },
+    "venueLabel": "Катакомбы Ком-эль-Шукафа",
+    "planKind": "ordered_route",
+    "defaultView": "plan",
+    "geoCount": 5,
+    "navBounds": [
+      [
+        29.888315,
+        31.174498
+      ],
+      [
+        29.897765,
+        31.182582
+      ]
+    ],
+    "navPaddingMeters": 350,
+    "nearbyRadiusMeters": 450,
+    "archive": "content/countries/egypt/cities/alexandria/attractions/catacombs/map.pmtiles"
+  }
+}

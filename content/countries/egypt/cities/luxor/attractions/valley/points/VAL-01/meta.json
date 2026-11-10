@@ -1,0 +1,51 @@
+{
+  "id": "VAL-01",
+  "title": "Долина царей: почему именно здесь?",
+  "role": "main",
+  "narrations": {
+    "main": {
+      "text": "main.txt",
+      "status": "imported_v025_unchanged",
+      "words": 102,
+      "estimated_minutes": 0.8,
+      "audio": "audio/main.mp3",
+      "text_sha256": "afc10f4e3c225590370bd73fc283ec89cc3b67efa655fd37a0041d5042486db2"
+    },
+    "learn_more": {
+      "text": "learn_more.txt",
+      "status": "imported_v1_unverified",
+      "words": 183,
+      "estimated_minutes": 1.4,
+      "audio": "audio/learn_more.mp3",
+      "text_sha256": "f8c7c6fe00095a6fbe550489c7f692b8228d507575fe2b0becd214eabec85a52"
+    }
+  },
+  "source_candidates_unchecked": [
+    "https://egymonuments.gov.eg/archaeological-sites/valley-of-the-kings"
+  ],
+  "factcheck_status": "pending_for_learn_more",
+  "summary": "Перед вами сухая долина в западных скалах близ древних Фив.",
+  "where_to_listen": "у доступной общей панорамы долины до входа в конкретную гробницу.",
+  "location": {
+    "lat": 25.74542,
+    "lng": 32.6051,
+    "precision": "interpretive_zone",
+    "note": "Общая вводная остановка: ориентир посетительской зоны южнее парковки, а НЕ обязательное место прослушивания.",
+    "source": "https://mapcarta.com/W89657572"
+  },
+  "map_note": {
+    "status": "B",
+    "description": "Входная доступная зона Долины царей",
+    "source": "https://thebanmappingproject.com/sites/default/files/plans/Valley%20of%20the%20Kings.pdf"
+  },
+  "media": {
+    "photo": {
+      "path": "content/countries/egypt/cities/luxor/attractions/valley/points/VAL-01/photo.jpg",
+      "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Valley_of_the_Kings_2.jpg?width=960",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Valley_of_the_Kings_2.jpg",
+      "source_filename": "Valley of the Kings 2.jpg",
+      "review_status": "candidate",
+      "accuracy_note": "Фотография-кандидат, авторство проверяется"
+    }
+  }
+}

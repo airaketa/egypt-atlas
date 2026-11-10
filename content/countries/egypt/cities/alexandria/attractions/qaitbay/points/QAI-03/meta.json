@@ -1,0 +1,51 @@
+{
+  "id": "QAI-03",
+  "title": "Главная башня и внутренний двор",
+  "role": "main",
+  "narrations": {
+    "main": {
+      "text": "main.txt",
+      "status": "imported_v025_unchanged",
+      "words": 77,
+      "estimated_minutes": 0.6,
+      "audio": "audio/main.mp3",
+      "text_sha256": "3b9684c402a2fe0da2978822aa6ad5857c88e0ec66893d60761b2842cdcbd147"
+    },
+    "learn_more": {
+      "text": "learn_more.txt",
+      "status": "imported_v1_unverified",
+      "words": 168,
+      "estimated_minutes": 1.3,
+      "audio": "audio/learn_more.mp3",
+      "text_sha256": "9bc231265cfc7577ad16461982936db8305b1c259f6ef1a04ffb326e96bff7f1"
+    }
+  },
+  "source_candidates_unchecked": [
+    "https://egymonuments.gov.eg/monuments/qaitbay-fort/"
+  ],
+  "factcheck_status": "pending_for_learn_more",
+  "summary": "Внутри внешних стен находится главный корпус крепости.",
+  "where_to_listen": "во внутреннем дворе, перед главным укреплённым корпусом.",
+  "location": {
+    "lat": 31.21394,
+    "lng": 29.88523,
+    "precision": "approx_plan",
+    "note": "Центральная башня и двор на северо-западной стороне; приблизительно по описанию крепости.",
+    "source": "https://egymonuments.gov.eg/monuments/qaitbay-fort/"
+  },
+  "map_note": {
+    "status": "A",
+    "description": "Главная башня во внутреннем дворе, северо-западная часть",
+    "source": "https://egymonuments.gov.eg/monuments/qaitbay-fort/"
+  },
+  "media": {
+    "photo": {
+      "path": "content/countries/egypt/cities/alexandria/attractions/qaitbay/points/QAI-03/photo.jpg",
+      "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/A_side_view_inside_the_courtyard_of_Qaitbay_Castle.jpg?width=960",
+      "source_url": "https://commons.wikimedia.org/wiki/File:A_side_view_inside_the_courtyard_of_Qaitbay_Castle.jpg",
+      "source_filename": "A side view inside the courtyard of Qaitbay Castle.jpg",
+      "review_status": "candidate",
+      "accuracy_note": "Фотография-кандидат, авторство проверяется"
+    }
+  }
+}

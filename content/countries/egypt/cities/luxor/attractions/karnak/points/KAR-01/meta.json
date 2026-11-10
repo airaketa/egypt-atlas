@@ -1,0 +1,52 @@
+{
+  "id": "KAR-01",
+  "title": "Аллея бараноголовых сфинксов и Первый пилон",
+  "role": "main",
+  "narrations": {
+    "main": {
+      "text": "main.txt",
+      "status": "imported_v025_unchanged",
+      "words": 122,
+      "estimated_minutes": 0.9,
+      "audio": "audio/main.mp3",
+      "text_sha256": "00ae792d79f383a4e74b3ace244f4d25edc224f979d4d9c8c75d045e883eeb93"
+    },
+    "learn_more": {
+      "text": "learn_more.txt",
+      "status": "imported_v1_unverified",
+      "words": 207,
+      "estimated_minutes": 1.6,
+      "audio": "audio/learn_more.mp3",
+      "text_sha256": "5ca110ada385f2a76abd5c471dbf6ccad5154868bf53fb71b4171ab1fa123d88"
+    }
+  },
+  "source_candidates_unchecked": [
+    "https://egymonuments.gov.eg/archaeological-sites/karnak/",
+    "https://digitalkarnak.ucsc.edu/1st-pylon/"
+  ],
+  "factcheck_status": "pending_for_learn_more",
+  "summary": "Перед вами главный вход в комплекс Амона — бога, который стал одним из важнейших покровителей египетской царской власти.",
+  "where_to_listen": "перед западным входом, увидев ряд сфинксов и две башни пилона.",
+  "location": {
+    "lng": 32.6568,
+    "lat": 25.7191,
+    "note": "Ориентир памятника; не GPS-точка стояния",
+    "precision": "legacy_approx",
+    "source": "https://digitalkarnak.ucsc.edu/1st-pylon/"
+  },
+  "map_note": {
+    "status": "A",
+    "description": "Аллея западного входа и Первый пилон, западный фасад",
+    "source": "https://digitalkarnak.ucsc.edu/1st-pylon/"
+  },
+  "media": {
+    "photo": {
+      "path": "content/countries/egypt/cities/luxor/attractions/karnak/points/KAR-01/photo.jpg",
+      "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/1st_Pylon_Karnak_Temple.JPG?width=960",
+      "source_url": "https://commons.wikimedia.org/wiki/File:1st_Pylon_Karnak_Temple.JPG",
+      "source_filename": "1st Pylon Karnak Temple.JPG",
+      "review_status": "existing_candidate",
+      "accuracy_note": "Фотография-кандидат, авторство проверяется"
+    }
+  }
+}

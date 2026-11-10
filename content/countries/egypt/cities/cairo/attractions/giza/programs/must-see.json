@@ -1,0 +1,15 @@
+{
+  "id": "giza-must-see",
+  "title": "Главное · Must-see",
+  "validation": "editorial_selection_not_route_verified",
+  "estimated_narration_minutes": 3.3,
+  "editorial_notes": "Ориентировочный отбор памятников без гарантии уменьшения расстояния. При планировании учитывать входы и доступный транспорт на плато.",
+  "important": "Не обещать экономию времени на перемещении, доступность или физический маршрут без проверки.",
+  "ordered_point_ids": [
+    "GIZ-01",
+    "GIZ-02",
+    "GIZ-04",
+    "GIZ-06"
+  ],
+  "optional_point_ids": []
+}

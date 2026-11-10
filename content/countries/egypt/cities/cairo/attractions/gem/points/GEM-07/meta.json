@@ -1,0 +1,45 @@
+{
+  "id": "GEM-07",
+  "title": "Канопический ларец и защита тела царя",
+  "role": "main",
+  "narrations": {
+    "main": {
+      "text": "main.txt",
+      "status": "imported_v025_unchanged",
+      "words": 104,
+      "estimated_minutes": 0.8,
+      "audio": "audio/main.mp3",
+      "text_sha256": "34476f5150ccadec67bbe480ceddcf76501bf4c0c9a3abb09017002fc6b23212"
+    },
+    "learn_more": {
+      "text": "learn_more.txt",
+      "status": "imported_v1_unverified",
+      "words": 165,
+      "estimated_minutes": 1.3,
+      "audio": "audio/learn_more.mp3",
+      "text_sha256": "908dbbc8f54c567c2d08d49e9f8f51071261d16d91f8fce61b77e2916447369c"
+    }
+  },
+  "source_candidates_unchecked": [
+    "https://gem.eg/en/collection/artefacts/canopic-chest"
+  ],
+  "factcheck_status": "pending_for_learn_more",
+  "summary": "Перед вами пример того, насколько тщательно египтяне продумывали погребальный ритуал.",
+  "where_to_listen": "в тематической зоне погребального оборудования Тутанхамона.",
+  "location": null,
+  "map_note": {
+    "status": "C",
+    "description": "Канопический ларец Тутанхамона, конкретная витрина неизвестна",
+    "source": "https://gem.eg/en/collection/artefacts/canopic-chest-of-tutankhamun"
+  },
+  "media": {
+    "photo": {
+      "path": "content/countries/egypt/cities/cairo/attractions/gem/points/GEM-07/photo.jpg",
+      "download_url": "https://cdn.gem.eg/media/4743/canopic-chest.jpeg?rnd=134049957610000000&ver=2025.10.27.02",
+      "source_url": "https://gem.eg/en/collection/artefacts/canopic-chest",
+      "source_filename": null,
+      "review_status": "official_image",
+      "accuracy_note": "Официальное изображение экспоната"
+    }
+  }
+}

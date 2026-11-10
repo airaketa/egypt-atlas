@@ -1,0 +1,52 @@
+{
+  "id": "CAT-05",
+  "title": "Змеи, Медуза и Анубис: символы защиты",
+  "role": "main",
+  "narrations": {
+    "main": {
+      "text": "main.txt",
+      "status": "imported_v025_unchanged",
+      "words": 99,
+      "estimated_minutes": 0.8,
+      "audio": "audio/main.mp3",
+      "text_sha256": "7eb05a8ec22ad226e23bba51c47dc2f4e73c324940aa3ad4ad6b3d7d13ee0d2a"
+    },
+    "learn_more": {
+      "text": "learn_more.txt",
+      "status": "imported_v1_unverified",
+      "words": 166,
+      "estimated_minutes": 1.3,
+      "audio": "audio/learn_more.mp3",
+      "text_sha256": "7be1e73603c25331247528df22cfad26b32d7ffe65ff44c01cc5c84a11a3deb5"
+    }
+  },
+  "source_candidates_unchecked": [
+    "https://www.bibalex.org/alexmed/Attachments/Publications/Files/kom%20el%20shoqafa.pdf",
+    "https://www.cambridge.org/core/books/visualizing-the-afterlife-in-the-tombs-of-graecoroman-egypt/egypt-as-metaphor/808A0B4ECDBFD6CB43A6054E9549D900"
+  ],
+  "factcheck_status": "pending_for_learn_more",
+  "summary": "Обратите внимание на необычное соседство символов.",
+  "where_to_listen": "у доступных рельефов главной гробницы, не заходя за ограждения.",
+  "location": {
+    "lat": 31.17854,
+    "lng": 29.89304,
+    "precision": "shared_site",
+    "note": "Археологический комплекс на поверхности: координата НЕ обозначает положение подземной рельефов. Внутри следуйте указателям.",
+    "source": "https://mapcarta.com/W32749330"
+  },
+  "map_note": {
+    "status": "B",
+    "description": "Рельефы у главной гробницы: Медуза, Анубис и другие образы",
+    "source": "https://www.bibalex.org/alexmed/Attachments/Publications/Files/kom%20el%20shoqafa.pdf"
+  },
+  "media": {
+    "photo": {
+      "path": "content/countries/egypt/cities/alexandria/attractions/catacombs/points/CAT-05/photo.jpg",
+      "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Anubis_mummifying_a_body_in_the_Catacombs_of_Kom_El_Shoqafa.jpg?width=960",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Anubis_mummifying_a_body_in_the_Catacombs_of_Kom_El_Shoqafa.jpg",
+      "source_filename": "Anubis mummifying a body in the Catacombs of Kom El Shoqafa.jpg",
+      "review_status": "candidate",
+      "accuracy_note": "Фотография-кандидат, авторство проверяется"
+    }
+  }
+}

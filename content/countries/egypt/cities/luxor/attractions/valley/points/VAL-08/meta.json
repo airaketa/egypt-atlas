@@ -1,0 +1,52 @@
+{
+  "id": "VAL-08",
+  "title": "KV6: Рамсес IX — астрономия на потолке",
+  "role": "main",
+  "narrations": {
+    "main": {
+      "text": "main.txt",
+      "status": "imported_v025_unchanged",
+      "words": 91,
+      "estimated_minutes": 0.7,
+      "audio": "audio/main.mp3",
+      "text_sha256": "c3af6079df94e9ef064d1aa001e97ce76ece0ae536f24b45563f3bce626dd580"
+    },
+    "learn_more": {
+      "text": "learn_more.txt",
+      "status": "imported_v1_unverified",
+      "words": 152,
+      "estimated_minutes": 1.2,
+      "audio": "audio/learn_more.mp3",
+      "text_sha256": "08bb48a161e8715cd329bd3937ad50e379651649660624eb4c819119f61acb36"
+    }
+  },
+  "source_candidates_unchecked": [
+    "https://nmec.gov.eg/ar/mummies-hall/",
+    "https://aea.physics.mcmaster.ca/index.php/en/database/ars/ar3-type-menu/tomb-of-rameses-ix-corridor-c-south"
+  ],
+  "factcheck_status": "pending_for_learn_more",
+  "summary": "Гробница KV6 принадлежит Рамсесу Девятому.",
+  "where_to_listen": "у входа в KV6; дальше — только в разрешённых точках, если гробница открыта. Опциональная.",
+  "location": {
+    "lng": 32.60228,
+    "lat": 25.74026,
+    "note": "OSM-объект KV6; уточнено положение относительно предыдущей сборки.",
+    "source": "https://mapcarta.com/N1047983708",
+    "precision": "osm_object"
+  },
+  "map_note": {
+    "status": "A",
+    "description": "Вход в гробницу VAL-08: сверить KV-номер и форму входа с официальной картой TMP",
+    "source": "https://thebanmappingproject.com/sites/default/files/plans/Valley%20of%20the%20Kings.pdf"
+  },
+  "media": {
+    "photo": {
+      "path": "content/countries/egypt/cities/luxor/attractions/valley/points/VAL-08/photo.jpg",
+      "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/KV6_Tomb_(53612052473).jpg?width=960",
+      "source_url": "https://commons.wikimedia.org/wiki/File:KV6_Tomb_(53612052473).jpg",
+      "source_filename": "KV6 Tomb (53612052473).jpg",
+      "review_status": "candidate",
+      "accuracy_note": "Фотография-кандидат, авторство проверяется"
+    }
+  }
+}

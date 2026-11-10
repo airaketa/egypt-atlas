@@ -1,0 +1,52 @@
+{
+  "id": "CAI-X02",
+  "title": "Улица мастеров-хайямийщиков",
+  "role": "optional_continuation",
+  "narrations": {
+    "main": {
+      "text": "main.txt",
+      "status": "imported_v025_unchanged",
+      "words": 167,
+      "estimated_minutes": 1.3,
+      "audio": "audio/main.mp3",
+      "text_sha256": "5142fcb7f66769a9d8800c04a73fb989dcc569d60595dd533830d1dc8861848a"
+    },
+    "learn_more": {
+      "text": "learn_more.txt",
+      "status": "imported_v1_unverified",
+      "words": 175,
+      "estimated_minutes": 1.3,
+      "audio": "audio/learn_more.mp3",
+      "text_sha256": "b8682ba01e3921c57092154cf2faea3ef85c48711f037f474191b46080b16ef3"
+    }
+  },
+  "source_candidates_unchecked": [
+    "https://www.cairo.gov.eg/en/news/2026/october/14/ef7d30ceded74de89c62f8f4925b961a",
+    "https://www.lonelyplanet.com/points-of-interest/tentmakers-market/1326461"
+  ],
+  "factcheck_status": "pending_for_learn_more",
+  "summary": "Узнаём, как из ткани, терпения и ручных стежков появляется знаменитая каирская аппликация.",
+  "where_to_listen": "от мечети двигайтесь южнее к крытой улице аль-Хайямия (Qasaba of Radwan Bey); остановитесь там, где не мешаете торговле.",
+  "location": {
+    "lat": 30.042025,
+    "lng": 31.257551,
+    "precision": "area",
+    "note": "Крытая улица мастеров аль-Хайямия: общий ориентир протяжённого рынка.",
+    "source": "https://en.wikipedia.org/wiki/Qasaba_of_Radwan_Bey"
+  },
+  "map_note": {
+    "status": null,
+    "description": null,
+    "source": null
+  },
+  "media": {
+    "photo": {
+      "path": "content/countries/egypt/cities/cairo/attractions/cairo/points/CAI-X02/photo.jpg",
+      "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Khayamiya_market_01.jpg",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Khayamiya_market_01.jpg",
+      "source_filename": null,
+      "review_status": "candidate",
+      "accuracy_note": "Фото-кандидат: указан памятник, но ракурс не обязательно совпадает с местом прослушивания"
+    }
+  }
+}

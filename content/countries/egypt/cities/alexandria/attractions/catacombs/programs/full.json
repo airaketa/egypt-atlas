@@ -1,0 +1,14 @@
+{
+  "id": "catacombs-full",
+  "title": "Полная экскурсия",
+  "validation": "original_order_from_v025",
+  "estimated_narration_minutes": 3.6,
+  "ordered_point_ids": [
+    "CAT-01",
+    "CAT-02",
+    "CAT-03",
+    "CAT-04",
+    "CAT-05"
+  ],
+  "optional_point_ids": []
+}

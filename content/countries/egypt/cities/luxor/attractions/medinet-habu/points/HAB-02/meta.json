@@ -1,0 +1,54 @@
+{
+  "id": "HAB-02",
+  "title": "Первый пилон: военная пропаганда царя",
+  "role": "main",
+  "narrations": {
+    "main": {
+      "text": "main.txt",
+      "status": "imported_v025_unchanged",
+      "words": 187,
+      "estimated_minutes": 1.4,
+      "audio": "audio/main.mp3",
+      "text_sha256": "e40ce51d12fcaf4c4c4724b77a0b044fd5e8ade5298b67f9736b78616282d732"
+    },
+    "learn_more": {
+      "text": "learn_more.txt",
+      "status": "imported_v1_unverified",
+      "words": 191,
+      "estimated_minutes": 1.5,
+      "audio": "audio/learn_more.mp3",
+      "text_sha256": "b341b3cb7576fc71ea07fab107736128ab32a5a1d030ec78ee6ebb8fc4533591"
+    }
+  },
+  "source_candidates_unchecked": [
+    "https://egymonuments.gov.eg/monuments/the-temple-of-medinet-habu/",
+    "https://commons.wikimedia.org/wiki/File:Medinet_Habou_Cartouche.jpg",
+    "https://www.memphis.edu/hypostyle/welcome/",
+    "https://www.metmuseum.org/art/collection/search/559806"
+  ],
+  "factcheck_status": "pending_for_learn_more",
+  "summary": "Перед вами монументальная часть заупокойного комплекса Рамсеса Третьего.",
+  "where_to_listen": "перед первым большим пилоном, где видны военные рельефы.",
+  "location": {
+    "lat": 25.71939,
+    "lng": 32.60152,
+    "precision": "approx_plan",
+    "note": "Первый пилон к западу от восточных ворот; приблизительно по последовательности архитектурных частей.",
+    "source": "https://egymonuments.gov.eg/monuments/the-temple-of-medinet-habu/"
+  },
+  "map_note": {
+    "status": "B",
+    "description": "Первый пилон Мединет-Абу — общий рассказ о военных рельефах",
+    "source": "https://isac.uchicago.edu/publications/united-eternity-concise-guide-monuments-medinet-habu"
+  },
+  "media": {
+    "photo": {
+      "path": "content/countries/egypt/cities/luxor/attractions/medinet-habu/points/HAB-02/photo.jpg",
+      "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/1st_Pylon_Medinet_Habu_R01.jpg?width=960",
+      "source_url": "https://commons.wikimedia.org/wiki/File:1st_Pylon_Medinet_Habu_R01.jpg",
+      "source_filename": "1st Pylon Medinet Habu R01.jpg",
+      "review_status": "candidate",
+      "accuracy_note": "Фотография-кандидат, авторство проверяется"
+    }
+  }
+}

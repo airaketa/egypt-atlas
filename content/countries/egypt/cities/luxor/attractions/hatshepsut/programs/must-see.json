@@ -1,0 +1,15 @@
+{
+  "id": "hatshepsut-must-see",
+  "title": "Главное · Must-see",
+  "validation": "editorial_selection_not_route_verified",
+  "estimated_narration_minutes": 3.0,
+  "editorial_notes": "Пропуск HAT-03 сокращает время прослушивания, но перемещения по террасам существенно не уменьшает. Следить за расположением боковых святилищ.",
+  "important": "Не обещать экономию времени на перемещении, доступность или физический маршрут без проверки.",
+  "ordered_point_ids": [
+    "HAT-01",
+    "HAT-02",
+    "HAT-04",
+    "HAT-05"
+  ],
+  "optional_point_ids": []
+}

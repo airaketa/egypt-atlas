@@ -1,0 +1,58 @@
+{
+  "id": "HAB-03",
+  "title": "Первый двор и осирические статуи",
+  "role": "main",
+  "narrations": {
+    "main": {
+      "text": "main.txt",
+      "status": "editorial_revision_2026-11-08_pending_full_factcheck",
+      "words": 106,
+      "estimated_minutes": 0.8,
+      "audio": "audio/main.mp3",
+      "text_sha256": "22abf377db5eead6981cf44d0bb8c5d91890390eefa1035790949363d5d866c1"
+    },
+    "learn_more": {
+      "text": "learn_more.txt",
+      "status": "editorial_revision_2026-11-08_pending_full_factcheck",
+      "words": 189,
+      "estimated_minutes": 1.5,
+      "audio": "audio/learn_more.mp3",
+      "text_sha256": "a2b6ceda1c68a08f69ea1683766a5e8f7127903fc7eb58c49dc334062d80cd83"
+    }
+  },
+  "source_candidates_unchecked": [
+    "https://egymonuments.gov.eg/monuments/the-temple-of-medinet-habu/",
+    "https://egymonuments.gov.eg/en/monuments/the-temple-of-medinet-habu",
+    "https://www.ancient-egypt.co.uk/medinet%20habu/pages/medinet%20habu%201.htm",
+    "https://mcclungmuseum.utk.edu/2002/04/01/foreign-captive/"
+  ],
+  "factcheck_status": "pending_for_learn_more",
+  "editorial_notes": [
+    "2026-11-08: уточнено, что в первом дворе есть фигуры царя, называемые осирическими, но назначение двора нельзя сводить к заупокойной символике.",
+    "Добавлена осторожная формулировка о дворцовом портике и Окне царских явлений на южной стороне; полный фактчекинг остальных утверждений ещё ожидается."
+  ],
+  "summary": "Пройдя через пилон, вы оказываетесь в первом большом дворе.",
+  "where_to_listen": "внутри первого двора, у доступных колоннад.",
+  "location": {
+    "lng": 32.601057,
+    "lat": 25.719468,
+    "note": "Фото-GPS, первый двор Мединет-Абу: ориентировочная зона",
+    "source": "https://commons.wikimedia.org/wiki/File:1st_Courtyard_Medinet_Habu_R01.jpg",
+    "precision": "photo_viewpoint"
+  },
+  "map_note": {
+    "status": "A",
+    "description": "Первый двор за пилоном, колоннады и осирические опоры",
+    "source": "https://isac.uchicago.edu/publications/medinet-habu-volume-v-temple-proper-part-i"
+  },
+  "media": {
+    "photo": {
+      "path": "content/countries/egypt/cities/luxor/attractions/medinet-habu/points/HAB-03/photo.jpg",
+      "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/1st_Courtyard_Medinet_Habu_R01.jpg?width=960",
+      "source_url": "https://commons.wikimedia.org/wiki/File:1st_Courtyard_Medinet_Habu_R01.jpg",
+      "source_filename": "1st Courtyard Medinet Habu R01.jpg",
+      "review_status": "candidate",
+      "accuracy_note": "Фотография-кандидат, авторство проверяется"
+    }
+  }
+}

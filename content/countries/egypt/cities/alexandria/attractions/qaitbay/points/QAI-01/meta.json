@@ -1,0 +1,52 @@
+{
+  "id": "QAI-01",
+  "title": "Здесь стоял Александрийский маяк",
+  "role": "main",
+  "narrations": {
+    "main": {
+      "text": "main.txt",
+      "status": "imported_v025_unchanged",
+      "words": 105,
+      "estimated_minutes": 0.8,
+      "audio": "audio/main.mp3",
+      "text_sha256": "384567bdd91f6d7cd5ecc56198a0a54a9fff9a42e9ce104915673272192c3ac0"
+    },
+    "learn_more": {
+      "text": "learn_more.txt",
+      "status": "imported_v1_unverified",
+      "words": 184,
+      "estimated_minutes": 1.4,
+      "audio": "audio/learn_more.mp3",
+      "text_sha256": "dd750c0636efea3e5cbbb03d1b3760b4b48cdea6396a6b7defdef383756e050f"
+    }
+  },
+  "source_candidates_unchecked": [
+    "https://egymonuments.gov.eg/monuments/qaitbay-fort/",
+    "https://egymonuments.gov.eg/sunken-monuments/qaitbay-fort-site/"
+  ],
+  "factcheck_status": "pending_for_learn_more",
+  "summary": "Перед вами крепость Кайтбей, построенная в пятнадцатом веке на месте древнего Александрийского маяка.",
+  "where_to_listen": "снаружи крепости, со стороны моря и входа.",
+  "location": {
+    "lng": 29.885667,
+    "lat": 31.213183,
+    "note": "Фото-GPS у входа крепости: метка не доказывает местоположение античного маяка",
+    "source": "https://commons.wikimedia.org/wiki/File:Entrance_of_Qaitbay_Citadel.jpg",
+    "precision": "photo_viewpoint"
+  },
+  "map_note": {
+    "status": "A",
+    "description": "Входная и приморская сторона крепости Кайтбей",
+    "source": "https://egymonuments.gov.eg/monuments/qaitbay-fort/"
+  },
+  "media": {
+    "photo": {
+      "path": "content/countries/egypt/cities/alexandria/attractions/qaitbay/points/QAI-01/photo.jpg",
+      "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Entrance_of_Qaitbay_Citadel.jpg?width=960",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Entrance_of_Qaitbay_Citadel.jpg",
+      "source_filename": "Entrance of Qaitbay Citadel.jpg",
+      "review_status": "candidate",
+      "accuracy_note": "Фотография-кандидат, авторство проверяется"
+    }
+  }
+}

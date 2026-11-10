@@ -1,0 +1,51 @@
+{
+  "id": "CAI-03",
+  "title": "Мечеть-медресе султана Хасана",
+  "role": "main",
+  "narrations": {
+    "main": {
+      "text": "main.txt",
+      "status": "imported_v025_unchanged",
+      "words": 105,
+      "estimated_minutes": 0.8,
+      "audio": "audio/main.mp3",
+      "text_sha256": "2443c07903c5fe808e7edf2251fd71f1fd0f6ba1fc5f35340b82939c8f64b7f5"
+    },
+    "learn_more": {
+      "text": "learn_more.txt",
+      "status": "imported_v1_unverified",
+      "words": 171,
+      "estimated_minutes": 1.3,
+      "audio": "audio/learn_more.mp3",
+      "text_sha256": "89b5e3f0325ffb3d772ca5b6cf1e851726bf047bba6716a05d312ffe7af719d0"
+    }
+  },
+  "source_candidates_unchecked": [
+    "https://egymonuments.gov.eg/en/monuments/mosque-and-madrasa-of-sultan-hasan"
+  ],
+  "factcheck_status": "pending_for_learn_more",
+  "summary": "Мечеть султана Хасана была построена в четырнадцатом веке, во времена мамлюков.",
+  "where_to_listen": "с площади Салах ад-Дина, затем во внутреннем дворе, если открыт.",
+  "location": {
+    "lng": 31.25631,
+    "lat": 30.03226,
+    "note": "Мечеть-медресе: ориентир здания, не точка входа",
+    "source": "https://mapcarta.com/28173580",
+    "precision": "site"
+  },
+  "map_note": {
+    "status": "A",
+    "description": "Фасад мечети-медресе султана Хасана на площади Салах ад-Дина",
+    "source": "https://egymonuments.gov.eg/monuments/mosque-and-madrasa-of-sultan-hasan/"
+  },
+  "media": {
+    "photo": {
+      "path": "content/countries/egypt/cities/cairo/attractions/cairo/points/CAI-03/photo.jpg",
+      "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Mosque-Madrassa_of_Sultan_Hassan_-_Exterior.jpg?width=960",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Mosque-Madrassa_of_Sultan_Hassan_-_Exterior.jpg",
+      "source_filename": "Mosque-Madrassa of Sultan Hassan - Exterior.jpg",
+      "review_status": "candidate",
+      "accuracy_note": "Фотография-кандидат, авторство проверяется"
+    }
+  }
+}

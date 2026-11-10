@@ -1,0 +1,51 @@
+{
+  "id": "CAI-05",
+  "title": "Улица Аль-Муизз: каменная история нескольких династий",
+  "role": "main",
+  "narrations": {
+    "main": {
+      "text": "main.txt",
+      "status": "imported_v025_unchanged",
+      "words": 104,
+      "estimated_minutes": 0.8,
+      "audio": "audio/main.mp3",
+      "text_sha256": "3d9016df665300131eedc6e55fd80067020eca25b6b43ee963066ea4f0c1c14f"
+    },
+    "learn_more": {
+      "text": "learn_more.txt",
+      "status": "imported_v1_unverified",
+      "words": 166,
+      "estimated_minutes": 1.3,
+      "audio": "audio/learn_more.mp3",
+      "text_sha256": "5c411778345cacaf060c0d049fd0b6aff7b4f116b7e5cf11d3272446c2940345"
+    }
+  },
+  "source_candidates_unchecked": [
+    "https://egymonuments.gov.eg/archaeological-sites/al-muizz-street/"
+  ],
+  "factcheck_status": "pending_for_learn_more",
+  "summary": "Эту улицу называют по имени фатимидского халифа аль-Муизза.",
+  "where_to_listen": "в центральной части улицы у исторических фасадов.",
+  "location": {
+    "lng": 31.26158,
+    "lat": 30.05089,
+    "note": "Улица Аль-Муизз: условная точка протяжённого маршрута; не начало и не конец улицы",
+    "source": "https://mapcarta.com/30705932",
+    "precision": "area"
+  },
+  "map_note": {
+    "status": "B",
+    "description": "Центральный участок Аль-Муизз, не единственная точка",
+    "source": "https://egymonuments.gov.eg/monuments/al-muizz-street/"
+  },
+  "media": {
+    "photo": {
+      "path": "content/countries/egypt/cities/cairo/attractions/cairo/points/CAI-05/photo.jpg",
+      "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Muizz_Street_-_Egypt.jpg?width=960",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Muizz_Street_-_Egypt.jpg",
+      "source_filename": "Muizz Street - Egypt.jpg",
+      "review_status": "candidate",
+      "accuracy_note": "Фотография-кандидат, авторство проверяется"
+    }
+  }
+}

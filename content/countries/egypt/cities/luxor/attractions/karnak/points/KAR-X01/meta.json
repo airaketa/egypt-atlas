@@ -1,0 +1,52 @@
+{
+  "id": "KAR-X01",
+  "title": "Храм Хонсу — лунный бог Фив",
+  "role": "optional_continuation",
+  "narrations": {
+    "main": {
+      "text": "main.txt",
+      "status": "imported_v025_unchanged",
+      "words": 197,
+      "estimated_minutes": 1.5,
+      "audio": "audio/main.mp3",
+      "text_sha256": "e3df0359bc6d932ee64d5137ac52ce711ec0402ad8cb8ff8016154bd34409108"
+    },
+    "learn_more": {
+      "text": "learn_more.txt",
+      "status": "imported_v1_unverified",
+      "words": 259,
+      "estimated_minutes": 2.0,
+      "audio": "audio/learn_more.mp3",
+      "text_sha256": "a5ac1762548bc92b056aeb77a8439323b87b94130906fb14ad17ee02d48eabdd"
+    }
+  },
+  "source_candidates_unchecked": [
+    "https://egymonuments.gov.eg/monuments/khonsu-temple/",
+    "https://digitalkarnak.ucsc.edu/khonsu-temple/"
+  ],
+  "factcheck_status": "pending_for_learn_more",
+  "summary": "Здесь фиванская триада становится полной: после Амона мы встречаем его сына, лунного бога Хонсу.",
+  "where_to_listen": "от Священного озера двигайтесь по разрешённому проходу в юго-западную часть комплекса к храму Хонсу; если доступ закрыт, оставайтесь за ограждением.",
+  "location": {
+    "lat": 25.716773,
+    "lng": 32.655858,
+    "precision": "site",
+    "note": "Храм Хонсу: ориентир здания; проход к храму зависит от доступа.",
+    "source": "https://www.outdooractive.com/en/poi/aegypten/temple-of-khonsu/807789224/"
+  },
+  "map_note": {
+    "status": null,
+    "description": null,
+    "source": null
+  },
+  "media": {
+    "photo": {
+      "path": "content/countries/egypt/cities/luxor/attractions/karnak/points/KAR-X01/photo.jpg",
+      "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Karnak_Khonsu_Temple_R01.jpg",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Karnak_Khonsu_Temple_R01.jpg",
+      "source_filename": null,
+      "review_status": "candidate",
+      "accuracy_note": "Фото-кандидат: указан памятник, но ракурс не обязательно совпадает с местом прослушивания"
+    }
+  }
+}

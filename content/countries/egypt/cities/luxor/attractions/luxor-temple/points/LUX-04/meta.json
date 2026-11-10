@@ -1,0 +1,51 @@
+{
+  "id": "LUX-04",
+  "title": "Двор Аменхотепа III и древнее ядро храма",
+  "role": "main",
+  "narrations": {
+    "main": {
+      "text": "main.txt",
+      "status": "imported_v025_unchanged",
+      "words": 94,
+      "estimated_minutes": 0.7,
+      "audio": "audio/main.mp3",
+      "text_sha256": "30237b85c52356671a9e15594a6b59800bb94d9a1806d85e196c6b0d5753c91a"
+    },
+    "learn_more": {
+      "text": "learn_more.txt",
+      "status": "imported_v1_unverified",
+      "words": 160,
+      "estimated_minutes": 1.2,
+      "audio": "audio/learn_more.mp3",
+      "text_sha256": "807d58887bcc0e488297f8ea2d1e4e375dd5fb86d3bad14eb1689e16b4bb0c19"
+    }
+  },
+  "source_candidates_unchecked": [
+    "https://egymonuments.gov.eg/monuments/luxor-temple/"
+  ],
+  "factcheck_status": "pending_for_learn_more",
+  "summary": "Главное ядро Луксорского храма сложилось при Аменхотепе Третьем.",
+  "where_to_listen": "во внутреннем дворе с колоннами.",
+  "location": {
+    "lng": 32.63917,
+    "lat": 25.69942,
+    "note": "Двор Аменхотепа III к югу от колоннады; приблизительно по планировке храма.",
+    "source": "https://egymonuments.gov.eg/monuments/luxor-temple/",
+    "precision": "approx_plan"
+  },
+  "map_note": {
+    "status": "A",
+    "description": "Двор Аменхотепа III, а НЕ комната с рельефами божественного рождения",
+    "source": "https://egymonuments.gov.eg/monuments/luxor-temple/"
+  },
+  "media": {
+    "photo": {
+      "path": "content/countries/egypt/cities/luxor/attractions/luxor-temple/points/LUX-04/photo.jpg",
+      "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/The_Court_of_Amonhotep_III_-_Luxor_Temple_(14281920163).jpg?width=960",
+      "source_url": "https://commons.wikimedia.org/wiki/File:The_Court_of_Amonhotep_III_-_Luxor_Temple_(14281920163).jpg",
+      "source_filename": "The Court of Amonhotep III - Luxor Temple (14281920163).jpg",
+      "review_status": "candidate",
+      "accuracy_note": "Фотография-кандидат, авторство проверяется"
+    }
+  }
+}

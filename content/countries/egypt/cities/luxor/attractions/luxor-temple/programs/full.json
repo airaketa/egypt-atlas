@@ -1,0 +1,18 @@
+{
+  "id": "luxor-temple-full",
+  "title": "Полная экскурсия",
+  "validation": "original_order_from_v025",
+  "estimated_narration_minutes": 4.5,
+  "ordered_point_ids": [
+    "LUX-01",
+    "LUX-02",
+    "LUX-03",
+    "LUX-04",
+    "LUX-05"
+  ],
+  "optional_point_ids": [
+    "LUX-X01",
+    "LUX-X02",
+    "LUX-X03"
+  ]
+}

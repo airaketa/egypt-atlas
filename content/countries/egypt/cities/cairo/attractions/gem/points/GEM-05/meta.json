@@ -1,0 +1,46 @@
+{
+  "id": "GEM-05",
+  "title": "Галереи Тутанхамона: открытие гробницы",
+  "role": "main",
+  "narrations": {
+    "main": {
+      "text": "main.txt",
+      "status": "imported_v025_unchanged",
+      "words": 103,
+      "estimated_minutes": 0.8,
+      "audio": "audio/main.mp3",
+      "text_sha256": "aebce8b7424a5f404e69222baef03c9b4a41bbab0b8f7ce2c8f0412138a5042b"
+    },
+    "learn_more": {
+      "text": "learn_more.txt",
+      "status": "imported_v1_unverified",
+      "words": 184,
+      "estimated_minutes": 1.4,
+      "audio": "audio/learn_more.mp3",
+      "text_sha256": "0fd411f3283eca732091ae8c8ea5724ee0c1ab31fd73e9ebfbfaf5862b10052d"
+    }
+  },
+  "source_candidates_unchecked": [
+    "https://gem.eg/collection/tutankhamun-galleries/",
+    "https://egymonuments.gov.eg/en/monuments/tomb-of-tutankhamun"
+  ],
+  "factcheck_status": "pending_for_learn_more",
+  "summary": "В тысяча девятьсот двадцать втором году археолог Говард Картер обнаружил в Долине царей гробницу Тутанхамона, сохранившую необычайно много погребальных вещей.",
+  "where_to_listen": "у раздела Discovery или его актуального аналога.",
+  "location": null,
+  "map_note": {
+    "status": "B",
+    "description": "Вход в Tutankhamun Galleries, не конкретная витрина",
+    "source": "https://tickets.gem.eg/rvmp"
+  },
+  "media": {
+    "photo": {
+      "path": "content/countries/egypt/cities/cairo/attractions/gem/points/GEM-05/photo.jpg",
+      "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/TUTANKHAMUN_GALLERY.jpg?width=960",
+      "source_url": "https://commons.wikimedia.org/wiki/File:TUTANKHAMUN_GALLERY.jpg",
+      "source_filename": "The Grand Staircase inside the Grand Egyptian Museum located in Giza, Egypt.jpg",
+      "review_status": "exact_photo",
+      "accuracy_note": "Фотография остановки"
+    }
+  }
+}

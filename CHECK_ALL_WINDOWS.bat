@@ -8,5 +8,10 @@ if errorlevel 1 (
 ) else (
   set "PY=py -3"
 )
+%PY% tools\self_check.py
+if errorlevel 1 (
+  pause
+  exit /b 1
+)
 %PY% generate_all.py --verify
 pause

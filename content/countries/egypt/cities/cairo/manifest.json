@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "id": "egypt-cairo",
+  "scope": "city",
+  "city_id": "cairo",
+  "country_id": "egypt",
+  "title": "Каир и Гиза",
+  "language": "ru",
+  "revision": "evergreen-draft-2026-11-09",
+  "requires": [
+    {
+      "package_id": "egypt-common",
+      "once": true
+    }
+  ],
+  "download_semantics": "Install egypt-common if absent, then this city; shared package not duplicated.",
+  "includes": [
+    "city-stories",
+    "city-attraction-texts",
+    "city-programs"
+  ],
+  "excludes": [
+    "audio-mp3",
+    "photos",
+    "offline-map-tiles"
+  ],
+  "content_status": "draft",
+  "editorial_policy": "evergreen_audio_only",
+  "factcheck_status": "pending_historical_review",
+  "stories": "stories/manifest.json",
+  "attractions": [
+    {
+      "id": "giza",
+      "title": "Пирамиды Гизы и Сфинкс",
+      "manifest": "attractions/giza/manifest.json"
+    },
+    {
+      "id": "gem",
+      "title": "Большой Египетский музей",
+      "manifest": "attractions/gem/manifest.json"
+    },
+    {
+      "id": "cairo",
+      "title": "Исторический Каир",
+      "manifest": "attractions/cairo/manifest.json"
+    }
+  ]
+}

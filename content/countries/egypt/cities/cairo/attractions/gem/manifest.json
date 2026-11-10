@@ -1,0 +1,144 @@
+{
+  "schema_version": 1,
+  "id": "gem",
+  "title": "Большой Египетский музей",
+  "city_id": "cairo",
+  "country_id": "egypt",
+  "full_program": "programs/full.json",
+  "must_see_program": "programs/must-see.json",
+  "content_status": "draft",
+  "points": [
+    {
+      "id": "GEM-01",
+      "title": "Висячий обелиск у входа",
+      "meta": "points/GEM-01/meta.json"
+    },
+    {
+      "id": "GEM-02",
+      "title": "Колосс Рамсеса II в Большом зале",
+      "meta": "points/GEM-02/meta.json"
+    },
+    {
+      "id": "GEM-03",
+      "title": "Большая лестница: история царской власти",
+      "meta": "points/GEM-03/meta.json"
+    },
+    {
+      "id": "GEM-04",
+      "title": "Основные галереи: власть, общество и вера",
+      "meta": "points/GEM-04/meta.json"
+    },
+    {
+      "id": "GEM-09",
+      "title": "Царский писец Рахотеп: кто управлял Египтом?",
+      "meta": "points/GEM-09/meta.json"
+    },
+    {
+      "id": "GEM-10",
+      "title": "Статуя Нахтмина и Тий: семья в камне",
+      "meta": "points/GEM-10/meta.json"
+    },
+    {
+      "id": "GEM-11",
+      "title": "Стела Несхонсу: загробный мир не только для фараонов",
+      "meta": "points/GEM-11/meta.json"
+    },
+    {
+      "id": "GEM-05",
+      "title": "Галереи Тутанхамона: открытие гробницы",
+      "meta": "points/GEM-05/meta.json"
+    },
+    {
+      "id": "GEM-06",
+      "title": "Золотая погребальная маска Тутанхамона",
+      "meta": "points/GEM-06/meta.json"
+    },
+    {
+      "id": "GEM-07",
+      "title": "Канопический ларец и защита тела царя",
+      "meta": "points/GEM-07/meta.json"
+    },
+    {
+      "id": "GEM-08",
+      "title": "Ладья Хуфу: корабль из эпохи пирамид",
+      "meta": "points/GEM-08/meta.json"
+    }
+  ],
+  "main_points": 11,
+  "optional_continuation_points": 0,
+  "content_type": "attraction",
+  "map": {
+    "center": [
+      31.1193,
+      29.9947
+    ],
+    "zoom": 16.4,
+    "geoPoints": {},
+    "image": "content/countries/egypt/cities/cairo/attractions/gem/map-plan.svg",
+    "source": "https://gem.eg/visit/plan-your-visit/museum-maps/",
+    "note": "СХЕМА ПОРЯДКА РАССКАЗОВ, не географический план. Номера на схеме условные: для передвижения используйте карту OSM, официальные указатели и описания «Где слушать».",
+    "points": {
+      "GEM-01": {
+        "x": 17.0,
+        "y": 28.0
+      },
+      "GEM-02": {
+        "x": 50,
+        "y": 28.0
+      },
+      "GEM-03": {
+        "x": 83.0,
+        "y": 28.0
+      },
+      "GEM-04": {
+        "x": 17.0,
+        "y": 46.0
+      },
+      "GEM-09": {
+        "x": 50,
+        "y": 46.0
+      },
+      "GEM-10": {
+        "x": 83.0,
+        "y": 46.0
+      },
+      "GEM-11": {
+        "x": 17.0,
+        "y": 64.0
+      },
+      "GEM-05": {
+        "x": 50,
+        "y": 64.0
+      },
+      "GEM-06": {
+        "x": 83.0,
+        "y": 64.0
+      },
+      "GEM-07": {
+        "x": 17.0,
+        "y": 82.0
+      },
+      "GEM-08": {
+        "x": 50,
+        "y": 82.0
+      }
+    },
+    "venueLabel": "Большой Египетский музей",
+    "planKind": "ordered_route",
+    "defaultView": "plan",
+    "geoCount": 0,
+    "navBounds": [
+      [
+        31.111002,
+        29.987514
+      ],
+      [
+        31.127598,
+        30.001886
+      ]
+    ],
+    "navPaddingMeters": 550,
+    "nearbyRadiusMeters": 600,
+    "archive": "content/countries/egypt/cities/cairo/attractions/gem/map.pmtiles"
+  }
+}

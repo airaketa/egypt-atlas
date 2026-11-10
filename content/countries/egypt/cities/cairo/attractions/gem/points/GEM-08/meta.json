@@ -1,0 +1,45 @@
+{
+  "id": "GEM-08",
+  "title": "Ладья Хуфу: корабль из эпохи пирамид",
+  "role": "main",
+  "narrations": {
+    "main": {
+      "text": "main.txt",
+      "status": "imported_v025_unchanged",
+      "words": 110,
+      "estimated_minutes": 0.8,
+      "audio": "audio/main.mp3",
+      "text_sha256": "f052b5f71f5d4e84662cdb104ca62d0681c6962cc7a010b990a85c7eb1c212c0"
+    },
+    "learn_more": {
+      "text": "learn_more.txt",
+      "status": "imported_v1_unverified",
+      "words": 182,
+      "estimated_minutes": 1.4,
+      "audio": "audio/learn_more.mp3",
+      "text_sha256": "576c6c356d7e9d803ae39049d9cda9e415a146f1041ba8589e138000025be740"
+    }
+  },
+  "source_candidates_unchecked": [
+    "https://gem.eg/collection/khufus-boats-museum/"
+  ],
+  "factcheck_status": "pending_for_learn_more",
+  "summary": "Этому деревянному судну около четырёх с половиной тысяч лет.",
+  "where_to_listen": "в музее ладей Хуфу, у экспонируемого судна.",
+  "location": null,
+  "map_note": {
+    "status": "B",
+    "description": "Отдельный Музей ладей Хуфу в пределах комплекса GEM",
+    "source": "https://tickets.gem.eg/rvmp"
+  },
+  "media": {
+    "photo": {
+      "path": "content/countries/egypt/cities/cairo/attractions/gem/points/GEM-08/photo.jpg",
+      "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Grand_Egyptian_Museum_-_Khufu_ship.jpg?width=960",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Grand_Egyptian_Museum_-_Khufu_ship.jpg",
+      "source_filename": "Grand Egyptian Museum - Khufu ship.jpg",
+      "review_status": "candidate",
+      "accuracy_note": "Фотография-кандидат, авторство проверяется"
+    }
+  }
+}

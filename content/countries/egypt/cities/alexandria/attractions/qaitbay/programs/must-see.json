@@ -1,0 +1,14 @@
+{
+  "id": "qaitbay-must-see",
+  "title": "Главное · Must-see",
+  "validation": "editorial_selection_not_route_verified",
+  "estimated_narration_minutes": 2.2,
+  "editorial_notes": "Оба маршрута проходят тот же комплекс, но краткий пропускает отдельный рассказ о стенах. Доступ уровней крепости проверить.",
+  "important": "Не обещать экономию времени на перемещении, доступность или физический маршрут без проверки.",
+  "ordered_point_ids": [
+    "QAI-01",
+    "QAI-03",
+    "QAI-04"
+  ],
+  "optional_point_ids": []
+}

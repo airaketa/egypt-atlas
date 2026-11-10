@@ -1,0 +1,20 @@
+{
+  "id": "karnak-full",
+  "title": "Полная экскурсия",
+  "validation": "original_order_from_v025",
+  "estimated_narration_minutes": 8.3,
+  "ordered_point_ids": [
+    "KAR-01",
+    "KAR-02",
+    "KAR-03",
+    "KAR-04",
+    "KAR-05",
+    "KAR-06",
+    "KAR-07",
+    "KAR-08"
+  ],
+  "optional_point_ids": [
+    "KAR-X01",
+    "KAR-X02"
+  ]
+}

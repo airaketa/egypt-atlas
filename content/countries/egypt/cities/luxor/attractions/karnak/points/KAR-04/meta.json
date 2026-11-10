@@ -1,0 +1,56 @@
+{
+  "id": "KAR-04",
+  "title": "Большой гипостильный зал",
+  "role": "main",
+  "narrations": {
+    "main": {
+      "text": "main.txt",
+      "status": "imported_v025_unchanged",
+      "words": 275,
+      "estimated_minutes": 2.1,
+      "audio": "audio/main.mp3",
+      "text_sha256": "9ca774b0fab3ea768ed5c605feadc3f352bf93e3d676b66a0e64b7bc99b4427c"
+    },
+    "learn_more": {
+      "text": "learn_more.txt",
+      "status": "imported_v1_unverified",
+      "words": 373,
+      "estimated_minutes": 2.9,
+      "audio": "audio/learn_more.mp3",
+      "text_sha256": "04a07cfb4644447e5523506c31ec6ea18f4579f96a3ed21375973074f5b9437e"
+    }
+  },
+  "source_candidates_unchecked": [
+    "https://egymonuments.gov.eg/archaeological-sites/karnak/",
+    "https://www.memphis.edu/hypostyle/about-architecture/",
+    "https://commons.wikimedia.org/wiki/File:Karnak_Freilichtmuseum_13b.jpg",
+    "https://commons.wikimedia.org/wiki/File:Karnak_titul_ramses.JPG",
+    "https://www.memphis.edu/hypostyle/welcome/",
+    "https://www.metmuseum.org/art/collection/search/559806"
+  ],
+  "factcheck_status": "pending_for_learn_more",
+  "summary": "Это один из самых впечатляющих залов древнего мира.",
+  "where_to_listen": "между Вторым и Третьим пилонами, среди колонн.",
+  "location": {
+    "lng": 32.6579,
+    "lat": 25.7186,
+    "note": "Ориентир памятника; не GPS-точка стояния",
+    "precision": "legacy_approx",
+    "source": "https://www.memphis.edu/hypostyle/about-architecture/"
+  },
+  "map_note": {
+    "status": "A",
+    "description": "Главная ось, зал между Вторым и Третьим пилонами",
+    "source": "https://www.memphis.edu/hypostyle/about-architecture/"
+  },
+  "media": {
+    "photo": {
+      "path": "content/countries/egypt/cities/luxor/attractions/karnak/points/KAR-04/photo.jpg",
+      "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Luxor,_Egypt,_Karnak,_Great_Hypostyle_Hall,_Columns.jpg?width=960",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Luxor,_Egypt,_Karnak,_Great_Hypostyle_Hall,_Columns.jpg",
+      "source_filename": "Luxor, Egypt, Karnak, Great Hypostyle Hall, Columns.jpg",
+      "review_status": "candidate",
+      "accuracy_note": "Фотография-кандидат, авторство проверяется"
+    }
+  }
+}

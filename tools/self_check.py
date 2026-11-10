@@ -1,39 +1,83 @@
 #!/usr/bin/env python3
-"""Fast source-only check before pushing; MP3 are not needed."""
-import hashlib,json,sys
-from pathlib import Path
-ROOT=Path(__file__).resolve().parents[1]
-def read_js(filename,prefix):
-    raw=(ROOT/filename).read_text(encoding='utf-8')
-    if not raw.startswith(prefix): raise RuntimeError(f'{filename}: unexpected JS export')
-    return json.loads(raw[len(prefix):].strip().removesuffix(';'))
+"""Validate the generic Atlas content model and app integration."""
 
-def main():
-    tours=read_js('catalog.js','window.EgyptAtlasCatalog = ')
-    voice=read_js('voice-catalog.js','window.EGYPT_ATLAS_TRACKS = ')
-    tracks=json.loads((ROOT/'data/track_list.json').read_text(encoding='utf-8'))
-    assert len(tours)==12, f'Expected 12 tours: {len(tours)}'
-    stops=[s for t in tours for s in (t['stops'] + t.get('extension',{}).get('stops',[]))]
-    assert len(stops)==len(tracks)==len(voice)==82, 'Expected 82 catalog/track/voice entries'
-    stop_index={s['id']:s for s in stops}
-    voice_index={s['id']:s for s in voice}
-    track_index={s['id']:s for s in tracks}
-    assert len(stop_index)==len(voice_index)==len(track_index)==82, 'Duplicate stop IDs'
-    assert stop_index.keys()==voice_index.keys()==track_index.keys(), 'IDs differ'
-    assert len(list((ROOT/'texts').glob('*.txt')))==82, 'Expected 82 source scripts'
-    for id,stop in stop_index.items():
-        source=(ROOT/'texts'/f'{id}.txt').read_text(encoding='utf-8').strip()
-        assert source==stop['script']==voice_index[id]['text']==track_index[id]['text'], f'Text drift for {id}'
-        assert hashlib.sha256(source.encode('utf-8')).hexdigest()==track_index[id]['sha256'], f'SHA mismatch for {id}'
-    for name in ('index.html','manifest.webmanifest','sw.js','.github/workflows/pages.yml','tools/build_site.py','tools/pack_media.py','PACK_MEDIA_WINDOWS.bat','vendor/maplibre-gl.js','vendor/maplibre-gl.css','vendor/pmtiles.js'):
-        assert (ROOT/name).is_file(), f'Missing {name}'
-    assert "pmtiles://" in (ROOT/'map-logic.js').read_text(encoding='utf-8'), 'Local PMTiles map integration missing'
-    assert "--require-complete" in (ROOT/'.github/workflows/pages.yml').read_text(encoding='utf-8'), 'Pages must require a complete offline package'
-    ignored=(ROOT/'.gitignore').read_text(encoding='utf-8')
-    for rule in ('/audio/','/photos/real/','/maps/offline/','/egypt-media.zip'):
-        assert rule in ignored, f'Missing .gitignore rule: {rule}'
-    print('PASS: 12 tours, 82 matching texts, complete offline Pages workflow and local PMTiles runtime')
+from __future__ import annotations
+
+import hashlib
+import json
+from pathlib import Path
+import sys
+
+from content_model import ContentTree, ROOT
+
+
+def fail(message: str) -> None:
+    raise AssertionError(message)
+
+
+def main() -> int:
+    tree = ContentTree()
+    summary = tree.summary()
+    if (summary["countries"], summary["cities"], summary["attractions"], summary["points"], summary["audio"]) != (1, 3, 12, 82, 217):
+        fail(f"Unexpected migrated Egypt baseline: {summary}")
+
+    point_ids = {point.meta["id"] for point in tree.points}
+    for point in tree.points:
+        for name, narration in point.meta["narrations"].items():
+            text = (point.path / narration["text"]).read_text(encoding="utf-8").strip()
+            digest = hashlib.sha256(text.encode("utf-8")).hexdigest()
+            if digest != narration["text_sha256"]:
+                fail(f"Text checksum drift: {point.meta['id']}:{name}")
+    for attraction in tree.attractions:
+        local_ids = {item["id"] for item in attraction.manifest["points"]}
+        for filename in (attraction.manifest["full_program"], attraction.manifest["must_see_program"]):
+            program = json.loads((attraction.path / filename).read_text(encoding="utf-8"))
+            referenced = set(program.get("ordered_point_ids", [])) | set(program.get("optional_point_ids", []))
+            if not referenced <= local_ids:
+                fail(f"Program references foreign points: {attraction.manifest['id']} {sorted(referenced-local_ids)}")
+    if len(point_ids) != summary["points"]:
+        fail("Point IDs are not globally unique")
+
+    required = (
+        "index.html", "styles.css", "app.js", "map-logic.js", "sw.js", "manifest.webmanifest",
+        "generate_all.py", "download_commons_photos.py", "download_offline_maps.py",
+        "tools/content_model.py", "tools/build_content.py", "tools/build_site.py", "tools/pack_media.py",
+        "GENERATE_ALL_WINDOWS.bat", "DOWNLOAD_PHOTOS_WINDOWS.bat", "DOWNLOAD_ALL_MAPS_WINDOWS.bat",
+        "PACK_MEDIA_WINDOWS.bat", "docs/CONTENT_ARCHITECTURE.md",
+    )
+    for name in required:
+        if not (ROOT / name).is_file():
+            fail(f"Missing required file: {name}")
+    if (ROOT / "Atlas_Content_Pack_v2").exists():
+        fail("Atlas_Content_Pack_v2 must be empty/removed after migration")
+    app_source = (ROOT / "app.js").read_text(encoding="utf-8")
+    if "EgyptAtlasCatalog" in app_source or "catalog.js" in (ROOT / "index.html").read_text(encoding="utf-8"):
+        fail("Legacy hard-coded catalog is still wired into the app")
+    workflow = (ROOT / ".github" / "workflows" / "pages.yml").read_text(encoding="utf-8")
+    for expected in ("media-v", "atlas-media.zip", "ATLAS_MEDIA_RELEASE", "--require-complete"):
+        if expected not in workflow:
+            fail(f"Pages workflow lacks {expected}")
+    service_worker = (ROOT / "sw.js").read_text(encoding="utf-8")
+    for expected in ("__ATLAS_BUILD_ID__", "build-info.json"):
+        if expected not in service_worker:
+            fail(f"Service worker lacks generated-version support: {expected}")
+    if "BUILD_INFO_URL" not in app_source:
+        fail("App does not display generated build metadata")
+    ignored = (ROOT / ".gitignore").read_text(encoding="utf-8")
+    for expected in ("/content/**/audio/*.mp3", "/content/**/photo.jpg", "/content/**/map.pmtiles", "/atlas-media.zip"):
+        if expected not in ignored:
+            fail(f"Missing generated-media ignore rule: {expected}")
+    print(
+        "PASS: generic Atlas content tree; "
+        f"{summary['countries']} country, {summary['cities']} cities, "
+        f"{summary['attractions']} attractions, {summary['points']} points, {summary['audio']} audio tracks"
+    )
     return 0
-if __name__=='__main__':
-    try:sys.exit(main())
-    except Exception as e:print('FAIL:',str(e));sys.exit(1)
+
+
+if __name__ == "__main__":
+    try:
+        raise SystemExit(main())
+    except (AssertionError, ValueError, OSError) as error:
+        print(f"FAIL: {error}", file=sys.stderr)
+        raise SystemExit(1)

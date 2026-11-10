@@ -1,0 +1,20 @@
+{
+  "id": "gem-full",
+  "title": "Полная экскурсия",
+  "validation": "original_order_from_v025",
+  "estimated_narration_minutes": 9.5,
+  "ordered_point_ids": [
+    "GEM-01",
+    "GEM-02",
+    "GEM-03",
+    "GEM-04",
+    "GEM-09",
+    "GEM-10",
+    "GEM-11",
+    "GEM-05",
+    "GEM-06",
+    "GEM-07",
+    "GEM-08"
+  ],
+  "optional_point_ids": []
+}

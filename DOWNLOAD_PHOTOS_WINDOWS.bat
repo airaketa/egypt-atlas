@@ -8,7 +8,7 @@ if errorlevel 1 (
 ) else (
   set "PY=py -3"
 )
-echo Egypt Atlas: downloading missing photos only...
+echo Atlas: downloading every missing point photo found under content\...
 %PY% download_commons_photos.py --delay 2 --timeout 30 --retries 5
 if errorlevel 1 (
   echo Some photos are still missing. Run this file again later; existing files will be skipped.
