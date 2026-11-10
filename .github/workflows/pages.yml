@@ -25,11 +25,36 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           mkdir -p .downloads
-          MEDIA_TAG="$(gh release list --repo "$GITHUB_REPOSITORY" --limit 100 \
-            --json tagName,isDraft,isPrerelease,publishedAt \
-            --jq '[.[] | select(.isDraft == false and .isPrerelease == false and (.tagName | test("^media-v[0-9]+([.][0-9]+)*$")))] | sort_by(.publishedAt) | last | .tagName // ""')"
+          LIST_OK=false
+          for attempt in 1 2 3; do
+            if MEDIA_TAG="$(gh release list --repo "$GITHUB_REPOSITORY" --limit 100 \
+              --json tagName,isDraft,isPrerelease,publishedAt \
+              --jq '[.[] | select(.isDraft == false and .isPrerelease == false and (.tagName | test("^media-v[0-9]+([.][0-9]+)*$")))] | sort_by(.publishedAt) | last | .tagName // ""')"; then
+              LIST_OK=true
+              break
+            fi
+            echo "Release lookup failed (attempt $attempt/3); retrying..."
+            sleep $((attempt * 10))
+          done
+          if [ "$LIST_OK" != true ]; then
+            echo "Unable to query GitHub Releases after 3 attempts" >&2
+            exit 1
+          fi
           if [ -n "$MEDIA_TAG" ]; then
-            gh release download "$MEDIA_TAG" --pattern 'atlas-media.zip' --dir .downloads --repo "$GITHUB_REPOSITORY"
+            DOWNLOAD_OK=false
+            for attempt in 1 2 3; do
+              rm -f .downloads/atlas-media.zip
+              if gh release download "$MEDIA_TAG" --pattern 'atlas-media.zip' --dir .downloads --repo "$GITHUB_REPOSITORY"; then
+                DOWNLOAD_OK=true
+                break
+              fi
+              echo "Release download failed (attempt $attempt/3); retrying..."
+              sleep $((attempt * 10))
+            done
+            if [ "$DOWNLOAD_OK" != true ]; then
+              echo "Unable to download atlas-media.zip after 3 attempts" >&2
+              exit 1
+            fi
             test -s .downloads/atlas-media.zip
             echo "ATLAS_MEDIA_RELEASE=$MEDIA_TAG" >> "$GITHUB_ENV"
             echo "Using $MEDIA_TAG / atlas-media.zip"
