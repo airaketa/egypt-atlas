@@ -81,6 +81,12 @@ def main(argv=None) -> int:
             counts["map"] += 1
         else:
             missing.append(f"map:{map_asset.attraction.manifest['id']}")
+    for map_asset in tree.city_maps():
+        if valid_map(map_asset.output):
+            ready.append((map_asset.output, map_asset.package_id, "city-map"))
+            counts["map"] += 1
+        else:
+            missing.append(f"city-map:{map_asset.city.manifest['city_id']}")
 
     expected = tree.summary()
     print(

@@ -107,6 +107,15 @@ class MapAsset:
     max_zoom: int
 
 
+@dataclass(frozen=True)
+class CityMapAsset:
+    city: CityNode
+    output: Path
+    package_id: str
+    bounds: list
+    max_zoom: int
+
+
 class ContentTree:
     def __init__(self, root: Path = CONTENT_ROOT):
         self.root = root.resolve()
@@ -275,6 +284,25 @@ class ContentTree:
             )
         return tuple(assets)
 
+    def city_maps(self) -> tuple[CityMapAsset, ...]:
+        assets: list[CityMapAsset] = []
+        for city in self.cities:
+            map_data = city.manifest.get("map", {})
+            bounds = map_data.get("navBounds")
+            archive = map_data.get("archive")
+            if not archive or not bounds:
+                raise ValueError(f"City {city.manifest['city_id']} lacks map archive/bounds")
+            assets.append(
+                CityMapAsset(
+                    city=city,
+                    output=ROOT / archive,
+                    package_id=city.manifest["id"],
+                    bounds=bounds,
+                    max_zoom=int(map_data.get("maxZoom", 13)),
+                )
+            )
+        return tuple(assets)
+
     def summary(self) -> dict[str, int]:
         return {
             "countries": len(self.countries),
@@ -283,5 +311,5 @@ class ContentTree:
             "points": len(self.points),
             "audio": len(self.audio_tracks()),
             "photos": len(self.photos()),
-            "maps": len(self.maps()),
+            "maps": len(self.maps()) + len(self.city_maps()),
         }

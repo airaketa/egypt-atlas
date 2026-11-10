@@ -28,6 +28,16 @@
   "editorial_policy": "evergreen_audio_only",
   "factcheck_status": "pending_historical_review",
   "stories": "stories/manifest.json",
+  "map": {
+    "center": [29.8975, 31.195],
+    "zoom": 12,
+    "navBounds": [
+      [29.87, 31.165],
+      [29.925, 31.225]
+    ],
+    "maxZoom": 13,
+    "archive": "content/countries/egypt/cities/alexandria/map.pmtiles"
+  },
   "attractions": [
     {
       "id": "alex-library",

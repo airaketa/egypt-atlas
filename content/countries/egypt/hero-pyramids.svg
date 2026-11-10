@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 360" role="img" aria-label="Три пирамиды Гизы в древней облицовке">
+  <defs>
+    <linearGradient id="sand" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f6e8b9" stop-opacity=".16"/>
+      <stop offset="1" stop-color="#cda45f" stop-opacity=".36"/>
+    </linearGradient>
+    <linearGradient id="khufuLight" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fff6d5" stop-opacity=".88"/>
+      <stop offset="1" stop-color="#d9bf81" stop-opacity=".62"/>
+    </linearGradient>
+    <linearGradient id="khufuShade" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#cda966" stop-opacity=".58"/>
+      <stop offset="1" stop-color="#8c6f3e" stop-opacity=".3"/>
+    </linearGradient>
+    <linearGradient id="khafreLight" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f6e8ba" stop-opacity=".82"/>
+      <stop offset="1" stop-color="#c9a968" stop-opacity=".55"/>
+    </linearGradient>
+    <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="7"/>
+    </filter>
+  </defs>
+
+  <path d="M126 334c126-32 233-25 318-8 86 17 170 12 276-16v50H126z" fill="url(#sand)"/>
+  <path d="M171 340c103-13 199-11 288 5 82 14 170 8 261-13" fill="none" stroke="#f6e7b5" stroke-opacity=".24" stroke-width="2"/>
+
+  <path d="M379 58 155 334h224z" fill="url(#khufuLight)" stroke="#fff1c1" stroke-opacity=".5" stroke-width="1.4"/>
+  <path d="m379 58 205 276H379z" fill="url(#khufuShade)" stroke="#e9d39d" stroke-opacity=".32" stroke-width="1.4"/>
+  <path d="m379 58-16 20h31z" fill="#fff5cf" fill-opacity=".9"/>
+  <path d="M244 224h270M204 273h347M178 306h390" fill="none" stroke="#fff2c5" stroke-opacity=".17" stroke-width="1"/>
+  <path d="M379 58v276" stroke="#fff5d5" stroke-opacity=".26"/>
+  <path d="m379 58-97 276M379 58l91 276" stroke="#fff4cf" stroke-opacity=".1"/>
+
+  <path d="M535 132 373 334h162z" fill="url(#khafreLight)" stroke="#f6e7b8" stroke-opacity=".45" stroke-width="1.2"/>
+  <path d="m535 132 151 202H535z" fill="#9f7f48" fill-opacity=".36" stroke="#dcc28b" stroke-opacity=".28" stroke-width="1.2"/>
+  <path d="m535 132-19 24h37z" fill="#fff3c7" fill-opacity=".86"/>
+  <path d="M435 257h190M403 297h252" fill="none" stroke="#fff0bf" stroke-opacity=".15"/>
+
+  <path d="m635 207-100 127h100z" fill="#ead7a0" fill-opacity=".66" stroke="#f8e9bd" stroke-opacity=".4"/>
+  <path d="m635 207 90 127h-90z" fill="#9b7944" fill-opacity=".32" stroke="#d7bb80" stroke-opacity=".24"/>
+  <path d="M570 288h128M549 314h166" fill="none" stroke="#fff0bf" stroke-opacity=".14"/>
+
+  <path d="M370 46c52-15 106-10 150 13" fill="none" stroke="#fff0b8" stroke-opacity=".18" stroke-width="9" filter="url(#softGlow)"/>
+  <circle cx="613" cy="88" r="3" fill="#fff1bd" fill-opacity=".38"/>
+  <circle cx="641" cy="68" r="1.5" fill="#fff1bd" fill-opacity=".27"/>
+</svg>

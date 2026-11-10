@@ -17,6 +17,5 @@ if errorlevel 1 (
   pause
   exit /b 1
 )
-cd _site
-%PY% -m http.server 8000
+%PY% tools\serve_site.py --directory _site --port 8000
 pause

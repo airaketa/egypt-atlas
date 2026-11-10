@@ -28,6 +28,16 @@
   "editorial_policy": "evergreen_audio_only",
   "factcheck_status": "pending_historical_review",
   "stories": "stories/manifest.json",
+  "map": {
+    "center": [31.19, 30.0125],
+    "zoom": 11,
+    "navBounds": [
+      [31.09, 29.95],
+      [31.29, 30.075]
+    ],
+    "maxZoom": 13,
+    "archive": "content/countries/egypt/cities/cairo/map.pmtiles"
+  },
   "attractions": [
     {
       "id": "giza",

@@ -30,6 +30,19 @@ def main() -> int:
                 fail(f"Text checksum drift: {point.meta['id']}:{name}")
     for attraction in tree.attractions:
         local_ids = {item["id"] for item in attraction.manifest["points"]}
+        map_data = attraction.manifest.get("map", {})
+        center = map_data.get("center", [])
+        if len(center) != 2 or not all(isinstance(value, (int, float)) for value in center):
+            fail(f"Attraction lacks a usable city-map center: {attraction.manifest['id']}")
+        if map_data.get("defaultView") != "plan":
+            geo_ids = set(map_data.get("geoPoints", {}))
+            located_ids = {
+                point.meta["id"] for point in tree.points
+                if point.attraction.path == attraction.path and point.meta.get("location")
+            }
+            missing_map_points = local_ids - geo_ids - located_ids
+            if missing_map_points:
+                fail(f"Live-map attraction has unmapped points: {attraction.manifest['id']} {sorted(missing_map_points)}")
         for filename in (attraction.manifest["full_program"], attraction.manifest["must_see_program"]):
             program = json.loads((attraction.path / filename).read_text(encoding="utf-8"))
             referenced = set(program.get("ordered_point_ids", [])) | set(program.get("optional_point_ids", []))

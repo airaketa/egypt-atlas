@@ -9,6 +9,26 @@
   "type": "content-only",
   "install_policy": "shared_dependency_install_once",
   "gps_optional": true,
+  "hero": {
+    "palette": [
+      "#17291f",
+      "#315b44",
+      "#9b7a42"
+    ],
+    "art": "hero-pyramids.svg"
+  },
+  "theme": {
+    "ink": "#17231d",
+    "muted": "#69746e",
+    "paper": "#f5f2e9",
+    "surface": "#fffdf8",
+    "line": "#ded9cc",
+    "primary": "#254f3d",
+    "primary_alt": "#39755a",
+    "soft": "#dce9df",
+    "accent": "#c6923d",
+    "sand": "#eadcc3"
+  },
   "cities": [
     {
       "id": "cairo",

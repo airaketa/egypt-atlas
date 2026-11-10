@@ -8,6 +8,15 @@ const CATALOG_URL = './content-data/catalog.json';
 const OFFLINE_URL = './content-data/offline-packages.json';
 const BUILD_INFO_URL = './content-data/build-info.json';
 const INSTALLED_KEY = 'atlas-installed-cities-v2';
+const PLAYBACK_RATES = [0.75, 1, 1.25, 1.5, 2];
+const DEFAULT_THEME = {
+  ink:'#17231d',muted:'#69746e',paper:'#f5f2e9',surface:'#fffdf8',line:'#ded9cc',
+  primary:'#254f3d',primary_alt:'#39755a',soft:'#dce9df',accent:'#c6923d',sand:'#eadcc3',
+};
+const THEME_PROPERTIES = {
+  ink:'--ink',muted:'--muted',paper:'--paper',surface:'--surface',line:'--line',
+  primary:'--green',primary_alt:'--green-2',soft:'--mint',accent:'--gold',sand:'--sand',
+};
 const state = {
   catalog: null,
   offline: null,
@@ -17,10 +26,20 @@ const state = {
   programModes: new Map(),
   toastTimer: null,
   downloading: false,
+  playback: null,
+  speedIndex: 1,
 };
 
 function escapeHtml(value='') {
   return String(value).replace(/[&<>'"]/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[char]));
+}
+function safeThemeColor(value,fallback) {
+  return /^#[0-9a-f]{6}$/i.test(String(value||''))?value:fallback;
+}
+function applyTheme(theme={}) {
+  for(const [name,property] of Object.entries(THEME_PROPERTIES)){
+    document.documentElement.style.setProperty(property,safeThemeColor(theme[name],DEFAULT_THEME[name]));
+  }
 }
 function safeExternalUrl(value='') {
   try { const url=new URL(value); return /^https?:$/.test(url.protocol)?url.href:''; } catch (_) { return ''; }
@@ -58,6 +77,13 @@ function offlinePackage(id) { return state.offline?.packages?.find(item=>item.id
 function isCityInstalled(packageId) {
   const record=installedState().cities[packageId],manifest=offlinePackage(packageId);
   return !!(record&&manifest&&record.revision===manifest.revision&&!manifest.missing.length);
+}
+function countryInstalledCityIds(countryId) {
+  const installed=installedState();
+  return Object.keys(installed.cities).filter(packageId=>offlinePackage(packageId)?.country_id===countryId);
+}
+function isCommonInstalled(country) {
+  return country.cities.some(city=>isCityInstalled(city.package_id)&&offlinePackage(city.package_id)?.requires?.includes(country.package_id));
 }
 function packageBadge(packageId) {
   return isCityInstalled(packageId)
@@ -125,7 +151,7 @@ function storySections(stories,countryId,cityId=null) {
 function storyCard(episode,countryId,cityId) {
   const route=href('story',countryId,cityId||'_',episode.id);
   return `<article class="story-card">
-    <button class="play-button" type="button" data-play="${escapeHtml(episode.audio)}" data-title="${escapeHtml(episode.title)}" aria-label="Воспроизвести ${escapeHtml(episode.title)}">▶</button>
+    <button class="play-button" type="button" data-play="${escapeHtml(episode.audio)}" data-title="${escapeHtml(episode.title)}" aria-label="Воспроизвести ${escapeHtml(episode.title)}"><span data-play-glyph>▶</span></button>
     <div><h4><a href="${route}">${escapeHtml(episode.title)}</a></h4><p>≈ ${escapeHtml(episode.estimated_min_at_130_wpm||'—')} мин · ${escapeHtml(episode.section||'Аудиоистория')}</p></div>
     <span class="story-mode">${episode.mode==='practical'?'Практика':'История'}</span>
   </article>`;
@@ -151,9 +177,12 @@ function renderHome() {
 
 async function renderCountry(route) {
   const ref=countryRef(route.countryId),data=await countryData(route.countryId);
+  const hero=data.country.manifest.hero||{},palette=Array.isArray(hero.palette)?hero.palette:[];
+  const heroStyle=`--hero-start:${safeThemeColor(palette[0],'#17291f')};--hero-middle:${safeThemeColor(palette[1],'#315b44')};--hero-end:${safeThemeColor(palette[2],'#9b7a42')}`;
+  const heroArt=hero.art?`<img class="country-hero-art" src="${escapeHtml(hero.art)}" alt="" aria-hidden="true">`:'';
   $('app-main').innerHTML=`<div class="page">
     ${breadcrumb([{title:'Все страны',url:'#/'},{title:ref.title}])}
-    <section class="hero"><span class="eyebrow">Страна</span><h1>${escapeHtml(ref.title)}</h1><p>Общие истории страны загрузятся автоматически вместе с первым выбранным городом.</p>
+    <section class="hero country-hero" style="${heroStyle}">${heroArt}<span class="eyebrow">Страна</span><h1>${escapeHtml(ref.title)}</h1><p>Общие истории страны загрузятся автоматически вместе с первым выбранным городом.</p>
       <div class="hero-stats"><span>${ref.cities.length} города</span><span>${ref.story_count} общих историй</span></div></section>
     <div class="section-head"><div><span class="eyebrow">Направления</span><h2>Города и регионы</h2></div><p>Каждый город — самостоятельный офлайн-пакет с историями, фото, аудио и картами.</p></div>
     <div class="card-grid">${ref.cities.map((city,index)=>`<a class="city-card" href="${href('city',ref.id,city.id)}">
@@ -171,7 +200,9 @@ async function renderCity(route) {
   $('app-main').innerHTML=`<div class="page">
     ${breadcrumb([{title:'Все страны',url:'#/'},{title:cref.title,url:href('country',cref.id)},{title:ref.title}])}
     <div class="title-row"><div><span class="eyebrow">Город</span><h1 class="page-title">${escapeHtml(ref.title)}</h1><p class="page-lead">Выберите достопримечательность или включите городскую историю перед прогулкой.</p></div>
-      <button class="${installed?'secondary-button':'primary-button'}" type="button" data-${installed?'manage':'install'}="${escapeHtml(ref.package_id)}">${installed?'Управлять пакетом':`Скачать офлайн · ${formatBytes((manifest?.bytes||0)+(manifest?.requires||[]).reduce((sum,id)=>sum+(offlinePackage(id)?.bytes||0),0))}`}</button></div>
+      ${installed?'':`<button class="primary-button" type="button" data-install="${escapeHtml(ref.package_id)}">Скачать офлайн · ${formatBytes((manifest?.bytes||0)+(manifest?.requires||[]).reduce((sum,id)=>sum+(offlinePackage(id)?.bytes||0),0))}</button>`}</div>
+    <div class="section-head"><div><span class="eyebrow">Ориентирование</span><h2>Достопримечательности на карте</h2></div><p>Нажмите на метку, чтобы открыть выбранное место.</p></div>
+    <div id="city-map"></div>
     <div class="section-head"><div><span class="eyebrow">Исследовать</span><h2>Достопримечательности</h2></div><p>${data.attractions.length} маршрутов с точками интереса и двумя уровнями рассказа.</p></div>
     <div class="card-grid">${data.attractions.map((item,index)=>`<a class="attraction-card" href="${href('attraction',route.countryId,route.cityId,item.id)}">
       <span class="card-number">${String(index+1).padStart(2,'0')}</span><span class="card-arrow">↗</span><h3>${escapeHtml(item.title)}</h3>
@@ -179,6 +210,7 @@ async function renderCity(route) {
     <div class="section-head"><div><span class="eyebrow">Аудиожурнал</span><h2>${escapeHtml(data.stories.title)}</h2></div><p>Истории города не привязаны к GPS — слушайте когда удобно.</p></div>
     ${storySections(data.stories,route.countryId,route.cityId)}
   </div>`;
+  if(window.AtlasMap)window.AtlasMap.mountCity($('city-map'),data,attractionId=>{location.hash=href('attraction',route.countryId,route.cityId,attractionId).slice(1);});
 }
 
 async function attractionContext(route) {
@@ -193,6 +225,27 @@ function orderedPoints(attraction,mode) {
   const byId=new Map(attraction.points.map(item=>[item.id,item]));
   return ids.map(id=>byId.get(id)).filter(Boolean);
 }
+function openPointDialog(route,attraction,programPoints,pointId) {
+  const point=attraction.points.find(item=>item.id===pointId);if(!point)return;
+  const sequence=programPoints.some(item=>item.id===pointId)?programPoints:attraction.points;
+  const index=sequence.findIndex(item=>item.id===pointId),nextPoint=index>=0?sequence[index+1]:null;
+  const photo=point.media?.photo||{},main=point.narrations.main,more=point.narrations.learn_more;
+  const sources=(point.source_candidates_unchecked||[]).map(url=>safeExternalUrl(url)).filter(Boolean);
+  $('point-dialog-content').innerHTML=`<article class="point-dialog-card">
+    ${photo.path?`<div class="point-dialog-photo"><img src="${escapeHtml(photo.path)}" alt="${escapeHtml(point.title)}"></div>`:''}
+    <div class="point-dialog-copy"><span class="eyebrow">Точка ${index>=0?index+1:'—'} из ${sequence.length}</span><h2 id="point-dialog-title">${escapeHtml(point.title)}</h2>
+      <p class="listen-note"><strong>Где слушать:</strong> ${escapeHtml(point.where_to_listen||'У памятника, не мешая проходу.')}</p>
+      <div class="point-dialog-actions"><button class="primary-button" type="button" data-play="${escapeHtml(main.audio)}" data-title="${escapeHtml(point.title)}" data-next-play="${escapeHtml(more.audio)}" data-next-title="${escapeHtml(point.title)} · Хочу узнать больше"><span data-play-glyph>▶</span> Основной рассказ</button>
+      <button class="secondary-button" type="button" data-play="${escapeHtml(more.audio)}" data-title="${escapeHtml(point.title)} · Хочу узнать больше"><span data-play-glyph>▶</span> Хочу узнать больше</button></div>
+      <details class="point-dialog-text"><summary>Текст основного рассказа</summary><p class="narration-text">${escapeHtml(main.text)}</p></details>
+      <details class="point-dialog-text"><summary>Текст продолжения</summary><p class="narration-text">${escapeHtml(more.text)}</p>${sources.length?`<p>${sources.map(url=>`<a class="source-link" href="${escapeHtml(url)}" target="_blank" rel="noopener">Источник-кандидат ↗</a>`).join('<br>')}</p>`:''}</details>
+      <div class="point-dialog-footer"><a class="source-link" href="${href('point',route.countryId,route.cityId,route.attractionId,point.id)}">Открыть отдельную страницу ↗</a>${nextPoint?`<button class="primary-button" type="button" data-dialog-next="${escapeHtml(nextPoint.id)}">Следующая точка · ${escapeHtml(nextPoint.title)} →</button>`:''}</div>
+    </div></article>`;
+  const dialog=$('point-dialog');dialog.scrollTop=0;
+  dialog.querySelector('[data-dialog-next]')?.addEventListener('click',event=>openPointDialog(route,attraction,programPoints,event.currentTarget.dataset.dialogNext));
+  if(typeof dialog.show==='function'&&!dialog.open)dialog.show();else if(!dialog.open)dialog.setAttribute('open','');
+  syncAudioButtons();
+}
 async function renderAttraction(route) {
   const cref=countryRef(route.countryId),cityRefValue=cityRef(route.countryId,route.cityId);
   const {attraction}=await attractionContext(route);
@@ -205,14 +258,14 @@ async function renderAttraction(route) {
       <button type="button" data-program="must_see" class="${mode==='must_see'?'active':''}">Главное · ${attraction.programs.must_see.ordered_point_ids.length}</button>
       <button type="button" data-program="full" class="${mode==='full'?'active':''}">Полная · ${attraction.programs.full.ordered_point_ids.length+(attraction.programs.full.optional_point_ids||[]).length}</button>
     </div>
+    <div id="attraction-map"></div>
     <div class="points-list">${points.map((point,index)=>`<a class="point-card" href="${href('point',route.countryId,route.cityId,route.attractionId,point.id)}">
       <span class="point-index">${index+1}</span><div><h3>${escapeHtml(point.title)}</h3><p>${escapeHtml(point.summary||point.where_to_listen||'Открыть рассказ')}</p></div><span class="chevron">›</span></a>`).join('')}</div>
-    <div id="attraction-map"></div>
   </div>`;
   document.querySelectorAll('[data-program]').forEach(button=>button.addEventListener('click',()=>{
     state.programModes.set(attraction.id,button.dataset.program);renderRoute(false);
   }));
-  if(window.AtlasMap)window.AtlasMap.mount($('attraction-map'),attraction,pointId=>{location.hash=href('point',route.countryId,route.cityId,route.attractionId,pointId).slice(1);});
+  if(window.AtlasMap)window.AtlasMap.mount($('attraction-map'),attraction,pointId=>openPointDialog(route,attraction,points,pointId));
 }
 
 async function renderPoint(route) {
@@ -226,13 +279,15 @@ async function renderPoint(route) {
     <div class="point-hero"><div class="point-photo"><img src="${escapeHtml(photo.path||'')}" alt="${escapeHtml(point.title)}" loading="eager"></div>
       <div class="point-copy"><span class="eyebrow">Точка интереса · ${escapeHtml(point.id)}</span><h1>${escapeHtml(point.title)}</h1>
       <p class="listen-note"><strong>Где слушать:</strong> ${escapeHtml(point.where_to_listen||'У памятника, не мешая проходу.')}</p>
-      <button class="primary-button" type="button" data-play="${escapeHtml(main.audio)}" data-title="${escapeHtml(point.title)}">▶ Слушать основной рассказ</button></div></div>
-    <article class="narration"><div class="narration-head"><h2>Основной рассказ</h2><button class="small-button" type="button" data-play="${escapeHtml(main.audio)}" data-title="${escapeHtml(point.title)}">▶ Аудио</button></div><p class="narration-text">${escapeHtml(main.text)}</p></article>
-    <details class="learn-more"><summary>Хочу узнать больше · ≈ ${escapeHtml(more.estimated_minutes||'—')} мин</summary><div class="details-body">
-      <button class="small-button" type="button" data-play="${escapeHtml(more.audio)}" data-title="${escapeHtml(point.title)} · Хочу узнать больше">▶ Слушать продолжение</button>
-      <p class="narration-text">${escapeHtml(more.text)}</p>
-      ${sources.length?`<p>${sources.map(url=>`<a class="source-link" href="${escapeHtml(url)}" target="_blank" rel="noopener">Источник-кандидат ↗</a>`).join('<br>')}</p>`:''}
-    </div></details>
+      <button class="primary-button" type="button" data-play="${escapeHtml(main.audio)}" data-title="${escapeHtml(point.title)}" data-next-play="${escapeHtml(more.audio)}" data-next-title="${escapeHtml(point.title)} · Хочу узнать больше"><span data-play-glyph>▶</span> Слушать основной рассказ</button></div></div>
+    <details class="narration narration-details"><summary>Текст основного рассказа</summary><div class="narration-details-body"><p class="narration-text">${escapeHtml(main.text)}</p></div></details>
+    <section class="continue-card">
+      <div class="continue-head"><div><span class="eyebrow">Продолжение</span><h2>Хочу узнать больше</h2><p>Дополнительный рассказ · ≈ ${escapeHtml(more.estimated_minutes||'—')} мин</p></div>
+      <button class="primary-button" type="button" data-play="${escapeHtml(more.audio)}" data-title="${escapeHtml(point.title)} · Хочу узнать больше"><span data-play-glyph>▶</span> Слушать продолжение</button></div>
+      <details><summary>Показать текст продолжения</summary><p class="narration-text">${escapeHtml(more.text)}</p>
+        ${sources.length?`<p>${sources.map(url=>`<a class="source-link" href="${escapeHtml(url)}" target="_blank" rel="noopener">Источник-кандидат ↗</a>`).join('<br>')}</p>`:''}
+      </details>
+    </section>
     ${photo.source_url?`<a class="source-link" href="${escapeHtml(safeExternalUrl(photo.source_url))}" target="_blank" rel="noopener">Источник фотографии ↗</a>`:''}
   </div>`;
 }
@@ -247,7 +302,7 @@ async function renderStory(route) {
     ${breadcrumb([{title:cref.title,url:href('country',cref.id)},...(cityReference?[{title:cityReference.title,url:parent}]:[]),{title:story.title}])}
     <span class="eyebrow">${escapeHtml(story.section||'Аудиоистория')}</span><h1 class="page-title">${escapeHtml(story.title)}</h1>
     <p class="page-lead">≈ ${escapeHtml(story.estimated_min_at_130_wpm||'—')} мин · ${story.mode==='practical'?'Практический рассказ':'История и культура'}</p>
-    <article class="narration"><div class="narration-head"><h2>Слушать</h2><button class="primary-button" type="button" data-play="${escapeHtml(story.audio)}" data-title="${escapeHtml(story.title)}">▶ Включить</button></div><p class="narration-text">${escapeHtml(story.text)}</p></article>
+    <article class="narration"><div class="narration-head"><h2>Слушать</h2><button class="primary-button" type="button" data-play="${escapeHtml(story.audio)}" data-title="${escapeHtml(story.title)}"><span data-play-glyph>▶</span> Включить</button></div><p class="narration-text">${escapeHtml(story.text)}</p></article>
   </div>`;
 }
 
@@ -265,9 +320,13 @@ function updateNavigation(route) {
 }
 async function renderRoute(scroll=true) {
   const token=++state.renderToken,route=parseRoute();
+  if($('point-dialog')?.open)$('point-dialog').close();
   if(window.AtlasMap)window.AtlasMap.unmount();
   updateNavigation(route);showLoading();
   try {
+    const themedCountry=route.countryId?await countryData(route.countryId):null;
+    if(token!==state.renderToken)return;
+    applyTheme(themedCountry?.country?.manifest?.theme);
     if(route.name==='home')renderHome();
     else if(route.name==='country')await renderCountry(route);
     else if(route.name==='city')await renderCity(route);
@@ -276,28 +335,73 @@ async function renderRoute(scroll=true) {
     else if(route.name==='story')await renderStory(route);
     else renderNotFound();
     if(token!==state.renderToken)return;
+    syncAudioButtons();
     if(scroll)scrollTo({top:0,behavior:'auto'});
-  } catch(error) { if(token===state.renderToken)showError(error); }
+  } catch(error) { if(token===state.renderToken){applyTheme();showError(error);} }
 }
 
-function playAudio(path,title) {
+function syncAudioButtons() {
+  const audio=$('audio-element');
+  const activeUrl=audio.src;
+  document.querySelectorAll('[data-play]').forEach(button=>{
+    const buttonUrl=button.dataset.play?new URL(button.dataset.play,ROOT).href:'';
+    const playing=!!buttonUrl&&buttonUrl===activeUrl&&!audio.paused&&!audio.ended;
+    button.classList.toggle('is-playing',playing);
+    const glyph=button.querySelector('[data-play-glyph]');
+    if(glyph)glyph.textContent=playing?'❚❚':'▶';
+    button.setAttribute('aria-pressed',String(playing));
+  });
+}
+function playAudio(path,title,{nextPath='',nextTitle=''}={}) {
   if(!path){toast('Для этой записи аудио ещё не опубликовано.');return;}
   const audio=$('audio-element'),url=new URL(path,ROOT).href;
-  if(audio.src===url&&!audio.paused){audio.pause();return;}
-  if(audio.src!==url){audio.src=url;$('dock-title').textContent=title;$('audio-dock').hidden=false;}
+  if(audio.src===url){
+    if(nextPath)state.playback={...(state.playback||{}),url,title,nextPath,nextTitle};
+    $('audio-dock').hidden=false;
+    if(!audio.paused){audio.pause();return;}
+    audio.play().catch(()=>toast(navigator.onLine?'Аудио ещё не опубликовано или повреждено.':'Этот аудиопакет не скачан.'));
+    return;
+  }
+  state.playback={url,title,nextPath,nextTitle};
+  $('dock-next').hidden=true;
+  audio.src=url;audio.playbackRate=PLAYBACK_RATES[state.speedIndex];
+  $('dock-title').textContent=title;$('audio-dock').hidden=false;
   audio.play().catch(()=>toast(navigator.onLine?'Аудио ещё не опубликовано или повреждено.':'Этот аудиопакет не скачан.'));
 }
 function setupPlayer() {
   const audio=$('audio-element');
   $('dock-play').addEventListener('click',()=>audio.paused?audio.play():audio.pause());
-  $('dock-close').addEventListener('click',()=>{audio.pause();audio.removeAttribute('src');audio.load();$('audio-dock').hidden=true;});
-  audio.addEventListener('play',()=>{$('dock-play').textContent='❚❚';});
-  audio.addEventListener('pause',()=>{$('dock-play').textContent='▶';});
+  $('dock-rewind').addEventListener('click',()=>{audio.currentTime=Math.max(0,(audio.currentTime||0)-5);});
+  $('dock-forward').addEventListener('click',()=>{audio.currentTime=Math.min(Number.isFinite(audio.duration)?audio.duration:Infinity,(audio.currentTime||0)+5);});
+  $('dock-speed').addEventListener('click',()=>{
+    state.speedIndex=(state.speedIndex+1)%PLAYBACK_RATES.length;
+    audio.playbackRate=PLAYBACK_RATES[state.speedIndex];
+    $('dock-speed').textContent=`${PLAYBACK_RATES[state.speedIndex]}×`;
+  });
+  $('dock-close').addEventListener('click',()=>{
+    audio.pause();audio.removeAttribute('src');audio.load();state.playback=null;
+    $('audio-dock').hidden=true;$('dock-next').hidden=true;$('dock-progress').style.width='0';
+    $('dock-current').textContent='0:00';$('dock-duration').textContent='0:00';syncAudioButtons();
+  });
+  $('dock-next').addEventListener('click',event=>{
+    const button=event.currentTarget;
+    playAudio(button.dataset.play,button.dataset.title);
+  });
+  audio.addEventListener('play',()=>{$('dock-play').textContent='❚❚';$('dock-next').hidden=true;syncAudioButtons();});
+  audio.addEventListener('pause',()=>{$('dock-play').textContent='▶';syncAudioButtons();});
+  audio.addEventListener('ended',()=>{
+    $('dock-play').textContent='▶';syncAudioButtons();
+    if(state.playback?.nextPath){
+      const next=$('dock-next');next.dataset.play=state.playback.nextPath;next.dataset.title=state.playback.nextTitle;
+      next.textContent=`▶ Продолжить: ${state.playback.nextTitle.split(' · ').pop()}`;next.hidden=false;
+    }
+  });
   audio.addEventListener('timeupdate',()=>{
     $('dock-current').textContent=formatTime(audio.currentTime);$('dock-duration').textContent=formatTime(audio.duration);
     $('dock-progress').style.width=`${audio.duration?audio.currentTime/audio.duration*100:0}%`;
   });
-  audio.addEventListener('error',()=>toast(navigator.onLine?'Не удалось открыть аудио.':'Аудио недоступно офлайн: скачайте пакет города.'));
+  audio.addEventListener('loadedmetadata',()=>{$('dock-duration').textContent=formatTime(audio.duration);});
+  audio.addEventListener('error',()=>{syncAudioButtons();toast(navigator.onLine?'Не удалось открыть аудио.':'Аудио недоступно офлайн: скачайте пакет города.');});
 }
 
 async function sha256(buffer) {
@@ -366,10 +470,23 @@ async function removeCity(packageId) {
   }
   saveInstalled(installed);toast(`${manifest.title}: файлы удалены.`);await renderPackageManager();renderRoute(false);
 }
+async function removeCountry(countryId) {
+  if(state.downloading)return;
+  const country=countryRef(countryId),packageIds=countryInstalledCityIds(countryId);
+  if(!country||!packageIds.length)return;
+  if(!confirm(`Удалить все офлайн-пакеты страны «${country.title}» с устройства?`))return;
+  const cache=await caches.open(state.offline.cache_name),installed=installedState();
+  for(const packageId of packageIds){
+    const manifest=offlinePackage(packageId);if(manifest)await deletePackageFiles(cache,manifest);
+    delete installed.cities[packageId];
+  }
+  const common=offlinePackage(country.package_id);if(common)await deletePackageFiles(cache,common);
+  saveInstalled(installed);toast(`${country.title}: все офлайн-пакеты удалены.`);await renderPackageManager();renderRoute(false);
+}
 async function storageText() {
   if(!navigator.storage?.estimate)return 'Браузер не сообщает объём хранилища.';
-  const {usage=0,quota=0}=await navigator.storage.estimate();
-  return `Хранилище браузера: занято ${formatBytes(usage)} из ${formatBytes(quota)}. Не очищайте данные сайта перед поездкой.`;
+  const {usage=0}=await navigator.storage.estimate();
+  return `Хранилище браузера: занято ${formatBytes(usage)}. Не очищайте данные сайта перед поездкой.`;
 }
 async function renderPackageManager() {
   if(!state.offline)return;
@@ -381,16 +498,16 @@ async function renderPackageManager() {
   const installed=installedState();
   $('package-manager-list').innerHTML=state.catalog.countries.map(country=>{
     const common=offlinePackage(country.package_id);
-    const installedCities=country.cities.filter(city=>isCityInstalled(city.package_id));
-    return `<section class="manager-country"><h3>${escapeHtml(country.title)}</h3>
+    const installedIds=countryInstalledCityIds(country.id),commonReady=isCommonInstalled(country);
+    const commonStatus=commonReady?'На устройстве':installedIds.length?'Требуется обновление':'Не на устройстве';
+    return `<section class="manager-country"><div class="manager-country-head"><div><h3>${escapeHtml(country.title)}</h3><small><span class="package-status ${commonReady?'installed':''}">${commonStatus}</span><span>·</span><span>Контент страны: ${formatBytes(common?.bytes||0)}</span></small></div>
+      ${installedIds.length?`<button class="danger-button" type="button" data-remove-country="${escapeHtml(country.id)}" ${state.downloading?'disabled':''}>Удалить всё</button>`:''}</div>
       ${country.cities.map(city=>{
-        const pack=offlinePackage(city.package_id),ready=isCityInstalled(city.package_id);
-        const dependencyBytes=(pack?.requires||[]).reduce((sum,id)=>sum+(offlinePackage(id)?.bytes||0),0);
-        const firstForCountry=!installedCities.length;
-        const total=(pack?.bytes||0)+(firstForCountry?dependencyBytes:0);
+        const pack=offlinePackage(city.package_id),ready=isCityInstalled(city.package_id),hasRecord=!!installed.cities[city.package_id];
         const incomplete=(pack?.missing.length||0)+(pack?.requires||[]).reduce((sum,id)=>sum+(offlinePackage(id)?.missing.length||0),0);
-        return `<div class="manager-package"><div><strong>${escapeHtml(city.title)}</strong><small>${ready?'На устройстве':incomplete?`Не опубликовано файлов: ${incomplete}`:`${formatBytes(total)}${firstForCountry&&dependencyBytes?' вместе с пакетом страны':''}`}</small></div>
-          <div class="manager-actions">${ready?`<button class="danger-button" type="button" data-remove="${escapeHtml(city.package_id)}">Удалить</button>`:`<button class="primary-button" type="button" data-install="${escapeHtml(city.package_id)}" ${incomplete||state.downloading?'disabled':''}>Скачать</button>`}</div></div>`;
+        const status=ready?`На устройстве · ${formatBytes(pack?.bytes||0)}`:incomplete?`Не опубликовано файлов: ${incomplete}`:hasRecord?`Требуется обновление · ${formatBytes(pack?.bytes||0)}`:`Не на устройстве · ${formatBytes(pack?.bytes||0)}`;
+        return `<div class="manager-package"><div><strong>${escapeHtml(city.title)}</strong><small>${status}</small></div>
+          <div class="manager-actions">${ready?`<button class="danger-button" type="button" data-remove="${escapeHtml(city.package_id)}">Удалить</button>`:`<button class="primary-button" type="button" data-install="${escapeHtml(city.package_id)}" ${incomplete||state.downloading?'disabled':''}>${hasRecord?'Обновить':'Скачать'}</button>`}</div></div>`;
       }).join('')}
       ${common?.missing.length?`<p class="manager-warning">Общий пакет страны пока неполный: ${common.missing.length} файлов отсутствуют.</p>`:''}
     </section>`;
@@ -412,17 +529,22 @@ function updateNetwork() {
 }
 function setupEvents() {
   $('back-button').addEventListener('click',event=>{location.hash=event.currentTarget.dataset.href||'#/';});
+  $('point-dialog-close').addEventListener('click',()=>$('point-dialog').close());
+  $('point-dialog').addEventListener('click',event=>{
+    if(event.target===$('point-dialog')){$('point-dialog').close();return;}
+    const play=event.target.closest('[data-play]');if(play){event.preventDefault();playAudio(play.dataset.play,play.dataset.title,{nextPath:play.dataset.nextPlay||'',nextTitle:play.dataset.nextTitle||''});}
+  });
   $('downloads-button').addEventListener('click',openManager);$('downloads-nav').addEventListener('click',openManager);
   $('downloads-close').addEventListener('click',()=>$('downloads-dialog').close());
   $('downloads-dialog').addEventListener('click',event=>{if(event.target===$('downloads-dialog'))$('downloads-dialog').close();});
   $('app-main').addEventListener('click',event=>{
-    const play=event.target.closest('[data-play]');if(play){event.preventDefault();playAudio(play.dataset.play,play.dataset.title);return;}
+    const play=event.target.closest('[data-play]');if(play){event.preventDefault();playAudio(play.dataset.play,play.dataset.title,{nextPath:play.dataset.nextPlay||'',nextTitle:play.dataset.nextTitle||''});return;}
     const install=event.target.closest('[data-install]');if(install){event.preventDefault();installCity(install.dataset.install);return;}
-    const manage=event.target.closest('[data-manage]');if(manage){event.preventDefault();openManager();}
   });
   $('package-manager-list').addEventListener('click',event=>{
     const install=event.target.closest('[data-install]');if(install)installCity(install.dataset.install);
     const remove=event.target.closest('[data-remove]');if(remove)removeCity(remove.dataset.remove);
+    const removeCountryButton=event.target.closest('[data-remove-country]');if(removeCountryButton)removeCountry(removeCountryButton.dataset.removeCountry);
   });
   addEventListener('hashchange',()=>renderRoute());addEventListener('online',updateNetwork);addEventListener('offline',updateNetwork);
 }

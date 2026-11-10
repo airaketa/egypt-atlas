@@ -26,6 +26,19 @@ def package_web_path(package_id: str) -> str:
     return f"./content-data/packages/{package_id}.json"
 
 
+def country_hero_asset(country) -> Path | None:
+    value = country.manifest.get("hero", {}).get("art")
+    if not value:
+        return None
+    country_root = country.path.resolve()
+    source = (country.path / value).resolve()
+    try:
+        source.relative_to(country_root)
+    except ValueError as error:
+        raise ValueError(f"Country hero art must stay inside {country.path}: {value}") from error
+    return source
+
+
 def compile_stories(tree: ContentTree, manifest: dict, scope_root: Path) -> dict:
     result = {
         "id": manifest["id"],
@@ -44,6 +57,9 @@ def compile_stories(tree: ContentTree, manifest: dict, scope_root: Path) -> dict
 def compile_country(tree: ContentTree, country) -> dict:
     stories, scope_root = tree.country_stories(country)
     public_manifest = copy.deepcopy(country.manifest)
+    hero_asset = country_hero_asset(country)
+    if hero_asset:
+        public_manifest["hero"]["art"] = web_path(hero_asset)
     return {
         "schema_version": 2,
         "package": {
@@ -106,6 +122,7 @@ def compile_city(tree: ContentTree, city) -> dict:
             "language": city.manifest.get("language", tree.catalog.get("language", "ru")),
             "content_status": city.manifest.get("content_status"),
             "factcheck_status": city.manifest.get("factcheck_status"),
+            "map": copy.deepcopy(city.manifest.get("map")),
         },
         "stories": compile_stories(tree, stories, scope_root),
         "attractions": attractions,
@@ -113,6 +130,15 @@ def compile_city(tree: ContentTree, city) -> dict:
 
 
 def copy_tracked_package_assets(tree: ContentTree, site_root: Path) -> None:
+    for country in tree.countries:
+        source = country_hero_asset(country)
+        if not source:
+            continue
+        destination = site_root / source.relative_to(ROOT)
+        if source.resolve() == destination.resolve():
+            continue
+        destination.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copy2(source, destination)
     for attraction in tree.attractions:
         image = attraction.manifest.get("map", {}).get("image")
         if not image:
@@ -129,6 +155,9 @@ def expected_package_assets(tree: ContentTree) -> dict[str, list[tuple[str, str]
     result: dict[str, list[tuple[str, str]]] = {}
     for country in tree.countries:
         result[country.manifest["id"]] = [(package_web_path(country.manifest["id"]), "package")]
+        hero_asset = country_hero_asset(country)
+        if hero_asset:
+            result[country.manifest["id"]].append((web_path(hero_asset), "country-hero"))
     for city in tree.cities:
         result[city.manifest["id"]] = [(package_web_path(city.manifest["id"]), "package")]
     for track in tree.audio_tracks():
@@ -140,6 +169,8 @@ def expected_package_assets(tree: ContentTree) -> dict[str, list[tuple[str, str]
         image = map_asset.attraction.manifest.get("map", {}).get("image")
         if image:
             result[map_asset.package_id].append(("./" + image.removeprefix("./"), "map-plan"))
+    for map_asset in tree.city_maps():
+        result[map_asset.package_id].append((web_path(map_asset.output), "city-map"))
     return result
 
 

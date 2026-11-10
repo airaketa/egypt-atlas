@@ -51,15 +51,28 @@
   </nav>
 
   <section class="audio-dock" id="audio-dock" hidden aria-label="Аудиоплеер">
-    <button class="dock-play" id="dock-play" type="button" aria-label="Воспроизвести или поставить на паузу">▶</button>
-    <div class="dock-copy">
-      <strong id="dock-title">Рассказ</strong>
-      <div class="dock-progress"><span id="dock-progress"></span></div>
-      <small><span id="dock-current">0:00</span> · <span id="dock-duration">0:00</span></small>
+    <div class="dock-main">
+      <div class="dock-controls" aria-label="Управление воспроизведением">
+        <button class="dock-skip" id="dock-rewind" type="button" aria-label="Назад на 5 секунд">−5</button>
+        <button class="dock-play" id="dock-play" type="button" aria-label="Воспроизвести или поставить на паузу">▶</button>
+        <button class="dock-skip" id="dock-forward" type="button" aria-label="Вперёд на 5 секунд">+5</button>
+        <button class="dock-speed" id="dock-speed" type="button" aria-label="Изменить скорость воспроизведения">1×</button>
+      </div>
+      <div class="dock-copy">
+        <strong id="dock-title">Рассказ</strong>
+        <div class="dock-progress"><span id="dock-progress"></span></div>
+        <small><span id="dock-current">0:00</span> · <span id="dock-duration">0:00</span></small>
+      </div>
+      <button class="dock-close" id="dock-close" type="button" aria-label="Закрыть плеер">×</button>
     </div>
-    <button class="dock-close" id="dock-close" type="button" aria-label="Закрыть плеер">×</button>
+    <button class="dock-next" id="dock-next" type="button" hidden>▶ Хочу узнать больше</button>
     <audio id="audio-element" preload="metadata"></audio>
   </section>
+
+  <dialog class="point-dialog" id="point-dialog" aria-labelledby="point-dialog-title">
+    <button class="point-dialog-close" id="point-dialog-close" type="button" aria-label="Закрыть точку">×</button>
+    <div id="point-dialog-content"></div>
+  </dialog>
 
   <dialog class="manager-dialog" id="downloads-dialog" aria-labelledby="downloads-title">
     <div class="dialog-head">
@@ -69,7 +82,7 @@
       </div>
       <button class="icon-button" id="downloads-close" type="button" aria-label="Закрыть">×</button>
     </div>
-    <p class="dialog-intro">Скачивайте только нужные города. Общий контент страны добавится с первым городом и удалится вместе с последним.</p>
+    <p class="dialog-intro">Скачивайте только нужные города.</p>
     <div class="storage-card" id="storage-card">Считаем занятое место…</div>
     <p class="build-version" id="build-version">Определяем версию публикации…</p>
     <div class="download-progress" id="download-progress" hidden>

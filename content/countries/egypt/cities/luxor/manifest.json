@@ -28,6 +28,16 @@
   "editorial_policy": "evergreen_audio_only",
   "factcheck_status": "pending_historical_review",
   "stories": "stories/manifest.json",
+  "map": {
+    "center": [32.63, 25.7225],
+    "zoom": 12,
+    "navBounds": [
+      [32.585, 25.687],
+      [32.675, 25.758]
+    ],
+    "maxZoom": 13,
+    "archive": "content/countries/egypt/cities/luxor/map.pmtiles"
+  },
   "attractions": [
     {
       "id": "karnak",

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Prepare small Protomaps PMTiles extracts for Egypt Atlas v0.23+.
+"""Prepare city and attraction Protomaps PMTiles extracts for Atlas.
 
 The generated .pmtiles files are DATA ONLY: the PWA still needs a local
 PMTiles renderer/style/font assets and an explicit offline-download flow.
@@ -41,9 +41,11 @@ def load_attractions() -> list[dict]:
     for asset in ContentTree().maps():
         attraction = {
             "id": asset.attraction.manifest["id"],
+            "kind": "attraction",
             "title": asset.attraction.manifest["title"],
             "map": {"navBounds": asset.bounds},
             "output": asset.output,
+            "maxzoom": asset.max_zoom,
         }
         bounds = asset.bounds
         if not bounds or len(bounds) != 2:
@@ -54,6 +56,28 @@ def load_attractions() -> list[dict]:
             raise ValueError(f"Attraction {attraction.get('id')} has invalid bounds: {bounds}")
         attractions.append(attraction)
     return attractions
+
+
+def load_cities() -> list[dict]:
+    cities = []
+    for asset in ContentTree().city_maps():
+        city = {
+            "id": asset.city.manifest["city_id"],
+            "kind": "city",
+            "title": asset.city.manifest["title"],
+            "map": {"navBounds": asset.bounds},
+            "output": asset.output,
+            "maxzoom": asset.max_zoom,
+        }
+        bounds = asset.bounds
+        if not bounds or len(bounds) != 2:
+            raise ValueError(f"City {city.get('id')} lacks map.navBounds")
+        w, s = bounds[0]
+        e, n = bounds[1]
+        if not (-180 < w < e < 180 and -90 < s < n < 90):
+            raise ValueError(f"City {city.get('id')} has invalid bounds: {bounds}")
+        cities.append(city)
+    return cities
 
 
 def http_request(url: str, *, range_first=False, timeout=15):
@@ -191,30 +215,36 @@ def bbox(tour:dict) -> str:
 def main(argv:list[str]|None=None)->int:
     ap=argparse.ArgumentParser(description=__doc__,formatter_class=argparse.RawDescriptionHelpFormatter)
     targets=ap.add_mutually_exclusive_group(required=True)
-    targets.add_argument("--all",action="store_true",help="all attraction areas discovered in content/")
+    targets.add_argument("--all",action="store_true",help="all city and attraction areas discovered in content/")
     targets.add_argument("--attraction",action="append",metavar="ID",help="a single attraction ID (can repeat)")
-    targets.add_argument("--list",action="store_true",help="show attraction IDs and bounding boxes")
+    targets.add_argument("--city",action="append",metavar="ID",help="a single city ID (can repeat)")
+    targets.add_argument("--list",action="store_true",help="show city/attraction IDs and bounding boxes")
     ap.add_argument("--source",help="Source Protomaps daily .pmtiles URL (auto-discovery if missing)")
     ap.add_argument("--pmtiles",help="Path to installed pmtiles CLI (Windows CLI auto-installer if missing)")
     ap.add_argument("--maxzoom",type=int,default=15,choices=range(8,16),metavar="8..15",help="maximum basemap zoom; default 15, zoom 16-18 can overscale")
     ap.add_argument("--force",action="store_true",help="replace existing local archives")
     ap.add_argument("--dry-run",action="store_true",help="print planned extraction commands; no downloads")
     args=ap.parse_args(argv)
-    attractions=load_attractions()
-    by_id={item["id"]:item for item in attractions}
+    attractions=load_attractions();cities=load_cities()
+    attraction_by_id={item["id"]:item for item in attractions};city_by_id={item["id"]:item for item in cities}
     if args.list:
-        for item in attractions:
-            print(f"{item['id']:18s} {bbox(item)}  {item['title']}")
+        for item in cities+attractions:
+            print(f"{item['kind']:10s} {item['id']:18s} {bbox(item)}  {item['title']}")
         return 0
-    if args.all: selected=attractions
+    if args.all: selected=cities+attractions
+    elif args.city:
+        unknown=sorted(set(args.city)-set(city_by_id))
+        if unknown:
+            ap.error(f"Unknown city IDs: {', '.join(unknown)}; see --list")
+        selected=[item for item in cities if item["id"] in set(args.city)]
     else:
-        unknown=sorted(set(args.attraction)-set(by_id))
+        unknown=sorted(set(args.attraction)-set(attraction_by_id))
         if unknown:
             ap.error(f"Unknown attraction IDs: {', '.join(unknown)}; see --list")
         selected=[item for item in attractions if item["id"] in set(args.attraction)]
     jobs=[(item,item["output"]) for item in selected]
     for item,dest in jobs:
-        print(f"{item['id']:18s} bbox={bbox(item)} maxzoom={args.maxzoom} => {dest.relative_to(ROOT)}")
+        print(f"{item['kind']:10s} {item['id']:18s} bbox={bbox(item)} maxzoom={min(args.maxzoom,item['maxzoom'])} => {dest.relative_to(ROOT)}")
     if args.dry_run:
         print("Dry-run only. Real downloads use a recent daily source or --source URL.")
         return 0
@@ -236,7 +266,7 @@ def main(argv:list[str]|None=None)->int:
         dest.parent.mkdir(parents=True,exist_ok=True)
         temp=dest.with_suffix(".pmtiles.partial")
         temp.unlink(missing_ok=True)
-        cmd=[str(cli),"extract",source,str(temp),"--bbox="+bbox(attraction),"--maxzoom="+str(args.maxzoom)]
+        cmd=[str(cli),"extract",source,str(temp),"--bbox="+bbox(attraction),"--maxzoom="+str(min(args.maxzoom,attraction["maxzoom"]))]
         print("  Running:"," ".join(cmd),flush=True)
         try:
             subprocess.run(cmd,check=True)
